@@ -1,0 +1,464 @@
+#newhousedetail {
+     
+    //底部paddingdiv
+    .bottompad{
+        width: 100%;
+        height: 10px;
+        background-color: white;
+    }
+    .newhousedetail {
+        position: absolute;
+        padding-bottom: 40px;
+        background-color: rgb(246,246,246);
+        .btn {
+            z-index: 999;
+            position: absolute;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.5);
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+            color: white;
+        }
+        .backbotton {
+            left: 5px;
+        }
+        .sharebotton {
+            right: 5px;
+        }
+        
+        .card {
+            box-shadow: none;
+            padding: 0 12px 0;
+            .borderline{
+                margin:10px 0 20px;
+            }
+        }
+        .bannerposition{
+            position: relative;
+            width: 100%;
+            height: 230px;
+            .detailcursor{
+                width: 100%;
+                height: 100%;
+                .slider-pager{
+                    bottom: 10px;
+                    display: none;
+                    .slider-pager-page{
+                        i.icon{
+                            color: rgba(255,255,255,1);
+                            font-size: 12px;
+                        }
+                    }
+                    .slider-pager-page .active{
+                        color: white;
+                        i.icon{
+                            color: white;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .indexnum{
+                position: absolute;
+                z-index: 998;
+                bottom: 5px;
+                right: 5px;
+                color: white;
+                border-radius: 3px;
+                background-color: rgba(0,0,0,0.5);
+                padding: 0 5px 0;
+            }
+            .hascer{
+                position: absolute;
+                z-index: 998;
+                bottom: 5px;
+                left: 0;
+                color: white;
+                 background-color: rgba(0,0,0,0.5);
+                padding: 2px 5px 2px;
+                border-radius: 0 2px 2px 0;
+            }
+        }
+        .headandtime {
+            p.tit{
+                font-size: 18px;
+                text-align: center;
+                color: rgb(0,0,0);
+                margin: 15px 0 15px;
+            }
+            p{
+               color: rgb(147,147,147);
+               text-align: center;
+            }
+        }
+        .houseinfo{
+            padding-bottom: 15px;
+            ul{
+                width: 100%;
+                height: auto;
+                padding: 10px 0 10px;
+                li{
+                    color: rgb(51,51,51);
+                    width: 50%;
+                    height: 30px;
+                    font-size: 14px;
+                    line-height: 30px;
+                    text-align: left;
+                    overflow: hidden;
+                    word-break:keep-all;
+                    white-space:nowrap;
+                    text-overflow:ellipsis;
+                    span.leftdesc{
+                        color: rgb(150,150,150);
+                    }
+                    span.price{
+                        color: rgb(230,75,0);
+                    }
+                }
+            }
+        }
+        .sellpoint{
+            padding-bottom: 30px;
+            position: relative;
+            h5{
+                border-left: 3px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 18px;
+                line-height: 18px;
+                padding-left: 10px;
+                margin: 20px 0 5px;
+            }
+            p.position{
+                margin: 0;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+            }
+            .sellpointlist.open{
+                height: auto!important;                
+            }
+            .sellpointlist{
+                position: relative;
+                width: 100%;
+//              height: 200px;
+                overflow: hidden;
+                padding: 10px 0 0;
+                .vertical{
+                    width: 0;
+                    height: calc(100% - 50px);
+                    position: absolute;
+                    z-index: 0;
+                    border-left: 1px solid rgba(150,150,150,0.5);
+                    top: 25px;
+                    left: 25px;
+                }
+                .cross{
+                    width: 100%;
+                    height: auto;
+                    padding: 0 0 10px;
+                    .yuan{
+                        position: relative;
+                        z-index: 1;
+                        float: left;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        border: 1px solid rgb(193,224,255);
+                        background-color: rgb(228,241,255);
+                        color: rgb(65,160,255);
+                        text-align: center;
+                        line-height: 50px;
+                    }
+                    .detail{
+                        padding: 0 0 0 10px;
+                        width: calc(100% - 50px);
+                        float: left;
+                        p{
+                            margin: 0;
+                        }
+                    }
+                    .clear{
+                        clear: both;
+                    }
+                }
+                .jiaotong{
+                    position: relative;
+                    min-height: 60px;
+                    .yuan{
+                        position: absolute;
+                        bottom: 10px;
+                    }
+                    .detail{
+                        margin-left: 50px;
+                    }
+                }
+            }
+            
+        }
+        .mainunit{
+            padding-bottom: 15px;
+            h5{
+                border-left: 3px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 18px;
+                line-height: 18px;
+                padding-left: 10px;
+                margin: 20px 0 5px;
+            }
+            .nomainimg{
+                height: 0!important;
+            }
+            .hasmainimg{
+                height: 180px;
+            }
+            #wrapper4{
+                margin: 10px 0 0;
+                position: relative;
+                z-index: 1;
+                height: 180px;
+                width: 100%;
+                background:rgb(255,255,255);
+                overflow: hidden;
+                -ms-touch-action: none;
+                #scroller4{
+                    position: absolute;
+                    z-index: 1;
+                    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+//                  width: 800px;
+                    height: 100%;
+                    -webkit-transform: translateZ(0);
+                    -moz-transform: translateZ(0);
+                    -ms-transform: translateZ(0);
+                    -o-transform: translateZ(0);
+                    transform: translateZ(0);
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    -webkit-text-size-adjust: none;
+                    -moz-text-size-adjust: none;
+                    -ms-text-size-adjust: none;
+                    -o-text-size-adjust: none;
+                    text-size-adjust: none;
+                    ul {
+                        list-style: none;
+                        width: 100%;
+                        height: 100%;
+                        padding: 0;
+                        margin: 0;
+                        li {
+                            margin-left: 8px;
+                            width: 200px;
+                            height: 100%;
+                            float: left;
+                            background-color: rgb(255,255,255);
+                            font-size: 14px;
+                            overflow: hidden;
+                            img{
+                                width: 200px;
+                                height: calc(100% - 30px);
+                                margin: auto;
+                                display: block;
+                            }
+                            p{
+                                margin: 0;
+                                height: 30px;
+                                line-height: 30px;
+                                text-align: center;
+                                font-size: 14px;
+                                color: rgb(102,102,102);
+                                background-color: white;
+                            }
+                            div{
+                                height: 20px;
+                                line-height: 20px;
+                                font-size: 12px;
+                                color: rgb(147,147,147);
+                                background-color: white;
+                                span{
+                                     color: rgb(230,75,0);
+                                }
+                            }
+                        }
+                    }
+                }
+               
+            }
+        }
+        .fyposition{
+            padding: 0;
+            .tit{
+                padding: 0 12px 0;
+                h5{
+                    border-left: 3px solid rgb(54,153,245);
+                    font-size: 16px;
+                    height: 18px;
+                    line-height: 18px;
+                    padding-left: 10px;
+                    margin: 20px 0 5px;
+                }
+            }
+            p{
+                margin: 0 12px 10px;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .counselor.open{
+            height: auto!important;
+        }
+        .counselor{
+            padding-bottom: 20px;
+            position: relative;
+            h5{
+                border-left: 3px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 18px;
+                line-height: 18px;
+                padding-left: 10px;
+                margin: 20px 0 5px;
+            }
+            ul{
+                width: 100%;
+                margin: 30px 0 0;
+                li{
+                    height: 50px;
+                    width: 100%;
+                    margin-bottom: 15px;
+                    .headimg{
+                        display: block;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        float: left;
+                    }
+                    .name{
+                        float: left;
+                        width: calc(100% - 90px);
+                        height: 50px;
+                        line-height: 50px;
+                        padding-left: 15px;
+                    }
+                    .font{
+                        float: left;
+                        margin-top: 5px;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        background-color: rgb(230,242,255);
+                        color: rgb(89,171,253);
+                        text-align: center;
+                        line-height: 40px;
+                        .iconfont{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            p.position{
+                margin: 0;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                height: 30px;
+                line-height: 30px;
+                background-color: white;
+                text-align: center;
+            }  
+        }
+         //底部广告
+        .advimg{
+            width: 100%;
+            height: 100px;
+            position: relative;
+            img{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            i.icon-guanbi2fill{
+                position: absolute;
+                z-index: 1001;
+                font-size: 20px;
+                top: 10px;
+                right: 10px;
+            }
+            a{
+                position: absolute;
+                z-index: 1000;
+                display: block;
+            }
+            a.android{
+                width: 50%;
+                height: 100%;
+                left: 0;
+            }
+            a.ios{
+                width: 50%;
+                height: 100%;
+                right: 0;
+            }
+        }
+        
+    }
+    //大屏
+    .plus{
+        .bannerposition{
+            position: relative;
+            width: 100%;
+            height: 280px;
+            .detailcursor{
+                width: 100%;
+                height: 100%;
+                .slider-pager{
+                    bottom: 10px;
+                    display: none;
+                    .slider-pager-page{
+                        i.icon{
+                            color: rgba(255,255,255,1);
+                            font-size: 12px;
+                        }
+                    }
+                    .slider-pager-page .active{
+                        color: white;
+                        i.icon{
+                            color: white;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .indexnum{
+                position: absolute;
+                z-index: 998;
+                bottom: 5px;
+                right: 5px;
+                color: white;
+                border-radius: 3px;
+                background-color: rgba(0,0,0,0.5);
+                padding: 0 5px 0;
+            }
+            .hascer{
+                position: absolute;
+                z-index: 998;
+                bottom: 5px;
+                left: 0;
+                color: white;
+                 background-color: rgba(0,0,0,0.5);
+                padding: 2px 5px 2px;
+                border-radius: 0 2px 2px 0;
+            }
+        }
+    }
+    
+}

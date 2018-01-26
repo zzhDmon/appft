@@ -1,0 +1,95 @@
+<!--我的界面模板-->
+<ion-view id="mine"  view-title="我的" hide-nav-bar=true>
+	
+	
+	<ion-content class="mine" has-bouncing=false>
+		<!-- <canvas width="100" height="100" id="testCanvas"></canvas> -->
+		
+		<div class="perinfo">
+			<div ng-if="myinfo.ShowImg!=='/app/images/broker_logo.png'" class="img">
+				<img class="headimg" ng-src="{{myinfo.ShowImg}}"/>
+			</div>
+			<div ng-if="myinfo.ShowImg=='/app/images/broker_logo.png'" class="img">
+				<div class="noneimg">
+					<i class="iconfont icon-touxiangx"></i>
+				</div>
+			</div>
+			
+			<p class="name"><span ng-if="myinfo.Name">{{myinfo.Name}}</span><span ng-if="!myinfo.Name">房田用户<span>{{myinfo.Phone | limitTo:-6 }}</span></span></p>
+			<p class="sign"><span ng-if="myinfo.Discription">{{myinfo.Discription}}</span><span ng-if="!myinfo.Discription">完善个性签名</span></p>
+		</div>
+		
+		<div class="offline"></div>
+		<div class="lookdetails" style="position: relative;">
+	       
+	        <div class="lefticon">
+	         	  <i class="iconfont icon-xiaoxilaba"></i> 
+	        </div> 
+		    <div class="minerool">
+				<ul>
+					<li><span class="lef">推荐经纪人同行加入房田，马上换福利</span><span class="rig" ui-sref="tabs.refcode">查看详情</span></li>
+				</ul>
+			</div>
+	    </div>
+	    
+	    
+	    <div class="borderline"></div>
+	    <ul class="enterlist">
+	    	<li ui-sref="tabs.myinfo">
+	    		<div class="tubiao">
+	    			<i class="iconfont icon-wodeziliao"></i>	    			
+	    		</div>
+	    		<p>我的资料</p>
+	    	</li>
+	    	<li ui-sref="tabs.mypoints">
+	    		<div class="tubiao">
+	    			<i class="iconfont icon-jifen"></i>
+	    		</div>
+	    		<p>我的积分</p>
+	    	</li>
+	    	<li ui-sref="tabs.myweidian({uid:uid})">
+	    		<div class="tubiao">
+	    			<i class="iconfont icon-weidian1"></i>
+	    		</div>
+	    		<p>我的微店</p>
+	    	</li>
+	    	<li ng-if="VStatus!==0 && VStatus!==undefined" ui-sref="tabs.checkprogress">
+	    		<div class="tubiao">
+	    			<i class="iconfont icon-renzheng1"></i>
+	    		</div>
+	    		<p>我的认证</p>
+	    	</li>
+	    	<li ng-if="VStatus==0 || !VStatus" ui-sref="tabs.minerenzheng">
+	    		<div class="tubiao">
+	    			<i class="iconfont icon-renzheng1"></i>
+	    		</div>
+	    		<p>我的认证</p>
+	    	</li>
+	    	<li ui-sref="tabs.refcode">
+	    		<div class="tubiao">
+	    			<i class="iconfont icon-tuijianma"></i>
+	    		</div>
+	    		<p>我的推荐码</p>
+	    	</li>
+	    	<!--<li>
+	    		<div class="tubiao">
+	    			<i class="iconfont icon-tongbu"></i>
+	    		</div>
+	    		<p>平台同步</p>
+	    	</li>-->
+	    	<li ui-sref="tabs.setting">
+	    		<div class="tubiao">
+	    			<i class="iconfont icon-shezhi "></i>
+	    		</div>
+	    		<p>更多设置</p>
+	    	</li>
+	    	<li ui-sref="tabs.aboutus">
+	    		<div class="tubiao">
+	    			<i class="iconfont icon-guanyuwomen"></i>
+	    		</div>
+	    		<p>关于我们</p>
+	    	</li>
+	    	<div style="clear: both;"></div>
+	    </ul>
+	</ion-content>
+</ion-view>

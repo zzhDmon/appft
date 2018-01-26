@@ -1,0 +1,164 @@
+/*卡片*/
+#searchhouse{
+   
+    .searchhouse-header{
+        position: absolute;
+        z-index: 999;
+        width: 100%!important;
+        height: 44px!important;
+        top: 0;
+        padding-top: 10px!important;
+        border-bottom: 1px solid rgb(230,230,230);
+        background-image: none;
+        background-color: rgb(246,246,246);
+        span.goback{
+            width: 10%;
+            height: 40px;
+            text-align: left;
+            line-height:40px;               
+            i{
+                font-size: 30px; 
+                color: rgb(51,51,51);
+            }
+        }
+        span.item-input-wrapper{
+            width: 85%;
+            height: 28px;
+            background-color: rgb(228,228,228);
+            span{
+                display: inline-block;
+                height: 28px;
+                text-align: center;
+                line-height: 28px;
+            }
+            i.icon--pulldown{
+                color: gray;
+            }
+            input{
+                padding-left: 10px;
+            }
+        }
+        span.cancel{
+            width: 15%;
+            text-align: left;
+            padding-left: 10px;
+        }
+    }
+    .searchhouse{
+        margin-top: 44px;
+        padding: 0;
+        .card{
+            box-shadow: none;
+        }
+        .havent{
+            margin-top: 180px;
+            box-shadow: none;
+            img{
+                display: block;
+                width: 150px;
+                height: 150px;
+                margin: auto;
+            }
+            p{
+                text-align: center;
+                color: rgb(102,102,102);
+            }
+        }
+        .searchhistory{
+            .list{
+                padding: 0 0 0 12px;
+                .item{
+                        padding: 15px 12px 15px 0;
+                        span{
+                            display: block!important;
+                            float: left;
+                        }
+                        .lef{
+                            width: 80%;
+                            height: 100%;
+                            color: #666666;
+                            word-break:keep-all;
+                            white-space:nowrap;
+                            overflow:hidden; 
+                            text-overflow:ellipsis;
+                        }
+                        .rig{
+                            text-align: right;
+                            width: 20%;
+                            height: 100%;
+                            color: #adadad;
+                            i{
+                                font-size: 22px;
+                            }
+                        }
+                }
+            }
+            .button{
+                display: block;
+                width: 100%;
+                margin-top: 15px;
+            }
+            p.nohistory{
+                margin: 0;
+                padding: 0;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                font-size: 14px;
+                color: rgb(150,150,150);
+                background-color: rgb(255,255,255);
+            }
+            //热门搜素
+            .hotsearch{
+                h5{
+                    background-color: rgb(255,255,255);
+                    margin: 0;
+                    padding: 0 0 0 12px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 16px;
+                    color: #333;
+                }
+                ul{
+                    width: 100%;
+                    padding: 0 0 0 12px;
+                    li{
+                        width: 100%;
+                        height: 50px;
+                        line-height: 50px;
+                        padding: 15px 12px 15px 0;
+                        line-height: 20px;
+                        font-size: 16px;
+                        color: #333;
+                        border-bottom: 1px solid #e6e6e6;
+                        span{
+                            display: block;
+                            margin:1px 10px 0 0;
+                            float: left;
+                            font-size: 14px;
+                            width: 18px;
+                            height: 18px;
+                            border-radius: 50%;
+                            text-align: center;
+                            line-height: 18px;
+                            background-color: #ff504c;
+                            color: #fff;
+                        }
+                    }
+                    li:nth-child(2){
+                        span{
+                            background-color: #ff9e40; 
+                        }
+                    }
+                    li:nth-child(3){
+                        span{
+                            background-color: #83cc2b; 
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+

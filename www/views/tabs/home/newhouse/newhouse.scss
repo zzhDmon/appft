@@ -1,0 +1,373 @@
+#newhouse{
+    .newhouse{
+        background-color: rgb(246,246,246);
+        margin-top: 44px;
+        //底线
+        p.baseLine{
+            margin: 0;
+            padding: 15px 12px 15px;
+            background-color: rgb(246,246,246);
+            span {
+                text-align: center;
+                display: block;     /*设置为块级元素会独占一行形成上下居中的效果*/
+                font-size: 14px;
+                color: #969696;
+                position: relative;   /*定位横线（当横线的父元素）*/
+            }
+            span:before{
+                content: '';                 /*CSS伪类用法*/
+                position: absolute;         /*定位背景横线的位置*/
+                top: 52%;
+                background: #e6e6e6;       /*宽和高做出来的背景横线*/
+                width: 28%;
+                height: 1px;
+            }
+            span:after {
+                content: '';                 /*CSS伪类用法*/
+                position: absolute;         /*定位背景横线的位置*/
+                top: 52%;
+                background: #e6e6e6;       /*宽和高做出来的背景横线*/
+                width: 28%;
+                height: 1px;
+            }
+            span:before{
+                left: 0;        /*调整背景横线的左右距离*/
+            }
+            span:after {
+                right: 0;
+            }
+        }
+        .card{
+            box-shadow: none;
+//          padding: 0 0 0 12px;
+            p.loading{
+                margin: 100px 0 100px;
+                font-size: 50px;
+                text-align: center;
+                .spinner svg {
+                  width: 60px !important;
+                  height: 60px !important;
+                }
+            }
+            ul{
+                padding: 0 0 0 12px;
+                width: 100%;
+                li:last-child{
+                    border-bottom: none;
+                }
+                li{
+                    width: 100%;
+                    padding: 15px 12px 13px 0;
+                    border-bottom: 1px solid rgb(230,230,230);
+                    .img{
+                        width: 35vw;
+                        height: auto;
+                        float: left;
+                        position: relative;
+                        img{
+                            border-radius: 3px;
+                            width: 100%;
+                            height: 85px;
+                        } 
+                        .newonline{
+                            position: absolute;
+                            bottom: 6px;
+                            right: 0;
+                            text-align: center;
+                            font-size: 12px;
+                            color: rgb(255,255,255);
+                            z-index: 998;
+                            background-color: rgba(0,0,0,0.3);
+                            padding: 0 5px 0;
+                        }
+                    }
+
+                    .description{
+                        float: left;
+                        width: calc(65vw - 38px);
+                        margin-left: 10px;
+                        .tit{
+                            color: rgb(51,51,51);
+                            font-size:16px;
+                            height: 20px;
+                            line-height: 20px;
+                            margin: 0;
+                            .name{
+                                width: 50%;
+                                float: left;
+                                height: 20px;
+                                line-height: 20px;
+                                word-break:keep-all;
+                                white-space:nowrap;
+                                overflow:hidden; 
+                                text-overflow:ellipsis;
+                            }
+                            .price{
+                                width: 50%;
+                                float: left;
+                                text-align: right;
+                                float: right;
+                                height: 20px;
+                                line-height: 20px;
+                                color: rgb(230,75,0);
+                                word-break:keep-all;
+                                white-space:nowrap;
+                                overflow:hidden; 
+                                text-overflow:ellipsis;
+                                font-size: 14px;
+                                span{
+                                    font-weight: 600;                                    
+                                }
+                            }
+                        }
+                        p{
+                            width: 100%;
+                            margin: 0;
+                            font-size: 14px;
+                            height: 22px;
+                            overflow: hidden;
+                            color: rgb(102,102,102);
+                            span{
+                                border-radius: 2px;
+                                font-size: 12px;
+                                padding: 3px;
+                                background-color:rgb(230,242,255) ;
+                                color: rgb(89,171,253);
+                                margin-right: 3px;
+                            }
+                        }
+                        p.devarea{
+                            font-size: 14px;
+                            color: #666;
+                            height: 23px;
+                            line-height: 23px;
+                        }
+                        div.earn{
+                            margin: 0 0 2px;
+                            font-size: 14px;
+                            color: rgb(102,102,102);
+                            width: calc(65vw - 38px);
+                            .yongjin{
+                                float: left;
+                                height: 25px;
+                                line-height: 25px;
+                                font-size: 13px;
+                                width: 100%;
+                                span.unit{
+                                    padding: 1px 5px;
+                                    background-color: rgb(255,90,90);
+                                    color: rgb(255,255,255);
+                                    border-radius: 5px 0 0 5px;
+                                }
+                                span.count{
+                                    padding: 2px 5px;
+                                    background-color: rgb(255,238,238);
+                                    color: rgb(255,90,90);
+                                    border-radius: 0 5px 5px 0;
+                                }
+                                span.nosignunit{
+                                    padding: 0 3px;
+                                    border: 1px solid rgb(255,90,90);
+                                    color: rgb(255,90,90);
+                                    border-radius: 3px;
+                                }
+                                span.nosigncount{
+                                    padding: 0 5px;
+                                    color: rgb(150,150,150);
+                                }
+                            }
+                           
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    //大屏
+    .plus{
+        margin-top: 44px;
+        background-color: rgb(246,246,246);
+        //底线
+            p.baseLine{
+                margin: 0;
+                padding: 15px 12px 15px;
+                background-color: rgb(246,246,246);
+                span {
+                    text-align: center;
+                    display: block;     /*设置为块级元素会独占一行形成上下居中的效果*/
+                    font-size: 14px;
+                    color: #969696;
+                    position: relative;   /*定位横线（当横线的父元素）*/
+                }
+                span:before{
+                    content: '';                 /*CSS伪类用法*/
+                    position: absolute;         /*定位背景横线的位置*/
+                    top: 52%;
+                    background: #e6e6e6;       /*宽和高做出来的背景横线*/
+                    width: 28%;
+                    height: 1px;
+                }
+                span:after {
+                    content: '';                 /*CSS伪类用法*/
+                    position: absolute;         /*定位背景横线的位置*/
+                    top: 52%;
+                    background: #e6e6e6;       /*宽和高做出来的背景横线*/
+                    width: 28%;
+                    height: 1px;
+                }
+                span:before{
+                    left: 0;        /*调整背景横线的左右距离*/
+                }
+                span:after {
+                    right: 0;
+                }
+            }
+        .card{
+            box-shadow: none;
+//          padding: 0 0 0 12px;
+            p.loading{
+                margin: 100px 0 100px;
+                font-size: 50px;
+                text-align: center;
+                .spinner svg {
+                  width: 60px !important;
+                  height: 60px !important;
+                }
+            }
+            ul{
+                width: 100%;
+                padding: 0 0 0 12px;
+                li:last-child{
+                    border-bottom: none;
+                }
+                li{
+                    width: 100%;
+                    padding: 15px 12px 13px 0;
+                    border-bottom: 1px solid rgb(230,230,230);
+                    .img{
+                        width: 28vw;
+                        height: auto;
+                        float: left;
+                        position: relative;
+                        img{
+                            border-radius: 3px;
+                            width: 100%;
+                            height: 90px;
+                        } 
+                        .newonline{
+                            position: absolute;
+                            bottom: 6px;
+                            right: 0;
+                            text-align: center;
+                            font-size: 12px;
+                            color: rgb(255,255,255);
+                            z-index: 998;
+                            background-color: rgba(0,0,0,0.3);
+                            padding: 0 5px 0;
+                        }
+                    }
+
+                    .description{
+                        float: left;
+                        width: calc(72vw - 38px);
+                        margin-left: 10px;
+                        .tit{
+                            color: rgb(51,51,51);
+                            font-size:16px;
+                            height: 20px;
+                            line-height: 20px;
+                            margin: 0;
+                            .name{
+                                width: 50%;
+                                float: left;
+                                height: 20px;
+                                line-height: 20px;
+                                word-break:keep-all;
+                                white-space:nowrap;
+                                overflow:hidden; 
+                                text-overflow:ellipsis;
+                            }
+                            .price{
+                                width: 50%;
+                                float: left;
+                                text-align: right;
+                                height: 20px;
+                                line-height: 20px;
+                                color: rgb(230,75,0);
+                                word-break:keep-all;
+                                white-space:nowrap;
+                                overflow:hidden; 
+                                text-overflow:ellipsis;
+                                font-size: 14px;
+                                span{
+                                    font-weight: 600;                                    
+                                }
+                            }
+                        }
+                        p{
+                            width: 100%;
+                            margin: 0;
+                            font-size: 14px;
+                            height: 22px;
+                            overflow: hidden;
+                            color: rgb(102,102,102);
+                            span{
+                                border-radius: 2px;
+                                font-size: 12px;
+                                padding: 3px;
+                                background-color:rgb(230,242,255) ;
+                                color: rgb(89,171,253);
+                                margin-right: 3px;
+                            }
+                        }
+                        p.devarea{
+                            margin: 3px 0 0;
+                            font-size: 14px;
+                            color: #666;
+                            height: 23px;
+                            line-height: 25px;
+                        }
+                        div.earn{
+                            font-size: 14px;
+                            color: rgb(102,102,102);
+                            width: calc(72vw - 38px);
+                            margin: 0 0 2px;
+                            .yongjin{
+                                float: left;
+                                height: 25px;
+                                line-height: 25px;
+                                font-size: 13px;
+                                width: 100%;
+                                span.unit{
+                                    padding: 1px 5px;
+                                    background-color: rgb(255,90,90);
+                                    color: rgb(255,255,255);
+                                    border-radius: 5px 0 0 5px;
+                                }
+                                span.count{
+                                    padding: 2px 5px;
+                                    background-color: rgb(255,238,238);
+                                    color: rgb(255,90,90);
+                                    border-radius: 0 5px 5px 0;
+                                }
+                                span.nosignunit{
+                                    padding: 0 3px;
+                                    border: 1px solid rgb(255,90,90);
+                                    color: rgb(255,90,90);
+                                    border-radius: 3px;
+                                }
+                                span.nosigncount{
+                                    padding: 0 5px;
+                                    color: rgb(150,150,150);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+    }
+}

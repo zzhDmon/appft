@@ -1,0 +1,49 @@
+
+<!--对话模板-->
+<ion-view id="refcode" view-title="我的推荐码分" hide-nav-bar=true>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			我的推荐码
+		</div>
+		<div class="right" >
+			
+		</div>
+	</div>
+	<ion-content on-swipe-right="onSwipeRight()" class="refcode">
+		<div class="head">
+			<p class="myrefcode">我的推荐码</p>
+			<p class="tuijianma">{{Phone}}</p>
+		</div>
+		
+		<div class="methods">
+			<div class="box">
+				<div class="line">
+					<span class="lecircle"></span>
+				</div>
+				<div class="text">推荐给同行，一起赢好礼</div>
+				<div class="line">
+					<span class="ricircle"></span>
+				</div>
+			</div>
+			<p class="meth">方法一：让同行在苹果商店APPstore，安卓腾讯应用宝等各大应用市场搜索“房田”,下载并填写你的推荐码AAAA097注册</p>
+			<p class="meth">方法二：一键分享给微信同行好友，或分享到自己的微信朋友圈，更简单更快捷。 </p>
+		</div>
+		
+		<div class="share">
+			<div class="weixin">
+				<button class="button" ng-click="share(0)">发给微信好友</button>
+			</div>
+			<div class="timeline">
+				<button class="button" ng-click="share(1)">分享到朋友圈</button>
+			</div>
+		</div>
+		
+		<!--分享缩略图-->
+		<canvas style="display: none;" id="refcodemycans" width="100px" height="100px"></canvas>
+	</ion-content>
+	
+</ion-view>
+

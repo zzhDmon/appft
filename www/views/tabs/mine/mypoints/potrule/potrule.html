@@ -1,0 +1,34 @@
+
+<!--对话模板-->
+<ion-view id="potrule" view-title="积分规则" hide-nav-bar=true>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			积分规则
+		</div>
+		<div class="right" >
+		</div>
+	</div>
+	<ion-content on-swipe-right="onSwipeRight()" class="potrule">
+		<div class="potaward">
+			<ul>
+				<li class="award">积分奖励</li>
+				
+				<li ng-repeat="rule in rules.list track by $index">{{rule.Name}} <span>+{{rule.Value}}</span></li>
+			</ul>
+		</div>
+		<div class="offline"></div>
+		
+		<div class="ruleexp">
+			<p class="explation">规则说明</p>
+			<div class="detailexp">
+				<p ng-repeat="desc in descarr track by $index">{{desc}}</p>
+				
+			</div>
+		</div>
+	</ion-content>
+	
+</ion-view>
+

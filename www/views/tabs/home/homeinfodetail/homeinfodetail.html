@@ -1,0 +1,92 @@
+<!--联系人界面模板-->
+<ion-view id="homeinfodetail" hide-nav-bar=true view-title="资讯详情">
+	<!--<ion-nav-buttons side="secondary">
+		
+		<a class="button button-small button-icon"  ng-click="openPopoverView($event)"><i class=" iconfont icon-fenxiang1" style="font-size: 25px!important;"></i></a>
+	</ion-nav-buttons>-->
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			资讯详情
+		</div>
+		<div class="right" ng-click="openPopoverView($event)">
+			<i class="iconfont icon-fenxiang1"></i>
+		</div>
+	</div>
+	
+	
+	
+	<ion-content on-swipe-right="onSwipeRight()"  class="homeinfodetail">
+		<canvas style="display: none;" id="homeinfomycans" width="100px" height="100px"></canvas>
+		
+		<div class="first">
+			<div class="card main">
+			</div>
+			
+			
+			
+			<!--<div ng-if="!userid" class="card adv">
+				<div class="botdiv">
+					<div class="leftline"></div>
+					<div class="text">广告</div>
+					<div class="rightline"></div>
+					<div style="clear: both;"></div>
+					<div class="img">
+						<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.fangtian.ft"><div class="android"></div></a>
+						<img src="imgs/资讯详情页_广告位.png"/>
+						<a href="itms-apps://itunes.apple.com/us/app/%E6%88%BF%E7%94%B0%E7%BD%91/id1288448623?mt=8"><div class="ios"></div></a>
+					</div>
+				</div>
+			</div>-->
+			<div ng-if="userid" class="card myweidian" ui-sref="tabs.weidian({uid:userid})">
+				<div class="botdiv">
+					<div class="leftline"></div>
+					<div class="text">广告</div>
+					<div class="rightline"></div>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="div">
+					<img ng-if="ShowImg" ng-src="{{ShowImg}}"/>
+					<div ng-if="!ShowImg" class="img">
+						<i class="iconfont icon-touxiangx"></i>
+					</div>
+					<div class="description">
+						<h3>{{Name}}</h3>
+						<p>{{discription}}</p>
+					</div>
+					<div class="look" >
+						查看
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+		<!--分享浮动框 ion-popover-view-->
+		<script id="infodetailspopover.html" type="text/ng-template">
+			<ion-popover-view class="Bottom-share-popover">
+				<ul>
+					<li class="weixin" ng-click="share(0)">
+						<div class="img">
+							<img src="imgs/微信.png"/>
+						</div>
+						<p>微信好友</p>
+					</li>
+					<li class="pengyouquan" ng-click="share(1)">
+						<div class="img">
+							<img src="imgs/朋友圈.png"/>
+							
+						</div>
+						<p>朋友圈</p>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<h4 ng-click="closePopoverView($event)">取消</h4>
+			</ion-popover-view>
+		</script>
+	</ion-content>
+
+	
+</ion-view>

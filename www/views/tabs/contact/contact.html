@@ -1,0 +1,92 @@
+    <ion-view id="client" view-title="通讯录" hide-nav-bar=true>  
+        
+        <div class="header">
+			<div class="back">
+			</div>
+			<div class="title">
+				我的客户
+				 <!--<form style="width:100%;height:44px;">
+		            <div class="item-input-inset" style="border:0;height:100%;width:100%;">
+		                <div class="item-input-wrapper" style="background-color:#fff;height:32px;border:solid 1px #E1E1E1;width:100%;">
+		                    <i class="icon ion-android-search placeholder-icon" style="color: #CCCCCC;font-size:20px;cursor:pointer;"></i>
+		                    <input type="search" placeholder="请输入城市名称" style="font-size:14px;color:#262626;height:22px;width:100%;" ng-change="startDot()" ng-model="$parent.cityName">
+		                    <i class="ion-close-circled" ng-click="searchEmpty()" style="color: #CCCCCC;display:{{searchEmptyShow ? 'block' : 'none'}};"></i>
+		                </div>
+		            </div>
+		        </form>-->
+			</div>
+			<div class="right" ng-if="havenloged" ui-sref="tabs.createcli({id:-1})">
+				<i class="iconfont icon-webxinshishihuiyitianjialianxirenicon"></i>
+			</div>
+		</div>
+		
+		
+  		<div ng-if="havenloged && !showAddcontact" class="search_client item-input-inset">
+      		<div class="item-input-wrapper" ng-class="{true: 'wrappercal', false: 'wrappernocal'}[showCancel]">  
+            	<i class="icon ion-ios-search placeholder-icon"></i>  
+                <input type="search" name="" placeholder='输入联系人姓名查询' ng-change="searchContact(searchinfo.name)" ng-model='searchinfo.name'>  
+            	<span class="ion-close-circled" ng-click="searchEmpty()" ng-show="showEmpty"></span>
+      		</div>  
+      		<span class="cancel" ng-show="showCancel" ng-click="cancel()">取消</span>
+  		</div>
+  		
+  		<!--模态层-->
+  		<div ng-click="closemodaldiv()" class="modaldiv"></div>
+  		
+  		<div ng-if="!havenloged">
+  			<ion-content class="client">
+  				<div class="notlogin">
+  					<div class="img">
+  						<img src="imgs/即将上线_icon.png"/>
+  					</div>
+  					<p>录入客户前请先登陆</p>
+  					<div class="btn" ui-sref="login">登录房田</div>
+  				</div>
+  			</ion-content>
+  		</div>
+  		
+  		<!--显示客户列表-->
+  		<div ng-show="!showResult&&havenloged">
+	        <ion-content class="client" delegate-handle="clientScroll" on-swipe-down="onSwipeDown()" on-swipe-up="onSwipeUp()">  
+	            <ul ng-if="!showAddcontact" class="letterli">  
+	            <!--<ul ng-if="formatContacts.length<1" class="letterli">-->  
+	                <li class="client-list" ng-if="group.value.length>0" ng-repeat="group in formatContacts  | orderBy:'key'" id={{"cliindex-"+group.key}}>  
+	                    <div class="label" id={{"client-"+group.key}}><strong>{{group.key}}</strong></div>  
+	                    <ul class="clientli">  
+	                        <li ng-click='showenter($event,item.Phone,item.Id)' class="client-name" ng-repeat="item in group.value | orderBy:'pinyinName'">                       
+	                            <h2 class="">{{item.Name}}</h2>     
+	                            <p>{{item.Level}}</p>
+	                            <!--<span ng-if="item.Level==1">A 有价值</span><span ng-if="item.Level==2">B 一般</span><span ng-if="item.Level==3">C 观望</span>-->
+	                        </li>  
+	                    </ul>  
+	                </li>  
+	            </ul> 
+	            
+	            <div class="nocontacts" ng-if="showAddcontact">
+	            <!--<div class="nocontacts" ng-if="formatContacts||formatContacts.lengt>0">-->
+	            	<div class="img">
+	            		<img ng-src="imgs/客户—空页面400x400.png"/>
+	            	</div>
+	            	<p>点击右上角，录入客户信息吧</p>
+	            	
+	            </div>
+	            
+	        </ion-content>  
+  		</div>
+  		<!--显示搜索结果-->
+      	<div ng-show="showResult&&havenloged">
+      		<ion-content class="client">
+      			<ul class="clientli">  
+                    <li ng-click='showenter($event,item.Phone,item.Id)' class="client-name" ng-repeat="item in searchResultarr track by $index">                       
+                        <h2 class="">{{item.Name}}</h2>     
+                        <p>{{item.Level}}</p>
+                    </li>  
+                </ul>
+      		</ion-content>
+      	</div>
+      
+        <!--同客户列表一起显示-->
+        <div ng-show="!showResult&&havenloged" class="citybox-shortcuts">  
+      		<a href="" ng-repeat="letter in letterarr"  ng-touchmove="mTouch($event)" ng-click="mTouch($event)">{{letter}}</a>
+        </div>  
+    </ion-view>  

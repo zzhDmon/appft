@@ -1,0 +1,31 @@
+#shareposter{
+    .btn{
+        z-index: 999;
+        position: absolute;
+        top: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgba(126,126,126,0.2);
+        text-align: center;
+        line-height: 30px;
+        font-size: 2rem;
+        color: white;
+    }
+    .backbotton{
+        left: 5px;
+    }
+    .sharebotton{
+        right: 5px;
+    }
+    .shareposter{
+        .userimg{
+            box-shadow: none;
+            .mainimg{
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+    }
+}

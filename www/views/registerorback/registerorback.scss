@@ -1,0 +1,79 @@
+#registerorback{
+    .header{
+        background-color: rgb(246,246,246);
+    }
+    .registerorback{
+        margin-top: 44px;
+        background-color: rgb(255,255,255);
+        height: 100%;
+       .card{
+           box-shadow: none;
+       } 
+       .list{
+           position: relative;
+           .button{
+               position: absolute;
+               z-index: 999;
+               width: 30vw;
+               height: 35px;
+               font-size: 14px;
+               top: 7px;
+               right: 10px;
+               color: rgb(65,160,255);
+               border: 1px solid rgb(65,160,255);
+               border-radius: 3px;
+           }
+           .item-input{
+               margin: 0;
+               border: none;
+               border-bottom: 1px solid rgb(230,230,230);
+               .input-label{
+                   padding: 7px 0 7px;
+                   font-size: 14px;
+                   width: 20vw!important;
+                   color: #333;
+               }
+               input{
+                   font-size: 16px;
+                   color: #333;
+               }
+               
+           }
+       }
+       .agreement{
+           border-top: 1px solid rgb(230,230,230);
+           .list{
+               .item{
+                   width: 100%;
+                   span{
+                       position: absolute;
+                       z-index: 9999;
+                       color: rgb(65,160,255);
+                   }
+               }
+           }
+       }
+       .loginbtn{
+//         background-color: rgb(242,242,242);
+           .subbtn{
+               width: 100%;
+               margin-top:20px ;
+               padding: 20px 5vw 10px;
+               .button{
+                   width: 90vw;
+                   font-size: 16px;
+                   background-color: rgb(65,160,255);
+               }
+           }
+       }
+       .expl{
+           margin: 0;
+           padding: 0;
+           height: 25px;
+           line-height: 25px;
+           font-size: 14px;
+           text-align: center;
+           color: #333;
+       }
+    }
+}

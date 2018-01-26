@@ -1,0 +1,109 @@
+
+<!--对话模板-->
+<ion-view id='chuzudetail'  hide-nav-bar="true">
+	
+	<!--底部联系人-->
+	<div class="contacts">
+		<div class="name">
+			<div class="headimg">
+				<div ng-if="!chuzudata.avatar" class="default">
+					<i class="iconfont icon-touxiangx"></i>
+				</div>	
+				<img ng-if="chuzudata.avatar" ng-src="{{chuzudata.avatar}}"/>
+								
+			</div>
+			<div class="hisname">{{chuzudata.Name}}</div>
+		</div>
+		<div class="communite">
+			<a href="tel:{{chuzudata.Tel}}"><i class="iconfont icon-dianhua1"></i>&nbsp;电话咨询</a>		
+		</div>
+	</div>
+	
+	
+	<ion-content class="chuzudetail" has-bouncing=false>
+		<!--返回和分享-->
+		<div class="backbotton btn" ng-click="back()"><i class="icon ion-chevron-left"></i></div>
+		<div class="sharebotton btn" ng-click="openPopoverView($event)"><i class=" iconfont icon-fenxiang1" style="font-size: 20px!important;"></i></div>
+		<!--分享缩略图-->
+		<canvas style="display: none;" id="chuzumycans" width="100px" height="100px"></canvas>
+	
+		<ion-slide-box  class="detailcursor" >
+		  <ion-slide ng-repeat="imgurl in chuzudata.Imgs">
+		    <div class="box"><img ng-src="{{imgurl}}"/></div>
+		  </ion-slide>
+		</ion-slide-box>
+	
+		<div class="card detailname">
+			<h4>{{chuzudata.Title}}</h4>
+			<p><span class="from">{{chuzudata.Source}}</span><span class="time">{{chuzudata.UpdateTime}}</span> <span class="text" ui-sref="tabs.readchuzu({url:chuzudata.Href})"><a href="{{chuzudata.Href}}">阅读原文</a></span></p>
+			<div class="borderline"></div>
+			<ul>
+				<li>
+					<p class="top">租金</p>
+					<p class="bottom">{{chuzudata.Price}} <span ng-if="chuzudata.Price.substring(chuzudata.Price.length-3)!=='元/月'">元/月</span></p>
+				</li>
+				<li class="line"></li>
+				<li>
+					<p class="top">房型</p>
+					<p class="bottom">{{chuzudata.HouseType}}</p>
+				</li>
+				<li class="line"></li>
+				<li>
+					<p class="top">面积</p>
+					<p class="bottom">{{chuzudata.Space}}m²</p>
+				</li>
+			</ul>
+		</div>
+		<div class="offline"></div>
+		
+		<div class="card houseinfo">
+			<ul>
+				<li>朝向：{{chuzudata.Orientation}}<span ng-if="!chuzudata.Orientation">--</span></li>
+				<li>楼层：{{chuzudata.Floor}}<span ng-if="!chuzudata.Floor">--</span></li>
+				<li>装修：{{chuzudata.Fitment}}<span ng-if="!chuzudata.Fitment">--</span></li>
+				<li>小区名称：{{chuzudata.Community}}<span ng-if="!chuzudata.Community">--</span></li>
+				<li>出租方式：{{chuzudata.RentType}}<span ng-if="!chuzudata.RentType">--</span></li>
+			</ul>
+			<p>地址：{{chuzudata.Address}}</p>
+		</div>
+		<div class="offline" ng-if="chuzudata.Facility!==''"></div>
+		<div class="card peizhi" ng-if="chuzudata.Facility!==''">
+			<h5>配置</h5>
+			<p>{{chuzudata.Facility}}</p>
+		</div>
+		<div ng-if="chuzudata.Desc!==null" class="offline"></div>
+		<div ng-if="chuzudata.Desc!==null" class="card abouthouse">
+			<h5>房源概况</h5>
+			<p>{{chuzudata.Desc}}</p>
+		</div>
+		
+		
+		<div style="height: 50px;width: 100%;"></div>
+		
+		<!--分享浮动框 ion-popover-view-->
+		<script id="chuzudetailpopover.html" type="text/ng-template">
+			<ion-popover-view class="Bottom-share-popover">
+				<ul>
+					<li class="weixin" ng-click="share(0)">
+						<div class="img">
+							<img src="imgs/微信.png"/>
+						</div>
+						<p>微信好友</p>
+					</li>
+					<li class="pengyouquan" ng-click="share(1)">
+						<div class="img">
+							<img src="imgs/朋友圈.png"/>
+							
+						</div>
+						<p>朋友圈</p>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<h4 ng-click="closePopoverView($event)">取消</h4>
+			</ion-popover-view>
+		</script>	
+		
+	</ion-content>
+	
+</ion-view>
+

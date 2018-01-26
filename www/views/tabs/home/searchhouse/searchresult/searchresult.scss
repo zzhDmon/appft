@@ -1,0 +1,117 @@
+#searchresult{
+    .header{
+        .title{
+            padding: 0 15px 0;
+            word-break:keep-all;
+            white-space:nowrap;
+            overflow:hidden; 
+            text-overflow:ellipsis;
+        }
+        .back{
+             height: 40px;
+            text-align: left;
+            line-height:40px;               
+            i{
+                font-size: 30px; 
+            }
+        }
+    }
+    .searchresult{
+        margin-top: 44px;
+        .allre{
+            padding: 0 12px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            color: rgb(102,102,102);
+        }
+        .card{
+            box-shadow: none;
+            padding: 0 0 0 12px;
+            ul{
+                    width: 100%;
+                    li:last-child{
+                        border-bottom: none;
+                    }
+                    li{
+                        width: 100%;
+                        padding: 15px 12px 12px 0;
+                        border-bottom: 1px solid rgb(230,230,230);
+                        h5{
+                                color: rgb(51,51,51);
+                                font-size:16px;
+                                height: 30px;
+                                line-height: 30px;
+                                margin: 0;
+                                word-break:keep-all;
+                                white-space:nowrap;
+                                overflow:hidden; 
+                                text-overflow:ellipsis;
+                            }
+                        p{
+                            width: 100%;
+                            margin: 0;
+                            font-size: 14px;
+                            height: 20px;
+                            overflow: hidden;
+                            color: rgb(102,102,102);
+                            span{
+                                border-radius: 2px;
+                                font-size: 12px;
+                                padding: 2px 3px 2px;
+                                background-color:rgb(230,242,255) ;
+                                color: rgb(89,171,253);
+                                margin-right: 3px;
+                            } 
+                        }
+                        .address{
+                            height: 25px;
+                            line-height: 25px;
+                        }
+                    }
+                    
+                }
+        }
+        //无搜索结果
+        .noresult{
+            padding: 80px 30px 0;
+            height: 400px;
+            
+            .tubiao{
+                width: 100%;
+                height: 100px;
+                img{
+                    margin: auto;
+                    display: block;
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            p{
+                margin: 30px 0 0;
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                font-size: 16px;
+                color: #666;
+            }
+            button{
+                display: block;
+                overflow: hidden;
+                margin: 25px auto 0;
+                width: 40%;
+                height: 40px;
+                font-size: 14px;
+                line-height: 40px;
+                text-align: center;
+                background-color: #fff;
+                color: #41a0ff;
+                border: 1px solid #41a0ff;
+                border-radius: 3px;
+            }
+        }
+        
+    }
+    
+}

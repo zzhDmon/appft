@@ -1,0 +1,15 @@
+<!--模板-->
+<ion-view id="imgcut" view-title="头像裁剪" class='dark'>
+	<ion-nav-buttons side="secondary">
+		<a ng-click="save()" style="color: gray;font-size: 1.4rem;" class="button button-small button-icon " >保存</a>	
+	</ion-nav-buttons>
+	
+	<ion-content on-swipe-right="onSwipeRight()" class="imgcut" has-bouncing=false>
+		<!--<img src="{{imgurl}}" />-->
+		<div class="card">
+			<img class="square" ng-src="{{view}}"/>
+			<img class="circle" ng-src="{{view}}"/>
+		</div>
+	</ion-content>
+
+</ion-view>

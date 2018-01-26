@@ -1,0 +1,28 @@
+
+<!--对话模板-->
+<ion-view id="imglist" hide-nav-bar=true class='dark'>
+	
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			
+		</div>
+		<div class="right" >
+			
+		</div>
+	</div>
+	
+	<ion-content on-swipe-right="onSwipeRight()">
+		
+		<div ng-show='name=="节日问候"' class="card imglist">
+			<img src="imgs/微信问候详情页.png"/>
+		</div>
+		<div ng-show='name=="房源海报"' class="card imglist">
+			<img src="imgs/房源海报详情页.png"/>
+		</div>
+	</ion-content>
+	
+</ion-view>
+

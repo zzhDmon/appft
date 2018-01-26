@@ -1,0 +1,226 @@
+
+<!--对话模板-->
+<ion-view id='newhousedetail'  hide-nav-bar="true">
+
+	<ion-content on-scroll="outerscrollListen()" delegate-handle="outerscroll" class="newhousedetail"  >
+		<div class="backbotton btn" ng-click="back()"><i class="icon ion-chevron-left"></i></div>
+		<div class="sharebotton btn" ng-click="openPopoverView($event)"><i class="iconfont icon-fenxiang1" style="font-size: 20px!important;"></i> </div>
+		<!--分享缩略图-->
+		<canvas style="display: none;" id="newhousedetailcans" width="100px" height="100px"></canvas>
+		
+		
+		
+		
+		<div>
+			<div class="bannerposition">
+				<!-- on-swipe-right="changeindex()" on-swipe-left="changeindex()"-->
+				<ion-slide-box on-slide-changed='changeindex()' delegate-handle='alikedetail-handle' class="detailcursor" >
+				  <ion-slide ng-repeat="banner in bannerarr track by $index" class="trycursor">
+				    <div class="box" style="width: 100%;height: 100%;"><img style="display: block;width: 100%;height: 100%;" ng-src="{{banner}}"/></div>
+				  </ion-slide>
+				</ion-slide-box>
+				<span class="hascer" ng-if="showone" ui-sref="login">佣金,登录认证后可见</span>
+				<span class="hascer" ng-if="showthree" ui-sref="tabs.renzheng">佣金,认证后可见</span>
+				<span class="hascer" ng-if="showtwo">佣{{newhousedetail.Commision}}</span>
+				<div class="indexnum">{{currentindex}}/{{totalbanner}}张</div>
+			</div>
+			
+		
+			<div class="card headandtime">
+				<p class="tit">{{newhousedetail.NewHouseName}}</h5>
+				<p>有效期至：{{newhousedetail.Deadline}}</p>
+			</div>
+			
+			
+			<div class="borderline"></div>
+			<div class="card houseinfo">
+				<ul>
+					<li><span class="leftdesc">均价：</span><span class="price"><span ng-if="newhousedetail.Price">{{newhousedetail.Price}}</span><span ng-if="!newhousedetail.Price">--</span>元/㎡</span></li>
+					<li><span class="leftdesc">开盘：</span><span ng-if="newhousedetail.OpenTime">{{newhousedetail.OpenTime}}</span><span ng-if="!newhousedetail.OpenTime">--</span></li>
+					<li><span class="leftdesc">交房时间：</span><span ng-if="newhousedetail.DeliverDate">{{newhousedetail.DeliverDate}}</span> <span ng-if="!newhousedetail.DeliverDate">--</span></li>
+					<li><span class="leftdesc">开发商：</span><span ng-if="newhousedetail.LandAgent">{{newhousedetail.LandAgent}}</span> <span ng-if="!newhousedetail.LandAgent">--</span></li>
+					
+				</ul>
+			</div>
+			
+			<div class="offline"></div>
+			<div class="card sellpoint">
+				<p class="position" ng-click="unfold()">显示全部<i class="iconfont icon-xiangxia2"></i></p>
+				<p class="position" ng-click="unfold()" style="display: none;">收起<i class="iconfont icon-xiangshang2"></i></p>
+				<h5>楼盘卖点</h5>
+				<div class="borderline"></div>
+				
+				<div class="sellpointlist">
+					<div class="vertical">
+						
+					</div>
+					<div class="jianjie cross">
+						<div class="yuan">
+							简介     
+						</div>
+						<div class="detail">
+							<p>{{newhousedetail.Description}}</p>
+							
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					<div ng-if="newhousedetail.SupportingFacilities" class="peitao cross">
+						<div class="yuan">
+							配套
+						</div>
+						<div class="detail">
+							<p>{{newhousedetail.SupportingFacilities}}</p>
+						</div>
+						
+						<div class="clear"></div>
+					</div>
+					
+					<div ng-if="newhousedetail.Area" class="diduan cross">
+						<div class="yuan">
+							地段
+						</div>
+						<div class="detail">
+							<p>{{newhousedetail.Area}}</p>
+						</div>
+						
+						<div class="clear"></div>
+					</div>
+					
+					<div ng-if="newhousedetail.Education" class="jiaoyu cross">
+						<div class="yuan">
+							教育
+						</div>
+						<div class="detail">
+							<p>{{newhousedetail.Education}}</p>
+						</div>
+						
+						<div class="clear"></div>
+					</div>
+					
+					<div ng-if="newhousedetail.Environment" class="huanjian cross">
+						<div class="yuan">
+							环境
+						</div>
+						<div class="detail">
+							<p>{{newhousedetail.Environment}}</p>
+						</div>
+						
+						<div class="clear"></div>
+					</div>
+					
+					<div class="jiaotong cross">
+						<div class="yuan">
+							交通
+						</div>
+						<div class="detail">
+							<p>{{newhousedetail.Transportation}}</p>
+						</div>
+						
+						<div class="clear"></div>
+					</div>
+					
+					<div style="clear: both;"></div>
+				</div>
+				
+				
+			</div>
+			
+			
+			
+			<div class="offline" ng-if="newhousedetail.ShowFloorPlanImg.length>0"></div>
+			<div class="card mainunit">
+				<h5 ng-if="newhousedetail.ShowFloorPlanImg.length>0">主力户型</h5>
+				<div class="borderline" ng-if="newhousedetail.ShowFloorPlanImg.length>0"></div>
+				<div id="wrapper4" ng-class="{true: 'hasmainimg',false: 'nomainimg'}[showmainimg]">
+					<div id="scroller4">
+						<ul>
+							<li ng-repeat="floorplanimg in newhousedetail.ShowFloorPlanImg track by $index">
+								<img ng-src="{{floorplanimg.Img}}"/>
+								<p>{{floorplanimg.Des}}</p>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="offline"></div>
+			<div class="card fyposition">
+				<div class="tit">
+					<h5>位置</h5>
+					<div class="borderline"></div>
+				</div>
+				<p>{{newhousedetail.Address}}</p>
+				<img src="{{mapimg}}"/>
+				
+			</div>
+			
+			<div class="card counselor">
+				
+				<h5>置业顾问</h5>
+				<div class="borderline"></div>
+				<p class="position" ng-click="switch()">显示全部<i class="iconfont icon-xiangxia2"></i></p>
+				<p class="position" ng-click="switch()" style="display: none;">收起<i class="iconfont icon-xiangshang2"></i></p>
+				
+				<ul>
+					<li ng-repeat="user in newhousedetail.Users track by $index">
+						<img class="headimg" src="imgs/经纪人头像.png"/>
+						<div class="name">
+							{{user.Name}}							
+						</div>
+						<a href="tel:{{user.Phone}}">
+							<div class="font">
+								<span class="iconfont icon-dianhua11"></span>
+							</div>
+							
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+			
+			
+		</div>
+		
+	
+		<!--底部广告  app端不显示-->
+		<!--<div class="advimg">
+			<a class="android" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.fangtian.ft"><div></div></a>
+			<a class="ios" href=""></a>
+			<i class="iconfont icon-guanbi2fill" ng-click="closeadv()"></i>
+			<img src="imgs/房田广告位.png"/>
+		</div>-->
+		
+		
+		
+		<div class="bottompad"></div>
+		
+		<!--分享浮动框 ion-popover-view-->
+		<script id="fydetailpopover.html" type="text/ng-template">
+			<ion-popover-view class="Bottom-share-popover">
+				<ul>
+					<li class="weixin" ng-click="share(0)">
+						<div class="img">
+							<img src="imgs/微信.png"/>
+						</div>
+						<p>微信好友</p>
+					</li>
+					<li class="pengyouquan" ng-click="share(1)">
+						<div class="img">
+							<img src="imgs/朋友圈.png"/>
+							
+						</div>
+						<p>朋友圈</p>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<h4 ng-click="closePopoverView($event)">取消</h4>
+			</ion-popover-view>
+		</script>
+		
+	</ion-content>
+	
+</ion-view>
+

@@ -1,0 +1,147 @@
+<!--联系人界面模板-->
+<ion-view id="shareinfodetails" hide-nav-bar=true view-title="资讯详情">
+	<!--<ion-nav-buttons side="secondary">
+		
+		<a class="button button-small button-icon"  ng-click="openPopoverView($event)"><i class=" iconfont icon-fenxiang1" style="font-size: 25px!important;"></i></a>
+	</ion-nav-buttons>-->
+	<div class="header">
+		<div class="back">
+			
+		</div>
+		<div class="title">
+			咨询详情
+		</div>
+		<div class="right" >
+			
+		</div>
+	</div>
+	
+	
+	
+	<ion-content class="shareinfodetails">
+		<div class="first" ng-show="type==1">
+			
+			<div class="card main">
+			</div>
+			<div ng-if="uid=='null'" class="card adv">
+				<div class="botdiv">
+					<div class="leftline"></div>
+					<div class="text">广告</div>
+					<div class="rightline"></div>
+					<div style="clear: both;"></div>
+					<div class="img">
+						<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.fangtian.ft"><div class="android"></div></a>
+						<img src="imgs/资讯详情页_广告位.png"/>
+						<div class="ios"></div>
+					</div>
+				</div>
+			</div>
+			<div ng-if="uid!=='null'" class="card myweidian">
+				<div class="div">
+					<img ng-src="{{ShowImg}}"/>
+					<!--<img ng-src="http://imgs.wujiuyun.com/images/logo.png"/>-->
+					<div class="description">
+						<h3>{{Name}}</h3>
+						<p>{{discription}}</p>
+					</div>
+					<div class="look" ui-sref="tabs.shareweidian">
+						查看
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="three" ng-show="type==2||type==3">
+			<div class="card head">
+				<h4>{{data.Title}}</h4>
+				<p><span class="frome">{{data.Source}}</span><span class="time">{{data.Time}}</span></p>
+			</div>
+			<div class="card main">
+			</div>
+			<div ng-if="uid=='null'" class="card adv">
+				<div class="botdiv">
+					<div class="leftline"></div>
+					<div class="text">广告</div>
+					<div class="rightline"></div>
+					<div style="clear: both;"></div>
+					<div class="img">
+						<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.fangtian.ft"><div class="android"></div></a>
+						<img src="imgs/资讯详情页_广告位.png"/>
+						<div class="ios"></div>
+					</div>
+				</div>
+			</div>
+			<div ng-if="uid!=='null'" class="card myweidian">
+				<div class="div">
+					<img ng-src="{{ShowImg}}"/>
+					<!--<img ng-src="http://imgs.wujiuyun.com/images/logo.png"/>-->
+					<div class="description">
+						<h3>{{Name}}</h3>
+						<p>{{discription}}</p>
+					</div>
+					<div class="look" ui-sref="tabs.shareweidian">
+						查看
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="xiaoshou" ng-show="type==4">
+			<div class="card head">
+				<h4>{{data.Title}}</h4>
+				<p>阅读次数：{{data.ReadCount}}</p>
+			</div>
+			<div class="card main">
+			</div>
+			<div ng-if="uid=='null'" class="card adv">
+				<div class="botdiv">
+					<div class="leftline"></div>
+					<div class="text">广告</div>
+					<div class="rightline"></div>
+					<div style="clear: both;"></div>
+					<div class="img">
+						<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.fangtian.ft"><div class="android"></div></a>
+						<img src="imgs/资讯详情页_广告位.png"/>
+						<div class="ios"></div>
+					</div>
+				</div>
+			</div>
+			<div ng-if="uid!=='null'" class="card myweidian">
+				<div class="div">
+					<img ng-src="{{ShowImg}}"/>
+					<!--<img ng-src="http://imgs.wujiuyun.com/images/logo.png"/>-->
+					<div class="description">
+						<h3>{{Name}}</h3>
+						<p>{{discription}}</p>
+					</div>
+					<div class="look" ui-sref="tabs.shareweidian">
+						查看
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--分享浮动框 ion-popover-view-->
+		<script id="infodetailspopover.html" type="text/ng-template">
+			<ion-popover-view class="Bottom-share-popover">
+				<ul>
+					<li class="weixin" ng-click="share(0)">
+						<div class="img">
+							<img src="imgs/微信.png"/>
+						</div>
+						<p>微信好友</p>
+					</li>
+					<li class="pengyouquan" ng-click="share(1)">
+						<div class="img">
+							<img src="imgs/朋友圈.png"/>
+							
+						</div>
+						<p>朋友圈</p>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<h4 ng-click="closePopoverView($event)">取消</h4>
+			</ion-popover-view>
+		</script>
+	</ion-content>
+
+	
+</ion-view>

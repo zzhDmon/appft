@@ -1,0 +1,77 @@
+<!--发现界面模板-->
+<ion-view id="find" view-title="发现" hide-nav-bar=true>
+	<!-- has-bouncing=false 不可滚动-->
+	<div class="header">
+		<div class="back">
+		</div>
+		<div class="title">
+			发现
+		</div>
+		<div class="right" >
+		</div>
+	</div>
+	
+	<ion-content class="find" scroller>
+		<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="finddoRefresh()"></ion-refresher>
+		<div class="offline"></div>
+		<div class="twoimg">
+			<div class="duanzi oneofimg" ui-sref="tabs.duanzi">
+				<div class="inside">
+					<img src="imgs/发现_优质段子.png"/>
+					<div class="text">
+						<h4>优质段子</h4>
+					</div>
+					
+				</div>
+			</div>
+			<div class="dazibao oneofimg" ui-sref="tabs.dazibao">
+				<div class="inside">
+					<img src="imgs/发现_大字报.png"/>
+					<div class="text">
+						<h4>大字报</h4>
+					</div>
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+		<div class="offline"></div>
+		
+		<div class="poster">
+			<h4 class="title">房源速销海报 <a ui-sref="tabs.findpopposter">更多<i class="iconfont icon-gengduo"></i></a></h4>
+			<div class="borderline"></div>
+			<div style="clear: both;"></div>
+			<div class="ninescroll">
+				
+				<div id="findwrapper">
+					<div id="findscroller">
+						<ul>
+							<li ui-sref="tabs.findchoosefy({tid:imglist.Id})" ng-repeat="imglist in findTempletearr track by $index">
+								<img ng-src="{{imglist.ShowImages}}"/>
+								<p>{{imglist.Name}}</p>
+								<div>已有<span>{{imglist.Hits}}</span>人使用</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="offline"></div>
+		
+		<div class="latestnews">
+			<div class="tit">
+				<h4 class="title">最新资讯 <a ui-sref="tabs.findinfo">更多<i class="iconfont icon-gengduo"></i></a></h4>
+				<div class="borderline"></div>
+			</div>
+			<ion-list class="list">
+				<ion-item collection-repeat="loushi in findNewsarr track by $index" class="item-thumbnail-right" ui-sref="tabs.findinfodetails({id:loushi.Id,type:1,uid:uid})" ng-click="shareinfo(loushi.Id,1,uid)">
+					<div class="img">
+						<img ng-src="{{loushi.Thumb}}"/>
+					</div>
+					<h2>{{loushi.Title}} </h2>
+					<p><span class="from">{{loushi.Source}}</span><span class="time">{{loushi.Time}}</span></p>
+				</ion-item>
+			</ion-list>
+		</div>
+	</ion-content>
+</ion-view>

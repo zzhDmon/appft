@@ -1,0 +1,500 @@
+#chuzudetail {
+    
+    //底部联系人
+    .contacts{
+        position: absolute;
+        z-index: 999;
+        bottom: 0;
+        height: 49px;
+        border-top: 1px solid rgb(230,230,230);
+        .name{
+            float: left;
+            width: 40vw;
+            height: 100%;
+            padding: 7px 5px 7px 15px;
+            background-color: rgb(255,255,255);
+            color: rgb(102,102,102);
+            .hisname{
+                padding-left: 5px;
+                width: calc(100% - 35px);
+                color: rgb(51,51,51);
+                height: 35px;
+                font-size: 16px;
+                float: left;
+                line-height: 35px;
+            }
+            .headimg{
+                width: 35px;
+                height: 35px;
+                float: left;
+                line-height: 35px;
+                text-align: center;
+                div{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background-color: rgb(245,245,245);
+//                  border: 1px solid rgb(224,224,224);
+                    i.iconfont{
+                        color: rgb(214,214,214);
+                        font-size: 22px;
+                        line-height: 35px;
+                    }
+                }
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .communite{
+            float: left;
+            width: 60vw;
+            height: 100%;
+            color: white;
+            background-color: rgb(54,153,245);
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: white;  
+                font-size: 16px;
+                line-height: 49px;
+                text-align: center;
+            }
+        }
+    }
+    
+    .chuzudetail {
+        position: absolute;
+        .btn {
+            z-index: 999;
+            position: absolute;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(126, 126, 126, 0.2);
+            text-align: center;
+            line-height: 30px;
+            font-size: 2rem;
+            color: white;
+        }
+        .backbotton {
+            left: 5px;
+        }
+        .sharebotton {
+            right: 5px;
+        }
+        
+        .detailcursor{
+            .box {
+                width: 100%;
+                height: 230px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .slider-pager{
+                position: absolute;
+                bottom: 5px;
+                .slider-pager-page{
+                    font-size: 12px;
+                }
+            }
+        }
+        .card {
+            box-shadow: none;
+            padding: 0 12px 0;
+        }
+        .detailname {
+            h4 {
+                font-size: 16px;
+                color: rgb(51, 51, 51);
+                margin: 10px 0 10px;
+                span {
+                    margin-right: 5px;
+                }
+            }
+            p {
+                margin: 10px 0 10px;
+                color: rgb(102,102,120);
+                span {
+                    margin-right: 15px;
+                }
+                .text {
+                    a{
+                        text-decoration: none;
+                        color: rgb(87,107,149);
+                    }
+                }
+            }
+            ul{
+                width: 100%;
+                height: auto;
+                padding: 15px 0 15px;
+                li{
+                    width: calc(33.33% - 1px);
+                    height: auto;
+                    line-height: 30px;
+                    text-align: center;
+                    p{
+                         font-size: 16px;
+                        text-align: center;
+                        line-height: 20px;
+                    }
+                    p.top{
+                        color: rgb(150,150,150);
+                        margin:0 0 10px;
+                    }
+                    p.bottom{
+                        color: rgb(230,75,0);
+                    }
+                }
+                .line{
+                    width: 0;
+                    height: 50px;
+                    border-right: 1px solid gainsboro;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        .houseinfo{
+            ul{
+                width: 100%;
+                height: 110px;
+                padding: 10px 0 10px;
+                li{
+                    width: 50%;
+                    height: 30px;
+                    overflow: hidden;
+                    font-size: 14px;
+                    line-height: 30px;
+                    text-align: left;
+                }
+            }
+            p{
+                margin: 0 0 10px;
+                font-size: 14px;
+                word-break:keep-all;
+                white-space:nowrap;
+                overflow:hidden; 
+                text-overflow:ellipsis;
+            }
+            .other{
+                h4{
+                    margin: 15px 0 10px;
+                    font-size: 16px;
+                    color: rgb(51,51,51);
+                }
+                p{
+                    margin: 0 0 15px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: rgb(102,102,102);
+                }
+            }
+            .fydesc{
+                h4{
+                    margin: 15px 0 10px;
+                    font-size: 16px;
+                    color: rgb(51,51,51);
+                }
+                p{
+                    margin: 0 0 15px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: rgb(102,102,102);
+                }
+            }
+        }
+        .peizhi{
+            padding-bottom: 20px;
+            h5{
+                border-left: 2px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 20px;
+                line-height: 20px;
+                padding-left: 10px;
+                margin: 20px 0 015px;
+            }
+            p{
+              margin: 0;
+              font-size: 14px;
+              line-height: 20px;
+              color: rgb(51,51,51);  
+              text-align: justify;
+            } 
+        }
+        .abouthouse{
+            padding-bottom: 20px;
+            h5{
+                border-left: 2px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 20px;
+                line-height: 20px;
+                padding-left: 10px;
+                margin: 20px 0 015px;
+            }
+            p{
+              margin: 0;
+              font-size: 14px;
+              line-height: 20px;
+              color: rgb(51,51,51);  
+              text-align: justify;
+              text-indent: 2em;
+            } 
+        }
+        .explore{
+            padding: 15px 12px 15px;
+            ul{
+                width: 60%;
+                float: left;
+                height: 40px;
+                overflow: hidden;
+                li{
+                    float: left;
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 5px;
+                    img{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .righttext{
+                float: right;
+                width: 40%;
+                height: 40px;
+                line-height: 40px;
+                font-size: 12px;
+                color:rgb(102,102,102);
+                text-align: right;
+            }
+        }
+        
+        
+    }
+    .plus {
+        position: absolute;
+        .btn {
+            z-index: 999;
+            position: absolute;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(126, 126, 126, 0.2);
+            text-align: center;
+            line-height: 30px;
+            font-size: 2rem;
+            color: white;
+        }
+        .backbotton {
+            left: 5px;
+        }
+        .sharebotton {
+            right: 5px;
+        }
+        
+        .detailcursor{
+            .box {
+                width: 100%;
+                height: 280px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .slider-pager{
+                position: absolute;
+                bottom: 5px;
+                .slider-pager-page{
+                    font-size: 12px;
+                }
+            }
+        }
+        .card {
+            box-shadow: none;
+            padding: 0 12px 0;
+        }
+        .detailname {
+            h4 {
+                font-size: 16px;
+                color: rgb(51, 51, 51);
+                margin: 10px 0 10px;
+                span {
+                    margin-right: 5px;
+                }
+            }
+            p {
+                margin: 10px 0 10px;
+                color: rgb(102,102,120);
+                span {
+                    margin-right: 15px;
+                }
+                .text {
+                    a{
+                        text-decoration: none;
+                        color: rgb(87,107,149);
+                    }
+                }
+            }
+            ul{
+                width: 100%;
+                height: auto;
+                padding: 15px 0 15px;
+                li{
+                    width: calc(33.33% - 1px);
+                    height: auto;
+                    line-height: 30px;
+                    text-align: center;
+                    p{
+                         font-size: 16px;
+                        text-align: center;
+                        line-height: 20px;
+                    }
+                    p.top{
+                        color: rgb(150,150,150);
+                        margin:0 0 10px;
+                    }
+                    p.bottom{
+                        color: rgb(230,75,0);
+                    }
+                }
+                .line{
+                    width: 0;
+                    height: 50px;
+                    border-right: 1px solid gainsboro;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        .houseinfo{
+            ul{
+                width: 100%;
+                height: 110px;
+                padding: 10px 0 10px;
+                li{
+                    width: 50%;
+                    height: 30px;
+                    overflow: hidden;
+                    font-size: 14px;
+                    line-height: 30px;
+                    text-align: left;
+                }
+            }
+            p{
+                margin: 0 0 10px;
+                font-size: 14px;
+                word-break:keep-all;
+                white-space:nowrap;
+                overflow:hidden; 
+                text-overflow:ellipsis;
+            }
+            .other{
+                h4{
+                    margin: 15px 0 10px;
+                    font-size: 16px;
+                    color: rgb(51,51,51);
+                }
+                p{
+                    margin: 0 0 15px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: rgb(102,102,102);
+                }
+            }
+            .fydesc{
+                h4{
+                    margin: 15px 0 10px;
+                    font-size: 16px;
+                    color: rgb(51,51,51);
+                }
+                p{
+                    margin: 0 0 15px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: rgb(102,102,102);
+                }
+            }
+        }
+        .peizhi{
+            padding-bottom: 20px;
+            h5{
+                border-left: 2px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 20px;
+                line-height: 20px;
+                padding-left: 10px;
+                margin: 20px 0 015px;
+            }
+            p{
+              margin: 0;
+              font-size: 14px;
+              line-height: 20px;
+              color: rgb(51,51,51);  
+              text-align: justify;
+            } 
+        }
+        .abouthouse{
+            padding-bottom: 20px;
+            h5{
+                border-left: 2px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 20px;
+                line-height: 20px;
+                padding-left: 10px;
+                margin: 20px 0 015px;
+            }
+            p{
+              margin: 0;
+              font-size: 14px;
+              line-height: 20px;
+              color: rgb(51,51,51);  
+              text-align: justify;
+              text-indent: 2em;
+            } 
+        }
+        .explore{
+            padding: 15px 12px 15px;
+            ul{
+                width: 60%;
+                float: left;
+                height: 40px;
+                overflow: hidden;
+                li{
+                    float: left;
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 5px;
+                    img{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .righttext{
+                float: right;
+                width: 40%;
+                height: 40px;
+                line-height: 40px;
+                font-size: 12px;
+                color:rgb(102,102,102);
+                text-align: right;
+            }
+        }
+        
+        
+    }
+    
+}

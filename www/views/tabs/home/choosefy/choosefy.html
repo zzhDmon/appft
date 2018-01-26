@@ -1,0 +1,56 @@
+
+<!--对话模板-->
+<ion-view id="choosefy" view-title="选择房源" hide-nav-bar=true  class='dark'>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			选择房源
+		</div>
+		<div class="right">
+			
+		</div>
+	</div>
+	
+	<ion-content on-swipe-right="onSwipeRight()" class="choosefy" has-bouncing={{torf}}>
+		
+		<div class="card list">
+			<ul>
+				<li ng-repeat="sell in sellhouse" ui-sref="tabs.fypic({tid:tid,hid:sell.Id})">
+					<div class="img">
+						<img ng-src="{{sell.Thumb}}"/>
+						<img ng-show={{sell.Recommend}} class="zhutui" src="imgs/主推.png"/>
+					</div>
+					
+					<div class="description">
+						<h5>{{sell.Title}}</h5>
+						<p>{{sell.CommunityName}}</p>
+						<!--<p>{{rent.HouseType}}&nbsp;{{rent.Space}}平米</p>-->
+						<div>
+							<div class="space">
+								{{sell.HouseType}}&nbsp;{{sell.Space}}平米 
+							</div>
+							<div class="price">
+								<span>{{sell.Price}}</span>万
+							</div>
+						</div>
+						<p>
+							<span ng-repeat="Tag in sell.Tags">{{Tag}}</span>
+						</p>
+					</div>
+				</li>
+			</ul>
+			
+			
+			<div style="clear: both;"></div>
+			<p ng-show="baseLine" class="baseLine"><span>人家是有底线的啦</span></p>
+		</div>
+	
+	
+	
+		
+	</ion-content>
+	
+</ion-view>
+

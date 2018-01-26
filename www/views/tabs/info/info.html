@@ -1,0 +1,102 @@
+<!--联系人界面模板-->
+<ion-view id="info" view-title="咨询" hide-nav-bar="true">
+	<!--<ion-nav-buttons side="primary">
+		<i menu-toggle class="icon ion-navicon-round" style="font-size: 25px;margin:7px 0 0 5px;"></i>
+	</ion-nav-buttons>-->
+	<div class="fourchoose" >
+		<span ng-click="move(0,$event)" class="fenlei">楼市</span>
+		<span ng-click="move(1,$event)" class="fenlei">厦门</span>
+		<span ng-click="move(2,$event)" class="fenlei">娱乐</span>
+		<span ng-click="move(3,$event)" class="fenlei">销售</span>
+		<div class="underline"></div>
+	</div>
+	
+	
+<!--楼市-->
+	<!--回到顶部-->
+	<div ng-if="head=='楼市'" class="backtop" ng-click="loushiscrollTop()"><i class="iconfont icon-xiangshang"></i></div>
+	
+	<div ng-if="head=='楼市'"  class="loushi">
+		<ion-content delegate-handle="loushiscroll" on-scroll="loushiscrollListen()">
+			<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="lsdoRefresh(false)"></ion-refresher>
+		
+			<ion-list class="list">
+				<ion-item collection-repeat="loushi in loushiarr track by $index" class="item-thumbnail-right" ui-sref="tabs.uidinfodetails({id:loushi.Id,type:1,uid:uid})" ng-click="shareinfo(loushi.Id,1,uid)">
+					<div class="img">
+						<img ng-src="{{loushi.Thumb}}"/>
+					</div>
+					<h2>{{loushi.Title}} </h2>
+					<p><span class="from">{{loushi.Source}}</span><span class="time">{{loushi.Time}}</span></p>
+				</ion-item>
+			</ion-list>
+			
+			<ion-infinite-scroll on-infinite="lsloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll>
+		</ion-content>
+		
+	</div>
+	
+<!--厦门-->
+	<!--回到顶部-->
+	<div ng-if="head=='厦门'" class="backtop" ng-click="xiamenscrollTop()"><i class="iconfont icon-xiangshang"></i></div>
+	<div ng-if="head=='厦门'" class="xiamen">
+		<ion-content delegate-handle="xiamenscroll" on-scroll="xiamenscrollListen()">
+			<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="xmdoRefresh(false)"></ion-refresher>
+			
+			<ion-list class="list">
+				<ion-item collection-repeat="xiamen in xiamenarr track by $index" class="item-thumbnail-right" ng-class="{true: 'noimg', false: 'haveimg'}[xiamen.Thumb!==null]"  ui-sref="tabs.uidinfodetails({type:2,id:xiamen.Id,uid:uid})" ng-click="shareinfo(xiamen.Id,2,uid)">
+						<div ng-if='xiamen.Thumb!==null' class="img">
+							<img ng-src="{{xiamen.Thumb}}"/>
+						</div>
+						<h2>{{xiamen.Title}} </h2>
+						<p><span class="from">{{xiamen.Source}}</span><span class="time">{{xiamen.Time}}</span></p>
+				</ion-item>
+			</ion-list>
+			<ion-infinite-scroll on-infinite="xmloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll>
+		</ion-content>
+		
+	</div>
+
+<!--娱乐-->
+	<!--回到顶部-->
+	<div ng-if="head=='娱乐'" class="backtop" ng-click="yulescrollTop()"><i class="iconfont icon-xiangshang"></i></div>
+	<div ng-if="head=='娱乐'" class="yule">
+		<ion-content delegate-handle="yulescroll" on-scroll="yulescrollListen()">
+			<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="yldoRefresh(false)"></ion-refresher>
+			
+			
+			<ion-list class="list">
+				<ion-item collection-repeat="yule in yulearr track by $index" class="item-thumbnail-right" ng-class="{true: 'noimg', false: 'haveimg'}[yule.Thumb!==null]"  ui-sref="tabs.uidinfodetails({type:3,id:yule.Id,uid:uid})" ng-click="shareinfo(yule.Id,3,uid)">
+					<div class="img">
+						<img ng-src="{{yule.Thumb}}"/>
+					</div>
+					<h2>{{yule.Title}} </h2>
+					<p><span class="from">{{yule.Source}}</span><span style="margin: 0;" class="time">{{yule.Time}}</span></p>
+				</ion-item>
+			</ion-list>
+			
+			<ion-infinite-scroll on-infinite="ylloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll>
+		</ion-content>
+		
+	</div>
+	
+<!--销售-->
+	<!--回到顶部-->
+	<div ng-if="head=='销售'" class="backtop" ng-click="xiaoshouscrollTop()"><i class="iconfont icon-xiangshang"></i></div>
+	<div ng-if="head=='销售'" class="xiaoshou">
+		<ion-content delegate-handle="xiaoshouscroll" on-scroll="xiaoshouscrollListen()">
+			<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="xsdoRefresh(false)"></ion-refresher>
+
+			<ion-list class="list">
+				<ion-item collection-repeat="xiaoshou in xiaoshouarr track by $index" class="item-thumbnail-right"  ui-sref="tabs.uidinfodetails({type:4,id:xiaoshou.Id,uid:uid})" >
+		
+					<h2>{{xiaoshou.Title}} </h2>
+					<p><span class="from">阅读次数：</span><span class="time">{{xiaoshou.ReadCount}}</span></p>
+				</ion-item>
+			</ion-list>
+			
+			<ion-infinite-scroll on-infinite="xsloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll>
+		</ion-content>
+		
+	</div>
+	
+</ion-view>

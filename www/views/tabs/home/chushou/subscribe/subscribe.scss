@@ -1,0 +1,16 @@
+#chushousub{
+    .header{
+        .right{
+           font-size: 14px;
+           color: rgb(102,102,102);
+        } 
+    }
+    .chushousub{
+        margin-top: 44px;
+        .list{
+            .item:first-child{
+                border-top: none;
+            }
+        }
+    }
+}

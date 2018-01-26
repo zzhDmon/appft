@@ -1,0 +1,303 @@
+-
+<!--对话模板-->
+<ion-view id='alikehousedetail'  hide-nav-bar="true">
+	
+	
+	<!--底部联系人-->
+	<div class="contacts">
+		<div class="name" ui-sref="tabs.hisweidian({uid:alikehousedetail.info.uid})">
+			<div class="headimg">
+				<div ng-if="!alikehousedetail.info.avatar" class="default">
+					<i class="iconfont icon-touxiangx"></i>
+				</div>	
+				<img ng-if="alikehousedetail.info.avatar" ng-src="{{alikehousedetail.info.avatar}}"/>
+								
+			</div>
+			<div class="hisname">{{alikehousedetail.info.agentName}}</div>
+		</div>
+		<div class="communite">
+			<a href="tel:{{alikehousedetail.info.phone}}"><i class="iconfont icon-dianhua1"></i>&nbsp;电话咨询</a>
+			
+		</div>
+	</div>
+	
+	
+	<ion-content class="alikehousedetail"  >
+		<div class="backbotton btn" ng-click="back()"><i class="icon ion-chevron-left"></i></div>
+		<div class="sharebotton btn" ng-click="openPopoverView($event)"><i class="iconfont icon-fenxiang1" style="font-size: 20px!important;"></i> </div>
+		<!--分享缩略图-->
+		<canvas style="display: none;" id="alikehousedetailmycans" width="100px" height="100px"></canvas>
+		
+		
+		
+		
+		<div>
+			<div class="bannerposition">
+				<!-- on-swipe-right="changeindex()" on-swipe-left="changeindex()"-->
+				<ion-slide-box on-slide-changed='changeindex()' delegate-handle='alikedetail-handle' class="detailcursor" >
+				  <ion-slide ng-repeat="banner in bannerarr track by $index" class="trycursor">
+				    <div class="box" style="width: 100%;height: 100%;"><img style="display: block;width: 100%;height: 100%;" ng-src="{{banner}}"/></div>
+				  </ion-slide>
+				</ion-slide-box>
+				<div class="indexnum">{{currentindex}}/{{totalbanner}}</div>
+			</div>
+			
+		
+			<div ng-if="type==1" class="card detailname">
+				<h4>{{alikehousedetail.house.Title}}</h4>
+				<div class="borderline"></div>
+				<ul>
+					<li>
+						<p class="top">售价</p>
+						<p class="bottom">{{alikehousedetail.house.Price}}万</p>
+					</li>
+					<li class="line"></li>
+					<li>
+						<p class="top">房型</p>
+						<p class="bottom">{{alikehousedetail.house.RoomType}}室{{alikehousedetail.house.HallType}}厅{{alikehousedetail.house.BathType}}卫</p>
+					</li>
+					<li class="line"></li>
+					<li>
+						<p class="top">面积</p>
+						<p class="bottom">{{alikehousedetail.house.Space}}m²</p>
+					</li>
+				</ul>
+			</div>
+			<div ng-if="type==2" class="card detailname">
+				<h4>{{alikehousedetail.house.Title}}</h4>
+				<!--<p class="creattime">{{alikehousedetail.house.CreateTime}}</p>-->
+				<div class="borderline"></div>
+				<ul>
+					<li>
+						<p class="top">租金</p>
+						<p class="bottom">{{alikehousedetail.house.Price}}元/月</p>
+					</li>
+					<li class="line"></li>
+					<li>
+						<p class="top">房型</p>
+						<p class="bottom">{{alikehousedetail.house.RoomType}}室{{alikehousedetail.house.HallType}}厅{{alikehousedetail.house.BathType}}卫</p>
+					</li>
+					<li class="line"></li>
+					<li>
+						<p class="top">面积</p>
+						<p class="bottom">{{alikehousedetail.house.Space}}m²</p>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="borderline"></div>
+			<div ng-if="type==1" class="card houseinfo">
+				<ul>
+					<li><span class="leftdesc">单价：</span>{{UnitPrice}} <span ng-if="!UnitPrice">--</span>元/平</li>
+					<li><span class="leftdesc">首付：</span>约{{FirstPayment}} <span ng-if="!FirstPayment">--</span>万</li>
+					<li><span class="leftdesc">月付：</span>约{{Monthly}}<span ng-if="!Monthly">--</span>元</li>
+					<li><span class="leftdesc">年代：</span>{{alikehousedetail.house.Year}}<span ng-if="!alikehousedetail.house.Year&&alikehousedetail.house.Year!==0">--</span>年</li>
+					<li><span class="leftdesc">朝向：</span>{{alikehousedetail.house.Orientation}}<span ng-if="!alikehousedetail.house.Orientation">--</span></li>
+					<li><span class="leftdesc">楼层：</span><span ng-if="alikehousedetail.house.Floor<0">{{-alikehousedetail.house.Floor}}</span><span ng-if="alikehousedetail.house.Floor>=0">{{alikehousedetail.house.Floor}}</span>/{{alikehousedetail.house.TotalFloor}}<span ng-if="!alikehousedetail.house.Floor">--</span></li>
+					<li><span class="leftdesc">装修：</span>{{alikehousedetail.house.Fitment}}<span ng-if="!alikehousedetail.house.Fitment">--</span></li>
+					<li><span class="leftdesc">小区名称：</span>{{alikehousedetail.house.CommunityName}}<span ng-if="!alikehousedetail.house.CommunityName">--</span></li>
+				</ul>
+			</div>
+			<div ng-if="type==2" class="card houseinfo">
+				<ul>
+					<li><span class="leftdesc">朝向：</span>{{alikehousedetail.house.Orientation}}<span ng-if="!alikehousedetail.house.Orientation">--</span></li>
+					<li><span class="leftdesc">楼层：</span><span ng-if="alikehousedetail.house.Floor<0">{{-alikehousedetail.house.Floor}}</span><span ng-if="alikehousedetail.house.Floor>=0">{{alikehousedetail.house.Floor}}</span>/{{alikehousedetail.house.TotalFloor}}<span ng-if="!alikehousedetail.house.Floor">--</span></li>
+					<li><span class="leftdesc">装修：</span>{{alikehousedetail.house.Fitment}}<span ng-if="!alikehousedetail.house.Fitment">--</span></li>
+					<li><span class="leftdesc">小区名称：</span>{{alikehousedetail.house.CommunityName}}<span ng-if="!alikehousedetail.house.CommunityName">--</span></li>
+				</ul>
+			</div>
+			
+			
+			<div ng-show="alikehousedetail.house.Tags.length>0" class="offline"></div>
+			<div ng-show="alikehousedetail.house.Tags.length>0" class="card fyliangdian">
+				<h5>房源亮点</h5>
+				<div>
+					<span ng-repeat="Tag in alikehousedetail.house.Tags track by $index">{{Tag}}</span>
+				</div>
+			</div>
+			
+			<div ng-show="alikehousedetail.house.Special.length>0" class="offline"></div>
+			<div ng-show="alikehousedetail.house.Special.length>0" class="card fyliangdian">
+				<h5>房源特色</h5>
+				<div>
+					<span ng-if="special==1" ng-repeat="special in alikehousedetail.house.Special track by $index">满两年</span>
+					<span ng-if="special==2" ng-repeat="special in alikehousedetail.house.Special track by $index">唯一住房</span>
+				</div>
+			</div>
+			
+			<div ng-if="alikehousedetail.house.Configure.length>0" class="offline"></div>
+			<div ng-if="alikehousedetail.house.Configure.length>0" class="card fypeizhi">
+				<h5>房间配置</h5>
+				<ul>
+					<li ng-if="config==1" ng-repeat="config in alikehousedetail.house.Configure track by $index">
+						<i class="iconfont icon-chuang"></i>
+						<p>床</p>
+					</li>
+					<li ng-if="config==2" ng-repeat="config in alikehousedetail.house.Configure track by $index">
+						<i class="iconfont icon-yigui"></i>
+						<p>衣柜</p>
+					</li>
+					<li ng-if="config==3" ng-repeat="config in alikehousedetail.house.Configure track by $index">
+						<i class="iconfont icon-shuzhuo"></i>
+						<p>书桌</p>
+					</li>
+					<li ng-if="config==4" ng-repeat="config in alikehousedetail.house.Configure track by $index">
+						<i class="iconfont icon-shafa"></i>
+						<p>沙发</p>
+					</li>
+					<li ng-if="config==5" ng-repeat="config in alikehousedetail.house.Configure track by $index">
+						<i class="iconfont icon-dianshi"></i>
+						<p>电视</p>
+					</li>
+					<li ng-if="config==6" ng-repeat="config in alikehousedetail.house.Configure track by $index">
+						<i class="iconfont icon-bingxiang"></i>
+						<p>冰箱</p>
+					</li>
+					<li ng-if="config==7" ng-repeat="config in alikehousedetail.house.Configure track by $index">
+						<i class="iconfont icon-xiyiji"></i>
+						<p>洗衣机</p>
+					</li>
+					<li ng-if="config==8" ng-repeat="config in alikehousedetail.house.Configure track by $index">
+						<i class="iconfont icon-kongtiao"></i>
+						<p>空调</p>
+					</li>
+					<li ng-if="config==9" ng-repeat="config in alikehousedetail.house.Configure track by $index">
+						<i class="iconfont icon-reshuiqi"></i>
+						<p>热水器</p>
+					</li>
+					<li ng-if="config==10" ng-repeat="config in alikehousedetail.house.Configure track by $index">
+						<i class="iconfont icon-iconfontkuandai"></i>
+						<p>宽带</p>
+					</li>
+					<li ng-if="config==11" ng-repeat="config in alikehousedetail.house.Configure track by $index">
+						<i class="iconfont icon-webiconyunxuzuofan"></i>
+						<p>可做饭</p>
+					</li>
+					<li ng-if="config==12" ng-repeat="config in alikehousedetail.house.Configure track by $index">
+						<i class="iconfont icon-duwei"></i>
+						<p>独卫</p>
+					</li>
+					<li ng-if="config==13" ng-repeat="config in alikehousedetail.house.Configure track by $index">
+						<i class="iconfont icon-31"></i>
+						<p>阳台</p>
+					</li>
+				</ul>
+			</div>
+			
+			<div ng-if="alikehousedetail.house.Discription&&!isobj" class="offline"></div>
+			<div ng-if="alikehousedetail.house.Discription&&!isobj" class="card fymiaoshu">
+				<h5>房源描述</h5>
+				<p>{{Discription}}</p>
+			</div>
+			<div ng-if="alikehousedetail.house.Discription&&isobj" class="offline"></div>
+			<div ng-if="alikehousedetail.house.Discription&&isobj" class="card fymiaoshu">
+				<h5>房源描述</h5>
+				<h6 ng-if="twodesc">核心卖点:</h6>
+				<p ng-if="twodesc">{{onedesc}}</p>
+				<h6 ng-if="onedesc">业主心态:</h6>
+				<p ng-if="onedesc">{{twodesc}}</p>
+				<h6 ng-if="threedesc">服务介绍:</h6>
+				<p ng-if="threedesc">{{threedesc}}</p>
+			</div>
+			<div ng-if="alikehousedetail.house.CommunityAddress" class="offline"></div>
+			<div ng-if="alikehousedetail.house.CommunityAddress" class="card fyposition">
+				<h5>位置</h5>
+				<p>{{alikehousedetail.house.CommunityAddress}}</p>
+			</div>
+			
+			
+			
+			<div ng-if="otheralikehousearr.length>0" class="offline"></div>
+			<div class="card hisonline" ng-if="otheralikehousearr.length>0">
+				<h5>其它相似房源</h5>
+				<ul ng-if="type==1">
+					<!-- ui-sref="tabs.fydetail({id:otherhouse.Id,housetype:housetype})"-->
+					<li ng-repeat="otherhouse in otheralikehousearr track by $index" ui-sref="tabs.alikehousedetail({id:otherhouse.Id})">
+						<div class="img">
+							<img ng-src="{{otherhouse.Thumb}}"/>
+							<img ng-show={{otherhouse.Recommend}} class="zhutui" ng-src="imgs/主推.png"/>
+						</div>
+						<div class="description">
+							<h6>{{otherhouse.Title}}</h6>
+							<p>{{otherhouse.CommunityName}}</p>
+							<div>
+								<div class="space">
+									{{otherhouse.HouseType}}&nbsp;{{otherhouse.Space}}平米 
+								</div>
+								<div class="price">
+									<span>{{otherhouse.Price}}</span>万
+								</div>
+							</div>
+							<p>
+								<span ng-repeat="Tag in otherhouse.Tags track by $index">{{Tag}}</span>
+							</p>
+						</div>
+					</li>
+				</ul>
+				<ul ng-if="type==2">
+					<!-- ui-sref="tabs.fydetail({id:otherhouse.Id,housetype:housetype})"-->
+					<li ng-repeat="otherhouse in otheralikehousearr track by $index" ui-sref="tabs.alikehousedetail({id:otherhouse.Id})">
+						<div class="img">
+							<img ng-src="{{otherhouse.Thumb}}"/>
+							<img ng-show={{otherhouse.Recommend}} class="zhutui" ng-src="imgs/主推.png"/>
+						</div>
+						<div class="description">
+							<h6>{{otherhouse.Title}}</h6>
+							<p>{{otherhouse.CommunityName}}</p>
+							<div>
+								<div class="space">
+									{{otherhouse.HouseType}}&nbsp;{{otherhouse.Space}}平米 
+								</div>
+								<div class="price">
+									<span>{{otherhouse.Price}}</span>元/月
+								</div>
+							</div>
+							<p>
+								<span ng-repeat="Tag in otherhouse.Tags track by $index">{{Tag}}</span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	
+		<!--底部广告  app端不显示-->
+		<!--<div class="advimg">
+			<a class="android" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.fangtian.ft"><div></div></a>
+			<a class="ios" href="itms-apps://itunes.apple.com/us/app/%E6%88%BF%E7%94%B0%E7%BD%91/id1288448623?mt=8"></a>
+			<i class="iconfont icon-guanbi2fill" ng-click="closeadv()"></i>
+			<img src="imgs/房田广告位.png"/>
+		</div>-->
+		
+		
+		
+		<div class="bottompad"></div>
+		
+		<!--分享浮动框 ion-popover-view-->
+		<script id="fydetailpopover.html" type="text/ng-template">
+			<ion-popover-view class="Bottom-share-popover">
+				<ul>
+					<li class="weixin" ng-click="share(0)">
+						<div class="img">
+							<img src="imgs/微信.png"/>
+						</div>
+						<p>微信好友</p>
+					</li>
+					<li class="pengyouquan" ng-click="share(1)">
+						<div class="img">
+							<img src="imgs/朋友圈.png"/>
+							
+						</div>
+						<p>朋友圈</p>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<h4 ng-click="closePopoverView($event)">取消</h4>
+			</ion-popover-view>
+		</script>
+		
+	</ion-content>
+	
+</ion-view>
+

@@ -1,0 +1,599 @@
+#ershoulist{
+    .searchhouse-header{
+        position: absolute;
+        z-index: 999;
+        width: 100%!important;
+        height: 44px!important;
+        top: 0;
+        padding-top: 10px!important;
+        border-bottom: none!important;
+        background-color: rgb(246,246,246);
+        background-image: none;
+        span.goback{
+            width: 10%;
+            height: 40px;
+            text-align: left;
+            line-height:40px;               
+            i{
+                font-size: 30px; 
+                color: rgb(51,51,51);
+            }
+        }
+        span.item-input-wrapper{
+            width: 85%;
+            height: 28px;
+            text-align: center;
+            background-color: rgb(228,228,228);
+            padding-left: 25%;
+            i.icon-sousuo2{
+               color:rgb(150,150,150);
+               line-height: 28px;
+            }
+            input{
+                padding-left: 10px;
+            }
+            input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+                color:rgb(150,150,150);
+            }
+            input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+               color:rgb(150,150,150);
+               opacity:  1;
+            }
+            input::-moz-placeholder { /* Mozilla Firefox 19+ */
+               color:rgb(150,150,150);
+               opacity:  1;
+            }
+            input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+               color:rgb(150,150,150);
+            }
+        }
+    }
+    
+    .topfour{
+        width: 100%;
+        height: 40px;
+        top: 43px;
+        position: absolute;
+        background-color: rgb(246,246,246);
+        border-top: none;
+        border-bottom: 1px solid rgb(230,230,230);
+        z-index: 1001;
+        li{
+            width: 25%;
+            text-align: center;
+            padding: 0 10px 0;
+            height: 40px;
+            font-size: 16px;
+            line-height: 40px;
+            color: rgb(102,102,102);
+            div{
+                display: inline-block;
+                word-break:keep-all;
+                white-space:nowrap;
+                overflow:hidden; 
+                text-overflow:ellipsis; 
+                text-align: center;
+                height: 100%;
+                max-width: 85%;
+                //float: left;
+            }
+            i.icon--pulldown{
+                position: relative;
+                display: inline-block;
+                width: 15%;
+                text-align: center;
+                height: 100%;
+                top:-15px;
+                color: rgb(102,102,102);
+                //display:block;
+                //float: left;
+            }
+        }
+        li.havechoose{
+            color: rgb(65,160,255);
+            i.icon--pulldown{
+                color: rgb(65,160,255);
+            }
+        }
+      
+    }
+    //下拉选框
+    .mask{
+        width: 100%;
+        height: calc(100% - 44px);
+        background-color: rgba(0,0,0,0.3);
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        top: 44px;
+    }
+    
+    
+    .pullchooselist{
+        //隐藏滚动条
+        .scroll-bar{
+            display: none;
+        }
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        z-index:1001;
+        top: 83px;
+        background-color:rgb(255,255,255);
+        display: none;
+        
+        .bottom{
+            position: absolute;
+            z-index: 1002;
+            bottom: -2px;
+            width: 100%;
+            height: 15px;
+            background-color: rgb(255,255,255);
+        }
+        div{
+            height: 100%;
+            border: none;
+            .area{
+              width: 50%;
+              height: 100%;
+              position: absolute;
+              right: 0;
+              top: 1px;
+              border-left: 1px solid rgb(230,230,230);  
+              background-color: rgb(246,246,246);
+              .bottom{
+                    position: absolute;
+                    z-index: 1003;
+                    bottom: -1px;
+                    width: 100%;
+                    height: 15px;
+                    background-color: rgb(246,246,246);
+                }
+              .scroll-content{
+                    margin:0 0 0 12px;
+                    .item{
+                        padding: 12px 16px 12px 0;
+                        color: rgb(102,102,102);
+                        background-color: rgb(246,246,246);
+                        border-color: rgb(230,230,230);
+                    }
+                    .item.clicked{
+                        color: rgb(65,160,255);
+                    }
+                    .item.activated{
+                        background-color: rgb(246,246,246);
+                        color: rgb(65,160,255);
+                    }
+                    .item:last-child{
+                        border-bottom: none;
+                    }
+                    .item:first-child{
+                        border-top: none;
+                    }
+                  
+              }
+            }
+            .scroll-content{
+                margin:0 0 0 12px;
+                padding: 0 0 30px;
+               .list{
+                   .item{
+                       color: rgb(102,102,102);
+                       padding: 12px 16px 12px 0;
+                       border-color: rgb(230,230,230);
+                   }
+                   .item.clicked{
+                      color: rgb(65,160,255);
+                  }
+                   .item.activated{
+                      background-color: rgb(255,255,255);
+                      color: rgb(65,160,255);
+                  }
+                   .item:last-child{
+                       border-bottom: none;
+                   }
+                   .item:first-child{
+                       border-top: none;
+                   }
+               }
+            }
+        }
+    }
+    
+    .ershoulist{
+        margin-top: 84px;
+        .card{
+            box-shadow: none;
+        }
+        p.loading{
+            margin: 100px 0 100px;
+            font-size: 50px;
+            text-align: center;
+            .spinner svg {
+              width: 60px !important;
+              height: 60px !important;
+            }
+        }
+        .ershou{
+            //底线
+            p.baseLine{
+                margin: 0;
+                padding: 15px 12px 15px;
+                background-color: rgb(246,246,246);
+                span {
+                    text-align: center;
+                    display: block;     /*设置为块级元素会独占一行形成上下居中的效果*/
+                    font-size: 14px;
+                    color: #969696;
+                    position: relative;   /*定位横线（当横线的父元素）*/
+                }
+                span:before{
+                    content: '';                 /*CSS伪类用法*/
+                    position: absolute;         /*定位背景横线的位置*/
+                    top: 52%;
+                    background: #e6e6e6;       /*宽和高做出来的背景横线*/
+                    width: 28%;
+                    height: 1px;
+                }
+                span:after {
+                    content: '';                 /*CSS伪类用法*/
+                    position: absolute;         /*定位背景横线的位置*/
+                    top: 52%;
+                    background: #e6e6e6;       /*宽和高做出来的背景横线*/
+                    width: 28%;
+                    height: 1px;
+                }
+                span:before{
+                    left: 0;        /*调整背景横线的左右距离*/
+                }
+                span:after {
+                    right: 0;
+                }
+            }
+            .list{
+                padding-left: 12px;
+                .item:last-child{
+                    .item-content{
+                        border-bottom: none;
+                    }
+                }
+                .item{
+                    border: none;
+                    margin: 0;
+                    .item-content.activated{
+                        background-color: rgb(246,246,246);
+                    }
+                    .item-content{
+                        width: 100%;
+                        padding: 12px 12px 12px 0;
+                        border-bottom: 1px solid rgb(230,230,230);
+//                      border-radius: 0 0 0 5px;
+//                      border-bottom: none;
+                        .img{
+                            width: 35vw;
+                            height: auto;
+                            float: left;
+                            position: relative;
+                            img{
+                                border-radius: 3px;
+                                width: 100%;
+                                height: 85px;
+                            } 
+                            .zhutui{
+                                width: 8vw;
+                                height: auto;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                            }
+                        }
+
+                        .description{
+                            float: left;
+                            width: calc(65vw - 38px);
+                            margin-left: 10px;
+                            h6{
+                                color: rgb(51,51,51);
+                                font-size:16px;
+                                height: 20px;
+                                line-height: 20px;
+                                margin: 0;
+                                word-break:keep-all;
+                                white-space:nowrap;
+                                overflow:hidden; 
+                                text-overflow:ellipsis;
+                            }
+                            p{
+                                width: 100%;
+                                margin: 0;
+                                font-size: 14px;
+                                height: 20px;
+                                overflow: hidden;
+                                color: rgb(150,150,150);
+                                span{
+                                    border-radius: 2px;
+                                    font-size: 12px;
+                                    padding: 2px 3px 2px;
+                                    background-color:rgb(230,242,255) ;
+                                    color: rgb(89,171,253);
+                                    margin-right: 3px;
+                                } 
+                            }
+                            div{
+                                font-size: 14px;
+                                color: rgb(150,150,150);
+                                width: calc(65vw - 38px);
+                                .space{
+                                    float: left;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    width: 65%;
+                                    word-break:keep-all;
+                                    white-space:nowrap;
+                                    overflow:hidden; 
+                                    text-overflow:ellipsis;
+                                }
+                                .price{
+                                        text-align: right;
+                                        float: right;
+                                        height: 25px;
+                                        line-height: 25px;
+                                        width: 35%;
+                                        color: rgb(230,75,0);
+                                        word-break:keep-all;
+                                        white-space:nowrap;
+                                        overflow:hidden; 
+                                        text-overflow:ellipsis;
+                                        span{
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                        }
+                                    }
+                            }
+                        }
+                    
+                    }
+                    .item-options{
+                        .button{
+                            background-color: rgb(65,160,255);
+                            color: rgb(255,255,255);
+                            padding: 0 24px 0;
+                            div{
+                                line-height: 20px;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //搜索无结果
+        .noresult{
+            padding: 50px 30px 0;
+            height: 130px;
+            .top{
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                .iconfont{
+                    font-size: 40px;
+                    color: rgb(150,150,150);
+                }
+            }
+            .bottom{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                text-align: center;
+                height: 30px;
+                line-height: 30px;
+                font-size: 16px;
+                color: rgb(150,150,150);
+                span{
+                    color: rgb(65,160,255);
+                }
+            }
+           
+        }
+        
+    }
+    //大屏
+    .plus{
+        margin-top: 84px;
+        
+        .card{
+            box-shadow: none;
+        }
+        p.loading{
+            margin: 100px 0 100px;
+            font-size: 50px;
+            text-align: center;
+            .spinner svg {
+              width: 60px !important;
+              height: 60px !important;
+            }
+        }
+        .ershou{
+            //底线
+            p.baseLine{
+                margin: 0;
+                padding: 15px 12px 15px;
+                background-color: rgb(246,246,246);
+                span {
+                    text-align: center;
+                    display: block;     /*设置为块级元素会独占一行形成上下居中的效果*/
+                    font-size: 14px;
+                    color: #969696;
+                    position: relative;   /*定位横线（当横线的父元素）*/
+                }
+                span:before{
+                    content: '';                 /*CSS伪类用法*/
+                    position: absolute;         /*定位背景横线的位置*/
+                    top: 52%;
+                    background: #e6e6e6;       /*宽和高做出来的背景横线*/
+                    width: 28%;
+                    height: 1px;
+                }
+                span:after {
+                    content: '';                 /*CSS伪类用法*/
+                    position: absolute;         /*定位背景横线的位置*/
+                    top: 52%;
+                    background: #e6e6e6;       /*宽和高做出来的背景横线*/
+                    width: 28%;
+                    height: 1px;
+                }
+                span:before{
+                    left: 0;        /*调整背景横线的左右距离*/
+                }
+                span:after {
+                    right: 0;
+                }
+            }
+            .list{
+                padding-left: 12px;
+                .item:last-child{
+                    .item-content{
+                        border-bottom: none;
+                    }
+                }
+                .item{
+                    border: none;
+                    margin: 0;
+                    .item-content.activated{
+                        background-color: rgb(246,246,246);
+                    }
+                    .item-content{
+                        width: 100%;
+                        padding: 12px 12px 12px 0;
+                        border-bottom: 1px solid rgb(230,230,230);
+//                      border-bottom: none;
+                        .img{
+                            width: 28vw;
+                            height: auto;
+                            float: left;
+                            position: relative;
+                            img{
+                                border-radius: 3px;
+                                width: 100%;
+                                height: 85px;
+                            } 
+                            .zhutui{
+                                width: 8vw;
+                                height: auto;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                            }
+                        }
+
+                        .description{
+                            float: left;
+                            width: calc(72vw - 38px);
+                            margin-left: 10px;
+                            h6{
+                                color: rgb(51,51,51);
+                                font-size:16px;
+                                height: 20px;
+                                line-height: 20px;
+                                margin: 0;
+                                word-break:keep-all;
+                                white-space:nowrap;
+                                overflow:hidden; 
+                                text-overflow:ellipsis;
+                            }
+                            p{
+                                width: 100%;
+                                margin: 0;
+                                font-size: 14px;
+                                height: 20px;
+                                overflow: hidden;
+                                color: rgb(150,150,150);
+                                span{
+                                    border-radius: 2px;
+                                    font-size: 12px;
+                                    padding: 2px 3px 2px;
+                                    background-color:rgb(230,242,255) ;
+                                    color: rgb(89,171,253);
+                                    margin-right: 3px;
+                                } 
+                            }
+                            div{
+                                font-size: 14px;
+                                color: rgb(150,150,150);
+                                width: calc(72vw - 38px);
+                                .space{
+                                    float: left;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    width: 65%;
+                                    word-break:keep-all;
+                                    white-space:nowrap;
+                                    overflow:hidden; 
+                                    text-overflow:ellipsis;
+                                }
+                                .price{
+                                        text-align: right;
+                                        float: right;
+                                        height: 25px;
+                                        line-height: 25px;
+                                        width: 35%;
+                                        color: rgb(230,75,0);
+                                        word-break:keep-all;
+                                        white-space:nowrap;
+                                        overflow:hidden; 
+                                        text-overflow:ellipsis;
+                                        span{
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                        }
+                                    }
+                            }
+                        }
+                    
+                    }
+                    .item-options{
+                        .button{
+                            background-color: rgb(65,160,255);
+                            color: rgb(255,255,255);
+                            padding: 0 24px 0;
+                            div{
+                                line-height: 20px;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //没搜索到结果
+        .noresult{
+           padding: 50px 30px 0;
+            height: 130px;
+            .top{
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                .iconfont{
+                    font-size: 40px;
+                    color: rgb(150,150,150);
+                }
+            }
+            .bottom{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                text-align: center;
+                height: 30px;
+                line-height: 30px;
+                font-size: 16px;
+                color: rgb(150,150,150);
+                span{
+                    color: rgb(65,160,255);
+                }
+            }
+        }
+        
+    }
+}

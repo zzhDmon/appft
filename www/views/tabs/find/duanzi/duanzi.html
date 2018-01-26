@@ -1,0 +1,49 @@
+
+<!--对话模板-->
+<ion-view id="duanzi" hide-nav-bar=true view-title="朋友圈段子"  class='dark'>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			朋友圈段子
+		</div>
+		<div class="right" >
+			
+		</div>
+	</div>
+	
+	<!--回到顶部-->
+	<div class="backtop" ng-click="scrollTop()"><i class="iconfont icon-xiangshang"></i></div>
+	<ion-content delegate-handle="zuanziscroll" on-scroll="scrollListen()" on-swipe-right="onSwipeRight()" class="duanzi">
+		<!--下拉刷新-->
+		<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="doRefresh(false)"></ion-refresher>
+		
+		<div class="card list">
+			<ul>
+				<!--<div class="copy" id="coprBtn" clip-action="copy" clip-model="text" clip-alert='true' clip-success-text="地址已经复制到剪贴板!" clipboard>
+					<i class="iconfont icon-fuzhi"></i><span>一键复制</span>
+				</div>-->
+				
+				<li ng-repeat="joke in jokearr">
+					<div class="img">
+						<img src="imgs/100.png"/>
+					</div>
+					<div class="text">
+						<h4 class="title">房田微营销</h4>
+						<p>{{joke.Article}}</p>
+						<div ng-click="copyText($index,joke.Article)" class="copy" id="copy{{$index}}">
+							<i class="iconfont icon-fuzhi"></i><span>一键复制</span>
+						</div>
+					</div>
+				</li>
+				
+			</ul>
+		</div>
+		
+		<!--上拉加载-->
+		<ion-infinite-scroll on-infinite="loadMore(true)" distance="10%" ng-if="noMore" > </ion-infinite-scroll>
+	</ion-content>
+	
+</ion-view>
+

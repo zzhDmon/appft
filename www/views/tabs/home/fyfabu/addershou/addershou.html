@@ -1,0 +1,150 @@
+
+<!--对话模板-->
+<ion-view id="addershou" view-title="{{headtitle}}" hide-nav-bar=true >
+	
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			{{headtitle}}
+		</div>
+		<div class="right" ng-click="publish()">
+			发布
+		</div>
+	</div>
+	
+	<ion-content on-swipe-right="onSwipeRight()" class="addershou">
+		<form novalidate name="formlogin">
+			<div class="offline"></div>
+			<div class="borderline"></div>
+			<div class="card" ui-sref="tabs.ershouxiaoqu">
+				<div class="tex">小区</div>
+				<div class="right"><i class="icon ion-chevron-right"></i></div>
+				<div class="cont">{{ershouxiaoqu}}</div>
+				<!--<input ng-model="publishdata.xiaoqu" class="cont" type="text" name="" id="" value="" />-->
+			</div>
+			<div class="borderline"></div>
+			<div class="offline"></div>
+			
+			<div class="borderline"></div>
+			<div class="card" ui-sref="tabs.ershoutd({name:'房源标题设置'})">
+				<div class="tex">标题</div>
+				<div class="right"><i class="icon ion-chevron-right"></i></div>
+				<div class="cont">{{ershoutitle}}</div>
+			</div>
+			<div class="borderline"></div>
+			
+			<div class="card" ui-sref="tabs.ershoutd({name:'房源描述设置'})">
+				<div class="tex">描述</div>
+				<div class="right"><i class="icon ion-chevron-right"></i></div>
+				<div class="cont">{{ershoudes}}</div>
+			</div>
+			<div class="borderline"></div>
+			<div class="offline"></div>
+			
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">房源编号</div>
+				<input class="bianhao" ng-model="publishdata.number" type="number" name="bianhao" value=""placeholder="请输入房源编号(选填)" />
+			</div>
+			<div class="borderline"></div>
+			<div class="offline"></div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">售价</div>
+				<div class="righttext">万元</div>
+				<input class="cellinput" type="number" ng-model="publishdata.price" name="" id="" value=""placeholder="请输入售价" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">建筑面积</div>
+				<div class="righttext">平米</div>
+				<input class="cellinput" type="number" ng-model="publishdata.area" name="" id="" value="" ng-model="pingmi" placeholder="请输入建筑面积" />
+			</div>
+			<div class="borderline"></div>
+			
+			<div class="offline"></div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">房型</div>
+				<input ng-model="publishdata.fangxing" class="picker qu-fangxing" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">楼层</div>
+				<input ng-model="publishdata.louceng" class="picker qu-louceng" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">类型</div>
+				<input ng-model="publishdata.type" class="picker qu-leixing" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">朝向</div>
+				<input ng-model="publishdata.chaoxiang" class="picker qu-chaoxiang" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">装修</div>
+				<input ng-model="publishdata.zhuangxiu" class="picker qu-zhuangxiu" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">年代</div>
+				<input ng-model="publishdata.year" class="picker qu-niandai" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			
+			<div class="offline"></div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">特色</div>
+				<div class="list checkpicker">
+	    
+			    <ion-checkbox ng-repeat="item in chooseList"
+			                  ng-model="item.isChecked" 
+			                  ng-checked="item.isChecked">
+			      {{ item.value }}
+			    </ion-checkbox>
+			    
+			 </div>
+			</div>
+			
+			<div class="borderline"></div>
+			<div class="offline"></div>
+			<div class="borderline"></div>
+			
+			<div class="card indoor" class="ershouIndoorImg" id="ershouIndoorImg">
+				<h4>室内图</h4>
+				<ul>
+					<li ng-repeat="img in publishdata.IndoorShowImages">
+						<img ng-src="{{img}}" alt="室内图"/>
+						<span ng-click="remove($index)">x</span>
+					</li>
+					<li class="chooseImg" id="chooseImg">
+						<img src="imgs/add.png"/>
+						<input  type="file" name="photo"  accept="image/*" autocomplete="off" />	
+					</li>
+				</ul>
+			</div>
+			<div class="card layout" id="ershouLayoutImg" class="ershouLayoutImg">
+				<h4>房型图</h4>
+				<ul>
+					<li ng-repeat="img in publishdata.LayoutShowImages">
+						<img ng-src="{{img}}" alt="房型图"/>
+						<span ng-click="removelayout($index)">x</span>
+					</li>
+					<li class="chooseLayoutImg" id="chooseLayoutImg">
+						<img src="imgs/add.png"/>
+						<input  type="file" name="photo"  accept="image/*" autocomplete="off" />	
+					</li>
+				</ul>
+			</div>
+			<canvas style="display: none;" id="mycans" width="" height=""></canvas>
+		</form>
+	</ion-content>
+	
+</ion-view>
+

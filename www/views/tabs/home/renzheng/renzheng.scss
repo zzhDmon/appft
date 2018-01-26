@@ -1,0 +1,364 @@
+#renzheng{
+    .header{
+        background-color: rgb(54, 153, 245);
+        border-bottom:none;
+        div{
+            color: white;
+        } 
+    }
+    .renzheng{
+        margin-top: 44px;
+        padding: 0;
+        div.headinfo{
+            width: 100%;
+            padding-top: 10px;
+            height: 200px;
+            background-color: rgb(54, 153, 245);
+            .headrenzheng{
+                width: 130px;
+                height: 130px;
+                margin:auto;
+
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            p{
+                margin: 10px 0 0;
+                height: 25px;
+                line-height: 25px;
+                font-size: 18px;
+                text-align: center;
+                color: white;
+            }
+        }
+        
+        .card{
+            box-shadow: none;
+            padding: 20px 12px 0; 
+            p.first{
+               margin: 0 0 15px;
+               font-size: 16px;
+               line-height: 25px;
+               span.red{
+                   color: rgb(233,60,48);
+               }
+            }
+            .top{
+                margin: 0 0 10px;
+                font-size: 16px;
+                height: 20px;
+                line-height: 20px;
+            }
+            .bottom{
+                width: 100%;
+                padding-left: 25px;
+                height: auto;
+                .across{
+                    height: auto;
+                    position: relative;
+                    .showimg{
+                        width: 120px;
+                        height: 160px;
+                        position: relative;
+                        img{
+                            position: absolute;
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                            max-height: 160px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        
+                    }
+                    .noimg{
+                        width: 160px;
+                        height: 120px;
+                        position: relative;
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .mask{
+                            position: absolute;
+                            z-index: 9;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(128,128,128,0.3);
+                            p{
+                                width: 100%;
+                                margin: 0;
+                                text-align: center;
+                                font-size: 20px;
+                                color: rgb(255,255,255);
+                                position: absolute;
+                                top: 50%; 
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    //名片样图
+                    .businessnocard{
+                        width: 160px;
+                        height: 96px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .mask{
+                            position: absolute;
+                            z-index: 9;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(128,128,128,0.3);
+                            p{
+                                width: 100%;
+                                margin: 0;
+                                text-align: center;
+                                font-size: 20px;
+                                color: rgb(255,255,255);
+                                position: absolute;
+                                top: 50%; 
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    .addimg{
+                        width: 15vw;
+                        height: 15vw;
+                        right: 20px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        .add{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            .iconfont{
+                                position: relative;
+                                top: 5vw;
+                                display: block;
+                                font-size: 15vw;
+                                color: rgb(150,150,150);
+                            }
+                        }
+                        input{
+                            display: none;
+                        }
+                        
+                    }
+                    
+                }
+                
+                p{
+                    margin: 10px 0 5px;
+                    line-height: 20px;
+                    font-size: 14px;
+                    color: rgb(150,150,150);
+                }
+                
+            }
+        
+        }
+        .idcard{
+            padding: 20px 12px 0; 
+            .bottom{
+                position: relative;
+            }
+        }
+        .business{
+            .bottom{
+                position: relative;
+            }
+        }
+        .banktype{
+            .bottom{
+                padding-right: 12px;
+                position: relative;
+                .iconfont{
+                    font-size: 20px;
+                    position: absolute;
+                    top: 50%;
+                    right: 15px;
+                    transform: translateY(-50%);
+                }
+                input{
+                    width: 100%;
+                    padding-left: 10px;
+                    border: 1px solid rgba(150,150,150,0.5);
+                    border-radius: 3px;
+                }
+            }
+        }
+        .banknum{
+            .bottom{
+                padding-right: 12px;
+                position: relative;
+                input{
+                    width: 100%;
+                    padding-left: 10px;
+                    border: 1px solid rgba(150,150,150,0.5);
+                    border-radius: 3px;
+                }
+                span.iconfont{
+                   position: absolute;
+                   top: 8px;
+                   right: 15px; 
+                }
+                span.icon-guanbi1{
+                    color: red;
+                }
+                span.icon-xuanze{
+                    color: green;
+                }
+            }
+        }
+        .confirm{
+            padding: 20px 12px 20px!important;
+            .button{
+                background-color: rgb(65,160,255);
+                display: block;
+                width: 100%;
+                margin: auto;
+            }
+        }
+        
+    }
+    .plus{
+        padding: 0;
+        .card{
+            box-shadow: none;
+            padding: 20px 12px 0; 
+            p{
+               margin: 0 0 15px;
+               line-height: 25px;
+               font-size: 16px;
+               span.red{
+                   color: rgb(233,60,48);
+               }
+            }
+            .top{
+                margin: 0 0 10px;
+                font-size: 16px;
+                height: 20px;
+                line-height: 20px;
+            }
+            .bottom{
+                width: 100%;
+                padding-left: 25px;
+                height: auto;
+                .across{
+                    height: auto;
+                    position: relative;
+                    .showimg{
+                        width: 150px;
+                        height: 200px;
+                        position: relative;
+                        img{
+                            position: absolute;
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                            max-height: 200px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        
+                    }
+                    .noimg{
+                        width: 200px;
+                        height: 150px;
+                        position: relative;
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .mask{
+                            position: absolute;
+                            z-index: 9;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(128,128,128,0.3);
+                            p{
+                                width: 100%;
+                                margin: 0;
+                                text-align: center;
+                                font-size: 20px;
+                                color: rgb(255,255,255);
+                                position: absolute;
+                                top: 50%; 
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    //名片样图
+                    .businessnocard{
+                        width: 200px;
+                        height: 120px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .mask{
+                            position: absolute;
+                            z-index: 9;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(128,128,128,0.3);
+                            p{
+                                width: 100%;
+                                margin: 0;
+                                text-align: center;
+                                font-size: 20px;
+                                color: rgb(255,255,255);
+                                position: absolute;
+                                top: 50%; 
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    .addimg{
+                        width: 15vw;
+                        height: 15vw;
+                        right: 20px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        .add{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            .iconfont{
+                                position: relative;
+                                top: 5vw;
+                                display: block;
+                                font-size: 15vw;
+                                color: rgb(150,150,150);
+                            }
+                        }
+                        input{
+                            display: none;
+                        }
+                        
+                    }
+                    
+                }
+
+                
+                
+                p{
+                    margin: 10px 0 5px;
+                    line-height: 20px;
+                    color: rgb(150,150,150);
+                }
+                
+            }
+        
+        }
+    }
+}

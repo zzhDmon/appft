@@ -1,0 +1,187 @@
+<!--联系人界面模板-->
+<ion-view id="createcli" view-title="{{Title}}" hide-nav-bar=true>
+	<!--<ion-nav-buttons side="primary">
+		<i menu-toggle class="icon ion-navicon-round" style="font-size: 25px;margin:7px 0 0 5px;"></i>
+	</ion-nav-buttons>-->
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			{{Title}}
+		</div>
+		<div class="right">
+			
+		</div>
+	</div>
+	
+	<!--自定义模态框-->
+	<div ng-click="closeselfmodal()" class="selfbackdrop"></div>
+	<div class="selfmodal">
+		<div class="self-head"></div>
+		<div class="self-content">
+			是否放弃录入这位客户的资料？
+		</div>
+		<div class="self-footer">
+			<div ng-click="giveUp()" class="giveup">放弃</div><div ng-click="continue()" class="continue">继续编辑</div>
+		</div>
+	</div>
+	
+	<form novalidate name="createcliForm" ng-cloak>
+		<ion-content class="createcli">
+				<p class="base">基本信息(必填)</p>
+				<div class="baseinfo">
+					<div class="tocontactlist" ui-sref="tabs.contactlist"><i class="iconfont icon-tianjia1"></i>  客户信息在通讯录？一键导入</div>
+					<div class="borderline"></div>
+
+					<div class="cliname">
+						<input ng-model="submitData.Name" type="text" name="name" value="" placeholder="客户姓名" required/>				
+					</div>
+					<div class="borderline"></div>
+					
+					<div class="cliphone">
+						<input ng-model="submitData.Phone" type="tel" name="phone" placeholder="电话" pattern="^1[0-9]{10}$" required/>					
+						<span ng-show='createcliForm.phone.$invalid&&createcliForm.phone.$dirty' class="iconfont icon-guanbi1"></span>
+						<span ng-show='createcliForm.phone.$valid&&createcliForm.phone.$dirty' class="iconfont icon-xuanze" title="两次正确的电话模式"></span>
+					</div>
+					<div class="borderline"></div>
+					
+					<div class="sex">
+						选择性别&#x3000;&#x3000;
+						<label><input ng-model="submitData.Sex" type="radio" name="sexradio" value="1" /> <i>✓</i>先生&nbsp;&nbsp;</label>
+						<label><input ng-model="submitData.Sex" type="radio" name="sexradio" value="2" /> <i>✓</i>女士</label>
+					
+					</div>
+					<div class="borderline"></div>
+					
+					<div class="reqtype">
+						需求类型&#x3000;&#x3000;
+						<label><input ng-model="submitData.PriceType" value="0" type="radio" name="reqcheck"> <i>✓</i>新房&nbsp;&nbsp;</label>
+						<label><input ng-model="submitData.PriceType" value="1" type="radio" name="reqcheck"> <i>✓</i>二手房&nbsp;&nbsp;</label>
+						<label><input ng-model="submitData.PriceType" value="2" type="radio" name="reqcheck"> <i>✓</i>租房	</label>					
+					</div>
+					<div class="borderline"></div>
+					
+					<div class="rank">
+						客户级别&#x3000;&#x3000;
+						<label><input ng-model="submitData.Level" value="1" type="radio" name="rankradio"> <i>✓</i>A有价值&nbsp;&nbsp;</label>
+						<label><input ng-model="submitData.Level" value="2" type="radio" name="rankradio"> <i>✓</i>B一般&nbsp;&nbsp;</label>
+						<label><input ng-model="submitData.Level" value="3" type="radio" name="rankradio"> <i>✓</i>C观望</label>
+					</div>	
+					<div class="borderline"></div>
+				</div>
+				
+				<p class="need">需求详情(选填)</p>
+				
+				<!-- -->
+				<div class="needinfo">
+					<ul>
+						<li ng-repeat="itemli in itemList track by $index">
+							<div class="left" ng-click="openModal(1,$index,itemli.key)">
+								<!--弹出模态框-->
+								<div class="rmask" ng-click="openModal(1,$index,itemli.key)"></div>
+								<input type="" name="" id="" value="{{itemli.key}}" placeholder="需求" />
+							</div>
+							<div class="right">
+								<!--弹出模态框-->
+								<div ng-show="itemli.key!=='户型要求'" class="rmask" ng-click="openModal(2,$index,itemli.key)"></div>
+								<input ng-show="itemli.key!=='户型要求'" value="{{itemli.value}}" placeholder="未选泽" />
+								<div ng-if="itemli.key=='户型要求'" class="rmask creatcli-fangxing" ng-click="showchoosefx($index)"></div>
+								<input ng-if="itemli.key=='户型要求'" value="{{itemli.value}}" placeholder="未选泽" />
+							</div>
+							<div ng-click="deleteitem($index,itemli.key)" class="delete">
+								<i class="iconfont icon-lajitong"></i>
+							</div>
+						</li>
+					</ul>
+					
+					<div style="clear: both;"></div>
+					<div class="additem" ng-click="additem()"><i class="iconfont icon-tianjia1"></i>点击增加客户需求项目</div>
+				</div>
+					
+				<div style="height: 45px;width: 100%;"></div>
+		</ion-content>
+		
+		<div class="save">
+			<button ng-disabled="createcliForm.$invalid" ng-click="save()" class="button">保存</button>
+		</div>
+	</form>
+
+
+
+
+<!--模态框-->
+	<script id="createcli-modal" type="text/ng-template">
+		<ion-modal-view ng-show="showmsg" id="createcli_msgmodal">
+			<div ng-show="!showerrmsg" class="img">
+				<img ng-src="imgs/提交成功.png"/>
+				<p class="suc">{{msginfo}}！</p>		
+			</div>
+			<div ng-show="showerrmsg" class="img">
+				<img src="imgs/提交失败.png"/>
+				<p class="defe">录入失败：{{msginfo}}！</p>
+			</div>
+		</ion-modal-view>
+		
+		<ion-modal-view ng-show="!showmsg" id="createcli_modal" ng-class="{true:'create-elsemodal',false:''}[toubutit=='设置心理价位']">
+			<!--头部-->
+			<div class="toubu">
+				{{toubutit}}
+				<!--<span ng-click="modal.hide()">关闭</span>-->
+			</div>
+			
+			<!--内容-->
+			<div ng-show="showkey">
+			    <ion-content class="climodal" >
+			       <ion-list>  
+			                <ion-item ng-click="choosekey(reqli)" ng-repeat="reqli in keyList track by $index">{{reqli}}</ion-item>
+			        </ion-list>         	
+			    </ion-content>
+				
+			</div>
+			
+			<ion-content class="climodal" ng-show="!showkey && toubutit!=='设置户型要求' && toubutit!=='设置心理价位'">
+			   <ion-list> 
+			            <ion-item ng-click="choosevalue($index,value)" ng-repeat="value in valueList track by $index">{{value}}</ion-item>
+			    </ion-list>         	
+			</ion-content>
+			  
+			    <ion-content id="creadcli_choosefx" class="climodal" ng-show="!showkey && toubutit=='设置户型要求'">
+				  
+			</ion-content>
+			
+			
+			<ion-content has-bouncing=false class="climodal" ng-show="!showkey && toubutit=='设置心理价位'">
+			   		<div ng-show="submitData.PriceType==0" class="pricetype">
+			   			<span></span>
+			   			<input type="number" ng-model="submitData.Price" name="" placeholder="输入购房总价"/>
+			   			<span>&#x3000;万</span>
+			   		</div> 
+			   		<div ng-show="submitData.PriceType==1" class="pricetype">
+			   			<span></span>
+			   			<input type="number" ng-model="submitData.Price" name="" placeholder="输入购房平均价"/>
+			   			<span>&#x3000;万</span>
+			   		</div> 
+			   		<div ng-show="submitData.PriceType==2" class="pricetype">
+			   			<span></span>
+			   			<input type="number" ng-model="submitData.Price" name=""  placeholder="输入租房每月租金"/>
+			   			<span>&#x3000;元/月</span>
+			   		</div>   	
+			</ion-content>
+			
+			<!--脚部-->
+			<!--<ion-footer-bar ng-show="!showkey && toubutit=='设置户型要求'">
+				<div>
+					提交        		
+				</div>
+			</ion-footer-bar>-->
+			<ion-footer-bar ng-click="savePrice()" ng-show="!showkey && toubutit=='设置心理价位'">
+				<div>
+					提交        		
+				</div>
+			</ion-footer-bar>
+		</ion-modal-view>
+    </script>
+
+	
+</ion-view>

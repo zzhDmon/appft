@@ -1,0 +1,126 @@
+
+<!--对话模板-->
+<ion-view id="shareweidian" view-title="微店"  class='dark' hide-nav-bar="true">
+	
+	
+	<div class="openshop">
+		<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.fangtian.ft">
+			我也要开店
+		</a>
+	</div>
+	<ion-content on-swipe-right="onSwipeRight()" class="shareweidian" has-bouncing={{torf}}>
+		<div class="card headback">
+			<div class="backbotton btn" ng-click="back()"><i class="icon ion-chevron-left"></i></div>
+		</div>
+		<div class="card headinfo">
+			<img ng-src="{{info.ShowImg}}"/>
+			<div class="description">
+				<h4>{{info.Name}}({{WorkYears}}年服务年限)</h4>
+				<p>{{discription}}</p>
+			</div>
+		</div>
+		
+		<div ng-show="recommend.length>0" class="card zhutui">
+			<div>
+				<h4>TA的主推房源</h4>				
+			</div>
+			<ul>
+				<li ng-repeat="recommendhouse in recommend" ui-sref="tabs.fydetail({id:recommendhouse.Id,housetype:recommendhouse.Type})">
+					<img ng-src="{{recommendhouse.Thumb}}"/>
+					<h5>{{recommendhouse.Title}}</h5>
+					<p class="desc"><span>{{recommendhouse.HouseType}}</span><span>{{recommendhouse.Space}}平方</span></p>
+					<p class="about">
+						<span ng-repeat="Tag in recommendhouse.Tags">{{Tag}}</span>
+					</p>
+					<p class="price"><span class="jiage">{{recommendhouse.Price}}</span><span ng-if="recommendhouse.Type==1">万</span><span ng-if="recommendhouse.Type==2">元/月</span></p>
+				</li>
+				
+			</ul>
+		</div>
+		<div ng-show="sell.length>0" class="offline"></div>
+		<div ng-show="sell.length>0" class="card zaishou">
+			<h4>TA的在售房源</h4>
+			<ul>
+				<li ng-repeat="sellhouse in sell" ui-sref="tabs.fydetail({id:sellhouse.Id,housetype:1})">
+					<div class="img">
+						<img src="{{sellhouse.Thumb}}"/>
+					</div>
+					<div class="description">
+						<h5>{{sellhouse.Title}}</h5>
+						<p>{{sellhouse.CommunityName}}</p>
+						<div>
+							<div class="space">
+								{{sellhouse.HouseType}}&nbsp;{{sellhouse.Space}}平米 
+							</div>
+							<div class="price">
+								<span>{{sellhouse.Price}}</span>万
+							</div>
+						</div>
+						<div style="clear: both;"></div>
+						<p>
+							<span ng-repeat="Tag in sellhouse.Tags">{{Tag}}</span>
+						</p>
+					</div>
+				</li>
+			
+				
+			</ul>
+		</div>
+		<div ng-show="rent.length>0" class="offline"></div>
+		<div ng-show="rent.length>0" class="card zaizu">
+			<h4>TA的在租房源</h4>
+			<ul>
+				<li ng-repeat="renthouse in rent" ui-sref="tabs.fydetail({id:renthouse.Id,housetype:'rent'})">
+					<div class="img">
+						<img src="{{renthouse.Thumb}}"/>
+					</div>
+					<div class="description">
+						<h5>{{renthouse.Title}}</h5>
+						<p>{{renthouse.CommunityName}}</p>
+						<div>
+							<div class="space">
+								{{renthouse.HouseType}}&nbsp;{{renthouse.Space}}平米 
+							</div>
+							<div class="price">
+								<span>{{renthouse.Price}}</span>元/月
+							</div>
+						</div>
+						<div style="clear: both;"></div>
+						<p>
+							<span ng-repeat="Tag in renthouse.Tags">{{Tag}}</span>
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		
+		
+		<!--分享浮动框 ion-popover-view-->
+		<script id="weidianpopover.html" type="text/ng-template">
+			<ion-popover-view class="Bottom-share-popover">
+				<ul>
+					<li class="weixin" ng-click="share(0)">
+						<div class="img">
+							<img src="imgs/微信.png"/>
+						</div>
+						<p>微信好友</p>
+					</li>
+					<li class="pengyouquan" ng-click="share(1)">
+						<div class="img">
+							<img src="imgs/朋友圈.png"/>
+							
+						</div>
+						<p>朋友圈</p>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<h4 ng-click="closePopoverView($event)">取消</h4>
+			</ion-popover-view>
+		</script>
+		
+		
+	</ion-content>
+	
+</ion-view>
+

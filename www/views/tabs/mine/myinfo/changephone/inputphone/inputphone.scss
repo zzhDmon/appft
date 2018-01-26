@@ -1,0 +1,30 @@
+#inputphone{
+    .inputphone{
+        background-color: rgb(242,242,242);
+        height: 100%;
+       .card{
+           box-shadow: none;
+       } 
+       .list{
+           position: relative;
+           .button{
+               position: absolute;
+               z-index: 999;
+               width: 20vw;
+               height: 30px;
+               font-size: 14px;
+               top: 10px;
+               right: 10px;
+               border: 1px solid black;
+               border-radius: 5px;
+           }
+           .item-input{
+               .input-label{
+                   padding: 7px 0 7px;
+                   font-size: 14px;
+                   width: 20vw!important;
+               }
+           }
+       }
+    }
+}

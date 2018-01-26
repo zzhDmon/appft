@@ -1,0 +1,115 @@
+<!--消息界面模板-->
+<ion-view id="searchhouse" hide-nav-bar="true" view-title="">
+	
+	<div class="bar searchhouse-header item-input-inset">
+	    <!--<button class="button icon-left ion-ios-search-strong button-clear button-small" ng-click="search(searchName)">-->
+	    <!--</button>-->
+	    <span class="goback" ng-if="!searchName.key.length" ng-click="goback()"><i class="iconfont icon-fanhuishangyiji"></i></span>
+	     <span class="item-input-wrapper" >
+	     	<span class="housetype" ng-click="openPopover($event)">{{typechoose}}</span>
+            <i class="iconfont icon--pulldown"></i>
+		    <form>
+	            <input type="search" placeholder="请输入小区名称或地址" ng-model="searchName.key">
+			    <button style="display: none" ng-click="search()"></button>
+			</form>
+            <!--<i class="icon ion-close-circled placeholder-icon" style="vertical-align: middle;"
+                   ng-click="clear()" ng-if="searchName.key.length"></i>-->
+        </span>
+	    <span class="cancel" ng-if="searchName.key.length" ng-click="cancle()">取消</span>
+	
+	</div>
+	
+	
+	<ion-content on-swipe-right="onSwipeRight()" class="searchhouse" has-bouncing=false>
+		
+		<div ng-if="type==1" class="card searchhistory ershou">
+			<!--<h5>历史记录</h5>-->
+			<ion-list>
+				<ion-item ng-repeat="ershouhistory in setershouhistory track by $index">
+					<span class="lef" ui-sref="tabs.searchresult({query:ershouhistory,type:1})">{{ershouhistory}}</span> <span class="rig" ng-click="Delershou($index)"><i class="iconfont icon-quxiao1"></i></span>
+				</ion-item>
+			</ion-list>
+			<button ng-if="setershouhistory.length>0" ng-click="removeershouhistory()" class="button "><i class="iconfont icon-lajitong"></i>删除历史记录</button>
+			
+			<p ng-if="setershouhistory.length<1" class="nohistory">
+				暂无二手房搜索记录
+			</p>
+			
+			<div class="offline"></div>
+			<div class="hotsearch">
+				<h5>房田热门搜索</h5>
+				<ul>
+					<li ng-repeat="item in hotSearcharr track by $index" ui-sref="tabs.searchresult({query:item.Title,type:1})">
+						<span>{{$index+1}}</span>{{item.Title}}
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div ng-if="type==2" class="card searchhistory zufang">
+			<!--<h5>历史记录</h5>-->
+			<ion-list>
+				<ion-item ng-repeat="zufanghistory in setzufanghistory track by $index">
+					<span class="lef" ui-sref="tabs.searchresult({query:zufanghistory,type:2})">{{zufanghistory}}</span>  <span class="rig" ng-click="Delzufang($index)"><i class="iconfont icon-quxiao1"></i></span>
+				</ion-item>
+			</ion-list>
+			<button ng-if="setzufanghistory.length>0" ng-click="removezufanghistory()" class="button"><i class="iconfont icon-lajitong"></i>删除历史记录</button>
+		
+			<p ng-if="setzufanghistory.length<1" class="nohistory">
+				暂无租房搜索记录
+			</p>
+			
+			<div class="offline"></div>
+			<div class="hotsearch">
+				<h5>房田热门搜索</h5>
+				<ul>
+					<li ng-repeat="item in hotSearcharr track by $index" ui-sref="tabs.searchresult({query:item.Title,type:2})">
+						<span>{{$index+1}}</span>{{item.Title}}
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div ng-if="type==0" class="card searchhistory newhouse">
+			<!--<h5>历史记录</h5>-->
+			<ion-list>
+				<ion-item ng-repeat="item in setnewhousehistory track by $index">
+					<span class="lef" ui-sref="tabs.searchresult({query:item,type:0})">{{item}}</span>  <span class="rig" ng-click="Delnewhouse($index)"><i class="iconfont icon-quxiao1"></i></span>
+				</ion-item>
+			</ion-list>
+			<button ng-if="setnewhousehistory.length>0" ng-click="removenewhousehistory()" class="button"><i class="iconfont icon-lajitong"></i>删除历史记录</button>
+		
+			<p ng-if="setnewhousehistory.length<1" class="nohistory">
+				暂无新房搜索记录
+			</p>
+			
+			<div class="offline"></div>
+			<div class="hotsearch">
+				<h5>房田热门搜索</h5>
+				<ul>
+					<li ng-repeat="item in hotSearcharr track by $index" ui-sref="tabs.searchresult({query:item.Title,type:0})">
+						<span>{{$index+1}}</span>{{item.Title}}
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+	
+		<script id="searchhouse.html" type="text/ng-template">
+			<ion-popover-view id="searchpopover">
+			  <ion-content>
+			    <ion-list>
+			    	<ion-item ng-click="changetype('二手房')">二手房</ion-item>
+			    	<ion-item ng-click="changetype('租房')">租房</ion-item>
+			    	<ion-item ng-click="changetype('新房')">新房</ion-item>
+			    </ion-list>
+			  </ion-content>
+			</ion-popover-view>
+		</script>
+	
+	</ion-content>
+
+</ion-view>
+
+
+

@@ -1,0 +1,251 @@
+#find{
+    .header{
+        background-color: rgb(255,255,255);
+    }
+    .find{
+        background-color: rgb(246,246,246);
+        margin-top: 44px;
+        .twoimg{
+            padding: 10px 12px;
+            width: 100%;
+//          height: 140px;
+            height: auto;
+            background-color: #fff;
+            .duanzi{
+                padding-right: 6px;
+            }
+            .dazibao{
+                padding-left: 6px;
+            }
+            .oneofimg{
+                width: 50%;
+                height: 100%;
+                float: left;
+                .inside{
+                    width: 100%;
+                    height: auto;
+//                  height: 100%;
+                    position: relative;
+                    img{
+                        display: block;
+                        width: 100%;
+                        height: auto;
+//                      height: 100%;
+                    }
+                    .text{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top:0;
+                        left: 0;
+                        background-color: rgba(0,0,0,0.5);
+                        h4{
+                            width: 100%;
+                            text-align: center;
+                            margin: 0;
+                            position: absolute;
+                            top: calc(50% - 15px);
+                            height: 30px;
+                            font-size: 18px;
+                            line-height: 30px;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        .poster{
+            h4.title{
+                margin: 0;
+                padding: 15px 12px 8px;
+                font-size: 16px;
+                color: rgb(17,17,17);
+                background-color: rgb(255,255,255);
+                box-sizing: border-box;
+                a{
+                    text-decoration: none;
+                    font-weight: normal;
+                    width: 60px;
+                    height: 100%;
+                    line-height: 20px;
+                    display: block;
+                    float: right;
+                    text-align: right;
+                    font-size: 14px;
+                    color: #969696;
+                    vertical-align: middle;
+                    .iconfont{
+                        vertical-align: middle;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .ninescroll{
+             padding: 10px 4px 0;
+             background-color: #fff;
+              #findwrapper {
+                position: relative;
+                z-index: 1;
+                height: 210px;
+                width: 100%;
+                background:rgb(255,255,255);
+                overflow: hidden;
+                -ms-touch-action: none;
+                #findscroller {
+                    position: absolute;
+                    z-index: 1;
+                    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                    width: 972px;
+                    height: 100%;
+                    -webkit-transform: translateZ(0);
+                    -moz-transform: translateZ(0);
+                    -ms-transform: translateZ(0);
+                    -o-transform: translateZ(0);
+                    transform: translateZ(0);
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    -webkit-text-size-adjust: none;
+                    -moz-text-size-adjust: none;
+                    -ms-text-size-adjust: none;
+                    -o-text-size-adjust: none;
+                    text-size-adjust: none;
+                    ul {
+                        list-style: none;
+                        width: 100%;
+                        height: 100%;
+                        padding: 0;
+                        margin: 0;
+                        li {
+                            margin-left: 8px;
+                            width: 100px;
+                            height: 100%;
+                            float: left;
+                            background-color: rgb(255,255,255);
+                            font-size: 14px;
+                            overflow: hidden;
+                            img{
+                                width: 100px;
+                                height: 150px;
+                                margin: auto;
+                                display: block;
+                            }
+                            p{
+                                margin: 5px 0 5px;
+                                height: 20px;
+                                line-height: 20px;
+                                font-size: 14px;
+                                color: black;
+                                background-color: white;
+                            }
+                            div{
+                                height: 20px;
+                                line-height: 20px;
+                                font-size: 12px;
+                                color: rgb(147,147,147);
+                                background-color: white;
+                                span{
+                                     color: rgb(230,75,0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        }
+        .latestnews{
+            background-color: #fff;
+            .tit{
+                padding: 0;
+                height: 40px;
+                .title{
+                    margin: 0;
+                    padding: 0 12px;
+                    width: 100%;
+                    height: 100%;
+                    line-height: 40px;
+                    font-size: 16px;
+                    color: rgb(17,17,17);
+                    background-color: rgb(255,255,255);
+                    box-sizing: border-box;
+                    a{
+                        text-decoration: none;
+                        text-decoration: none;
+                        font-weight: normal;
+                        width: 80px;
+                        display: block;
+                        float: right;
+                        text-align: right;
+                        font-size: 14px;
+                        color: #969696;
+                        vertical-align: middle;
+                        word-break:keep-all;
+                        white-space:nowrap;
+                        overflow:hidden; 
+                        text-overflow:ellipsis; 
+                        .iconfont{
+                            vertical-align: middle;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .list{
+            .item-thumbnail-right{
+                border: none!important;
+                padding: 0 0 0 12px;
+                margin: 0;
+                .item-content.activated{
+                    background-color: rgb(246,246,246);
+                }
+                .item-content{
+                    border-bottom: 1px solid rgb(230,230,230);
+                    padding: 10px 12px 10px 0;
+                    position: relative;
+                    .img{
+                        margin-left: 10px;
+                        margin-top: 5px;
+                        width: 100px!important;
+                        height: 70px;
+                        float: right;
+                        img{
+                            display: block;
+                            width: 100px!important;
+                            height: 70px;
+                        }
+                    }
+                    h2{
+                        text-overflow: initial;
+                        white-space: initial;
+                        border-top: none!important; 
+                        color: rgb(51,51,51);
+                        font-size: 16px;
+                        font-weight: 450;
+                        height: 50px;
+                        line-height: 25px;
+                        text-overflow:ellipsis; 
+                    }
+                    p{
+                        margin: 0;
+                        position: absolute;
+                        bottom: 10px;
+                        color: rgb(147,147,147);
+                        font-size: 12px;
+                        border-top: none!important; 
+                        text-overflow: initial;
+                        white-space: initial;
+                        text-overflow:ellipsis; 
+                        .time{
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        }
+    }
+}
+

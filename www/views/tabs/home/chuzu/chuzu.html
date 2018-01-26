@@ -1,0 +1,94 @@
+<!--对话模板-->
+<ion-view id="chuzu" hide-nav-bar=true view-title="业主出租" class='dark'>
+	<!--<ion-nav-buttons side="secondary">
+		<a ui-sref="tabs.chuzusub" style="color: gray;font-size: 1.4rem;" class="button button-small button-icon ">设置订阅</a>
+	</ion-nav-buttons>-->
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			业主出租
+		</div>
+		<div ui-sref="tabs.chuzusub" class="right" >
+			设置订阅
+		</div>
+	</div>
+	
+	<ul class="toptwo">
+		<li ng-click="move(0,$event)">订阅</li>
+		<li ng-click="move(1,$event)">全部</li>
+		<div class="line"></div>
+	</ul>
+	
+	<!--回到顶部-->
+	<div ng-if="toptwo=='订阅'" class="backtop" ng-click="subscrollTop()"><i class="iconfont icon-xiangshang"></i></div>
+	<div ng-show="toptwo=='订阅'&&isSub!==''">
+		<ion-content delegate-handle="subscroll" on-scroll="subScrollListen()" on-swipe-right="onSwipeRight()" class="chuzu">
+			<!--下拉刷新-->
+			<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="subdoRefresh(false)"></ion-refresher>
+			<div class="card list">
+				<ul>
+					<li ng-repeat="chuzudata in subchushoudatarr" ui-sref="tabs.chuzudetail({id:chuzudata.Id})">
+						<h4>{{chuzudata.Title}}</h4>
+						<p class="area"><span>{{chuzudata.District}}</span><span class="second">{{chuzudata.Community}}</span></p>
+						<!--<p><span>{{chuzudata.HouseType}}</span><span class="second">{{chuzudata.Space}}平米</span></p>-->
+						<div class="sandp">
+							<div class="space">
+								<span>{{chuzudata.HouseType}}</span><span class="second">{{chuzudata.Space}}平米</span>
+							</div>
+							<div class="price">
+								<span class="jiage">{{chuzudata.Price}}</span><span ng-if="chuzudata.Price.substring(chuzudata.Price.length-3)!=='元/月'">元/月</span>
+							</div>
+						</div>
+						<div class="clear" style="clear: both;"></div>
+						<p class="from"><span>{{chuzudata.Source}}</span><span class="second">{{chuzudata.UpdateTime}}</span></p>
+						<!--<div class="price">
+							{{chuzudata.Price}}元/月
+						</div>-->
+					</li>
+				</ul>
+			</div>
+			
+			
+			<!--上拉加载-->
+			<ion-infinite-scroll on-infinite="subloadMore(true)" distance="10%" ng-if="noMore" > </ion-infinite-scroll>
+		</ion-content>	
+	</div>
+	
+	<!--回到顶部-->
+	<div ng-if="toptwo=='全部'" class="backtop" ng-click="allscrollTop()"><i class="iconfont icon-xiangshang"></i></div>
+	<div ng-show="toptwo=='全部'">
+		<ion-content delegate-handle="allscroll" on-scroll="allScrollListen()" on-swipe-right="onSwipeRight()" class="chuzu">
+			<!--下拉刷新-->
+			<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="alldoRefresh(false)"></ion-refresher>
+			<div class="card list">
+				<ul>
+					<li ng-repeat="chuzudata in allchushoudatarr" ui-sref="tabs.chuzudetail({id:chuzudata.Id})">
+						<h4>{{chuzudata.Title}}</h4>
+						<p class="area"><span>{{chuzudata.District}}</span><span class="second">{{chuzudata.Community}}</span></p>
+						<!--<p><span>{{chuzudata.HouseType}}</span><span class="second">{{chuzudata.Space}}平米</span></p>-->
+						<div class="sandp">
+							<div class="space">
+								<span>{{chuzudata.HouseType}}</span><span class="second">{{chuzudata.Space}}平米</span>
+							</div>
+							<div class="price">
+								<span class="jiage">{{chuzudata.Price}}</span><span ng-if="chuzudata.Price.substring(chuzudata.Price.length-3)!=='元/月'">元/月</span>
+							</div>
+						</div>
+						<div class="clear" style="clear: both;"></div>
+						<p class="from"><span>{{chuzudata.Source}}</span><span class="second">{{chuzudata.UpdateTime}}</span></p>
+						<!--<div class="price">
+							{{chuzudata.Price}}元/月
+						</div>-->
+					</li>
+				</ul>
+			</div>
+			
+			
+			<!--上拉加载-->
+			<ion-infinite-scroll on-infinite="allloadMore(true)" distance="10%" ng-if="noMore" > </ion-infinite-scroll>
+		</ion-content>	
+	</div>
+	
+</ion-view>

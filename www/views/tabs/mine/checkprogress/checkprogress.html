@@ -1,0 +1,65 @@
+
+<!--对话模板-->
+<ion-view id="checkprogress" hide-nav-bar=true view-title="房源发布"  class='dark'>
+	<!--<ion-nav-buttons side="secondary">
+		<a  class="button button-small button-icon"  ng-click="openPopoverView($event)"><i style="color: gray;font-size: 25px!important;color: rgb(51,51,51);font-weight: 500;" class="iconfont icon-jiahao1"></i></a>	
+	</ion-nav-buttons>-->
+	
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			审核详情
+		</div>
+		<div class="right">
+			
+		</div>
+	</div>
+
+	<div>
+		<ion-content on-swipe-right="onSwipeRight()" class="checkprogress">
+			<div class="card ">
+				<span ng-if="VStatus==1" class="iconfont icon-shenhe01"></span>
+				<span ng-if="VStatus==2 || VStatus==3" class="iconfont icon-shenhewancheng1"></span>
+				<p ng-if="VStatus==1">正在审核中，请耐心等待！</p>
+				<p ng-if="VStatus==2">您的审核已通过</p>
+				<p ng-if="VStatus==3">审核完成，您的审核未通过</p>
+				<div class="progress">
+					<div class="across">
+						<div class="left">
+							<span ng-if="VStatus==1 || VStatus==2 || VStatus==3" class="iconfont icon-shenhe"></span>
+							<div ng-if="VStatus==0" class="circle"></div>
+						</div>	
+						<div class="right">
+							审核已受理
+						</div>
+					</div>
+					<div class="across">
+						<div class="left">
+							<span ng-if="VStatus==1 || VStatus==2 || VStatus==3" class="iconfont icon-shenhe"></span>
+							<div ng-if="VStatus==0" class="circle"></div>
+						</div>	
+						<div class="right">
+							审核中
+						</div>
+					</div>
+					<div class="across">
+						<div class="left">
+							<span ng-if="VStatus==3 || VStatus==2" class="iconfont icon-shenhe"></span>
+							<div ng-if="VStatus!==3 && VStatus!==2" class="circle"></div>
+						</div>	
+						<div class="right">
+							审核完成<span ng-if="VStatus==3">，未通过</span>
+						</div>
+					</div>
+					
+					<div class="vertical"></div>
+				</div>
+			</div>
+		</ion-content>
+	</div>
+	
+	
+</ion-view>
+

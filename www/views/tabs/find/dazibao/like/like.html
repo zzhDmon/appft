@@ -1,0 +1,29 @@
+
+<!--对话模板-->
+<ion-view id="like" hide-nav-bar=true view-title=""  class='dark'>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+		</div>
+		<div class="right" >
+			
+		</div>
+	</div>
+	<ion-content on-swipe-right="onSwipeRight()" class='like'>
+		<div class="card">
+			<img ng-src="{{url}}"/>
+			<div class="loveshare">
+				<div class="love" ng-click="like()">
+					<i class="icon ion-ios-heart-outline"></i>&nbsp;点赞一下
+				</div>
+				<div class="share" ng-click="downloadImage(url)">
+					<i class="icon ion-android-download"></i>&nbsp;保存图片
+				</div>
+			</div>
+		</div>
+	</ion-content>
+	
+</ion-view>
+

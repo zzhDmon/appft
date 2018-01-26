@@ -1,0 +1,120 @@
+
+<!--对话模板-->
+<ion-view id="zufanglist" hide-nav-bar=true view-title="房源发布"  class='dark'>
+	<!--<ion-nav-buttons side="secondary">
+		<a  class="button button-small button-icon"  ng-click="openPopoverView($event)"><i style="color: gray;font-size: 25px!important;color: rgb(51,51,51);font-weight: 500;" class="iconfont icon-jiahao1"></i></a>	
+	</ion-nav-buttons>-->
+	
+	<div ng-click="onlyclosechoose()" class="bar searchhouse-header item-input-inset">
+	    <span class="goback" ng-click="back()"><i class="iconfont icon-fanhuishangyiji"></i></span>
+	     <span class="item-input-wrapper" ui-sref="tabs.searchhouse({housetype:'租房'})">
+	     	<i class="iconfont icon-sousuo2"></i>
+            <input type="search" placeholder="请输入小区名称或地址" ng-model="searchName.key" ng-change="search(searchName.key)">
+            
+        </span>
+	
+	</div>
+	
+	<ul class="topfour">
+		<li ng-click="openchoose(0)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.district=='区域']"><div>{{querydata.district}} <span ng-if="querydata.area!==''">|{{querydata.area}}</span></div><i class="iconfont icon--pulldown"></i></li>
+		<li ng-click="openchoose(1)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.price=='租金']"><div>{{querydata.price}}</div><i class="iconfont icon--pulldown"></i></li>
+		<li ng-click="openchoose(2)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.type=='房型']"><div>{{querydata.type}}</div><i class="iconfont icon--pulldown"></i></li>
+		<li ng-click="openchoose(3)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.sort=='排序']"><div>{{querydata.sort}}</div><i class="iconfont icon--pulldown"></i></li>
+	</ul>
+	
+	<!--模态层-->
+	<div ng-click="closechoose()" class="mask" >
+		
+	</div>
+	<div class="pullchooselist" >
+		<!--底部条-->
+		<div class="bottom"></div>
+		
+		<div ng-if="topindex==0" class="district">
+			<ion-content>
+				<ion-list>
+					<ion-item ng-click="changeareaindex($index,$event)" ng-repeat="district in districtdata track by $index">{{district.district}}</ion-item>
+				</ion-list>
+			</ion-content>
+			<div class="area" ng-if="areaindex>0">
+				<!--底部条-->
+				<div class="bottom"></div>
+				
+				<ion-content delegate-handle="zufangareascroll">
+						<ion-item ng-click="changearea(area,$event)" ng-repeat="area in districtdata[areaindex].area track by $index">{{area}}</ion-item>
+				</ion-content>
+			</div>
+		</div>
+		<div ng-if="topindex==1" class="price" >
+			<ion-content>
+				<ion-list>
+					<ion-item ng-click="changeprice($index,price,$event)" ng-repeat="price in pricedata track by $index">{{price}}</ion-item>
+				</ion-list>
+			</ion-content>
+		</div>
+		<div ng-if="topindex==2" class="type">
+			<ion-content>
+				<ion-list>
+					<ion-item ng-click="changetype($index,type,$event)" ng-repeat="type in typedata track by $index">{{type}}</ion-item>
+				</ion-list>
+			</ion-content>
+		</div>
+		<div ng-if="topindex==3" class="sort">
+			<ion-content>
+				<ion-list>
+					<ion-item ng-click="changesort($index,sort,$event)" ng-repeat="sort in sortdata track by $index">{{sort}}</ion-item>
+				</ion-list>
+			</ion-content>
+		</div>
+	</div>
+	
+	<ion-content delegate-handle="mainscroll" on-swipe-right="onSwipeRight()" class="zufanglist">
+	
+		<div ng-if="renthousearr.length<1" class="card noresult">
+			<div class="top">
+				<span class="iconfont icon-fangdajingtubiao"></span>
+			</div>
+			<div class="bottom">
+				<p>没有符合条件的结果，<span ng-click="reload()">清空条件</span></p>
+			</div>
+		</div>
+		<!--未渲染完成-->
+		<p ng-if="renderdone&&renthousearr.length>0" class="loading">
+		    <ion-spinner icon="lines" class=""></ion-spinner>
+		</p>
+		
+		<div ng-if="renthousearr.length>0" class="card zufang">
+			
+			<ul>
+				<li on-finish-render-filters ng-repeat="rent in renthousearr" ui-sref="tabs.alikehousedetail({id:rent.Id,type:2})">
+					<div class="img">
+						<img ng-src="{{rent.Thumb}}"/>
+						<img ng-show={{rent.Recommend}} class="zhutui" src="imgs/主推.png"/>
+					</div>
+					<div class="description">
+						<h5>{{rent.Title}}</h5>
+						<p>{{rent.CommunityName}}</p>
+						<!--<p>{{rent.HouseType}}&nbsp;{{rent.Space}}平米</p>-->
+						<div>
+							<div class="space">
+								{{rent.HouseType}}&nbsp;{{rent.Space}}平米 
+							</div>
+							<div class="price">
+								<span>{{rent.Price}}</span>元/月
+							</div>
+						</div>
+						<p>
+							<span ng-repeat="Tag in rent.Tags">{{Tag}}</span>
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--上拉加载-->
+		<ion-infinite-scroll on-infinite="zufanglistloadMore(true)" distance="20%" ng-if="noMore" > </ion-infinite-scroll>
+	
+		
+	</ion-content>
+	
+</ion-view>
+

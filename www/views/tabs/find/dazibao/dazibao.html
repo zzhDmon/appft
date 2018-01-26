@@ -1,0 +1,42 @@
+
+<!--对话模板-->
+<ion-view id="dazibao" hide-nav-bar=true view-title="大字报"  class='dark'>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			大字报
+		</div>
+		<div class="right" >
+			
+		</div>
+	</div>
+	
+	<ul class="topfive">
+		<li ng-click="move(0,$event)">小区</li>
+		<li ng-click="move(1,$event)">房屋</li>
+		<li ng-click="move(2,$event)">结构</li>
+		<li ng-click="move(3,$event)">位置</li>
+		<li ng-click="move(4,$event)">附加</li>
+		<div id="underline"></div>
+	</ul>
+	<ion-content on-swipe-right="onSwipeRight()" class='dazibao'>
+		<div class="card">
+			<!--<ul>
+				<li ng-show="{{dazibao.LineImageType}}==1" ng-repeat="dazibao in dazibaoarr" ui-sref="tabs.like">
+					<img ng-src="{{dazibao.ShowImages}}"/>
+					<p><i class="icon ion-heart"></i>&nbsp;<span class="count">{{dazibao.Hits}}{{dazibao.LineImageType}}</span><span class="right">{{dazibao.Name}}</span></p>
+				</li>
+			</ul>-->
+			<ul>
+				<li ng-show="{{dazibao.LineImageType}}==LineImageType" ng-repeat="dazibao in dazibaoarr" ui-sref="tabs.like({id:dazibao.Id,url:dazibao.ShowImages,name:dazibao.Name})">
+					<img ng-src="{{dazibao.ShowImages}}"/>
+					<p><i class="icon ion-heart"></i>&nbsp;<span class="count">{{dazibao.Hits}}</span><span class="right">{{dazibao.Name}}</span></p>
+				</li>
+			</ul>
+		</div>
+	</ion-content>
+	
+</ion-view>
+

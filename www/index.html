@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+			<!-- img-src * 去除script-src * 'unsafe-eval';-->
+		<meta http-equiv="Content-Security-Policy" content=" connect-src * 'unsafe-eval';object-src 'self'; style-src * 'unsafe-inline';">
+		<title></title>
+		
+		<link rel="manifest" href="manifest.json">
+
+		<!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+		<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<!--轮播-->
+		<link href="css/bottom.css" rel="stylesheet">
+
+		<!--IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above-->
+   		<link href="css/ionic.app.css" rel="stylesheet">
+	 	<link href="lib/iconfont/iconfont.css" rel="stylesheet">
+    
+
+
+		<!-- ionic/angularjs js -->
+		<script src="lib/ionic/js/ionic.bundle.js"></script>
+		<script src="lib/angular/angular.js"></script>
+		<!--<script src="lib/angular-cookies/angular-cookies.js"></script>-->
+		<!--<script src="lib/ionic/js/jquery.min.js"></script>-->
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<!--banner-num-->
+		<script src="lib/js/jquery.pikachoose.full.js" type="text/javascript"></script>
+		<!--放大图片-->
+		<script src="lib/js/pinchzoom.js" type="text/javascript"></script>
+		
+		<!--left-right-scroll-->
+		<script src="lib/js/iscroll.js"></script>
+		<!--<script src="lib/cookies/jquery.cookie.js"></script>-->
+		<!--ciipboard-->
+		<script src="lib/js/clipboard.min.js" type="text/javascript"></script>
+		<!--Imgcut-->
+		<script src="lib/js/alloy_crop.js" type="text/javascript"></script>
+		<script src="lib/js/alloy_finger.js" type="text/javascript"></script>
+		<script src="lib/js/transform.js" type="text/javascript"></script>
+		<!--百度map-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nLsK9qUii8uBZlkPAQUozAf9mR5xNVZF"></script>
+		
+		<script src="http://cdn.bootcss.com/angular-cookie/4.1.0/angular-cookie.min.js"></script>
+
+		<!-- cordova script (this will be a 404 during development) -->
+		<script src="lib/ngCordova/dist/ng-cordova.js"></script>
+		<script src="cordova.js"></script>
+
+		<!-- your app's js -->
+		<script src="js/app.js"></script>
+		<script src="js/services/factory.js"></script>
+		<script src="js/directives/directive.js"></script>
+		
+		
+		<script src="views/login/login.js"></script>
+		<script src="views/logo/logo.js"></script>
+		<script src="views/registerorback/registerorback.js"></script>
+		<script src="views/agreement/agreement.js"></script>
+		<script src="views/tabs/home/home.js"></script>
+		<script src="views/tabs/home/alikehouse/alikehouse.js"></script>
+		<script src="views/tabs/home/alikehouse/alikehousedetail/alikehousedetail.js"></script>
+		<script src="views/tabs/home/alikehouse/hisweidian/hisweidian.js"></script>
+		<script src="views/tabs/home/gpslocation/gpslocation.js"></script>
+		<script src="views/tabs/home/fyfabu/fyfabu.js"></script>
+		<script src="views/tabs/home/fyfabu/addershou/addershou.js"></script>
+		<script src="views/tabs/home/fyfabu/addershou/ershoutd/ershoutd.js"></script>
+		<script src="views/tabs/home/fyfabu/addershou/ershouxiaoqu/ershouxiaoqu.js"></script>
+		<script src="views/tabs/home/fyfabu/addzufang/addzufang.js"></script>
+		<script src="views/tabs/home/fyfabu/addzufang/zufangtd/zufangtd.js"></script>
+		<script src="views/tabs/home/fyfabu/addzufang/zufangxiaoqu/zufangxiaoqu.js"></script>
+		<script src="views/tabs/home/fyfabu/addzufang/addzufang.js"></script>
+		<script src="views/tabs/home/fyfabu/fydetail/fydetail.js"></script>
+		<script src="views/tabs/home/zufanglist/zufanglist.js"></script>
+		<script src="views/tabs/home/weidian/weidian.js"></script>
+		<script src="views/tabs/home/weidian/shareweidian/shareweidian.js"></script>
+		<script src="views/tabs/home/chushou/chushou.js"></script>
+		<script src="views/tabs/home/chushou/subscribe/subscribe.js"></script>
+		<script src="views/tabs/home/chushou/chushoudetail/chushoudetail.js"></script>
+		<script src="views/tabs/home/chushou/chushoudetail/readchushou/readchushou.js"></script>
+		<script src="views/tabs/home/ershoulist/ershoulist.js"></script>
+		<script src="views/tabs/home/chuzu/chuzu.js"></script>
+		<script src="views/tabs/home/chuzu/subscribe/subscribe.js"></script>
+		<script src="views/tabs/home/chuzu/chuzudetail/chuzudetail.js"></script>
+		<script src="views/tabs/home/chuzu/chuzudetail/readchuzu/readchuzu.js"></script>
+		<script src="views/tabs/home/popposter/popposter.js"></script>
+		<script src="views/tabs/home/list/list.js"></script>
+		<script src="views/tabs/home/newhouse/newhouse.js"></script>
+		<script src="views/tabs/home/newhouse/newhousedetail/newhousedetail.js"></script>
+		<script src="views/tabs/home/renzheng/renzheng.js"></script>
+		<script src="views/tabs/home/renzheng/renzhengmsg/renzhengmsg.js"></script>
+		<script src="views/tabs/home/shareposter/shareposter.js"></script>
+		<script src="views/tabs/home/searchhouse/searchhouse.js"></script>
+		<script src="views/tabs/home/searchhouse/searchresult/searchresult.js"></script>
+		<script src="views/tabs/home/incarousel/incarousel.js"></script>
+		<script src="views/tabs/home/homeinfodetail/homeinfodetail.js"></script>
+		<script src="views/tabs/home/choosefy/choosefy.js"></script>
+		<script src="views/tabs/home/choosefy/fypic/fypic.js"></script>
+		<script src="views/tabs/info/info.js"></script>
+		<script src="views/tabs/info/infodetails/infodetails.js"></script>
+		<script src="views/tabs/info/shareinfodetails/shareinfodetails.js"></script>
+		<script src="views/tabs/contact/contact.js"></script>
+		<script src="views/tabs/contact/clidetail/clidetail.js"></script>
+		<script src="views/tabs/contact/createcli/createcli.js"></script>
+		<script src="views/tabs/contact/createcli/contactlist/contactlist.js"></script>
+		<script src="views/tabs/find/find.js"></script>
+		<script src="views/tabs/find/dazibao/dazibao.js"></script>
+		<script src="views/tabs/find/dazibao/like/like.js"></script>
+		<script src="views/tabs/find/duanzi/duanzi.js"></script>
+		<script src="views/tabs/find/findinfo/findinfo.js"></script>
+		<script src="views/tabs/find/findinfo/findinfodetails/findinfodetails.js"></script>
+		<script src="views/tabs/find/findchoosefy/findchoosefy.js"></script>
+		<script src="views/tabs/find/findchoosefy/findfypic/findfypic.js"></script>
+		<script src="views/tabs/find/findpopposter/findpopposter.js"></script>
+		<script src="views/tabs/find/findpopposter/findshareposter/findshareposter.js"></script>
+		<script src="views/tabs/find/findpopposter/findlist/findlist.js"></script>
+		<script src="views/tabs/mine/mine.js"></script>
+		<script src="views/tabs/mine/aboutus/aboutus.js"></script>
+		<script src="views/tabs/mine/myinfo/myinfo.js"></script>
+		<script src="views/tabs/mine/myinfo/changeinfo/changeinfo.js"></script>
+		<script src="views/tabs/mine/myinfo/changephone/changephone.js"></script>
+		<script src="views/tabs/mine/myinfo/changephone/inputphone/inputphone.js"></script>
+		<script src="views/tabs/mine/myinfo/imgpreview/imgpreview.js"></script>
+		<script src="views/tabs/mine/myinfo/imgpreview/imgcut/imgcut.js"></script>
+		<script src="views/tabs/mine/myinfo/eqcode/eqcode.js"></script>
+		<script src="views/tabs/mine/setting/setting.js"></script>
+		<script src="views/tabs/mine/checkprogress/checkprogress.js"></script>
+		<script src="views/tabs/mine/checkprogress/minerenzheng/minerenzheng.js"></script>
+		<script src="views/tabs/mine/checkprogress/minerenzheng/minerenzhengmsg/minerenzhengmsg.js"></script>
+		<script src="views/tabs/mine/setting/problem/problem.js"></script>
+		<script src="views/tabs/mine/mypoints/mypoints.js"></script>
+		<script src="views/tabs/mine/mypoints/potrule/potrule.js"></script>
+		<script src="views/tabs/mine/mypoints/giftlist/giftlist.js"></script>
+		<script src="views/tabs/mine/refcode/refcode.js"></script>
+		<script src="views/tabs/mine/refcode/sharerefcode/sharerefcode.js"></script>
+		<script src="views/tabs/mine/myweidian/myweidian.js"></script>
+		<script src="views/tabs/mine/myweidian/myfydetail/myfydetail.js"></script>
+		
+		
+		<!--lazy-load-->
+	    <script src="js/ionic-image-lazy-load.js"></script>
+		<script src="js/lazy-load.js"></script>
+		<!--fanvas-->
+		<script type='text/javascript' src='fanvas3-min.js'></script>
+		<script type='text/javascript' src='swfData.js'></script>
+		<script>
+			var el = angular.element("#testCanvas");
+			$scope = el.scope();
+			$injector = el.injector();
+			$injector.invoke(function($compile){
+			   $compile(el)($scope)
+			})
+
+		    function canvasinit() {
+		        fanvas.play("testCanvas", swfData, {
+		            cache: true, autoPlay: true,showFPS:0,clearAll:1,scale:1,
+		            onFrame: function (index,two) {
+		                      	console.log("onFrame", index,two);
+		                      	if(index == 70){
+		                          	fanvas.pause("testCanvas");
+		                          	fanvas.replay("testCanvas");
+			//                        setTimeout(function(){
+			////                            fanvas.resume("testCanvas");
+			////                            fanvas.replay("testCanvas");
+			//                        }, 500);
+			//                        fanvas.gotoAndPlay("testCanvas",35)
+		                      	}
+		            	},
+		            	imagePath: "./"
+		        });
+		    }
+		    
+		    //响应式canvas
+		//  $(window).resize(resizeCanvas);
+		// 	function resizeCanvas() {
+		//	        $('#testCanvas').width($(window).get(0).innerWidth);
+		//	        $('#testCanvas').height($(window).get(0).innerHeight);
+		////	        $('#testCanvas').getContext("2d").fillRect(0, 0, canvas.width(), canvas.height());
+		// 	};
+		//	 resizeCanvas();
+		</script>
+	
+	</head>
+
+	<body ng-app="App">
+
+		<!--带侧边栏应用-->
+		<ion-side-menus>
+			<!--页面主要内容-->
+			<ion-side-menu-content>
+				
+				<!--导航条-->
+				<ion-nav-bar navcss class="bar-light">
+					<!--返回按钮-->
+					<ion-nav-back-button ></ion-nav-back-button>
+				</ion-nav-bar>
+				
+					<!--导航视图-->
+				<ion-nav-view></ion-nav-view>
+				
+			</ion-side-menu-content>
+		</ion-side-menus>
+
+	</body>
+
+</html>

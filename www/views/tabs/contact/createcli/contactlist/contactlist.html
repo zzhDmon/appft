@@ -1,0 +1,51 @@
+<ion-view id="contactlist" view-title="通讯录" hide-nav-bar=true>  
+  
+    <div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			通讯录
+		</div>
+	</div>
+	
+	<div class="search_contact item-input-inset">
+  		<div class="item-input-wrapper">  
+        	<i class="icon ion-ios-search placeholder-icon"></i>  
+          <input type="search" name="" placeholder='输入联系人姓名' ng-change="searchContact(searchinfo.name)" ng-model='searchinfo.name'>  
+    			<span class="ion-close-circled" ng-click="searchEmpty()" ng-show="showEmpty"></span>
+      </div>  
+	</div>
+	
+	<div ng-show="!showResult">
+    <ion-content class="contactlist" delegate-handle="contactlistScroll">  
+        <ul class="letterli">  
+            <li class="contact-list" ng-if="group.value.length>0" ng-repeat="group in formatContacts  | orderBy:'key'" class="contact-list" id={{"index-"+group.key}}>  
+                <div class="label" id={{"contact-"+group.key}}><strong>{{group.key}}</strong></div>  
+                <ul class="contactli">  
+                    <li ng-click="choosed(item.displayName,item.phoneNumber)" ng-repeat="item in group.value | orderBy:'pinyinName'" class="contact-name">   
+                        <h2 class="">{{item.displayName}}</h2> 
+                        <p>{{item.phoneNumber}}</p>
+                    </li>  
+                </ul>  
+            </li>  
+        </ul>
+    </ion-content>  
+  </div>
+  
+	<div ng-show="showResult">
+    <ion-content class="contactlist" delegate-handle="contactlistScroll">  
+        <ul ng-show="searchResultarr.length>0" class="contactli">  
+            <li ng-click="choosed(item.displayName,item.phoneNumbers[0].value)" ng-repeat="item in searchResultarr" class="contact-name">   
+                <h2 class="">{{item.displayName}}</h2> 
+                <p>{{item.phoneNumbers[0].value}}</p>
+            </li>  
+        </ul> 
+        <p class="noresult" ng-show="searchResultarr.length<1">没有匹配的结果</p>
+    </ion-content>  
+  </div>
+  
+    <div ng-show="!showResult" class="citybox-shortcuts" >  
+  		<a href="" ng-repeat="letter in letterarr"  ng-touchmove="mTouch($event)" ng-click="mTouch($event)">{{letter}}</a>
+    </div>  
+</ion-view>  

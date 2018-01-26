@@ -1,0 +1,125 @@
+
+<!--对话模板-->
+<ion-view id="minerenzheng" hide-nav-bar=true view-title="房源发布"  class='dark'>
+	<!--<ion-nav-buttons side="secondary">
+		<a  class="button button-small button-icon"  ng-click="openPopoverView($event)"><i style="color: gray;font-size: 25px!important;color: rgb(51,51,51);font-weight: 500;" class="iconfont icon-jiahao1"></i></a>	
+	</ion-nav-buttons>-->
+	
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			经纪人从业认证
+		</div>
+		<div class="right">
+			
+		</div>
+	</div>
+	
+	<ion-content on-swipe-right="onSwipeRight()" class="minerenzheng" has-bouncing=false>
+		<div class="headinfo">
+			<div class="headrenzheng">
+				<img src="imgs/认证.png" alt="" />
+			</div>
+			<p>实名信息认证</p>
+		</div>
+		<div class="card">
+			<p class="first">为保证房田网平台<span class="red">从业人员的真实性</span>以及<span class="red">平台数据的真实性</span>，必须通过审核才能免费开放相关功能</p>
+			
+		</div>
+		
+		<div class="borderline"></div>
+		<form novalidate name="myForm" ng-cloak>
+		
+			<div class="card idcard">
+				<div class="top">
+					1、上传身份证*
+				</div>
+				<div class="bottom">
+					<div class="across">
+						<div ng-if="!userinfo.ShowVCard" class="showimg noimg">
+							<div class="mask">
+								<p>样图</p>
+							</div>
+							<img src="imgs/身份证样图.png"/>
+						</div>
+						<div ng-if="userinfo.ShowVCard" class="showimg">
+							<img src="{{userinfo.ShowVCard}}"/>
+						</div>
+						
+						<div class="addimg" id="mineaddIdcard">
+							<div class="add"><i class="iconfont icon-add"></i></div>
+							<input  type="file" name="idphoto"  accept="image/*" autocomplete="off"/>
+						</div>
+					</div>
+					
+					<div style="clear: both;"></div>
+					<p>要求身份证名称、编号等能清晰看清！</p>
+				</div>
+			</div>
+			
+			
+			<div class="card business">
+				<div class="top">
+				2、上传名片或工作证*
+				</div>
+				<div class="bottom">
+					<div class="across">
+						
+						<div ng-if="!userinfo.ShowBusinessCard" class="showimg noimg businessnocard">
+							<div class="mask">
+								<p>样图</p>
+							</div>
+							<img src="imgs/名片样图.png"/>
+						</div>
+						<div ng-if="userinfo.ShowBusinessCard" class="showimg">
+							<img src="{{userinfo.ShowBusinessCard}}"/>
+						</div>
+						<div class="addimg" id="minebusinesscard">
+							<div class="add"><i class="iconfont icon-add"></i></div>
+							<input  type="file" name="businessphoto"  accept="image/*" autocomplete="off" />
+						</div>
+					</div>
+					
+					<div style="clear: both;"></div>
+					<p>上传工作证时，工作证上的姓名必须和身份证上相同；上传名片时，名片上的手机号必须和注册房田网时的手机号一致</p>
+					
+				</div>
+			</div>
+		
+		
+			<div class="card banktype">
+				<div class="top">
+					3、银行卡类型：
+				</div>
+				<div class="bottom">
+					<input class="rz-banktype" type="text" name="banknumtype" ng-model="showBankType.BankType" placeholder="请选择银行卡类型" required=""  />
+					<span class="iconfont icon-xiangxiajiantou"></span>
+				</div>
+			</div>
+			<div class="card banknum">
+				<div class="top">
+					4、银行卡号：
+				</div>
+				<div class="bottom">
+					<input type="text" name="banknum" ng-model="userinfo.BankNum" placeholder="请输入银行卡号" pattern="^\d{16,19}" required="" />
+					<p>房田与您佣金结算时使用，务必填写本人实名的银行卡号！</p>
+					<span ng-show='myForm.banknum.$invalid&&myForm.banknum.$dirty' class="iconfont icon-guanbi1"></span>
+					<span ng-show='myForm.banknum.$valid&&myForm.banknum.$dirty' class="iconfont icon-xuanze" title="两次正确的电话模式"></span>
+				</div>
+			</div>
+		</form>
+		
+		<div class="card confirm">
+			<!-- ng-disabled='myForm.$invalid'-->
+			<button ng-disabled='myForm.banknum.$invalid || myForm.banktype.$invalid ||!userinfo.VCard ||!userinfo.BusinessCard' ng-click="submit()" class="button button-positive">确认</button>
+		</div>
+	
+		<canvas style="display: none;" id="mineidcardcans" width="750" height="1000"></canvas>
+		<canvas style="display: none;" id="minebusinesscardcans" width="750" height="1000"></canvas>
+		
+	</ion-content>
+	
+</ion-view>
+

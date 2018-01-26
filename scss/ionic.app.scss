@@ -1,0 +1,104 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+@import "www/views/logo/logo";
+@import "www/views/login/login";
+@import "www/views/registerorback/registerorback";
+@import "www/views/agreement/agreement";
+@import "www/views/tabs/home/home";
+@import "www/views/tabs/home/alikehouse/alikehouse";
+@import "www/views/tabs/home/alikehouse/alikehousedetail/alikehousedetail";
+@import "www/views/tabs/home/alikehouse/hisweidian/hisweidian";
+@import "www/views/tabs/home/gpslocation/gpslocation";
+@import "www/views/tabs/home/fyfabu/fyfabu";
+@import "www/views/tabs/home/fyfabu/fydetail/fydetail";
+@import "www/views/tabs/home/fyfabu/addershou/addershou";
+@import "www/views/tabs/home/fyfabu/addershou/ershoutd/ershoutd";
+@import "www/views/tabs/home/fyfabu/addershou/ershouxiaoqu/ershouxiaoqu";
+@import "www/views/tabs/home/fyfabu/addzufang/addzufang";
+@import "www/views/tabs/home/fyfabu/addzufang/zufangtd/zufangtd";
+@import "www/views/tabs/home/fyfabu/addzufang/zufangxiaoqu/zufangxiaoqu";
+@import "www/views/tabs/home/zufanglist/zufanglist";
+@import "www/views/tabs/home/weidian/weidian";
+@import "www/views/tabs/home/weidian/shareweidian/shareweidian";
+@import "www/views/tabs/home/chushou/chushou";
+@import "www/views/tabs/home/chushou/subscribe/subscribe";
+@import "www/views/tabs/home/chushou/chushoudetail/chushoudetail";
+@import "www/views/tabs/home/chushou/chushoudetail/readchushou/readchushou";
+@import "www/views/tabs/home/ershoulist/ershoulist";
+@import "www/views/tabs/home/chuzu/chuzu";
+@import "www/views/tabs/home/chuzu/subscribe/subscribe";
+@import "www/views/tabs/home/chuzu/chuzudetail/chuzudetail";
+@import "www/views/tabs/home/chuzu/chuzudetail/readchuzu/readchuzu";
+@import "www/views/tabs/home/popposter/popposter";
+@import "www/views/tabs/home/list/list";
+@import "www/views/tabs/home/newhouse/newhouse";
+@import "www/views/tabs/home/newhouse/newhousedetail/newhousedetail";
+@import "www/views/tabs/home/renzheng/renzheng";
+@import "www/views/tabs/home/renzheng/renzhengmsg/renzhengmsg";
+@import "www/views/tabs/home/shareposter/shareposter";
+@import "www/views/tabs/home/searchhouse/searchhouse";
+@import "www/views/tabs/home/searchhouse/searchresult/searchresult";
+@import "www/views/tabs/home/incarousel/incarousel";
+@import "www/views/tabs/home/homeinfodetail/homeinfodetail";
+@import "www/views/tabs/home/choosefy/choosefy";
+@import "www/views/tabs/home/choosefy/fypic/fypic";
+@import "www/views/tabs/info/info";
+@import "www/views/tabs/info/infodetails/infodetails";
+@import "www/views/tabs/info/shareinfodetails/shareinfodetails";
+@import "www/views/tabs/contact/contact";
+@import "www/views/tabs/contact/clidetail/clidetail";
+@import "www/views/tabs/contact/createcli/createcli";
+@import "www/views/tabs/contact/createcli/contactlist/contactlist";
+@import "www/views/tabs/find/find";
+@import "www/views/tabs/find/dazibao/dazibao";
+@import "www/views/tabs/find/dazibao/like/like";
+@import "www/views/tabs/find/duanzi/duanzi";
+@import "www/views/tabs/find/findinfo/findinfo";
+@import "www/views/tabs/find/findinfo/findinfodetails/findinfodetails";
+@import "www/views/tabs/find/findchoosefy/findchoosefy";
+@import "www/views/tabs/find/findchoosefy/findfypic/findfypic";
+@import "www/views/tabs/find/findpopposter/findpopposter";
+@import "www/views/tabs/find/findpopposter/findshareposter/findshareposter";
+@import "www/views/tabs/find/findpopposter/findlist/findlist";
+@import "www/views/tabs/mine/mine";
+@import "www/views/tabs/mine/aboutus/aboutus";
+@import "www/views/tabs/mine/myinfo/myinfo";
+@import "www/views/tabs/mine/myinfo/changeinfo/changeinfo";
+@import "www/views/tabs/mine/myinfo/changephone/changephone";
+@import "www/views/tabs/mine/myinfo/changephone/inputphone/inputphone";
+@import "www/views/tabs/mine/myinfo/imgpreview/imgpreview";
+@import "www/views/tabs/mine/myinfo/imgpreview/imgcut/imgcut";
+@import "www/views/tabs/mine/myinfo/eqcode/eqcode";
+@import "www/views/tabs/mine/setting/setting";
+@import "www/views/tabs/mine/checkprogress/checkprogress";
+@import "www/views/tabs/mine/checkprogress/minerenzheng/minerenzheng";
+@import "www/views/tabs/mine/checkprogress/minerenzheng/minerenzhengmsg/minerenzhengmsg";
+@import "www/views/tabs/mine/setting/problem/problem";
+@import "www/views/tabs/mine/mypoints/mypoints";
+@import "www/views/tabs/mine/mypoints/potrule/potrule";
+@import "www/views/tabs/mine/mypoints/giftlist/giftlist";
+@import "www/views/tabs/mine/refcode/refcode";
+@import "www/views/tabs/mine/refcode/sharerefcode/sharerefcode";
+@import "www/views/tabs/mine/myweidian/myweidian";
+@import "www/views/tabs/mine/myweidian/myfydetail/myfydetail";
+

@@ -1,0 +1,177 @@
+<!--消息界面模板-->
+<ion-view id="home" hide-nav-bar="true" view-title="">
+	
+	<div class="home-header item-input-inset">
+		<!--ui-sref="tabs.gpslocation"-->
+	    <span ng-click="getarea()" class="location">厦门<i class="iconfont icon-xialacaidanxiaosanjiao1"></i></span>
+	    <span class="item-input-wrapper" ui-sref="tabs.searchhouse({housetype:'二手房'})">
+            <i class="iconfont icon-sousuo1"></i>
+            <input ng-disabled="true" type="search" placeholder="请输入小区名称或地址" ng-model="searchName.key" ng-change="search(searchName.key)">
+                <i class="icon ion-close-circled placeholder-icon" style="vertical-align: middle;"
+                   ng-click="clear()" ng-if="searchName.key.length"></i>
+        </span>
+	</div>
+
+	
+	<!--回到顶部-->
+	<div class="backtop" ng-click="scrollTop()"><i class="iconfont icon-xiangshang"></i></div>
+	
+	<ion-content delegate-handle="myscroll" on-scroll="scrollListen()" has-bouncing=false class="home" scroller>
+		
+		<div class="card homebanner">
+			<ion-slide-box does-continue="true" auto-play="true" slide-interval="5000" delegate-handle='home-banner' class="detailcursor" >
+				  <ion-slide ng-repeat="banner in BannerList track by $index">
+				    <div class="box" ><img style="display: block;width: 100vw;height: 56vw;" ng-src="{{banner.ShowImages}}"/></div>
+				  </ion-slide>
+				  <!--<ion-slide >
+				    <div class="box" ><img style="display: block;width: 100vw;height: 56vw;" ng-src="imgs/海报图.png"/></div>
+				  </ion-slide>
+				  <ion-slide >
+				    <div class="box" ><img style="display: block;width: 100vw;height: 56vw;" ng-src="imgs/海报图.png"/></div>
+				  </ion-slide>
+				  <ion-slide >
+				    <div class="box" ><img style="display: block;width: 100vw;height: 56vw;" ng-src="imgs/海报图.png"/></div>
+				  </ion-slide>-->
+			</ion-slide-box>
+		</div>
+		<!--四个分类-->
+		<div class="card eightpic">
+			<div class="toptwo">
+				<div class="public" ng-click="changeToptwo('房田公盘')">房田公盘</div>
+				<div class="midone" ng-show="toptwo=='房田公盘'"></div>
+				<div class="midtwo" ng-show="toptwo=='个人租售'"></div>
+				<div class="private" ng-click="changeToptwo('个人租售')">个人租售</div>
+			</div>
+			<ul ng-show="toptwo=='房田公盘'">
+				<li>
+					<!--<div class="tubiao xinfang" ui-sref="tabs.renzheng">-->
+					<div class="tubiao xinfang" ui-sref="tabs.newhouse">
+						<i class="iconfont icon-icon-xinfang"></i>
+					</div>
+					<p>新房</p>
+				</li>
+				<li>
+					<div class="tubiao ershoufang" ui-sref="tabs.ershoulist"> 
+						<i class="iconfont icon-icon-ershoufang"></i>
+					</div>
+					<p>二手房</p>
+				</li>
+				
+				<li>
+					<div class="tubiao zufang" ui-sref="tabs.zufanglist">
+						<i class="iconfont icon-icon-zufang"></i>
+						
+					</div>
+					<p>租房</p>
+				</li>
+				<li>
+					<div ng-if="VStatus==2" ui-sref="tabs.fyfabu" class="tubiao fyfabu"><i class="iconfont icon-icon-fangyuanfabu"></i></div>
+					<div ng-if="!VStatus || VStatus!==2" ui-sref="tabs.renzheng" class="tubiao fyfabu"><i class="iconfont icon-icon-fangyuanfabu"></i></div>
+					<p>房源发布</p>
+				</li>
+				<!--<li>
+					<div ng-if="VStatus==2" ui-sref="tabs.weidian({uid:uid})" class="tubiao weidian"><i class="iconfont icon-icon-weidian"></i></div>
+					<div ng-if="!VStatus || VStatus!==2" ui-sref="tabs.renzheng" class="tubiao weidian"><i class="iconfont icon-icon-weidian"></i></div>
+					<p>经纪人微店</p>
+				</li>
+				<li>
+					<div ng-if="VStatus==2" ui-sref="tabs.popposter" class="tubiao haibao"><i class="iconfont icon-icon-fangyuanhaibao"></i></div>
+					<div ng-if="!VStatus || VStatus!==2" ui-sref="tabs.renzheng" class="tubiao haibao"><i class="iconfont icon-icon-fangyuanhaibao"></i></div>
+					<p>宣传海报</p>
+				</li>-->
+				
+			</ul>
+			<ul ng-show="toptwo=='个人租售'">
+				<li>
+					<div class="tubiao chushou" ui-sref="tabs.chushou">
+						<i class="iconfont icon-icon-chushou"></i>
+					</div>
+					<p>房东出售</p>
+				</li>
+				<li>
+					<div ui-sref="tabs.chuzu" class="tubiao chuzu"><i class="iconfont icon-icon-chuzu"></i></div>
+					<p>房东出租</p>
+				</li>
+			</ul>
+			
+		</div>
+		
+		<div class="borderline" style="margin-bottom: 1px;"></div>
+		<div class="card loushizixun">
+			<div class="left">
+				<img src="imgs/楼市资讯.png" />
+			</div>
+			<div class="right">
+				 
+			</div>
+			<div class="card trytry" style="width:calc(100% - 100px);height: 40px;position: relative;top: -40px;left: 80px;z-index: 999;">
+				<ul ng-if="!uid" style="height: 40px;overflow: hidden;">
+					<li style="height: 40px;line-height: 40px;"  ng-repeat="loushizixun in loushizixunarr track by $index" ui-sref="tabs.homeinfodetail({id:loushizixun.Id})">{{loushizixun.Title}}</li>
+				</ul>
+				<ul ng-if="uid" style="height: 40px;overflow: hidden;">
+					<li style="height: 40px;line-height: 40px;"  ng-repeat="loushizixun in loushizixunarr track by $index" ui-sref="tabs.uidhomeinfodetail({id:loushizixun.Id,uid:uid})">{{loushizixun.Title}}</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		<div class="offline"></div>
+		<div class="card fylist">
+			<div class="morenewhouse">
+				<h5>新房推荐 <span ui-sref="tabs.newhouse">更多<i class="iconfont icon-gengduo"></i></span></h5>
+				<div class="borderline"></div>
+			</div>
+			
+			<!--未渲染完成-->
+			<p ng-if="renderdone" class="loading">
+			    <ion-spinner icon="lines" class=""></ion-spinner>
+			</p>
+			
+			
+			<ul>
+				<li on-finish-render-filters ng-repeat="new in homehousearr" ui-sref="tabs.newhousedetail({id:new.Id})">
+					<div class="img">
+						<img ng-src="{{new.Images}}"/>
+						<span class="newonline">
+							{{new.SellType}}
+						</span>
+					</div>
+					<div class="description">
+						<div class="tit"><div class="name">{{new.Title}}</div><div class="price"><span>{{new.Prize}}</span>元/㎡</div></div>
+						
+						<p class="devarea">{{new.Address}}</p>
+						<p>
+							<span ng-repeat="Special in new.Specialty">{{Special}}</span>
+						</p>
+						<div class="earn">
+							<div class="yongjin" ng-if="showmoney">
+								<span class="unit">佣金</span><span class="count">{{new.Bound}}/每套</span>
+							</div>
+							<div class="yongjin" ng-if="!showmoney">
+								<span class="nosignunit">佣金</span><span class="nosigncount">登录认证后可见</span>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+			<div style="clear: both;"></div>
+			<p ng-show="baseLine" class="baseLine"><span>人家是有底线的啦</span></p>
+		</div>
+		
+		
+	
+		
+		<!--上拉加载-->
+		<ion-infinite-scroll on-infinite="homehouseloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll>
+	</ion-content>
+	
+	
+	
+	
+</ion-view>
+
+
+
+

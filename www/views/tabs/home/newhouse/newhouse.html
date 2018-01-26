@@ -1,0 +1,80 @@
+
+<!--对话模板-->
+<ion-view id="newhouse" hide-nav-bar=true view-title="厦门市及周边"  class='dark'>
+	<!--<ion-nav-buttons side="secondary">
+		<a  class="button button-small button-icon"  ng-click="openPopoverView($event)"><i style="color: gray;font-size: 25px!important;color: rgb(51,51,51);font-weight: 500;" class="iconfont icon-jiahao1"></i></a>	
+	</ion-nav-buttons>-->
+	
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			{{CityName}}及周边
+		</div>
+		<div class="right"  ng-click="openPopover($event)">
+			切换城市
+		</div>
+	</div>
+	
+	
+	<ion-content delegate-handle="newhouseScroll" on-swipe-right="onSwipeRight()" class="newhouse">
+		<!--刷新-->
+		<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="newhousedoRefresh(false)"></ion-refresher>
+		
+		
+		<div class="card ershoufang">
+			<!--未渲染完成-->
+			<p ng-if="renderdone" class="loading">
+			    <ion-spinner icon="lines" class=""></ion-spinner>
+			</p>
+			
+			
+			<ul>
+				<li on-finish-render-filters ng-repeat="new in newhouse track by $index" ui-sref="tabs.newhousedetail({id:new.Id})">
+					<div class="img">
+						<img ng-src="{{new.Images}}"/>
+						<span class="newonline">
+							{{new.SellType}}
+						</span>
+					</div>
+					<div class="description">
+						<div class="tit"><div class="name">{{new.Title}}</div><div class="price"><span>{{new.Prize}}</span>元/㎡</div></div>
+						
+						<p class="devarea">{{new.Address}}</p>
+						<p>
+							<span ng-repeat="Special in new.Specialty">{{Special}}</span>
+						</p>
+						<div class="earn">
+							<div class="yongjin" ng-if="showmoney">
+								<span class="unit">佣金</span><span class="count">{{new.Bound}}/每套</span>
+							</div>
+							<div class="yongjin" ng-if="!showmoney">
+								<span class="nosignunit">佣金</span><span class="nosigncount">登录认证后可见</span>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+		<div style="clear: both;"></div>
+		<p ng-show="baseLine" class="baseLine"><span>人家是有底线的啦</span></p>
+		
+		<!--加载-->
+		<ion-infinite-scroll on-infinite="newhouseloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll>
+		
+		<script id="newhouse.html" type="text/ng-template">
+			<ion-popover-view id="newhousepopover">
+			  <ion-content>
+			    <ion-list>
+			    	<ion-item ng-repeat="City in CityList track by $index" ng-click="changeCity(City.CityName,City.CityId)">{{City.CityName}}</ion-item>
+			    	
+			    </ion-list>
+			  </ion-content>
+			</ion-popover-view>
+		</script>
+	</ion-content>
+	
+</ion-view>
+

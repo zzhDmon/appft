@@ -1,0 +1,44 @@
+<!--模板-->
+<ion-view id="eqcode" view-title="门店二维码" hide-nav-bar=true>
+	<!--<ion-nav-buttons side="secondary">
+		<a ng-click="openPopoverView($event)" style="color: gray;font-size: 1.4rem;" class="button button-small button-icon " >分享</a>	
+	</ion-nav-buttons>-->
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			{{name}}
+		</div>
+		<div ng-click="openPopoverView($event)" class="right" >
+			分享
+		</div>
+	</div>
+	
+	<ion-content on-swipe-right="onSwipeRight()" class="eqcode" has-bouncing=false>
+		<img ng-src="{{qcode}}" />
+		
+		<!--分享浮动框 ion-popover-view-->
+		<script id="qcodepopover.html" type="text/ng-template">
+			<ion-popover-view class="Bottom-share-popover">
+				<ul>
+					<li class="weixin" ng-click="share(0)">
+						<div class="img">
+							<img src="imgs/微信.png"/>
+						</div>
+						<p>微信好友</p>
+					</li>
+					<li class="pengyouquan" ng-click="share(1)">
+						<div class="img">
+							<img src="imgs/朋友圈.png"/>
+							
+						</div>
+						<p>朋友圈</p>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<h4 ng-click="closePopoverView($event)">取消</h4>
+			</ion-popover-view>
+		</script>
+	</ion-content>
+</ion-view>

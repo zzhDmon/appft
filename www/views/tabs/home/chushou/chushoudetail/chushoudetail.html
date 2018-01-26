@@ -1,0 +1,130 @@
+
+<!--对话模板-->
+<ion-view id='chushoudetail'  hide-nav-bar="true">
+	
+	<!--底部联系人-->
+
+	
+	<div class="contacts">
+		<div class="name">
+			<div class="headimg">
+				<div ng-if="!chushoudata.avatar" class="default">
+					<i class="iconfont icon-touxiangx"></i>
+				</div>	
+				<img ng-if="chushoudata.avatar" ng-src="{{chushoudata.avatar}}"/>
+								
+			</div>
+			<div class="hisname">{{chushoudata.Name}}</div>
+		</div>
+		<div class="communite">
+			<a href="tel:{{chushoudata.Tel}}"><i class="iconfont icon-dianhua1"></i>&nbsp;电话咨询</a>		
+		</div>
+	</div>
+	
+	<ion-content class="chushoudetail" has-bouncing=false>
+		<div class="backbotton btn" ng-click="back()"><i class="icon ion-chevron-left"></i></div>
+		<div class="sharebotton btn" ng-click="openPopoverView($event)"><i class=" iconfont icon-fenxiang1" style="font-size: 20px!important;"></i> </div>
+			
+		<!--分享缩略图-->
+		<canvas style="display: none;" id="chushoumycans" width="100px" height="100px"></canvas>	
+			
+		<ion-slide-box  class="detailcursor" >
+		  <ion-slide ng-repeat="imgurl in chushoudata.Imgs">
+		    <div class="box"><img ng-src="{{imgurl}}"/></div>
+		  </ion-slide>
+		  <!--<ion-slide>
+		    <div class="box "><img  src="imgs/index_banner_02@2x.png"/></div>
+		  </ion-slide>-->
+		</ion-slide-box>
+	
+		<div class="card detailname">
+			<h4>{{chushoudata.Title}} </h4>
+			<p><span class="from">{{chushoudata.Source}}</span><span class="time">{{chushoudata.UpdateTime}}</span> <span class="text" ui-sref="tabs.readchushou({url:chushoudata.Href})"><a >阅读原文</a></span></p>
+			<div class="borderline"></div>
+			<ul>
+				<li>
+					<p class="top">售价</p>
+					<p class="bottom">{{chushoudata.Price}}万</p>
+				</li>
+				<li class="line"></li>
+				<li>
+					<p class="top">房型</p>
+					<p class="bottom">{{chushoudata.HouseType}}</p>
+				</li>
+				<li class="line"></li>
+				<li>
+					<p class="top">面积</p>
+					<p class="bottom">{{chushoudata.Space}}m²</p>
+				</li>
+			</ul>
+		</div>
+		<div class="offline"></div>
+		
+		<div class="card houseinfo">
+			<ul>
+				<li>区域：{{chushoudata.District}}<span ng-if="!chushoudata.District">--</span></li>
+				<li>小区：{{chushoudata.Community}}<span ng-if="!chushoudata.Community">--</span></li>
+				<!--<li>朝向：东南</li>
+				<li>楼层：7楼共8楼</li>
+				<li>地址：仙岳路186号</li>
+				<li>出租方式：整租</li>-->
+			</ul>
+			<!--<div class="borderline"></div>
+			<div class="other">
+				<h4>配套设施</h4>
+				<p>冰箱、空调、柜子、床、洗衣机等</p>
+				
+			</div>
+			<div class="borderline"></div>
+			<div class="fydesc">
+				<h4>房源描述</h4>
+				<p>西雅图2016年07月26日销售报价均价29800.00元/品方米，相比上个
+					销售周期持平。海沧供9个可销售商业住宅项目，西雅图销售价相比海沧均价高出50%。厦门137个可销售商业住宅项目，西雅图销售均价相比厦门搞出50%</p>
+			</div>-->
+		</div>
+		<div class="offline"></div>
+		<!--<div class="card explore">
+			<ul>
+				<li><img src="imgs/经纪人头像.png"/></li>
+				<li><img src="imgs/经纪人头像.png"/></li>
+				<li><img src="imgs/经纪人头像.png"/></li>
+				<li><img src="imgs/经纪人头像.png"/></li>
+				<li><img src="imgs/经纪人头像.png"/></li>
+			</ul>
+			<div class="righttext">
+				等25人浏览过
+			</div>
+		</div>-->
+		<div class="card abouthouse">
+			<h5>房源概况</h5>
+			<p>{{chushoudata.Desc}}</p>
+		</div>
+		
+		<div style="height: 50px;width: 100%;"></div>
+		
+	<!--分享浮动框 ion-popover-view-->
+		<script id="chushoudetailpopover.html" type="text/ng-template">
+			<ion-popover-view class="Bottom-share-popover">
+				<ul>
+					<li class="weixin" ng-click="share(0)">
+						<div class="img">
+							<img src="imgs/微信.png"/>
+						</div>
+						<p>微信好友</p>
+					</li>
+					<li class="pengyouquan" ng-click="share(1)">
+						<div class="img">
+							<img src="imgs/朋友圈.png"/>
+							
+						</div>
+						<p>朋友圈</p>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<h4 ng-click="closePopoverView($event)">取消</h4>
+			</ion-popover-view>
+		</script>	
+	</ion-content>
+	
+</ion-view>
+

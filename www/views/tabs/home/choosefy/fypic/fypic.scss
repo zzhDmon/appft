@@ -1,0 +1,34 @@
+#fypic{
+    .btn{
+        z-index: 999;
+        position: absolute;
+        top: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgba(126,126,126,0.2);
+        text-align: center;
+        line-height: 30px;
+        font-size: 2rem;
+        color: white;
+    }
+    .backbotton{
+        left: 5px;
+    }
+    .sharebotton{
+        right: 5px;
+    }
+    .fypic{
+        .img{
+            box-shadow: none;
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+      
+    }
+}
+

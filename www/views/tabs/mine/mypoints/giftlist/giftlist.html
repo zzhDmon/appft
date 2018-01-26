@@ -1,0 +1,87 @@
+
+<!--对话模板-->
+<ion-view id="giftmall" view-title="积分商城" hide-nav-bar=true>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			积分商城
+		</div>
+		<div class="right" >
+			
+		</div>
+	</div>
+	<ion-content on-swipe-right="onSwipeRight()" class="giftmall">
+		<!--刷新-->
+		<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="giftdoRefresh(false)"></ion-refresher>
+		
+		<div class="giftlist">
+			<ul>
+				<li ng-repeat="gift in giftList track by $index">
+					<div class="showimg">
+						<img ng-src="{{gift.Image}}"/>
+					</div>
+					<div class="contdetail">
+						<p class="name">{{gift.Name}}</p>
+						<div class="change">
+							<div class="points">
+								{{gift.Score}}积分
+							</div>
+							<div ng-show="Balance>=gift.Score" ng-click="openModal($index,gift.Id)" class="exchange">
+								去兑换
+							</div>
+							<div ng-show="Balance<gift.Score" class="nomoney">
+								余额不足
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+			<div style="clear: both;"></div>
+			<p ng-show="baseLine" class="baseLine"><span>人家是有底线的啦</span></p>
+		</div>
+		
+		<!--加载-->
+		<ion-infinite-scroll on-infinite="giftloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll>
+	</ion-content>
+</ion-view>
+<!--模态框-->
+<script id="giftlist-modal" type="text/ng-template">
+      <ion-modal-view id="giftlist_modal" ng-class="{true:'msgmodal',false:''}[showmsg]">
+       
+        <div ng-show="!showmsg">
+        	<form  novalidate name="giftForm" ng-cloak>
+		        <ion-content class="giftdetail" delegate-handle="giftdetailScroll">
+		           <div class="head">
+		           		<div class="img">
+		           			<img ng-src="{{giftDetail.Image}}"/>
+		           		</div>
+		           		<div class="text">
+		           			<p class="name">{{giftDetail.Name}}</p>
+		           			<p class="points">{{giftDetail.Score}}积分</p>
+		           		</div>
+		           </div> 
+		           <h4 class="intro">奖品介绍</h4>
+		           <div class="borderline"></div>
+		           <p class="details">{{giftDetail.Description}}</p>
+		          
+		           	<div class="continfo">
+		           		<input type="text" name="Message" ng-model="submitData.Message" placeholder="请输入收货地址和电话" required=""/>        		
+		           	</div>
+		        </ion-content>
+		        	
+		        <ion-footer-bar>
+		        	<div ng-disabled="giftForm.$invalid" ng-click="exchange(giftDetail.Id,giftDetail.Name,giftDetail.Score)" class="affirm button">
+		        		确认兑换        		
+		        	</div>
+		       </ion-footer-bar>
+           </form>
+        </div>
+        <div class="showmsg" ng-show="showmsg">
+        	<img src="imgs/兑换成功_03.png"/>
+        	<p>恭喜您，兑换成功！</p>
+        </div>
+    </ion-modal-view>
+</script>

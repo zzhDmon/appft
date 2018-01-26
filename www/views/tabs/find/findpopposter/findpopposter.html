@@ -1,0 +1,93 @@
+<!--消息界面模板-->
+<ion-view id="findpopposter" hide-nav-bar="true" view-title="">
+	
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			宣传海报
+		</div>
+		<div class="right" >
+		</div>
+	</div>
+	
+	<ion-content class="findpopposter" scroller>
+		
+		<div>
+			<h4 class="title">房源速销海报 <a ui-sref="tabs.findlist({name:'房源海报',id:'1'})">查看更多></a></h4>
+			<div class="borderline"></div>
+			<div style="clear: both;"></div>
+			<div class="card ninescroll poster">
+				
+				<div id="popwrapper">
+					<div id="popscroller">
+						<ul ng-repeat="template in threetemplate" ng-if="template.TemplateType==1">
+							<li ui-sref="tabs.findchoosefy({tid:imglist.Id})" ng-repeat="imglist in template.Templates">
+								<img ng-src="{{imglist.ShowImages}}"/>
+								<p>{{imglist.Name}}</p>
+								<div>已有<span>{{imglist.Hits}}</span>人使用</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		<div class="offline"></div>
+		<div>
+		<h4 class="title" >营销海报  <a ui-sref="tabs.findlist({name:'微信加油站',id:'3'})">查看更多></a></h4>
+		<div class="borderline"></div>
+		<div style="clear: both;"></div>
+		<div class="card ninescroll station">
+			<div id="popwrapper2">
+				<div id="popscroller2">
+					<ul ng-repeat="template in threetemplate" ng-if="template.TemplateType==3">
+						<li ui-sref="tabs.findshareposter({tid:imglist.Id,TemplateType:template.TemplateType})"  ng-repeat="imglist in template.Templates">
+							<img src="{{imglist.ShowImages}}"/>
+							<p>{{imglist.Name}}</p>
+							<div>已有<span>{{imglist.Hits}}</span>人使用</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		</div>
+		
+		<div class="offline"></div>
+		<h4 class="title">{{text}} <a ui-sref="tabs.findlist({name:text,id:'2'})">查看更多></a></h4>
+		<div class="borderline"></div>
+		<div style="clear: both;"></div>
+		<div class="card ninescroll greeting">
+			<div id="popwrapper3">
+				<div id="popscroller3">
+					<ul ng-repeat="template in threetemplate" ng-if="template.TemplateType==2">
+						<li ui-sref="tabs.findshareposter({tid:imglist.Id,TemplateType:template.TemplateType})" ng-repeat="imglist in template.Templates">
+							<img ng-src="{{imglist.ShowImages}}"/>
+							<p>{{imglist.Name}}</p>
+							<div>已有<span>{{imglist.Hits}}</span>人使用</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div style="clear: both;"></div>
+		
+	
+		
+		<!--上拉加载-->
+		<!--<ion-infinite-scroll on-infinite="loadMore(true)" distance="1%" ng-if="noMore" > </ion-infinite-scroll>-->
+	</ion-content>
+	
+	
+	
+	
+</ion-view>
+
+
+
+

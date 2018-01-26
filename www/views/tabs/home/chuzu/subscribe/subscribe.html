@@ -1,0 +1,41 @@
+
+<!--对话模板-->
+<ion-view id="chuzusub" hide-nav-bar=true view-title="订阅设置"  class='dark'>
+	<!--<ion-nav-buttons side="secondary">
+		<a ng-click="chk()" style="color: gray;font-size: 1.4rem;" class="button button-small button-icon "  >保存</a>	
+	</ion-nav-buttons>-->
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			设置订阅
+		</div>
+		<div ng-click="chk()" class="right" >
+			保存
+		</div>
+	</div>
+	
+	<ion-content class="chuzusub" on-swipe-right="onSwipeRight()">
+		<div class="list">
+		    <ion-checkbox ng-repeat="item in devList"
+		                  ng-model="item.checked" 
+		                  ng-checked="item.checked">
+		      {{ item.text }}
+		    </ion-checkbox>
+	    </div>
+	    
+	    <!--<ul class="list">
+		        <li class="item item-checkbox" ng-repeat="item in devList">
+		           <label class="checkbox">
+		             <input class="chuzucheck" type="checkbox" ng-model="item.checked" ng-checked="item.checked">
+		           </label>
+		          	{{ item.text }}
+		        </li>
+		       
+		</ul>-->
+		
+	</ion-content>
+	
+</ion-view>
+

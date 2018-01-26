@@ -1,0 +1,50 @@
+#list {
+    .postlist{
+        margin-top: 44px;
+        .listimg {
+            box-shadow: none;
+            padding:15px 5px 0;
+            ul {
+                width: 100%;
+                li {
+                    width: 33.33%;
+                    img {
+                        display: block;
+                        width: calc(33.33vw - 10px);
+                        height: calc(33.33*750/1100vw - 10*750/1100px);
+                        margin:0 auto;
+                    }
+                    p {
+                        width: 90%;
+                        margin: 0 auto;
+                         height: 2rem;
+                        line-height: 20px;
+                        font-size: 1.2rem;
+                        color: black;
+                        background-color: white;
+                        word-break:keep-all;
+                        white-space:nowrap;
+                        overflow:hidden; 
+                        text-overflow:ellipsis;
+                    }
+                    div {
+                        width: 90%;
+                        margin: 0 auto 10px;
+                        height: 2rem;
+                        line-height: 2rem;
+                        font-size: 1.2rem;
+                        color: rgb(147, 147, 147);
+                        word-break:keep-all;
+                        white-space:nowrap;
+                        overflow:hidden; 
+                        text-overflow:ellipsis;
+                        background-color: white;
+                        span {
+                            color: rgb(230, 75, 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

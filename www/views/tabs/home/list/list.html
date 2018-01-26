@@ -1,0 +1,44 @@
+
+<!--对话模板-->
+<ion-view id="list" view-title="{{name}}" hide-nav-bar=true  class='dark'>
+	
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			{{name}}
+		</div>
+		<div class="right" >
+		</div>
+	</div>
+	
+	<ion-content class="postlist" on-swipe-right="onSwipeRight()"  scroller>
+		
+		<div ng-show="id==1" class="card listimg">
+			<ul>
+				<li ng-repeat="poster in posterlist" ui-sref="tabs.choosefy({tid:poster.Id})">
+					<!--<img ng-src="{{poster.ShowImages}}"/>-->
+					<img src="img/noimg.png" onerror="this.src='img/noimg.png'" image-lazy-src="{{ poster.ShowImages }}">
+			
+					<p>{{poster.Name}}</p>
+						<div>已有<span>{{poster.Hits}}</span>人使用</div>
+				</li>
+				
+			</ul>
+		</div>
+		<div ng-show="id==2||id==3" class="card listimg">
+			<ul>
+				<li ng-repeat="poster in posterlist" ui-sref="tabs.shareposter({tid:poster.Id,TemplateType:id})">
+					<!--<img ng-src="{{poster.ShowImages}}"/>-->
+					<img src="img/noimg.png" onerror="this.src='img/noimg.png'" image-lazy-src="{{ poster.ShowImages }}">
+					<p>{{poster.Name}}</p>
+					<div>已有<span>{{poster.Hits}}</span>人使用</div>
+				</li>
+			</ul>
+		</div>
+		
+	</ion-content>
+	
+</ion-view>
+

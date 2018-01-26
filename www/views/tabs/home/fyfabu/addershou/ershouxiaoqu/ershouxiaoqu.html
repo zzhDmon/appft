@@ -1,0 +1,28 @@
+
+<!--对话模板-->
+<ion-view hide-nav-bar=true id="ershouxiaoqu" >
+	
+	
+	<div class="bar bar-header item-input-inset">
+	    <span class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="请输入小区名" ng-model="searchName.key" ng-change="search(searchName.key)">
+                <i class="icon ion-close-circled placeholder-icon" style="vertical-align: middle;"
+                   ng-click="clear()" ng-if="searchName.key.length"></i>
+        </span>
+	    <span class="cancel" ng-click="cancel()">取消</span>
+	
+	</div>
+	<ion-content on-swipe-right="onSwipeRight()" class="ershouxiaoqu">
+		<div class="card lasted">
+			最近发布
+		</div>
+		<div class="card list">
+			<ul>
+				<li ng-repeat="xiaoqu in xiaoquarr" ng-click="choosexiaoqu($event,xiaoqu.Id)">{{xiaoqu.Name}}</li>
+			</ul>
+		</div>
+	</ion-content>
+	
+</ion-view>
+

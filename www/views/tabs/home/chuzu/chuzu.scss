@@ -1,0 +1,129 @@
+#chuzu{
+    .header{
+        .right{
+           font-size: 14px;
+           color: rgb(102,102,102);
+        } 
+    }
+     .toptwo{
+        width: 100%;
+        height: 40px;
+        position: fixed;
+        top: 44px;
+        border-bottom: 1px solid gainsboro;
+        z-index: 999;
+        li{
+            width: 50%;
+            font-size: 16px;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+        }
+        .line{
+            width: 50%;
+            height: 0;
+            border-bottom: 2px solid rgb(54,153,245);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    .backtop{
+        display: none;
+        position: absolute;
+        z-index: 999;
+        bottom:60px;
+        right:15px;
+        width: 39px;
+        height: 39px;
+        line-height:39px;
+        text-align: left;
+        border-radius: 50%;
+        color: rgb(150,150,150);
+        background-color: rgba(255,255,255,0.9);
+        i{
+            position: relative;
+            top: 2px;
+            font-size: 38px;
+        }
+    }
+    .chuzu{
+        margin-top: 84px;
+        .card{
+            box-shadow: none;
+            padding: 0 0 0 12px;
+        }
+         .list{
+            ul{
+                    width: 100%;
+                    li{
+                        position: relative;
+                        width: 100%;
+                        padding: 10px 12px 10px 0;
+                        border-bottom: 1px solid rgb(230,230,230);
+                       
+                       h4{
+                           margin: 0;
+                           font-size: 16px;
+                           color: rgb(51,51,51);
+                           line-height: 25px;
+                       }
+                       p{
+                           font-size: 14px;
+                           line-height: 20px;
+                           span.second{
+                               margin-left: 10px;
+                           }
+                       }
+                       p.area{
+                           margin: 10px 0 0;
+                           color: rgb(102,102,102);
+                       }
+                       p.from{
+                           color: rgb(150,150,150);
+                           margin: 10px 0 0;
+                           font-size: 12px;
+                       }
+                       div.sandp{
+                           height: 20px;
+                                font-size: 14px;
+                                color: rgb(102,102,102);
+                                .space{
+                                    float: left;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    width: calc(60vw - 38px);
+                                    word-break:keep-all;
+                                            white-space:nowrap;
+                                            overflow:hidden; 
+                                            text-overflow:ellipsis;
+                                    span.second{
+                                           margin-left: 10px;
+                                           
+                                       }
+                                }
+                                 .price{
+                                        text-align: right;
+                                        float: right;
+                                        height: 25px;
+                                        line-height: 25px;
+                                        width: 40vw;
+                                        color: rgb(230,75,0);
+                                        word-break:keep-all;
+                                        white-space:nowrap;
+                                        overflow:hidden; 
+                                        text-overflow:ellipsis;
+                                        span{
+                                            display: inline;                                            
+                                        }
+                                        span.jiage{
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                        }
+                                    }
+                        }
+                    }
+                }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+/*卡片*/
+#searchhouse{
+   
+    .home-header{
+        position: absolute;
+        z-index: 999;
+        width: 100%!important;
+        height: 44px!important;
+        top: 0;
+        padding-top: 10px!important;
+        border: none!important;
+        background-color: rgba(255,255,255,0);
+        span.goback{
+            width: 10%;
+            height: 25px;
+            text-align: center;
+            i{
+                font-size: 20px; 
+                line-height: 25px;               
+            }
+        }
+        span.item-input-wrapper{
+            width: 85%;
+            span{
+                display: inline-block;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                width: 20%;
+                
+            }
+            i.icon--pulldown{
+                color: gray;
+            }
+            input{
+                padding-left: 10px;
+            }
+        }
+        span.cancel{
+            width: 15%;
+            text-align: left;
+            padding-left: 10px;
+        }
+    }
+    .searchhouse{
+        margin-top: 44px;
+        padding-top: 100px;
+        .havent{
+            box-shadow: none;
+            img{
+                display: block;
+                margin: auto;
+            }
+            p{
+                text-align: center;
+            }
+        }
+    } 
+}
+
+

@@ -1,0 +1,194 @@
+#readchushou {
+    
+    .readchushou{
+        position: absolute;
+        .btn {
+            z-index: 999;
+            position: absolute;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(126, 126, 126, 0.2);
+            text-align: center;
+            line-height: 30px;
+            font-size: 2rem;
+            color: white;
+        }
+        .backbotton {
+            left: 5px;
+        }
+        .sharebotton {
+            right: 5px;
+        }
+        
+        .detailcursor{
+            .slider-pager{
+                position: absolute;
+                bottom: 5px;
+                .slider-pager-page{
+                    font-size: 12px;
+                }
+            }
+        }
+        .detailcursor {
+            .box {
+                width: 100%;
+                height: 210px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .card {
+            box-shadow: none;
+            padding: 0 12px 0;
+        }
+        .detailname {
+            h4 {
+                font-size: 14px;
+                color: rgb(51, 51, 51);
+                margin: 10px 0 10px;
+                span {
+                    margin-right: 5px;
+                }
+            }
+            p {
+                margin: 10px 0 10px;
+                color: rgb(102,102,102);
+                span {
+                    margin-right: 15px;
+                }
+                .text {
+                    a{
+                        text-decoration: none;
+                        color: rgb(87,107,149);
+                    }
+                }
+            }
+            ul{
+                width: 100%;
+                height: auto;
+                padding: 15px 0 15px;
+                li{
+                    width: calc(33.33% - 1px);
+                    height: auto;
+                    line-height: 30px;
+                    text-align: center;
+                    p{
+                         font-size: 16px;
+                        text-align: center;
+                        line-height: 20px;
+                    }
+                    p.top{
+                        color: rgb(51,51,51);
+                        margin:0 0 10px;
+                    }
+                    p.bottom{
+                        color: rgb(230,75,0);
+                    }
+                }
+                .line{
+                    width: 0;
+                    height: 50px;
+                    border-right: 1px solid gainsboro;
+                    box-sizing: border-box;
+                }
+            }
+            
+        }
+        .houseinfo{
+            ul{
+                width: 100%;
+                height: 50px;
+                padding: 10px 0 10px;
+                li{
+                    width: 50%;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: left;
+                    overflow: hidden;
+                }
+            }
+            .other{
+                h4{
+                    margin: 15px 0 10px;
+                    font-size: 16px;
+                    color: rgb(51,51,51);
+                }
+                p{
+                    margin: 0 0 15px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: rgb(102,102,102);
+                }
+            }
+            .fydesc{
+                h4{
+                    margin: 15px 0 10px;
+                    font-size: 16px;
+                    color: rgb(51,51,51);
+                }
+                p{
+                    margin: 0 0 15px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: rgb(102,102,102);
+                }
+            }
+        }
+        .explore{
+            padding: 15px 12px 15px;
+            ul{
+                width: 60%;
+                float: left;
+                height: 40px;
+                overflow: hidden;
+                li{
+                    float: left;
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 5px;
+                    img{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .righttext{
+                float: right;
+                width: 40%;
+                height: 40px;
+                line-height: 40px;
+                font-size: 12px;
+                color:rgb(102,102,102);
+                text-align: right;
+            }
+        }
+        .abouthouse{
+            padding-bottom: 20px;
+            h5{
+                border-left: 3px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 20px;
+                line-height: 20px;
+                padding-left: 10px;
+                margin: 20px 0 015px;
+            }
+            p{
+              margin: 0;
+              font-size: 14px;
+              line-height: 20px;
+              color: rgb(51,51,51);  
+              text-align: justify;
+              text-indent: 2em;
+            }
+        }
+        
+        
+    }
+    
+}

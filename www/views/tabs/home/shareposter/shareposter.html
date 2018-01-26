@@ -1,0 +1,39 @@
+
+<!--对话模板-->
+<ion-view id='shareposter' hide-nav-bar="true">
+	
+	<div class="backbotton btn" ng-click="back()"><i class="icon ion-chevron-left"></i></div>
+	<div class="sharebotton btn" ng-click="openPopoverView($event)"><i class=" iconfont icon-fenxiang1" style="font-size: 20px!important;"></i> </div>
+	<ion-content on-swipe-right="onSwipeRight()" class="shareposter">
+		<div class="card userimg">
+			<img class="mainimg" src="{{imgurl}}"/>
+			
+			<canvas style="display: none;" id="postermycans" width="750px" height="1334px"></canvas>
+		</div>
+		
+	<!--分享浮动框 ion-popover-view-->
+		<script id="shareposterpopover.html" type="text/ng-template">
+			<ion-popover-view class="Bottom-share-popover">
+				<ul>
+					<li class="weixin" ng-click="share(0)">
+						<div class="img">
+							<img src="imgs/微信.png"/>
+						</div>
+						<p>微信好友</p>
+					</li>
+					<li class="pengyouquan" ng-click="share(1)">
+						<div class="img">
+							<img src="imgs/朋友圈.png"/>
+							
+						</div>
+						<p>朋友圈</p>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<h4 ng-click="closePopoverView($event)">取消</h4>
+			</ion-popover-view>
+		</script>
+	</ion-content>
+	
+</ion-view>
+

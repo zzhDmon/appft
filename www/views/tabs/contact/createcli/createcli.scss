@@ -1,0 +1,364 @@
+//模态框
+.modal-backdrop{
+    background-color: rgba(0,0,0,0.2);
+}
+//提示模态框
+#createcli_msgmodal{
+    width: 250px;
+    min-height: 100px;
+    height: 200px;
+    top: calc(50% - 100px);
+    left: calc(50% - 125px);
+    border-radius: 5px;
+    .img{
+        margin: auto;
+        width: 200px;
+        height: 100%;
+        position: relative;
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        p{
+            position: absolute;
+            margin: 0;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        }
+        .suc{
+           top: 5px; 
+        }
+        .defe{
+            bottom: 5px;            
+        }
+    }
+}
+//选择模态框
+#createcli_modal{
+    width: 80%;
+    min-height: 200px;
+    height: 50%;
+    top: 25%;
+    left: 10%;
+    border-radius: 5px;
+    .toubu{
+       position: absolute;
+       top: 0; 
+       height: 50px;
+       line-height: 50px;
+       text-align: center;
+       font-size: 16px;
+       color: #333;
+       width: 100%;
+       border-bottom: 1px solid #f2f2f2;
+       span{
+           position: absolute;
+           display: block;
+           height: 50px;
+           width: 50px;
+           text-align: center;
+           line-height: 50px;
+           color: #969696;
+           top: 0;
+           right: 0;
+       }
+
+    }
+    .climodal{
+        margin: 50px 0 10px;
+        padding: 0 12px 0;
+        .list{
+            .activated{
+                background-color: rgb(246,246,246);
+            }
+            .item{
+                text-align: center;
+                margin: 0;
+                border: none;
+                border-bottom: 1px solid #f2f2f2;
+            }
+            .item:last-child{
+                border: none;
+            }
+        }
+        .pricetype{
+            width: 100%;
+            height: 30px;
+            margin-top: 50px;
+            input{
+                float: left;
+                display: block;
+                width: 60%;
+                height: 100%;
+                font-size: 16px;
+                border-bottom: 1px solid rgb(230,230,230);
+                text-align: center;
+            }
+            span{
+                display: block;
+                width: 20%;
+                height: 100%;
+                line-height: 30px;
+                float: left;
+            }
+        }
+    }
+    
+    .bar-footer{
+        text-align: center;
+        background-color: #f2f2f2;
+        div{
+            line-height: 34px;
+            color: rgb(65,160,255);
+            font-size: 16px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.create-elsemodal{
+    height: 250px!important;
+    top: calc(50% - 125px);
+}
+#createcli{
+    .save{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            color: #fff;
+            font-size:16px;
+            .button{
+               width: 100%;
+               height: 100%;
+               background-color: #41A0FF;  
+               color: #fff;
+               font-size:16px;
+               text-align: center;
+            }
+        }
+    .selfbackdrop{
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.2);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+    }
+    .selfmodal{
+        display: none;
+        width: 70%;
+        height: 120px;
+        max-width: 100%;
+        max-height: 90%;
+        background-color: rgb(255,255,255);
+        position: absolute;
+        top: calc(50% - 50px);
+        left: 15%;
+        z-index: 10001;
+        border-radius: 4px;
+        overflow: hidden;
+        .self-head{
+            width: 100%;
+            height: 4px;
+            background-color: rgb(65,160,255);
+        }
+        .self-content{
+            width: 100%;
+            height: 67px;
+            border-bottom: 1px solid #d5d5d5;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 67px;
+            font-size: 16px;
+            color: #333;
+        }
+        .self-footer{
+            width: 100%;
+            height: 49px;
+            div{
+                width: 50%;
+                height: 100%;
+                float: left;
+                text-align: center;
+                line-height: 49px;
+                font-size: 16px;
+            }
+            .giveup{
+                color: rgb(230,75,0);
+            }
+            .continue{
+                border-left:1px solid #d5d5d5;
+                color: #333;
+            }
+        }
+    }
+
+    .createcli{
+        margin-top: 44px;
+        background-color: #f2f2f2;
+        .base,.need{
+            margin: 0;
+            padding: 0 0 0 12px;
+            height: 44px;
+            line-height: 44px;
+            font-size: 14px;
+            color: #333333;
+            background-color: #f2f2f2;
+        }
+        .baseinfo{
+            padding: 0 0 0 12px;
+            background-color: #fff;
+            
+            //自定义单选框样式
+            label{
+             i{font-size:14px;
+             font-style:normal;
+             display:inline-block;
+             width:14px;
+             height:14px;
+             text-align:center;
+             line-height:14px;
+             color:#fff;
+             vertical-align:middle;
+             margin:-2px 2px 1px 0px;
+             border: 1px solid rgb(65,160,255);} 
+            input[type="radio"] + i {
+                border-radius:7px;
+                } 
+            input[type="radio"] {
+                display:none;
+                }  
+            input[type="radio"]:checked + i {background:rgb(65,160,255);}  
+            input[type="radio"]:disabled + i {border-color:#ccc;}  
+            }
+            
+            div{
+                width: 100%;
+                height: 44px;
+                line-height: 44px;
+                font-size: 15px;
+            }
+            .borderline{
+                height: 0;
+            }
+            .tocontactlist{
+                text-align: center;
+                line-height: 44px;
+                .icon-tianjia1{
+                    vertical-align: middle;
+                    font-size: 25px;
+                    color: #4cd964;
+                }
+            }
+            .cliname,.cliphone{
+                position: relative;
+                input{
+                    font-size: 15px;
+                    width: 100%;
+                    height: 100%;
+                }
+                span.iconfont{
+                   position: absolute;
+                   right: 15px; 
+                   top: 0;
+                }
+                span.icon-guanbi1{
+                    color: red;
+                }
+                span.icon-xuanze{
+                    color: green;
+                }
+            }
+        }
+        .needinfo{
+                      
+            padding: 0 0 0 12px;
+            background-color: #fff;
+            ul{
+                width: 100%;
+                li{
+                    position: relative;
+                    width: 100%;
+                    height: 44px;
+                    font-size: 14px;
+                    color: #333;
+                    border-bottom: 1px solid #f2f2f2;
+                    .left{
+                        position: relative;
+                        float: left;
+                        width: 30%;
+                        height: 100%;
+                        line-height: 44px;
+                        text-align: left;
+                        .rmask{
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                        input{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                        }
+                    }
+                    .right{
+                        position: relative;
+                        float: left;
+                        width: 70%;
+                        height: 100%;
+                        line-height: 44px;
+                        .rmask{
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                        input{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                        }
+                    }
+                    .delete{
+                        position: absolute;
+                        right: 0;
+                        width: 20%;
+                        height: 100%;
+                        text-align: center;
+                        line-height: 44px;
+                        .iconfont{
+                            vertical-align: middle;
+                            font-size: 18px;
+                            color: #969696;
+                        }
+                    }
+                }
+            }
+            .additem{
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                color: #969696;
+                .icon-tianjia1{
+                    font-size: 20px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
