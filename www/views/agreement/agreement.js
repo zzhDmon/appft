@@ -1,11 +1,13 @@
-angular.module('App').controller('AgreementController',function($ionicHistory,$http,$Factory,$stateParams,$scope,$state,$ionicLoading){
+angular.module('App').controller('AgreementController',function(goBack,$ionicViewSwitcher,$ionicHistory,$http,$Factory,$stateParams,$scope,$state,$ionicLoading){
 	
 	setTimeout(function(){
 		$('span.back-text').css('display','none');
 	})
 	
 	$scope.back=function(){
-		$ionicHistory.goBack()
+		// $ionicHistory.goBack();
+		// $ionicViewSwitcher.nextDirection("back");
+		goBack.goback()
 	};
 	
 	$scope.name = $stateParams.name;

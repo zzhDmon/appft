@@ -55,5 +55,8 @@
     </plugin>
     <plugin name="cordova-plugin-x-toast" spec="git+https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git" />
     <plugin name="cordova-umeng-analytics" spec="git+https://github.com/pipitang/cordova-umeng-analytics.git" />
+    <plugin name="jmessage-phonegap-plugin" spec="^3.1.7">
+        <variable name="APP_KEY" value="05efb4abd755fffa53a87fe0" />
+    </plugin>
     <plugin name="org.devgeeks.Canvas2ImagePlugin" spec="https://github.com/devgeeks/Canvas2ImagePlugin.git" />
 </widget>

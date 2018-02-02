@@ -1,19 +1,25 @@
 
 <!--对话模板-->
-<ion-view id="ershoulist" hide-nav-bar=true view-title="房源发布"  class='dark'>
+<ion-view id="ifHaveHouse" hide-nav-bar=true view-title="房源发布"  class='dark'>
 	<!--<ion-nav-buttons side="secondary">
 		<a  class="button button-small button-icon"  ng-click="openPopoverView($event)"><i style="color: gray;font-size: 25px!important;color: rgb(51,51,51);font-weight: 500;" class="iconfont icon-jiahao1"></i></a>	
 	</ion-nav-buttons>-->
 	
 	<div ng-click="onlyclosechoose()" class="bar searchhouse-header item-input-inset">
-	    <span class="goback" ng-click="back()"><i class="iconfont icon-fanhuishangyiji"></i></span>
-	     <span class="item-input-wrapper" ui-sref="tabs.searchhouse({housetype:'二手房'})">
+	    <span class="goback" ng-click="getarea()">厦门<i class="iconfont icon-xialacaidanxiaosanjiao1"></i></span>
+	    <span class="item-input-wrapper" ui-sref="tabs.clientSearch({type:0})">
 	     	<i class="iconfont icon-sousuo2"></i>
             <input type="search" placeholder="请输入小区名称或地址" ng-model="searchName.key" ng-change="search(searchName.key)">
             <!--<i class="icon ion-close-circled placeholder-icon" style="vertical-align: middle;"
                    ng-click="clear()" ng-if="searchName.key.length"></i>-->
         </span>
-	
+	</div>
+	<div class="tabNav" style="position:absolute;bottom:0;width:100%;height:45px;z-index:1;">
+		<ul>
+			<li ui-sref="tabs.fbManage({type:0})">出售</li>
+			<li>mid</li>
+			<li ui-sref="tabs.fbManage({type:1})">出租</li>
+		</ul>
 	</div>
 	
 	<ul class="topfour">
@@ -70,7 +76,7 @@
 	
 	
 
-	<ion-content delegate-handle="mainscroll" on-swipe-right="onSwipeRight()" class="ershoulist">
+	<ion-content delegate-handle="mainscroll" on-swipe-right="onSwipeRight()" on-swipe-down="onSwipeDown()" on-swipe-up="onSwipeUp()" class="ifHaveHouse">
 		<div ng-if="sellhousearr.length<1" class="card noresult">
 			<div class="top">
 				<span class="iconfont icon-fangdajingtubiao"></span>

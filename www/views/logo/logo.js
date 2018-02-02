@@ -1,13 +1,14 @@
-angular.module('App').controller('LogoController',function($timeout,$http,$Factory,$state,$scope,$rootScope,$ionicLoading,$document,$ionicHistory){
-	// $timeout(function(){
-	// 	$state.go('tabs.home')
-	// },3000)
+angular.module('App').controller('LogoController',function($timeout,$interval,$http,$Factory,$state,$scope,$rootScope,$ionicLoading,$document,$ionicHistory){
+// $timeout(function(){
+// 	$state.go('tabs.home')
+// },3000)
 //	$timeout(function(){
 //		if($('#logo .logo').innerWidth()>375){
 //			$('#logo .logo .normal').css('display','none')
 //			$('#logo .logo .plus').css('display','block')
 //		}
 //	})
+
 //	$http.get($Factory.Template.banner.url).then(function(resData){
 //		$rootScope.homebanner=resData.data;
 //	},function(){
@@ -17,7 +18,6 @@ angular.module('App').controller('LogoController',function($timeout,$http,$Facto
 		fanvas.play("testCanvas", swfData, {
 			cache: true, autoPlay: true,showFPS:0,clearAll:1,scale:1,
 			onFrame: function (index) {
-				console.log(index)
 					if(index == 30){
 							fanvas.pause("testCanvas");
 	                       	setTimeout(function(){
@@ -28,12 +28,12 @@ angular.module('App').controller('LogoController',function($timeout,$http,$Facto
 							fanvas.pause("testCanvas");
 							$timeout(function(){
 								// fanvas.gotoAndPlay("testCanvas",35)
-								$state.go('tabs.home')
+								$state.go('tabs.ifHaveHouse')
 							}, 500);
-							// 切换动画
+							
 					}
 			},
-			imagePath: "./"
+			imagePath: "./canvasimg/"
 		});
 	}
 	//响应式canvas

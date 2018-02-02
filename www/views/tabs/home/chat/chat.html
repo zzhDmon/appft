@@ -1,0 +1,116 @@
+<!--对话模板-->
+<!-- <ion-view id="chat" view-title="选择房源" hide-nav-bar=true  class='dark'>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			Chat
+		</div>
+		<div class="right">
+			
+		</div>
+	</div>
+	
+	<ion-content on-swipe-right="onSwipeRight()" class="chat" has-bouncing={{torf}}>
+		
+		<div class="card list">
+			<br/>
+			<br/>
+			
+			<br/>
+			<input type="text" ng-model="user.username" placeholder="用户名">
+			<input type="text" ng-model="user.password" placeholder="密码">
+			<p class="button button-positive" ng-click="login()">登录</p>
+			
+			<input type="text" ng-model="send.username" placeholder="发送给">
+			<input type="text" ng-model="send.text" placeholder="发送内容">
+			<p class="button button-positive" ng-click="towho()">发送</p>
+			
+			<br/>
+			<br/>
+			<input type="text" ng-model="get.username" placeholder="from who">
+			<p class="button button-positive" ng-click="getmsg()">接收消息</p>
+			<br/>
+			<br/>
+			<p class="button button-positive" ng-click="logout()">退出</p>
+			<br/>
+			<br/>
+			<div style="clear: both;"></div>
+			<p ng-show="baseLine" class="baseLine"><span>人家是有底线的啦</span></p>
+		</div>
+	
+	
+	
+		
+	</ion-content>
+	
+</ion-view> -->
+
+
+<ion-view id="userMessagesView" cache-view="false" view-title="{{toUser.username}}">
+
+	<div class="loader-center" ng-if="!doneLoading">
+		<div class="loader">
+			<i class="icon ion-loading-c"></i>
+		</div>
+	</div>
+
+	<ion-content has-bouncing="true" class="has-header has-footer" delegate-handle="userMessageScroll">
+
+		<div ng-repeat="message in messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">
+
+			<div ng-if="user._id !== message.userId">
+
+				<img ng-click="viewProfile(message)" class="profile-pic left" ng-src="{{toUser.pic}}" onerror="onProfilePicError(this)" />
+
+				<div class="chat-bubble left">
+
+					<div class="message" ng-bind-html="message.text | nl2br" autolinker>
+					</div>
+
+					<div class="message-detail">
+						<span ng-click="viewProfile(message)" class="bold">{{toUser.username}}</span>,
+						<span am-time-ago="message.date"></span>
+					</div>
+
+				</div>
+			</div>
+
+			<div ng-if="user._id === message.userId">
+
+				<img ng-click="viewProfile(message)" class="profile-pic right" ng-src="{{user.pic}}" onerror="onProfilePicError(this)" />
+
+				<div class="chat-bubble right">
+
+					<div class="message" ng-bind-html="message.text | nl2br" autolinker>
+					</div>
+
+					<div class="message-detail">
+						<span ng-click="viewProfile(message)" class="bold">{{user.username}}</span>,
+						<span am-time-ago="message.date"></span>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="cf"></div>
+
+		</div>
+	</ion-content>
+
+	<form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
+		<ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
+			<label class="item-input-wrapper">
+				<textarea ng-model="input.message" value="" placeholder="Send {{toUser.username}} a message..." required minlength="1" maxlength="1500"
+				 msd-elastic></textarea>
+			</label>
+			<div class="footer-btn-wrap">
+				<button class="button button-icon icon ion-android-send footer-btn" type="submit" ng-disabled="!input.message || input.message === ''">
+				</button>
+			</div>
+		</ion-footer-bar>
+	</form>
+
+</ion-view>

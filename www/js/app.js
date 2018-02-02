@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('App', ['ionic','App.imglist','ngCordova'])
+angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment'])
 .config(function($ionicConfigProvider,$stateProvider,$urlRouterProvider,$httpProvider){
 	$httpProvider.defaults.withCredentials = true;
 	$httpProvider.defaults.headers.post['Content-Type'] = 'application/json';
@@ -24,15 +24,68 @@ angular.module('App', ['ionic','App.imglist','ngCordova'])
 	}).state('agreement',{
 		url: '/agreement',
 		templateUrl: 'views/agreement/agreement.html',
-		controller:'AgreementController'
+		controller:'AgreementController',
+		data:{isPublic:true}
 	})
-	
 	
 	.state('tabs',{
 		url:'/tabs',
 		abstract: true,
 		templateUrl:'views/tabs.html'
-	}).state('tabs.home',{
+	})
+	.state('tabs.ifHaveHouse',{
+		url:'/tabs/ifhavehouse',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/ifHaveHouse.html',
+				controller:'ifHaveHouseCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.clientSearch',{
+		url:'/tabs/ifhavehouse/clientsearch/:type',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/clientSearch/clientSearch.html',
+				controller:'clientSearchCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.fbManage',{
+		url:'/tabs/ifhavehouse/fbmanage/:type',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/fbManage/fbManage.html',
+				controller:'fbManageCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.addFy',{
+		url:'/tabs/ifhavehouse/fbmanage/:type',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/addFy/addFy.html',
+				controller:'addFyCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.changeFy',{
+		url:'/tabs/ifhavehouse/changefy/:type',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/changeFy/changeFy.html',
+				controller:'changeFyCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+
+
+	.state('tabs.home',{
 		url:'/home',
 //		cache:false,
 		views:{
@@ -41,6 +94,14 @@ angular.module('App', ['ionic','App.imglist','ngCordova'])
 				controller:'HomeController'
 			}
 		}			
+	}).state('tabs.chat',{
+		url:'/home/chat',
+		views:{
+			home:{
+				templateUrl:'views/tabs/home/chat/chat.html',
+				controller:'ChatController'
+			}
+		}
 	}).state('tabs.alikehouse',{
 		url:'/home/alikehouse/:minprize/:maxprize/:roomType',
 		views:{
@@ -73,6 +134,14 @@ angular.module('App', ['ionic','App.imglist','ngCordova'])
 			home:{
 				templateUrl:'views/tabs/home/fyfabu/fyfabu.html',
 				controller:'FyfabuController'
+			}
+		}
+	}).state('tabs.cfyfabu',{
+		url:'/home/cfyfabu',
+		views:{
+			classify:{
+				templateUrl:'views/agreement/agreement.html',
+				controller:'AgreementController'
 			}
 		}
 	}).state('tabs.fydetail',{
@@ -716,7 +785,7 @@ angular.module('App', ['ionic','App.imglist','ngCordova'])
 
 .constant('views',{currentView:null})
 
-.run(function($rootScope,$ionicSideMenuDelegate,$ionicTabsDelegate,views,$state){
+.run(function($rootScope,$ionicSideMenuDelegate,$ionicTabsDelegate,views,$state,ModalService){
 	
 	
 	$rootScope.closeshare=function(){
@@ -746,28 +815,58 @@ angular.module('App', ['ionic','App.imglist','ngCordova'])
 	
 	//登录拦截，判断后跳转到登录页面可跳转页面
 	//后台可进入微店 ||toState.name=='tabs.weidian' ||toState.name=='tabs.searchhouse'
-	$rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
-		if(toState.name=='login'||toState.name=='registerorback'||toState.name=='agreement'||toState.name=='logo'||toState.name=='tabs.home'||toState.name=='tabs.chushoudetail'||toState.name=='tabs.readchushou'||toState.name=='tabs.chuzudetail'||toState.name=='tabs.readchuzu'||
-		toState.name=='tabs.info'||toState.name=='tabs.contact'||toState.name=='tabs.infodetails'||toState.name=='tabs.uidinfodetails'||toState.name=='tabs.shareinfodetails'||toState.name=='tabs.find'||toState.name=='tabs.dazibao'||toState.name=='tabs.duanzi'||
-		toState.name=='tabs.humor'||toState.name=='tabs.like'||toState.name=='tabs.fydetail'||toState.name=='tabs.chuzudetail'||toState.name=='tabs.fypic'||toState.name=='tabs.alikehouse'||toState.name=='tabs.alikehousedetail'||
-		toState.name=='tabs.hisweidian'||toState.name=='tabs.homeinfodetail'||toState.name=='tabs.uidhomeinfodetail'||toState.name=='tabs.searchresult'||
-		toState.name=='tabs.gpslocation'||toState.name=='tabs.ershoutd'||toState.name=='tabs.ershoulist'||toState.name=='tabs.zufanglist'||toState.name=='tabs.newhouse'||toState.name=='tabs.newhousedetail' ||
-		toState.name=='tabs.findinfodetails' ||toState.name=='tabs.myweidian' ||toState.name=='tabs.myfydetail' ||toState.name=='tabs.sharerefcode'){
-			return;// 如果是进入登录界面则允许			
-		}
-		// 如果用户不存在
-		if(localStorage.getItem('loged')!=='0'){
-			event.preventDefault();// 取消默认跳转行为
-			$state.go("login",{from:fromState.name,w:'notLogin'});//跳转到登录界面			
-		}else{
-		}
-	});
+	// $rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
+	// 	if(angular.isObject(toState.data) && toState.data.isPublic === true){
+	// 		console.log(toState.data.isPublic)
+			
+	// 	}
+	// 	if(toState.name=='login'||toState.name=='registerorback'||toState.name=='agreement'||toState.name=='logo'||toState.name=='tabs.home'||toState.name=='tabs.chushoudetail'||toState.name=='tabs.readchushou'||toState.name=='tabs.chuzudetail'||toState.name=='tabs.readchuzu'||
+	// 	toState.name=='tabs.info'||toState.name=='tabs.contact'||toState.name=='tabs.infodetails'||toState.name=='tabs.uidinfodetails'||toState.name=='tabs.shareinfodetails'||toState.name=='tabs.find'||toState.name=='tabs.dazibao'||toState.name=='tabs.duanzi'||
+	// 	toState.name=='tabs.humor'||toState.name=='tabs.like'||toState.name=='tabs.fydetail'||toState.name=='tabs.chuzudetail'||toState.name=='tabs.fypic'||toState.name=='tabs.alikehouse'||toState.name=='tabs.alikehousedetail'||
+	// 	toState.name=='tabs.hisweidian'||toState.name=='tabs.homeinfodetail'||toState.name=='tabs.uidhomeinfodetail'||toState.name=='tabs.searchresult'||
+	// 	toState.name=='tabs.gpslocation'||toState.name=='tabs.ershoutd'||toState.name=='tabs.ershoulist'||toState.name=='tabs.zufanglist'||toState.name=='tabs.newhouse'||toState.name=='tabs.newhousedetail' ||
+	// 	toState.name=='tabs.findinfodetails' ||toState.name=='tabs.myweidian' ||toState.name=='tabs.myfydetail' ||toState.name=='tabs.sharerefcode'){
+	// 		return;// 如果是进入登录界面则允许			
+	// 	}
+	// 	// 如果用户不存在
+	// 	if(localStorage.getItem('loged')!=='0'){
+	// 		event.preventDefault();// 取消默认跳转行为
+	// 		$state.go("login",{from:fromState.name,w:'notLogin'});//跳转到登录界面			
+	// 	}else{
+	// 	}
+	// });
+	
+	// $rootScope.$on("$stateChangeStart", function (evt, toState, toParams, fromState, fromParams) {
+    //     var isPublic = angular.isObject(toState.data) && toState.data.isPublic === true;    //判断当前state的data属性"isPublic" === true
+    //     // var token = Passport.getToken();    //这里的getToken()是我自己写的取得当前token的方法，可以换成你自己的方法
+    //     if (!isPublic) {     
+    //              //do nothing
+    //     }
+    //     else {    //表示该state访问需要权限
+    //       ModalService.show('views/login/login-model.html', 'LoginController', {'login': true})    //调用ModalService.show()方法，显示登录modal框，这里还要指定Controller为LoginController，你也可以替换为自己的Controller
+    //         .then(function (data) {
+	// 			console.log(data)
+    //           if (data.login) {    //login 是我自定义的参数，后面会讲到
+    //             $rootScope.$broadcast('login', 'true');        //向下广播 login事件，这样就可以在其他controller中接收到该事件，从而进行相应的操作
+    //           }
+    //           else {
+	// 			$state.go(fromState.name);
+    //             // if(data.state){    //state也是我自定义的参数
+	// 			// 	$state.go(data.state);
+    //             // }else{
+	// 			// 	$state.go(fromState.name);
+    //             // }
+    //           }
+    //         });
+    //     }
+    //   });
 })
 
-.run(function($ionicPopup,$cordovaAppVersion,$cordovaFileTransfer, $cordovaFile, $cordovaFileOpener2,$ionicPlatform,$rootScope
+.run(function($timeout,$ionicPopup,$cordovaAppVersion,$cordovaFileTransfer, $cordovaFile, $cordovaFileOpener2,$ionicPlatform,$rootScope
 	,$q,$http,$Factory,$ionicHistory,$cordovaToast,$location,$cordovaStatusbar,$ionicLoading,$cordovaNetwork) {
-  	//ios风格显示
- 	 ionic.Platform.setPlatform('ios');
+	
+	//ios风格显示
+ 	ionic.Platform.setPlatform('ios');
   	$ionicPlatform.ready(function() {
 	    if(window.cordova && window.cordova.plugins.Keyboard) {
 	      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -792,6 +891,32 @@ angular.module('App', ['ionic','App.imglist','ngCordova'])
 //		    alert("友盟API初始化成功");
 		}, function (reason) {
 		});
+
+		JMessage.init({ isOpenMessageRoaming: true });
+
+		// JMessage.register({ username: 'testone', password: '123654', nickname: 'nickname',
+		// 	gender: 'male', extras: { key1: 'value1' }},
+		// 	(suc) => {
+		// 		// do something.
+		// 		alert('regsuc'+JSON.stringify(suc))
+		// 	}, (error) => {
+		// 		alert('regerr'+JSON.stringify(error))
+		// })
+		// $timeout(function(){
+		// 	JMessage.login({ username: 'test', password: '123654' },
+		// 	(suc) => {
+		// 		alert('logsuc'+JSON.stringify(suc))
+		// 		JMessage.getMessageById({type:'single',username:'viktor',appKey:'',messageId:'1'},
+		// 			(msg)=>{
+		// 				alert('msgsuc'+JSON.stringify(msg))
+		// 			},(err)=>{
+		// 				alert('msgerr'+JSON.stringify(err
+		// 				))
+		// 			})
+		// 	}, (error) => {
+		// 		alert('logerr'+JSON.stringify(error))
+		// 	})
+		// })
   	});
  
 	document.addEventListener("deviceready", function () {
@@ -888,13 +1013,21 @@ angular.module('App', ['ionic','App.imglist','ngCordova'])
 //          	$ionicHistory.goBack()
 //      }
         else if ($ionicHistory.backView()) {
-            	$ionicHistory.goBack()
+			if($location.path() == '/tabs/contact/createcli/-1'){
+				// 返回确定退出？
+				// $rootScope.showSelfModal=true;
+				$('#createcli .selfbackdrop').css('display','block');
+			   	$('#createcli .selfmodal').css('display','block');
+		   	}
+		   	else{
+				$ionicHistory.goBack()
+		   	}
         }
 		else {
         }
-       e.preventDefault(); 
+        e.preventDefault(); 
         return false;
-    }, 101);
+	}, 101);
    
 })
 

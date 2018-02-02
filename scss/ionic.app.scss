@@ -61,6 +61,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/views/tabs/home/incarousel/incarousel";
 @import "www/views/tabs/home/homeinfodetail/homeinfodetail";
 @import "www/views/tabs/home/choosefy/choosefy";
+@import "www/views/tabs/home/chat/chat";
 @import "www/views/tabs/home/choosefy/fypic/fypic";
 @import "www/views/tabs/info/info";
 @import "www/views/tabs/info/infodetails/infodetails";
@@ -101,4 +102,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/views/tabs/mine/refcode/sharerefcode/sharerefcode";
 @import "www/views/tabs/mine/myweidian/myweidian";
 @import "www/views/tabs/mine/myweidian/myfydetail/myfydetail";
+
+@import "www/views/tabs/ifhavehouse/ifhavehouse";
+@import "www/views/tabs/ifhavehouse/clientSearch/clientSearch";
+@import "www/views/tabs/ifhavehouse/fbManage/fbManage";
 

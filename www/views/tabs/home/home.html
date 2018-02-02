@@ -34,6 +34,10 @@
 				  </ion-slide>-->
 			</ion-slide-box>
 		</div>
+		<p class="button button-positive" ui-sref="tabs.chat">聊天</p>
+		<!-- <p class="button button-positive" ui-sref="registerorback">切换</p> -->
+		<p class="button button-positive" ng-click="reg()">切换</p>
+
 		<!--四个分类-->
 		<div class="card eightpic">
 			<div class="toptwo">
@@ -130,7 +134,7 @@
 			
 			
 			<ul>
-				<li on-finish-render-filters ng-repeat="new in homehousearr" ui-sref="tabs.newhousedetail({id:new.Id})">
+				<li on-drag-left="dragLeft()" on-finish-render-filters ng-repeat="new in homehousearr" ui-sref="tabs.newhousedetail({id:new.Id})">
 					<div class="img">
 						<img ng-src="{{new.Images}}"/>
 						<span class="newonline">

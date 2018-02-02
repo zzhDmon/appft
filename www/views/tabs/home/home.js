@@ -1,5 +1,5 @@
 angular.module('App')
-.controller('HomeController',function($interval,$cacheFactory,$timeout,$cordovaStatusbar,$state,$Factory,$http,$ionicHistory,$scope,$rootScope,$ionicPopover,$ionicSideMenuDelegate,$ionicSlideBoxDelegate,$ionicLoading,$http,$ionicScrollDelegate){
+.controller('HomeController',function(goTo,$ionicViewSwitcher,$interval,$cacheFactory,$timeout,$cordovaStatusbar,$state,$Factory,$http,$ionicHistory,$scope,$rootScope,$ionicPopover,$ionicSideMenuDelegate,$ionicSlideBoxDelegate,$ionicLoading,$http,$ionicScrollDelegate){
 	//清除浏览历史，即使手机上有回退按钮或者导航栏上显示回退按钮，都无法回退
 	$ionicHistory.clearHistory();
 	
@@ -14,6 +14,16 @@ angular.module('App')
 		}
 		
 	})
+
+	$scope.dragLeft=function(e){
+		console.log(e)
+	}
+	$scope.reg=function(){
+		// $state.go('agreement')
+		// $ionicViewSwitcher.nextDirection("forward");
+		goTo.goto('agreement')
+	}
+	
 	
 	//全局使用  咨询页面判断使用
 	$rootScope.loged=localStorage.getItem('loged');

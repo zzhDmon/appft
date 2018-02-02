@@ -184,7 +184,7 @@ angular.module('App').controller('ContactCtr',function($timeout,$window,$state,$
 	
  
 
-	var formatContacts=[{key:'A',value:[]},{key:'B',value:[]},{key:'C',value:[]},{key:'D',value:[]},{key:'E',value:[]},
+	var formatContacts=[{key:'A',value:[]},{key:'B',value:[]},{key:'C',value:[]},{key:'D',value:[]},{key:'E',value:[]}					,
 						{key:'F',value:[]},{key:'G',value:[]},{key:'H',value:[]},{key:'I',value:[]},{key:'J',value:[]},
 						{key:'K',value:[]},{key:'L',value:[]},{key:'M',value:[]},{key:'N',value:[]},{key:'O',value:[]},
 						{key:'P',value:[]},{key:'Q',value:[]},{key:'R',value:[]},{key:'S',value:[]},{key:'T',value:[]},

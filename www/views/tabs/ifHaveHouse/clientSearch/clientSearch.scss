@@ -1,50 +1,52 @@
 /*卡片*/
-#searchHouse{
-   
-    .searchhouse-header{
-        position: absolute;
-        z-index: 999;
-        width: 100%!important;
-        height: 44px!important;
-        top: 0;
-        padding-top: 10px!important;
-        border-bottom: 1px solid rgb(230,230,230);
-        background-image: none;
-        background-color: rgb(246,246,246);
-        span.goback{
-            width: 10%;
-            height: 40px;
-            text-align: left;
-            line-height:40px;               
-            i{
-                font-size: 30px; 
-                color: rgb(51,51,51);
+#clientSearch{
+
+    .clientSearch{
+        .searchhouse-header{
+            position: fixed;
+            z-index: 999;
+            width: 100%!important;
+            height: 44px!important;
+            top: 0;
+            padding-top: 10px!important;
+            border-bottom: 1px solid rgb(230,230,230);
+            background-image: none;
+            background-color: rgb(246,246,246);
+            span.goback{
+                width: 10%;
+                height: 40px;
+                text-align: left;
+                line-height:40px;               
+                i{
+                    font-size: 30px; 
+                    color: rgb(51,51,51);
+                }
             }
-        }
-        span.item-input-wrapper{
-            width: 85%;
-            height: 28px;
-            background-color: rgb(228,228,228);
-            span{
-                display: inline-block;
+            span.item-input-wrapper{
+                width: 85%;
                 height: 28px;
-                text-align: center;
-                line-height: 28px;
+                background-color: rgb(228,228,228);
+                span{
+                    display: inline-block;
+                    height: 28px;
+                    text-align: center;
+                    line-height: 28px;
+                }
+                i.icon--pulldown{
+                    color: gray;
+                }
+                input{
+                    padding-left: 10px;
+                }
             }
-            i.icon--pulldown{
-                color: gray;
-            }
-            input{
+            span.cancel{
+                width: 15%;
+                text-align: left;
                 padding-left: 10px;
             }
         }
-        span.cancel{
-            width: 15%;
-            text-align: left;
-            padding-left: 10px;
-        }
-    }
-    .searchHouse{
+
+
         margin-top: 44px;
         padding: 0;
         .card{
