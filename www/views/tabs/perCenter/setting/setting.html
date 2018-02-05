@@ -1,0 +1,35 @@
+
+<!--模板-->
+<ion-view view-title="设置" hide-nav-bar=true  class='dark'>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			设置
+		</div>
+		<div class="right" >
+			
+		</div>
+	</div>
+	
+	<ion-content on-swipe-right="onSwipeRight()" id="setting">
+		
+		<div class="offline"></div>
+		<div class="card problem" ui-sref="tabs.problem">
+			问题反馈
+			<i class="icon ion-chevron-right"></i>
+		</div>
+		<div class="offline"></div>
+		<div class="card check"  ng-click="check()">
+			检查更新
+		</div>
+		
+		<div class="offline"></div>
+		<div class="card logout"  ng-click="logout()">
+			退出登录
+		</div>
+	</ion-content>
+	
+</ion-view>
+

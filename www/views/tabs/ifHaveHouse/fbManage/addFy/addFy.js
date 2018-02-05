@@ -1,21 +1,17 @@
 
-angular.module('App').controller('AddFyCtl',function($ionicLoading,$ionicHistory,$timeout,$http,$Factory,$scope,$rootScope,$stateParams,$ionicPopover,$timeout){
-	//是否缓存
-	$rootScope.$on('$ionicView.beforeLeave',function(event,data){
-		if(data.stateName=="tabs.fyfabu"){
-			$scope.isCache=false;
-		}else{
-			$scope.isCache=true;
-		}
-		
-	})
+angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory,$timeout,$http,$Factory,$scope,$rootScope,$stateParams,$ionicPopover,$timeout){
+	
 
 	$scope.back=function(){
 		$ionicHistory.goBack();
 	}
 	
-	$scope.title = $stateParams.title;
-	$scope.headtitle = '二手房源'+$scope.title;
+	$scope.type = $stateParams.type;
+	if($scope.type==0){
+		$scope.headtitle = '二手房源新增';
+	}else{
+		$scope.headtitle = '租房源新增';
+	}
 	$scope.id=$stateParams.id;
 	
 //	

@@ -1,0 +1,85 @@
+#checkprogress{
+    .checkprogress{
+        margin-top: 44px;
+        .card{
+            padding: 50px 12px 0;
+            box-shadow: none;
+            text-align: center;
+            span{
+                font-size: 60px;
+            }
+            span.icon-shenhe01{
+                color: rgb(102,102,102);
+            }
+            span.icon-shenhewancheng1{
+                color: rgb(65,160,255);
+            }
+            span.icon-guanbi2fill{
+                color: rgb(232,164,0);
+            }
+            span.icon-guanbi2{
+                color: rgb(232,164,0);
+            }
+            p{
+                margin: 10px 0 0;
+                font-size: 16px;
+                span{
+                    font-size: 16px;
+                    color: rgb(65,160,255);
+                }
+            }
+            .progress{
+                margin: 20px 0 0 ;
+                position: relative;
+                .vertical{
+                    position: absolute;
+                    z-index: 0;
+                    width: 0;
+                    height: calc(100% - 30px);
+                    border-left: 1px solid rgba(150,150,150,0.5);
+                    left: calc(45% - 12px);
+                    top: 10px;
+                }
+                .across{
+                    position: relative;
+                    z-index: 1;
+                    width: 100%;
+                    height: 45px;
+                    .left{
+                        width: 45%;
+                        height: 100%;
+                        line-height: 45px;
+                        float: left;
+                        text-align: right;
+                        .circle{
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            background-color: gainsboro;
+                            float: right;
+                            margin:10px 2px 0 0;
+                        }
+                        .iconfont{
+                            background-color: rgb(255,255,255);                            
+                            font-size: 24px;
+                            color: rgb(65,160,255);
+                        }
+                    }
+                    .right{
+                        width: 55%;
+                        height: 100%;
+                        line-height: 45px;
+                        font-size: 16px;
+                        float: left;
+                        text-align: left;
+                        padding: 0 0 0 10px;
+                        span{
+                           font-size: 16px;
+                           color: rgb(51,51,51); 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

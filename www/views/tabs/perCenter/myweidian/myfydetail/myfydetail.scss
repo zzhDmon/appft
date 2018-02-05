@@ -1,0 +1,726 @@
+#myfydetail {
+    
+    
+    //底部联系人
+    .contacts{
+        position: absolute;
+        z-index: 999;
+        bottom: 0;
+        height: 49px;
+        border-top: 1px solid rgb(230,230,230);
+        .name{
+            float: left;
+            width: 40vw;
+            height: 100%;
+            padding: 7px 5px 7px 15px;
+            background-color: rgb(255,255,255);
+            color: rgb(102,102,102);
+            .hisname{
+                padding-left: 5px;
+                width: calc(100% - 35px);
+                color: rgb(51,51,51);
+                height: 35px;
+                font-size: 16px;
+                float: left;
+                line-height: 35px;
+            }
+            .headimg{
+                width: 35px;
+                height: 35px;
+                float: left;
+                line-height: 35px;
+                text-align: center;
+                div{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background-color: rgb(245,245,245);
+                    border: 1px solid rgb(224,224,224);
+                    i.iconfont{
+                        color: rgb(214,214,214);
+                        font-size: 22px;
+                        line-height: 35px;
+                    }
+                }
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .communite{
+            float: left;
+            width: 60vw;
+            height: 100%;
+            color: white;
+            background-color: rgb(54,153,245);
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: white;  
+                font-size: 16px;
+                line-height: 49px;
+                text-align: center;
+            }
+        }
+    }
+    
+    
+    .myfydetail {
+        position: absolute;
+        padding-bottom: 40px;
+        .btn {
+            z-index: 999;
+            position: absolute;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.5);
+            text-align: center;
+            line-height: 30px;
+            font-size: 2rem;
+            color: white;
+        }
+        .backbotton {
+            left: 5px;
+        }
+        .sharebotton {
+            right: 5px;
+        }
+        
+        .bannerposition{
+            position: relative;
+            width: 100%;
+            height: 230px; 
+            .detailcursor{
+                width: 100%;
+                height: 100%;
+                .box {
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .slider-pager{
+                    position: absolute;
+                    bottom: 5px;
+                    .slider-pager-page{
+                        font-size: 12px;
+                    }
+                }
+            }
+            .indexnum{
+                position: absolute;
+                z-index: 998;
+                bottom: 5px;
+                right: 5px;
+                color: white;
+                border-radius: 3px;
+                background-color: rgba(0,0,0,0.5);
+                padding: 0 5px 0;
+            }
+        }
+        
+        .card {
+            box-shadow: none;
+            padding: 0 12px 0;
+        }
+        .detailname {
+            h4 {
+                font-size: 18px;
+                color: rgb(51, 51, 51);
+                margin: 15px 0 15px;
+            }
+           
+            ul{
+                width: 100%;
+                height: auto;
+                padding: 15px 0 15px;
+                li{
+                    width: calc(33.33% - 1px);
+                    height: auto;
+                    line-height: 30px;
+                    text-align: center;
+                    p{
+                         font-size: 16px;
+                        text-align: center;
+                        line-height: 20px;
+                    }
+                    p.top{
+                        color: rgb(150,150,150);
+                        margin:0 0 10px;
+                    }
+                    p.bottom{
+                        color: rgb(230,75,0);
+                    }
+                }
+                .line{
+                    width: 0;
+                    height: 50px;
+                    border-right: 1px solid gainsboro;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        .houseinfo{
+            ul{
+                width: 100%;
+                height: 110px;
+                padding: 10px 0 10px;
+                li{
+                    width: 50%;
+                    height: 30px;
+                    font-size: 16px;
+                    line-height: 30px;
+                    text-align: left;
+                    word-break:keep-all;
+                    white-space:nowrap;
+                    overflow:hidden; 
+                    text-overflow:ellipsis; 
+                    span.leftdesc{
+                        color: rgb(150,150,150);
+                    }
+                }
+            }
+        }
+        .fypeizhi{
+            padding-bottom: 15px;
+            h5{
+                border-left: 3px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 18px;
+                line-height: 18px;
+                padding-left: 10px;
+                margin: 20px 0 015px;
+            }
+            ul{
+                width: 100%;
+                height: auto;
+                li{
+                    width: 16.66%;
+                    height: auto;
+                    float: left!important;
+                    margin-top: 15px;
+                    .iconfont{
+                        display: block;
+                        width: 80%;
+                        height: 30px;
+                        font-size: 25px;
+                        line-height: 30px;
+                        text-align: center;
+                        margin: auto;
+                    }
+                    p{
+                       margin: 0;
+                       width: 100%; 
+                       height: 20px;
+                       line-height: 20px;
+                       text-align: center;
+                    }
+                }
+            }
+        }
+        .fyliangdian{
+            padding-bottom: 20px;
+            h5{
+                border-left: 3px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 18px;
+                line-height: 18px;
+                padding-left: 10px;
+                margin: 20px 0 015px;
+            }
+            div{
+                width: 100%;
+                span{
+//                  display: inline-block;
+                    word-break: break-all;
+                    border-radius: 2px;
+//                  height: 30px;
+                    line-height: 30px;
+                    padding: 3px 5px 3px;
+                    color: rgb(89,171,253);
+                    background-color: rgb(230,242,255);
+                    margin: 0 5px 5px 0;
+                }
+            }
+        }
+        .fymiaoshu{
+            padding-bottom: 20px;
+            h5{
+                border-left: 3px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 18px;
+                line-height: 18px;
+                padding-left: 10px;
+                margin: 20px 0 015px;
+            }
+            h6{
+                font-size: 16px;
+                color: rgb(102,102,102);
+            }
+            p{
+              margin: 0;
+              font-size: 14px;
+              line-height: 20px;
+              color: rgb(51,51,51);  
+            } 
+        }
+        .fyposition{
+            padding-bottom: 20px;
+            h5{
+                border-left: 3px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 18px;
+                line-height: 18px;
+                padding-left: 10px;
+                margin: 20px 0 015px;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .hisonline{
+            padding: 0 0 0 12px;
+            h5{
+                font-size: 16px;
+                height: 55px;
+                line-height: 30px;
+                margin: 0 0 5px;
+                padding: 15px 0 0 0;
+                border-bottom: 1px solid rgb(230,230,230);
+            }
+            ul{
+                    width: 100%;
+                    li:last-child{
+                        border-bottom:none; 
+                    }
+                    li{
+                        width: 100%;
+                        padding: 12px 12px 12px 0;
+                        border-bottom: 1px solid rgb(230,230,230);
+                        .img{
+                            width: 35vw;
+                            height: auto;
+                            float: left;
+                            position: relative;
+                            img{
+                                border-radius: 3px;
+                                width: 100%;
+                                height: 85px;
+                            } 
+                            .zhutui{
+                                width: 8vw;
+                                height: auto;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                            }
+                        }
+                        .description{
+                            float: left;
+                            width: calc(65vw - 38px);
+                            margin-left: 10px;
+                            h6{
+                                color: rgb(51,51,51);
+                                font-size:15px;
+                                font-weight: 400;
+                                border: none;
+                                height: 20px;
+                                line-height: 20px;
+                                margin: 0;
+                                word-break:keep-all;
+                                white-space:nowrap;
+                                overflow:hidden; 
+                                text-overflow:ellipsis;
+                            }
+                            p{
+                                width: 100%;
+                                margin: 0;
+                                font-size: 14px;
+                                height: 20px;
+                                overflow: hidden;
+                                color: rgb(102,102,102);
+                                span{
+                                    font-size: 12px;
+                                    border-radius: 2px;
+                                    padding: 2px 3px 2px;
+                                    background-color:rgb(230,242,255) ;
+                                    color: rgb(89,171,253);
+                                    margin-right: 3px;
+                                } 
+                            }
+                           div{
+                                font-size: 14px;
+                                color: rgb(102,102,102);
+                                width: calc(65vw - 38px);
+                                .space{
+                                    float: left;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    width: 60%;
+                                    word-break:keep-all;
+                                    white-space:nowrap;
+                                    overflow:hidden; 
+                                    text-overflow:ellipsis;
+                                }
+                                .price{
+                                        text-align: right;
+                                        float: right;
+                                        height: 25px;
+                                        line-height: 25px;
+                                        width: 40%;
+                                        color: rgb(230,75,0);
+                                        word-break:keep-all;
+                                        white-space:nowrap;
+                                        overflow:hidden; 
+                                        text-overflow:ellipsis;
+                                        span{
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                        }
+                                    }
+                            }
+                        }
+                    }
+                }
+        }
+    }
+    //大屏
+    .plus{
+        position: absolute;
+        padding-bottom: 40px;
+        .btn {
+            z-index: 999;
+            position: absolute;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.5);
+            text-align: center;
+            line-height: 30px;
+            font-size: 2rem;
+            color: white;
+        }
+        .backbotton {
+            left: 5px;
+        }
+        .sharebotton {
+            right: 5px;
+        }
+        
+        .bannerposition{
+            position: relative;
+            width: 100%;
+            height: 280px; 
+            .detailcursor{
+                width: 100%;
+                height: 100%;
+                .box {
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .slider-pager{
+                    position: absolute;
+                    bottom: 5px;
+                    .slider-pager-page{
+                        font-size: 12px;
+                    }
+                }
+            }
+            .indexnum{
+                position: absolute;
+                z-index: 998;
+                bottom: 5px;
+                right: 5px;
+                color: white;
+                border-radius: 3px;
+                background-color: rgba(0,0,0,0.5);
+                padding: 0 5px 0;
+            }
+        }
+        .card {
+            box-shadow: none;
+            padding: 0 12px 0;
+        }
+        .detailname {
+            h4 {
+                font-size: 18px;
+                color: rgb(51, 51, 51);
+                margin: 15px 0 15px;
+            }
+           
+            ul{
+                width: 100%;
+                height: auto;
+                padding: 15px 0 15px;
+                li{
+                    width: calc(33.33% - 1px);
+                    height: auto;
+                    line-height: 30px;
+                    text-align: center;
+                    p{
+                         font-size: 16px;
+                        text-align: center;
+                        line-height: 20px;
+                    }
+                    p.top{
+                        color: rgb(150,150,150);
+                        margin:0 0 10px;
+                    }
+                    p.bottom{
+                        color: rgb(230,75,0);
+                    }
+                }
+                .line{
+                    width: 0;
+                    height: 50px;
+                    border-right: 1px solid gainsboro;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        .houseinfo{
+            ul{
+                width: 100%;
+                height: 110px;
+                padding: 10px 0 10px;
+                li{
+                    width: 50%;
+                    height: 30px;
+                    font-size: 16px;
+                    line-height: 30px;
+                    text-align: left;
+                    word-break:keep-all;
+                    white-space:nowrap;
+                    overflow:hidden; 
+                    text-overflow:ellipsis; 
+                    span.leftdesc{
+                        color: rgb(150,150,150);
+                    }
+                }
+            }
+        }
+        .fypeizhi{
+            padding-bottom: 15px;
+            h5{
+                border-left: 3px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 18px;
+                line-height: 18px;
+                padding-left: 10px;
+                margin: 20px 0 015px;
+            }
+            ul{
+                width: 100%;
+                height: auto;
+                li{
+                    width: 16.66%;
+                    height: auto;
+                    float: left!important;
+                    margin-top: 15px;
+                    .iconfont{
+                        display: block;
+                        width: 80%;
+                        height: 30px;
+                        font-size: 25px;
+                        line-height: 30px;
+                        text-align: center;
+                        margin: auto;
+                    }
+                    p{
+                       margin: 0;
+                       width: 100%; 
+                       height: 20px;
+                       line-height: 20px;
+                       text-align: center;
+                    }
+                }
+            }
+        }
+        .fyliangdian{
+            padding-bottom: 20px;
+            h5{
+                border-left: 3px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 18px;
+                line-height: 18px;
+                padding-left: 10px;
+                margin: 20px 0 015px;
+            }
+            div{
+                width: 100%;
+                span{
+//                  display: inline-block;
+                    word-break: break-all;
+                    border-radius: 2px;
+//                  height: 30px;
+                    line-height: 30px;
+                    padding: 3px 5px 3px;
+                    color: rgb(89,171,253);
+                    background-color: rgb(230,242,255);
+                    margin: 0 5px 5px 0;
+                }
+            }
+        }
+        .fymiaoshu{
+            padding-bottom: 20px;
+            h5{
+                border-left: 3px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 18px;
+                line-height: 18px;
+                padding-left: 10px;
+                margin: 20px 0 015px;
+            }
+            h6{
+                font-size: 16px;
+                color: rgb(102,102,102);
+            }
+            p{
+              margin: 0;
+              font-size: 14px;
+              line-height: 20px;
+              color: rgb(51,51,51);  
+            } 
+        }
+        .fyposition{
+            padding-bottom: 20px;
+            h5{
+                border-left: 3px solid rgb(54,153,245);
+                font-size: 16px;
+                height: 18px;
+                line-height: 18px;
+                padding-left: 10px;
+                margin: 20px 0 015px;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        //大屏
+        .hisonline{
+            padding: 0 0 0 12px;
+            h5{
+                font-size: 16px;
+                height: 55px;
+                line-height: 30px;
+                margin: 0 0 5px;
+                padding: 15px 0 0 0;
+                border-bottom: 1px solid rgb(230,230,230);
+            }
+            ul{
+                    width: 100%;
+                    li:last-child{
+                        border-bottom:none; 
+                    }
+                    li{
+                        width: 100%;
+                        padding: 12px 12px 12px 0;
+                        border-bottom: 1px solid rgb(230,230,230);
+                        .img{
+                            width: 28vw;
+                            height: auto;
+                            float: left;
+                            position: relative;
+                            img{
+                                border-radius: 3px;
+                                width: 100%;
+                                height: 85px;
+                            } 
+                            .zhutui{
+                                width: 8vw;
+                                height: auto;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                            }
+                        }
+                        .description{
+                            float: left;
+                            width: calc(72vw - 38px);
+                            margin-left: 10px;
+                            h6{
+                                color: rgb(51,51,51);
+                                font-size:15px;
+                                font-weight: 400;
+                                border: none;
+                                height: 20px;
+                                line-height: 20px;
+                                margin: 0;
+                                word-break:keep-all;
+                                white-space:nowrap;
+                                overflow:hidden; 
+                                text-overflow:ellipsis;
+                            }
+                            p{
+                                width: 100%;
+                                margin: 0;
+                                font-size: 14px;
+                                height: 20px;
+                                overflow: hidden;
+                                color: rgb(102,102,102);
+                                span{
+                                    border-radius: 2px;
+                                    padding: 2px 3px 2px;
+                                    font-size: 12px;
+                                    background-color:rgb(230,242,255) ;
+                                    color: rgb(89,171,253);
+                                    margin-right: 3px;
+                                } 
+                            }
+                            div{
+                                font-size: 14px;
+                                color: rgb(102,102,102);
+                                width: calc(72vw - 38px);
+                                .space{
+                                    float: left;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    width: 60%;
+                                    word-break:keep-all;
+                                    white-space:nowrap;
+                                    overflow:hidden; 
+                                    text-overflow:ellipsis;
+                                }
+                                .price{
+                                        text-align: right;
+                                        float: right;
+                                        height: 25px;
+                                        line-height: 25px;
+                                        width: 40%;
+                                        color: rgb(230,75,0);
+                                        word-break:keep-all;
+                                        white-space:nowrap;
+                                        overflow:hidden; 
+                                        text-overflow:ellipsis;
+                                        span{
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                        }
+                                    }
+                            }
+                        }
+                    }
+                }
+        }
+        
+        
+        
+    }
+    
+}

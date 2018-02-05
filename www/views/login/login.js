@@ -1,4 +1,4 @@
-angular.module('App').controller('LoginController',function($http,$Factory,$state,$scope,$rootScope,$ionicLoading,$document,$ionicHistory){
+angular.module('App').controller('LoginController',function(goBack,$http,$Factory,$state,$scope,$rootScope,$ionicLoading,$document,$ionicHistory){
 	
 	
 	$scope.user = {};
@@ -16,7 +16,8 @@ angular.module('App').controller('LoginController',function($http,$Factory,$stat
 
 	/***/ 
 	$scope.back=function(){
-		$ionicHistory.goBack()
+		console.log(111)
+		goBack.goback()
 	};
 	$scope.logininfo={
 		Status:0,

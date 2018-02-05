@@ -1,0 +1,22 @@
+#about_us{
+    .about-us{
+        margin-top: 44px;
+        .card{
+            box-shadow: none;
+            padding: 15px 12px 20px;
+            p{
+                text-align: justify;
+                font-size: 14px;
+                line-height: 18px;
+            }
+            img{
+                display: block;
+                width: 100%;
+                height: auto;
+                margin: 15px 0 15px;
+            }
+            
+        }
+        
+    }
+}

@@ -123,7 +123,7 @@ angular.module('App')
 		$scope.setzufanghistory=[];
 	}
 	
-	//点叉号删除单个
+	//点叉号删除单个历史记录
 	$scope.Delershou=function(index){
 		$scope.setershouhistory.splice(index,1);
 		//设置二手搜索历史记录

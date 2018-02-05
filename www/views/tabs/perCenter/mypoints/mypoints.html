@@ -1,0 +1,43 @@
+
+<!--对话模板-->
+<ion-view id="mypoints" view-title="我的积分" hide-nav-bar=true>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			我的积分
+		</div>
+		<div class="right" ui-sref="tabs.potrule">
+			积分规则
+		</div>
+	</div>
+	<ion-content on-swipe-right="onSwipeRight()" class="mypoints">
+		<div class="head">
+			<p class="points">{{points.total}}</p>
+			<p class="pottxt">目前拥有积分</p>
+			<div class="getpot">
+				<div class="get" ui-sref="tabs.giftlist">
+					立即兑换好礼
+				</div>
+			</div>
+		</div>
+		
+		<div class="offline"></div>
+		<div class="tubiao">
+			<i class="iconfont icon-jifen2"></i>&nbsp;积分记录
+		</div>
+		
+		<div class="record">
+			<ul>
+				
+				<li ng-repeat="record in points.list track by $index">
+					<div class="fir">{{record.RelateName}}</div><div class="sec"><span ng-show="record.RelateValue>0">+</span>{{record.RelateValue}}</div><div class="thir">{{record.CreateTime | cutStr}}</div>
+				
+				</li>
+			</ul>
+		</div>
+	</ion-content>
+	
+</ion-view>
+

@@ -152,6 +152,14 @@
 		<script src="views/tabs/ifHaveHouse/ifHaveHouse.js"></script>
 		<script src="views/tabs/ifHaveHouse/clientSearch/clientSearch.js"></script>
 		<script src="views/tabs/ifHaveHouse/fbManage/fbManage.js"></script>
+		<script src="views/tabs/ifHaveHouse/fbManage/addFy/addFy.js"></script>
+		<script src="views/tabs/ifHaveHouse/fbManage/changeFy/changeFy.js"></script>
+		<script src="views/tabs/ifHaveHouse/needManage/needManage.js"></script>
+		<script src="views/tabs/ifHaveHouse/mySet/mySet.js"></script>
+		<script src="views/tabs/ifHaveHouse/mySet/aboutUs/aboutUs.js"></script>
+		<script src="views/tabs/ifHaveHouse/mySet/feedBack/feedBack.js"></script>
+		<script src="views/tabs/ifHaveHouse/mySet/changePwd/changePwd.js"></script>
+		<script src="views/tabs/perCenter/perCenter.js"></script>
 		
 		
 		<!--lazy-load-->
@@ -167,43 +175,6 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
 			<!-- chat angular moment -->
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.8.2/angular-moment.min.js"></script>
-
-		<script>
-			var el = angular.element("#testCanvas");
-			$scope = el.scope();
-			$injector = el.injector();
-			$injector.invoke(function($compile){
-			   $compile(el)($scope)
-			})
-
-		    function canvasinit() {
-		        fanvas.play("testCanvas", swfData, {
-		            cache: true, autoPlay: true,showFPS:0,clearAll:1,scale:1,
-		            onFrame: function (index,two) {
-		                      	console.log("onFrame", index,two);
-		                      	if(index == 70){
-		                          	fanvas.pause("testCanvas");
-		                          	fanvas.replay("testCanvas");
-			//                        setTimeout(function(){
-			////                            fanvas.resume("testCanvas");
-			////                            fanvas.replay("testCanvas");
-			//                        }, 500);
-			//                        fanvas.gotoAndPlay("testCanvas",35)
-		                      	}
-		            	},
-		            	imagePath: "./"
-		        });
-		    }
-		    
-		    //响应式canvas
-		//  $(window).resize(resizeCanvas);
-		// 	function resizeCanvas() {
-		//	        $('#testCanvas').width($(window).get(0).innerWidth);
-		//	        $('#testCanvas').height($(window).get(0).innerHeight);
-		////	        $('#testCanvas').getContext("2d").fillRect(0, 0, canvas.width(), canvas.height());
-		// 	};
-		//	 resizeCanvas();
-		</script>
 	
 	</head>
 

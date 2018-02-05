@@ -34,7 +34,7 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment'])
 		templateUrl:'views/tabs.html'
 	})
 	.state('tabs.ifHaveHouse',{
-		url:'/tabs/ifhavehouse',
+		url:'/ifhavehouse/:query',
 		views:{
 			home:{
 				templateUrl:'views/tabs/ifHaveHouse/ifHaveHouse.html',
@@ -43,8 +43,48 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment'])
 		},
 		data:{isPublic:true}
 	})
+	.state('tabs.mySet',{
+		url:'/ifhavehouse/myset',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/mySet/mySet.html',
+				controller:'mySetCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.aboutUs',{
+		url:'/ifhavehouse/myset/aboutus',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/mySet/aboutUs/aboutUs.html',
+				controller:'aboutUsCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.feedBack',{
+		url:'/ifhavehouse/myset/feedback',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/mySet/feedBack/feedBack.html',
+				controller:'feedBackCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.changePwd',{
+		url:'/ifhavehouse/myset/changepwd',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/mySet/changePwd/changePwd.html',
+				controller:'changePwdCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
 	.state('tabs.clientSearch',{
-		url:'/tabs/ifhavehouse/clientsearch/:type',
+		url:'/ifhavehouse/clientsearch/:type',
 		views:{
 			home:{
 				templateUrl:'views/tabs/ifHaveHouse/clientSearch/clientSearch.html',
@@ -54,7 +94,7 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment'])
 		data:{isPublic:true}
 	})
 	.state('tabs.fbManage',{
-		url:'/tabs/ifhavehouse/fbmanage/:type',
+		url:'/ifhavehouse/fbmanage/:type',
 		views:{
 			home:{
 				templateUrl:'views/tabs/ifHaveHouse/fbManage/fbManage.html',
@@ -64,21 +104,41 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment'])
 		data:{isPublic:true}
 	})
 	.state('tabs.addFy',{
-		url:'/tabs/ifhavehouse/fbmanage/:type',
+		url:'/ifhavehouse/fbmanage/addfy/:type',
 		views:{
 			home:{
-				templateUrl:'views/tabs/ifHaveHouse/addFy/addFy.html',
+				templateUrl:'views/tabs/ifHaveHouse/fbManage/addFy/addFy.html',
 				controller:'addFyCtl'
 			}
 		},
 		data:{isPublic:true}
 	})
 	.state('tabs.changeFy',{
-		url:'/tabs/ifhavehouse/changefy/:type',
+		url:'/ifhavehouse/fbchange/changefy/:type/:id',
 		views:{
 			home:{
-				templateUrl:'views/tabs/ifHaveHouse/changeFy/changeFy.html',
+				templateUrl:'views/tabs/ifHaveHouse/fbManage/changeFy/changeFy.html',
 				controller:'changeFyCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.needManage',{
+		url:'/ifhavehouse/needmanage/:type',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/needManage/needManage.html',
+				controller:'needManageCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.perCenter',{
+		url:'/percenter',
+		views:{
+			mine:{
+				templateUrl:'views/tabs/perCenter/perCenter.html',
+				controller:'perCenterCtl'
 			}
 		},
 		data:{isPublic:true}
@@ -785,7 +845,7 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment'])
 
 .constant('views',{currentView:null})
 
-.run(function($rootScope,$ionicSideMenuDelegate,$ionicTabsDelegate,views,$state,ModalService){
+.run(function(goTo,$rootScope,$ionicSideMenuDelegate,$ionicTabsDelegate,views,$state,ModalService){
 	
 	
 	$rootScope.closeshare=function(){
@@ -815,26 +875,25 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment'])
 	
 	//登录拦截，判断后跳转到登录页面可跳转页面
 	//后台可进入微店 ||toState.name=='tabs.weidian' ||toState.name=='tabs.searchhouse'
-	// $rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
-	// 	if(angular.isObject(toState.data) && toState.data.isPublic === true){
-	// 		console.log(toState.data.isPublic)
-			
-	// 	}
-	// 	if(toState.name=='login'||toState.name=='registerorback'||toState.name=='agreement'||toState.name=='logo'||toState.name=='tabs.home'||toState.name=='tabs.chushoudetail'||toState.name=='tabs.readchushou'||toState.name=='tabs.chuzudetail'||toState.name=='tabs.readchuzu'||
-	// 	toState.name=='tabs.info'||toState.name=='tabs.contact'||toState.name=='tabs.infodetails'||toState.name=='tabs.uidinfodetails'||toState.name=='tabs.shareinfodetails'||toState.name=='tabs.find'||toState.name=='tabs.dazibao'||toState.name=='tabs.duanzi'||
-	// 	toState.name=='tabs.humor'||toState.name=='tabs.like'||toState.name=='tabs.fydetail'||toState.name=='tabs.chuzudetail'||toState.name=='tabs.fypic'||toState.name=='tabs.alikehouse'||toState.name=='tabs.alikehousedetail'||
-	// 	toState.name=='tabs.hisweidian'||toState.name=='tabs.homeinfodetail'||toState.name=='tabs.uidhomeinfodetail'||toState.name=='tabs.searchresult'||
-	// 	toState.name=='tabs.gpslocation'||toState.name=='tabs.ershoutd'||toState.name=='tabs.ershoulist'||toState.name=='tabs.zufanglist'||toState.name=='tabs.newhouse'||toState.name=='tabs.newhousedetail' ||
-	// 	toState.name=='tabs.findinfodetails' ||toState.name=='tabs.myweidian' ||toState.name=='tabs.myfydetail' ||toState.name=='tabs.sharerefcode'){
-	// 		return;// 如果是进入登录界面则允许			
-	// 	}
-	// 	// 如果用户不存在
-	// 	if(localStorage.getItem('loged')!=='0'){
-	// 		event.preventDefault();// 取消默认跳转行为
-	// 		$state.go("login",{from:fromState.name,w:'notLogin'});//跳转到登录界面			
-	// 	}else{
-	// 	}
-	// });
+	$rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
+		
+		if(toState.name=='login'||toState.name=='registerorback'||toState.name=='agreement'||toState.name=='logo'||toState.name=='tabs.home'||toState.name=='tabs.chushoudetail'||toState.name=='tabs.readchushou'||toState.name=='tabs.chuzudetail'||toState.name=='tabs.readchuzu'||
+		toState.name=='tabs.info'||toState.name=='tabs.contact'||toState.name=='tabs.infodetails'||toState.name=='tabs.uidinfodetails'||toState.name=='tabs.shareinfodetails'||toState.name=='tabs.find'||toState.name=='tabs.dazibao'||toState.name=='tabs.duanzi'||
+		toState.name=='tabs.humor'||toState.name=='tabs.like'||toState.name=='tabs.fydetail'||toState.name=='tabs.chuzudetail'||toState.name=='tabs.fypic'||toState.name=='tabs.alikehouse'||toState.name=='tabs.alikehousedetail'||
+		toState.name=='tabs.hisweidian'||toState.name=='tabs.homeinfodetail'||toState.name=='tabs.uidhomeinfodetail'||toState.name=='tabs.searchresult'||
+		toState.name=='tabs.gpslocation'||toState.name=='tabs.ershoutd'||toState.name=='tabs.ershoulist'||toState.name=='tabs.zufanglist'||toState.name=='tabs.newhouse'||toState.name=='tabs.newhousedetail' ||
+		toState.name=='tabs.findinfodetails' ||toState.name=='tabs.myweidian' ||toState.name=='tabs.myfydetail' ||toState.name=='tabs.sharerefcode'){
+	
+			return;// 如果是进入登录界面则允许			
+		}
+		// 如果用户不存在
+		// if(localStorage.getItem('loged')=='0'){
+		if(localStorage.getItem('loged')!=='0'){
+			event.preventDefault();// 取消默认跳转行为
+			$state.go("login",{from:fromState.name,w:'notLogin'});//跳转到登录界面			
+		}else{
+		}
+	});
 	
 	// $rootScope.$on("$stateChangeStart", function (evt, toState, toParams, fromState, fromParams) {
     //     var isPublic = angular.isObject(toState.data) && toState.data.isPublic === true;    //判断当前state的data属性"isPublic" === true

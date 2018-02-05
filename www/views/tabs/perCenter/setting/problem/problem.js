@@ -1,0 +1,29 @@
+
+angular.module('App').controller('ProblemController',function($ionicHistory,$timeout,$ionicLoading,$http,$state,$Factory,$rootScope,$scope,$stateParams){
+	$timeout(function(){
+		$('span.back-text').css('display','none');
+	})	
+	$scope.back=function(){
+		$ionicHistory.goBack()
+	}
+	
+	$scope.problem={
+		des:''
+	}
+	$scope.feedback=function(){
+		$http.post($Factory.Server.back.url,{params:{Discription:$scope.problem.problem}}).then(function(resData){
+			$ionicLoading.show({
+					template:resData.data.msg,
+					duration:1000
+			});
+			$timeout(function(){
+				$ionicHistory.goBack()
+			},1000)
+		},function(resData){
+			$ionicLoading.show({
+					template:resData.data.msg,
+					duration:1000
+			});
+		})
+	}
+})

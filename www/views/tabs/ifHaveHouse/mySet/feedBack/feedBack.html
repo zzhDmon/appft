@@ -1,0 +1,28 @@
+
+<!--模板-->
+<ion-view id="feed_back" view-title="问题反馈" hide-nav-bar=true>
+	<!--<ion-nav-buttons side="secondary">
+		<a ng-click="feedback()" style="color: gray;font-size: 1.4rem;" class="button button-small button-icon">保存</a>	
+	</ion-nav-buttons>-->
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			问题反馈
+		</div>
+		<div ng-click="feedback()" class="right" >
+			保存
+		</div>
+	</div>
+	
+	<ion-content on-swipe-right="onSwipeRight()" class="feed-back" has-bouncing=false>
+		<div class="offline"></div>
+		<!--<div class="card feedback" >-->
+			<textarea ng-model="problem.des" name="feedback" rows="15" cols="" placeholder="请输入你要反馈的内容！"></textarea>
+		<!--</div>-->
+		
+	</ion-content>
+	
+</ion-view>
+

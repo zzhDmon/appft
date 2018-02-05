@@ -1,0 +1,18 @@
+#imgpreview{
+    .header{
+        .right{
+           font-size: 14px;
+           color: rgb(102,102,102);
+        } 
+    }
+    .imgpreview{
+        margin-top: 44px;
+        background-color: rgb(242,242,242);
+        img{
+            display: block;
+            width:calc(100vw - 24px);
+            height:calc(100vw - 24px);
+            margin: 50px 12px 0;
+        }
+    }
+}

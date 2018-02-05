@@ -28,7 +28,7 @@ angular.module('App').controller('LogoController',function($timeout,$interval,$h
 							fanvas.pause("testCanvas");
 							$timeout(function(){
 								// fanvas.gotoAndPlay("testCanvas",35)
-								$state.go('tabs.ifHaveHouse')
+								$state.go('tabs.ifHaveHouse',({'query':$scope.query}))
 							}, 500);
 							
 					}
@@ -48,8 +48,12 @@ angular.module('App').controller('LogoController',function($timeout,$interval,$h
 	$scope.canvasinit();
 
 	$scope.onSwipeUp=function(){
+			fanvas.gotoAndPlay("testCanvas",31);
+			$scope.query=0;
+	}
+	$scope.onSwipeDown=function(){
 			fanvas.gotoAndPlay("testCanvas",31)
-			// fanvas.gotoAndStop("testCanvas",40)
+			$scope.query=1;
 	}
 
 })

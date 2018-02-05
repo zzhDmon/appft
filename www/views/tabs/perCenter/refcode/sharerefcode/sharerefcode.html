@@ -1,0 +1,28 @@
+
+<!--对话模板-->
+<ion-view id="sharerefcode" view-title="推荐码" hide-nav-bar=true>
+	
+	
+		
+	<ion-content on-swipe-right="onSwipeRight()" class="sharerefcode" has-bouncing=false>
+		<div class="img">
+			<img src="imgs/分享界面_01.png"/>
+		</div>
+		<div class="ecode">
+			<img ng-if="version=='android'" data-tap-disabled="true" src="imgs/android二维码.png"/>
+			<img ng-if="version=='ios'" data-tap-disabled="true" src="imgs/ios二维码.png"/>
+			<p>长按二维码，下载房田APP</p>
+		</div>
+		<div class="mycode">
+			<p class="my">注册时输入推荐码</p>
+			<p class="code">{{Phone}}</p>
+		</div>
+		
+		<div class="dibu">
+			<p class="fir">和{{Name}}一起上房田</p>
+			<p class="sec"><span> 找客户，看房源，拿福利</span></p>
+		</div>
+	</ion-content>
+	
+</ion-view>
+

@@ -1,0 +1,25 @@
+#my_set{
+    .my-set{
+        margin-top: 44px;
+        background-color: rgb(246,246,246);
+        .card{
+            box-shadow: none;
+            padding: 5px 12px 5px 12px;
+            height: 44px;
+            line-height: 34px;
+            font-size: 16px;
+        }
+        .samelist{
+                .icon{
+                    display: block;
+                    float: right;
+                    color: rgb(204,204,204);
+                }
+        }
+        .logout{
+            text-align: center;
+            font-weight: 500;
+        }
+        
+    }
+}

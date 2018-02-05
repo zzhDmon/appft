@@ -1,0 +1,67 @@
+
+<!--模板-->
+<ion-view id="my_set" view-title="设置" hide-nav-bar=true  class='dark'>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			设置
+		</div>
+		<div class="right" >
+			
+		</div>
+	</div>
+	
+	<ion-content on-swipe-right="onSwipeRight()" class="my-set" has-bouncing="false">
+		
+		<div class="offline"></div>
+		<div class="card samelist" ui-sref="tabs.problem">
+			导航设置
+			<i class="icon ion-chevron-right"></i>
+		</div>
+		<div class="borderline"></div>
+		<div class="card samelist" ui-sref="tabs.problem">
+			提醒设置
+			<i class="icon ion-chevron-right"></i>
+		</div>
+		<div class="borderline"></div>
+		<div class="card samelist" ui-sref="tabs.problem">
+			打招呼语
+			<i class="icon ion-chevron-right"></i>
+		</div>
+		<div class="borderline"></div>
+		<div class="card samelist" ui-sref="tabs.changePwd">
+			修改密码
+			<i class="icon ion-chevron-right"></i>
+		</div>
+		<div class="borderline"></div>
+		<div class="card samelist" ui-sref="tabs.aboutUs">
+			关于我们
+			<i class="icon ion-chevron-right"></i>
+		</div>
+		<div class="borderline"></div>
+		<div class="card samelist" ui-sref="tabs.feedBack">
+			问题反馈
+			<i class="icon ion-chevron-right"></i>
+		</div>
+		<div class="borderline"></div>
+
+		<div class="offline"></div>
+		<div class="borderline"></div>
+		<div class="card check"  ng-click="check()">
+			检查更新
+		</div>
+		<div class="borderline"></div>
+		
+		<div class="offline"></div>
+		<div class="borderline"></div>
+		<div class="card logout"  ng-click="logout()">
+			退出登录
+		</div>
+		<div class="borderline"></div>
+
+	</ion-content>
+	
+</ion-view>
+

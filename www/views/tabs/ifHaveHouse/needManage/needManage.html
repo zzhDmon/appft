@@ -1,0 +1,113 @@
+
+<!--对话模板-->
+<ion-view id="need_manage" hide-nav-bar=true view-title="房源发布"  class='dark'>
+	<!--<ion-nav-buttons side="secondary">
+		<a  class="button button-small button-icon"  ng-click="openPopoverView($event)"><i style="color: gray;font-size: 25px!important;color: rgb(51,51,51);font-weight: 500;" class="iconfont icon-jiahao1"></i></a>	
+	</ion-nav-buttons>-->
+	
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			房源发布
+		</div>
+		<div class="right" ui-sref="tabs.addFy({type:type})">
+			新增需求
+		</div>
+	</div>
+	
+	<!-- <ul class="toptwo">
+		<li ng-click="move(0,$event)">二手房</li>
+		<li ng-click="move(1,$event)">租房</li>
+		<div class="line"></div>
+	</ul> -->
+	
+	<div ng-show="type==0">
+		<ion-content on-swipe-right="onSwipeRight()" class="need-manage">
+			<!--下拉刷新-->
+			<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="ershoudoRefresh(false)"></ion-refresher>
+			
+			<div class="card ershoufang">
+				<!--未渲染完成-->
+				<p ng-if="renderdone" class="loading">
+				    <ion-spinner icon="lines" class=""></ion-spinner>
+				</p>
+				
+				<ul>
+					<li on-finish-render-filters ng-repeat="sell in sellhouse" ng-click='show($event,sell.Id,housetype)'>
+						<div class="img">
+							<img ng-src="{{sell.Thumb}}"/>
+							<img ng-show={{sell.Recommend}} class="zhutui" src="imgs/主推.png"/>
+						</div>
+						<div class="description">
+							<h5>{{sell.Title}}</h5>
+							<p>{{sell.CommunityName}}</p>
+							<div>
+								<div class="space">
+									{{sell.HouseType}}&nbsp;{{sell.Space}}平米 
+								</div>
+								<div class="price">
+									<span>{{sell.Price}}</span>万
+								</div>
+							</div>
+							<p>
+								<!-- <span ng-repeat="Tag in sell.Tags">{{Tag}}</span> -->
+								<span>修改</span><span>已认证</span><span>停售</span><span>推广</span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<!--上拉加载-->
+			<ion-infinite-scroll on-infinite="ershouloadMore(true)" distance="10%" ng-if="noMore" > </ion-infinite-scroll>
+		</ion-content>
+	</div>	
+	
+	
+	<div ng-show="type==1">
+		<ion-content on-swipe-right="onSwipeRight()" class="need-manage">
+			<!--下拉刷新-->
+			<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="ershoudoRefresh(false)"></ion-refresher>
+			
+			<div class="card zufang">
+				<!--未渲染完成-->
+				<p ng-if="renderdone" class="loading">
+				    <ion-spinner icon="lines" class=""></ion-spinner>
+				</p>
+				
+				<ul>
+					<li on-finish-render-filters ng-repeat="rent in renthouse" ng-click='show($event,rent.Id,housetype)'>
+						<div class="img">
+							<img ng-src="{{rent.Thumb}}"/>
+							<img ng-show={{rent.Recommend}} class="zhutui" src="imgs/主推.png"/>
+						</div>
+						<div class="description">
+							<h5>{{rent.Title}}</h5>
+							<p>{{rent.CommunityName}}</p>
+							<!--<p>{{rent.HouseType}}&nbsp;{{rent.Space}}平米</p>-->
+							<div>
+								<div class="space">
+									{{rent.HouseType}}&nbsp;{{rent.Space}}平米 
+								</div>
+								<div class="price">
+									<span>{{rent.Price}}</span>元/月
+								</div>
+							</div>
+							<p>
+								<span ng-repeat="Tag in rent.Tags">{{Tag}}</span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		
+			<!--上拉加载-->
+			<ion-infinite-scroll on-infinite="zufangloadMore(true)" distance="10%" ng-if="noMore" > </ion-infinite-scroll>
+		</ion-content>
+	</div>
+	
+		
+</ion-view>
+

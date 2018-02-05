@@ -5,7 +5,7 @@
 	    <!--<button class="button icon-left ion-ios-search-strong button-clear button-small" ng-click="search(searchName)">-->
 	    <!--</button>-->
 	    <span class="goback" ng-if="!searchName.key.length" ng-click="goback()"><i class="iconfont icon-fanhuishangyiji"></i></span>
-	     <span class="item-input-wrapper" >
+		<span class="item-input-wrapper" >
 	     	<span class="housetype" ng-click="openPopover($event)">{{typechoose}}</span>
             <i class="iconfont icon--pulldown"></i>
 		    <form>
@@ -15,7 +15,7 @@
             <!--<i class="icon ion-close-circled placeholder-icon" style="vertical-align: middle;"
                    ng-click="clear()" ng-if="searchName.key.length"></i>-->
         </span>
-	    <span class="cancel" ng-if="searchName.key.length" ng-click="cancle()">取消</span>
+	    <span class="search" ng-if="searchName.key.length" ng-click="search()">搜索</span>
 	
 	</div>
 	

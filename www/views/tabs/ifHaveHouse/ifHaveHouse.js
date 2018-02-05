@@ -1,10 +1,6 @@
 
 angular.module('App').controller('ifHaveHouseCtl',function($ionicScrollDelegate,$ionicLoading,$ionicHistory,$state,$http,$Factory,$scope,$rootScope,$stateParams,$ionicPopover,$ionicPopup,$timeout,$ionicActionSheet){
 	$timeout(function(){
-		$('span.back-text').css('display','none');
-//		//根据导航栏绝对定位
-//		$('.toptwo').css('top',$('.header').outerHeight())
-//		$('.fyfabu').css('margin-top',$('.header').outerHeight()+40)
 		$('#view-popover').css('top',$('.header').outerHeight())
 		
 		if($('#ifHaveHouse .ifHaveHouse').innerWidth()>375){
@@ -12,6 +8,12 @@ angular.module('App').controller('ifHaveHouseCtl',function($ionicScrollDelegate,
 			$('#ifHaveHouse .ifHaveHouse').removeClass('ifHaveHouse')
 		}
 	})
+
+	if($stateParams.query==0){
+		$scope.haveHouse=true;
+	}else{
+		$scope.haveHouse=false;
+	}
 	//GPS定位
 	$scope.getarea=function(){
 		//myaddr(116.324499,39.899216);

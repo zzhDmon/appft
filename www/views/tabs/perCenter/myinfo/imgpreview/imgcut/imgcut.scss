@@ -1,0 +1,19 @@
+#imgcut{
+    .imgcut{
+        background-color: rgb(255,255,255);
+        .card{
+            box-shadow: none;
+            padding-top: 150px;
+            img{
+                width: 20vw;
+                height: 20vw;
+                display: block;
+                float: left;
+                margin-left: 20vw;
+            }
+            .circle{
+                border-radius: 50%;
+            }
+        }
+    }
+}
