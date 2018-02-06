@@ -13,7 +13,7 @@ angular.module('App').controller('fbManageCtl',function($ionicLoading,$ionicHist
 		}
 	})
 
-	$scope.type=$stateParams.type;
+	$scope.showType=$stateParams.type;
 	$scope.back=function(){
 		$ionicHistory.goBack()
 	}				
@@ -68,11 +68,12 @@ angular.module('App').controller('fbManageCtl',function($ionicLoading,$ionicHist
 
 	
   	
-//	$http.get($Factory.HouseSource.query.url,{params:{houseType:1,pagenum:0,pagesize:10}}).then(function(resData){
-//			
-//				$scope.sellhouse=resData.data;
-//				$scope.housetype='sell'
-//			})
+	// $http.get($Factory.HouseSource.query.url,{params:{houseType:1,pagenum:1,pagesize:10}}).then(function(resData){
+	// 		console.log(resData)
+	// 			// $scope.sellhouse=resData.data;
+	// 			// $scope.housetype='sell'
+	// 			// $scope.noMore = true;
+	// 		})
 
   	
   	//刷新和加载方法

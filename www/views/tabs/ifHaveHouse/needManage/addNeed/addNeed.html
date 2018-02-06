@@ -1,0 +1,105 @@
+<!--界面模板-->
+<ion-view id="add_need" view-title="需求新增" hide-nav-bar=true>
+		
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			{{headTitle}}
+		</div>
+		<div class="right" >
+			保存
+		</div>
+	</div>
+	
+	<ion-content class="add-need" has-bouncing=false>
+		<!-- <form novalidate name="formlogin">
+			<div class="card list">
+				<label class="item item-input">
+		          <span class="input-label">手机号</span>
+		          <input type="number" name="phone" ng-model="logininfo.Phone" required=""  placeholder="请输入手机号" pattern="^1[0-9]{10}$">
+		        </label>
+				<label class="item item-input">
+		          <span class="input-label">密码</span>
+		          <input type="password" name="psw" ng-model="logininfo.Password" required="" placeholder="请输入密码" pattern="^.{6,16}$" >
+		        </label>
+			</div>
+			<div class="card loginbtn">
+				
+				<div class="subbtn">
+					<button ng-disabled="formlogin.$invalid" ng-click="login()" class="button button-balanced">提交</button>
+				</div>
+			</div>
+		</form> -->
+
+		<div ng-if="type==0">
+			<div class="card">
+				<div class="tex">您想在哪买</div>
+				<input ng-model="publishdata.fangxing" class="picker zf-fangxing" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">您想的价格预算</div>
+				<input ng-model="publishdata.fangxing" class="picker zf-fangxing" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">您想买几居</div>
+				<input ng-model="publishdata.fangxing" class="picker zf-fangxing" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">您想买多大面积</div>
+				<input ng-model="publishdata.fangxing" class="picker zf-fangxing" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card list">
+				<ion-checkbox ng-repeat="item in configList"
+							ng-model="item.isChecked" 
+							ng-checked="item.isChecked">
+					{{ item.value }}
+				</ion-checkbox>
+				
+			</div>
+			<div class="subbtn">
+				<button class="button button-positive">提交</button>
+			</div>
+		</div>
+
+		<div ng-if="type==1">
+			<div class="card">
+				<div class="tex">您想在哪租</div>
+				<input ng-model="publishdata.fangxing" class="picker zf-fangxing" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">您想的价格预算</div>
+				<input ng-model="publishdata.fangxing" class="picker zf-fangxing" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">您想租几居</div>
+				<input ng-model="publishdata.fangxing" class="picker zf-fangxing" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card">
+				<div class="tex">您想租多大面积</div>
+				<input ng-model="publishdata.fangxing" class="picker zf-fangxing" type="text" name="" id="" value="" />
+			</div>
+			<div class="borderline"></div>
+			<div class="card list">
+				<ion-checkbox ng-repeat="item in configType"
+							ng-model="item.isChecked" 
+							ng-checked="item.isChecked">
+					{{ item.value }}
+				</ion-checkbox>
+				
+			</div>
+			<div class="subbtn">
+				<button class="button button-positive">提交</button>
+			</div>
+		</div>
+	</ion-content>
+	
+</ion-view>

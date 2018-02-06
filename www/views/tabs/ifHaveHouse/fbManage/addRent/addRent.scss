@@ -1,0 +1,180 @@
+#add_rent{
+    .add-rent{
+        margin-top: 44px;
+         background-color: rgb(246,246,246);
+        .card{
+            box-shadow: none;
+            font-size: 14px;
+            height: 44px;
+            line-height: 34px;
+            padding: 5px 12px 5px;
+            .rightcell{
+                width: 15vw;
+                float: right;
+                text-align: right;
+            }
+            .right{
+                width: 3vw;
+                float: right;
+                text-align: right;
+            }
+            .cont{
+                float: right;
+                text-align: right;
+                width: calc(77vw - 24px);
+                word-break:keep-all;
+                white-space:nowrap;
+                overflow:hidden; 
+                text-overflow:ellipsis; 
+            }
+            .tex{
+                width: 20vw;
+                float: left;
+                color: rgb(51,51,51);
+            }
+             input{
+                float: right;
+                width: calc(80vw - 24px);
+                text-align: right;
+                position: relative;
+                bottom: 0px;
+            }
+             input.cellinput{
+                width: calc(65vw - 24px);
+            }
+            .picker{
+                float: right;
+                background-color: white;
+            }
+        }
+        .list{
+            height:150px ;
+            padding: 5px 0 5px;
+             .item-checkbox{
+                    width: 25vw;
+                    font-size: 14px;
+                    line-height: 34px;
+                    margin-top: 3px;
+                    padding-top: 0px;
+                    padding-right: 0;
+                    padding-left: 35px;
+                    padding-bottom: 00px;
+                    float: left;
+                    border: 0;
+                    .checkbox-circle{
+                        padding-left: 0;
+                        .checkbox-icon{
+                           width: 20px;
+                           height: 20px;
+                           margin-top: 4px;
+                        } 
+                    }
+                }
+        }
+        //点击上传图片
+       
+        #zufangIndoorImg{
+               height: auto;
+               padding: 0;
+               h4{
+                   font-size: 16px;
+                   padding: 0 12px 0;
+                   margin-bottom: 0;
+               }
+               ul{
+                    li{
+                        position: relative;
+                        float: left;
+                        margin: 2vw;
+                        width: 20vw;
+                        height: 20vw;
+                         img{
+                             width: 20vw;
+                             height: 20vw;
+                         }
+                         span{
+                             position: absolute;
+                             z-index: 999;
+                             display: block;
+                             width: 15px;
+                             height: 15px;
+                              font-size: 14px;
+                              text-align: center;
+                             line-height: 15px;
+                             border: 1px solid gray;
+                             border-radius: 50%;
+                             top: -5px;
+                             right: -5px;
+                         }
+                    }
+                    #zufangchooseImg{
+                        height: auto;
+                        input{
+                            display: none;
+                        }
+                        img{
+                            width: 20vw;
+                            height: 20vw;
+                        }
+                    }
+                }
+               
+               
+               input{
+                   display: none;
+               }
+               img{
+                   float: left;
+                   display: block;
+                   width: 20vw;
+                   height: 20vw;
+               }
+           }
+           #zufangLayoutImg{
+                    height: auto;
+               padding: 0;
+               h4{
+                   font-size: 16px;
+                   padding: 0 12px 0;
+                   margin-bottom: 0;
+               }
+               ul{
+                    li{
+                        position: relative;
+                        float: left;
+                        margin: 2vw;
+                        width: 20vw;
+                        height: 20vw;
+                         img{
+                             width: 20vw;
+                             height: 20vw;
+                         }
+                         span{
+                             position: absolute;
+                             z-index: 999;
+                             display: block;
+                             width: 15px;
+                             height: 15px;
+                             font-size: 14px;
+                             line-height: 15px;
+                             text-align: center;
+                             border: 1px solid gray;
+                             border-radius: 50%;
+                             top: -5px;
+                             right:-5px;
+                         }
+                    }
+                    #zufangchooseLayoutImg{
+                        height: auto;
+                        input{
+                            display: none;
+                        }
+                        img{
+                            width: 20vw;
+                            height: 20vw;
+                        }
+                    }
+                }
+           }
+    }
+}

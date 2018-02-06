@@ -1,4 +1,4 @@
-#ifHaveHouse{
+#if_have_house{
     .searchhouse-header{
         position: absolute;
         z-index: 1002;
@@ -232,7 +232,7 @@
         }
     }
     
-    .ifHaveHouse{
+    .if-have-house{
         margin-top: 84px;
         .card{
             box-shadow: none;

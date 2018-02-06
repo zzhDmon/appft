@@ -10,9 +10,12 @@
 			<i class=" iconfont icon-xiangzuo1"></i>
 		</div>
 		<div class="title">
-			房源发布
+			管理发布
 		</div>
-		<div class="right" ui-sref="tabs.addFy({type:type})">
+		<div ng-if="showType==0" class="right" ui-sref="tabs.addSell">
+			新增房源
+		</div>
+		<div ng-if="showType==1" class="right" ui-sref="tabs.addRent">
 			新增房源
 		</div>
 	</div>
@@ -23,7 +26,7 @@
 		<div class="line"></div>
 	</ul> -->
 	
-	<div ng-show="type==0">
+	<div ng-if="showType==0">
 		<ion-content on-swipe-right="onSwipeRight()" class="fbManage">
 			<!--下拉刷新-->
 			<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="ershoudoRefresh(false)"></ion-refresher>
@@ -66,10 +69,10 @@
 	</div>	
 	
 	
-	<div ng-show="type==1">
+	<div ng-if="showType==1">
 		<ion-content on-swipe-right="onSwipeRight()" class="fbManage">
 			<!--下拉刷新-->
-			<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="ershoudoRefresh(false)"></ion-refresher>
+			<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="zufangdoRefresh(false)"></ion-refresher>
 			
 			<div class="card zufang">
 				<!--未渲染完成-->

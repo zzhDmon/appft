@@ -36,18 +36,18 @@ angular.module('App').controller('ifHaveHouseCtl',function($ionicScrollDelegate,
 	}
 	//上下滑切换显示搜索框
 	$scope.onSwipeUp = function(){
-		$("#ifHaveHouse .topfour").animate({
+		$("#if_have_house .topfour").animate({
 			top:0
 		},150);
-		$("#ifHaveHouse .ifHaveHouse").animate({
+		$("#if_have_house .if-have-house").animate({
 			marginTop:44
 		},150);
 	}
 	$scope.onSwipeDown = function(){
-		$("#ifHaveHouse .topfour").animate({
+		$("#if_have_house .topfour").animate({
 			top:44
 		},150);
-		$("#ifHaveHouse .ifHaveHouse").animate({
+		$("#if_have_house .if-have-house").animate({
 			marginTop:88
 		},150);
 	}
@@ -58,7 +58,7 @@ angular.module('App').controller('ifHaveHouseCtl',function($ionicScrollDelegate,
 	
 	//关闭右侧相似房源option
 	$scope.closeoption=function($event){
-		$('#ifHaveHouse .ershou .item-content').css('transform','translate3d(0px, 0px, 0px)')
+		$('#if_have_house .ershou .item-content').css('transform','translate3d(0px, 0px, 0px)')
 	}
 	
 	$scope.querydata={

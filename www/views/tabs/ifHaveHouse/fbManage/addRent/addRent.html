@@ -1,0 +1,149 @@
+
+<!--对话模板-->
+<ion-view id="add_rent" cache-view='false' view-title="{{headtitle}}" hide-nav-bar=true  class='dark'>
+	
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			{{headtitle}}
+		</div>
+		<div class="right" ng-click="publish()">
+			发布
+		</div>
+	</div>
+	
+	<ion-content on-swipe-right="onSwipeRight()" class="add-rent">
+		<div class="offline"></div>
+		<div class="borderline"></div>
+		<div class="card" ui-sref="tabs.zufangxiaoqu">
+			<div class="tex">小区</div>
+			<div class="right"><i class="icon ion-chevron-right"></i></div>
+			<div class="cont">{{zufangxiaoqu}}</div>
+		</div>
+		<div class="borderline"></div>
+		<div class="offline"></div>
+		
+		<div class="borderline"></div>
+		<div class="card" ui-sref="tabs.zufangtd({name:'房源标题设置'})">
+			<div class="tex">标题</div>
+			<div class="right"><i class="icon ion-chevron-right"></i></div>
+			<div class="cont">{{zufangtitle}}</div>
+		</div>
+		<div class="borderline"></div>
+		<div class="card" ui-sref="tabs.zufangtd({name:'房源描述设置'})">
+			<div class="tex">描述</div>
+			<div class="right"><i class="icon ion-chevron-right"></i></div>
+			<div class="cont">{{zufangdes}}</div>
+		</div>
+		<div class="borderline"></div>
+		<div class="offline"></div>
+		
+		<div class="borderline"></div>
+		<div class="card">
+			<div class="tex">租金</div>
+			<div class="rightcell">元/月</div>
+			<input class="cellinput" ng-model="publishdata.zujin" type="number" name="" id="" value=""placeholder="请输入租金" />
+		</div>
+		<div class="borderline"></div>
+		<div class="card">
+			<div class="tex">面积</div>
+			<div class="rightcell">平米</div>
+			<input class="cellinput" ng-model="publishdata.area" type="number" name="" id="" value=""placeholder="请输入面积" />
+		</div>
+		<div class="borderline"></div>
+		<div class="card">
+			<div class="tex">租房方式</div>
+			<input ng-model="publishdata.zufang" class="picker zf-zufang" type="text" name="" id="" value="" />
+		</div>
+		<div class="borderline"></div>
+		<div class="card">
+			<div class="tex">付款方式</div>
+			<input ng-model="publishdata.pay" class="picker zf-fukuang" type="text" name="" id="" value="" />
+		</div>
+		<div class="borderline"></div>
+		<div class="offline"></div>
+		
+		<div class="borderline"></div>
+		<div class="card">
+			<div class="tex">房型</div>
+			<input ng-model="publishdata.fangxing" class="picker zf-fangxing" type="text" name="" id="" value="" />
+		</div>
+		<div class="borderline"></div>
+		<div class="card">
+			<div class="tex">楼层</div>
+			<input ng-model="publishdata.louceng" class="picker zf-louceng" type="text" name="" id="" value="" />
+		</div>
+		<div class="borderline"></div>
+		<div class="card">
+			<div class="tex">类型</div>
+			<input ng-model="publishdata.type" class="picker zf-leixing" type="text" name="" id="" value="" />
+		</div>
+		<div class="borderline"></div>
+		<div class="card">
+			<div class="tex">朝向</div>
+			<input ng-model="publishdata.chaoxiang" class="picker zf-chaoxiang" type="text" name="" id="" value="" />
+		</div>
+		<div class="borderline"></div>
+		<div class="card">
+			<div class="tex">装修</div>
+			<input ng-model="publishdata.zhuangxiu" class="picker zf-zhuangxiu" type="text" name="" id="" value="" />
+		</div>
+		<div class="borderline"></div>
+		
+		<div class="offline"></div>
+		<div class="borderline"></div>
+		<div class="card">
+			配置
+		</div>
+		<div class="borderline"></div>
+		<div class="card list">
+			<ion-checkbox ng-repeat="item in devList"
+                        ng-model="item.isChecked" 
+                        ng-checked="item.isChecked">
+           	 {{ item.value }}
+          	</ion-checkbox>
+			<!--<ion-checkbox ng-show="title=='修改'" ng-repeat="item in changedevList"
+                        ng-model="item.checked" 
+                        ng-checked="item.checked">
+           	 {{ item.value }}
+          	</ion-checkbox>-->
+          
+		</div>
+		<div class="borderline"></div>
+		
+		<div class="offline"></div>
+		<div class="card indoor" id="zufangIndoorImg">
+				<h4>室内图</h4>
+				<ul>
+					<li ng-repeat="img in publishdata.IndoorShowImages">
+						<img ng-src="{{img}}" alt="室内图"/>
+						<span ng-click="remove($index)">x</span>
+					</li>
+					<li id="zufangchooseImg">
+						<img src="imgs/add.png"/>
+						<input  type="file" name="photo"  accept="image/*" autocomplete="off" />	
+					</li>
+				</ul>
+				
+				
+			</div>
+			<div class="card layout" id="zufangLayoutImg">
+				<h4>房型图</h4>
+				<ul>
+					<li ng-repeat="img in publishdata.LayoutShowImages">
+						<img ng-src="{{img}}" alt="房型图"/>
+						<span ng-click="removelayout($index)">x</span>
+					</li>
+					<li id="zufangchooseLayoutImg">
+						<img src="imgs/add.png"/>
+						<input  type="file" name="photo"  accept="image/*" autocomplete="off" />	
+					</li>
+				</ul>
+			</div>
+			<canvas style="display: none;" id="mycans" width="" height=""></canvas>
+	</ion-content>
+	
+</ion-view>
+

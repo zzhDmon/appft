@@ -103,15 +103,20 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/views/tabs/mine/myweidian/myweidian";
 @import "www/views/tabs/mine/myweidian/myfydetail/myfydetail";
 
+@import "www/views/publicPage/dialogBox/dialogBox";
 @import "www/views/tabs/ifhavehouse/ifhavehouse";
 @import "www/views/tabs/ifhavehouse/clientSearch/clientSearch";
+@import "www/views/tabs/ifhavehouse/houseSearch/houseSearch";
 @import "www/views/tabs/ifhavehouse/mySet/mySet";
 @import "www/views/tabs/ifhavehouse/fbManage/fbManage";
 @import "www/views/tabs/ifhavehouse/needManage/needManage";
+@import "www/views/tabs/ifhavehouse/needManage/addNeed/addNeed";
 @import "www/views/tabs/ifhavehouse/mySet/aboutUs/aboutUs";
 @import "www/views/tabs/ifhavehouse/mySet/feedBack/feedBack";
 @import "www/views/tabs/ifhavehouse/mySet/changePwd/changePwd";
-@import "www/views/tabs/ifhavehouse/fbManage/addFy/addFy";
+@import "www/views/tabs/ifhavehouse/fbManage/addSell/addSell";
+@import "www/views/tabs/ifhavehouse/fbManage/addRent/addRent";
 @import "www/views/tabs/ifhavehouse/fbManage/changeFy/changeFy";
 @import "www/views/tabs/perCenter/perCenter";
+@import "www/views/tabs/chatList/chatList";
 

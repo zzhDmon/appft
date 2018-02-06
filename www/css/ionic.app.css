@@ -24892,7 +24892,7 @@ a.button {
                 font-size: 16px;
                 font-weight: 600; }
 
-#ifHaveHouse .searchhouse-header {
+#if_have_house .searchhouse-header {
   position: absolute;
   z-index: 1002;
   width: 100% !important;
@@ -24902,68 +24902,68 @@ a.button {
   border-bottom: none !important;
   background-color: #f6f6f6;
   background-image: none; }
-  #ifHaveHouse .searchhouse-header span.location {
+  #if_have_house .searchhouse-header span.location {
     width: 20%;
     height: 40px;
     line-height: 40px;
     text-align: left;
     padding-left: 10px;
     color: dimgray; }
-  #ifHaveHouse .searchhouse-header span.set {
+  #if_have_house .searchhouse-header span.set {
     width: 10%;
     height: 40px;
     line-height: 40px;
     text-align: center;
     color: dimgray; }
-    #ifHaveHouse .searchhouse-header span.set .iconfont {
+    #if_have_house .searchhouse-header span.set .iconfont {
       font-size: 25px; }
-  #ifHaveHouse .searchhouse-header span.item-input-wrapper {
+  #if_have_house .searchhouse-header span.item-input-wrapper {
     width: 70%;
     height: 28px;
     text-align: center;
     background-color: #e4e4e4;
     padding-left: 15%; }
-    #ifHaveHouse .searchhouse-header span.item-input-wrapper i.icon-sousuo2 {
+    #if_have_house .searchhouse-header span.item-input-wrapper i.icon-sousuo2 {
       color: #969696;
       line-height: 28px; }
-    #ifHaveHouse .searchhouse-header span.item-input-wrapper input {
+    #if_have_house .searchhouse-header span.item-input-wrapper input {
       padding-left: 10px; }
-    #ifHaveHouse .searchhouse-header span.item-input-wrapper input::-webkit-input-placeholder {
+    #if_have_house .searchhouse-header span.item-input-wrapper input::-webkit-input-placeholder {
       /* WebKit, Blink, Edge */
       color: #969696; }
-    #ifHaveHouse .searchhouse-header span.item-input-wrapper input:-moz-placeholder {
+    #if_have_house .searchhouse-header span.item-input-wrapper input:-moz-placeholder {
       /* Mozilla Firefox 4 to 18 */
       color: #969696;
       opacity: 1; }
-    #ifHaveHouse .searchhouse-header span.item-input-wrapper input::-moz-placeholder {
+    #if_have_house .searchhouse-header span.item-input-wrapper input::-moz-placeholder {
       /* Mozilla Firefox 19+ */
       color: #969696;
       opacity: 1; }
-    #ifHaveHouse .searchhouse-header span.item-input-wrapper input:-ms-input-placeholder {
+    #if_have_house .searchhouse-header span.item-input-wrapper input:-ms-input-placeholder {
       /* Internet Explorer 10-11 */
       color: #969696; }
 
-#ifHaveHouse .tabNav {
+#if_have_house .tabNav {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 45px;
   background-color: #e6e6e6; }
-  #ifHaveHouse .tabNav ul {
+  #if_have_house .tabNav ul {
     width: 100%;
     height: 100%; }
-    #ifHaveHouse .tabNav ul li {
+    #if_have_house .tabNav ul li {
       height: 100%;
       text-align: center;
       line-height: 45px; }
-    #ifHaveHouse .tabNav ul .rig {
+    #if_have_house .tabNav ul .rig {
       width: 35%; }
-    #ifHaveHouse .tabNav ul .lef {
+    #if_have_house .tabNav ul .lef {
       width: 30%; }
-    #ifHaveHouse .tabNav ul .mid {
+    #if_have_house .tabNav ul .mid {
       width: 35%; }
 
-#ifHaveHouse .topfour {
+#if_have_house .topfour {
   width: 100%;
   height: 40px;
   top: 43px;
@@ -24972,7 +24972,7 @@ a.button {
   border-top: none;
   border-bottom: 1px solid #e6e6e6;
   z-index: 1001; }
-  #ifHaveHouse .topfour li {
+  #if_have_house .topfour li {
     width: 25%;
     text-align: center;
     padding: 0 10px 0;
@@ -24980,7 +24980,7 @@ a.button {
     font-size: 16px;
     line-height: 40px;
     color: #666666; }
-    #ifHaveHouse .topfour li div {
+    #if_have_house .topfour li div {
       display: inline-block;
       word-break: keep-all;
       white-space: nowrap;
@@ -24989,7 +24989,7 @@ a.button {
       text-align: center;
       height: 100%;
       max-width: 85%; }
-    #ifHaveHouse .topfour li i.icon--pulldown {
+    #if_have_house .topfour li i.icon--pulldown {
       position: relative;
       display: inline-block;
       width: 15%;
@@ -24997,12 +24997,12 @@ a.button {
       height: 100%;
       top: -15px;
       color: #666666; }
-  #ifHaveHouse .topfour li.havechoose {
+  #if_have_house .topfour li.havechoose {
     color: #41a0ff; }
-    #ifHaveHouse .topfour li.havechoose i.icon--pulldown {
+    #if_have_house .topfour li.havechoose i.icon--pulldown {
       color: #41a0ff; }
 
-#ifHaveHouse .mask {
+#if_have_house .mask {
   width: 100%;
   height: calc(100% - 44px);
   background-color: rgba(0, 0, 0, 0.3);
@@ -25011,7 +25011,7 @@ a.button {
   z-index: 1000;
   top: 44px; }
 
-#ifHaveHouse .pullchooselist {
+#if_have_house .pullchooselist {
   width: 100%;
   height: 300px;
   position: absolute;
@@ -25019,19 +25019,19 @@ a.button {
   top: 83px;
   background-color: white;
   display: none; }
-  #ifHaveHouse .pullchooselist .scroll-bar {
+  #if_have_house .pullchooselist .scroll-bar {
     display: none; }
-  #ifHaveHouse .pullchooselist .bottom {
+  #if_have_house .pullchooselist .bottom {
     position: absolute;
     z-index: 1002;
     bottom: -2px;
     width: 100%;
     height: 15px;
     background-color: white; }
-  #ifHaveHouse .pullchooselist div {
+  #if_have_house .pullchooselist div {
     height: 100%;
     border: none; }
-    #ifHaveHouse .pullchooselist div .area {
+    #if_have_house .pullchooselist div .area {
       width: 50%;
       height: 100%;
       position: absolute;
@@ -25039,62 +25039,62 @@ a.button {
       top: 1px;
       border-left: 1px solid #e6e6e6;
       background-color: #f6f6f6; }
-      #ifHaveHouse .pullchooselist div .area .bottom {
+      #if_have_house .pullchooselist div .area .bottom {
         position: absolute;
         z-index: 1003;
         bottom: -1px;
         width: 100%;
         height: 15px;
         background-color: #f6f6f6; }
-      #ifHaveHouse .pullchooselist div .area .scroll-content {
+      #if_have_house .pullchooselist div .area .scroll-content {
         margin: 0 0 0 12px; }
-        #ifHaveHouse .pullchooselist div .area .scroll-content .item {
+        #if_have_house .pullchooselist div .area .scroll-content .item {
           padding: 12px 16px 12px 0;
           color: #666666;
           background-color: #f6f6f6;
           border-color: #e6e6e6; }
-        #ifHaveHouse .pullchooselist div .area .scroll-content .item.clicked {
+        #if_have_house .pullchooselist div .area .scroll-content .item.clicked {
           color: #41a0ff; }
-        #ifHaveHouse .pullchooselist div .area .scroll-content .item.activated {
+        #if_have_house .pullchooselist div .area .scroll-content .item.activated {
           background-color: #f6f6f6;
           color: #41a0ff; }
-        #ifHaveHouse .pullchooselist div .area .scroll-content .item:last-child {
+        #if_have_house .pullchooselist div .area .scroll-content .item:last-child {
           border-bottom: none; }
-        #ifHaveHouse .pullchooselist div .area .scroll-content .item:first-child {
+        #if_have_house .pullchooselist div .area .scroll-content .item:first-child {
           border-top: none; }
-    #ifHaveHouse .pullchooselist div .scroll-content {
+    #if_have_house .pullchooselist div .scroll-content {
       margin: 0 0 0 12px;
       padding: 0 0 30px; }
-      #ifHaveHouse .pullchooselist div .scroll-content .list .item {
+      #if_have_house .pullchooselist div .scroll-content .list .item {
         color: #666666;
         padding: 12px 16px 12px 0;
         border-color: #e6e6e6; }
-      #ifHaveHouse .pullchooselist div .scroll-content .list .item.clicked {
+      #if_have_house .pullchooselist div .scroll-content .list .item.clicked {
         color: #41a0ff; }
-      #ifHaveHouse .pullchooselist div .scroll-content .list .item.activated {
+      #if_have_house .pullchooselist div .scroll-content .list .item.activated {
         background-color: white;
         color: #41a0ff; }
-      #ifHaveHouse .pullchooselist div .scroll-content .list .item:last-child {
+      #if_have_house .pullchooselist div .scroll-content .list .item:last-child {
         border-bottom: none; }
-      #ifHaveHouse .pullchooselist div .scroll-content .list .item:first-child {
+      #if_have_house .pullchooselist div .scroll-content .list .item:first-child {
         border-top: none; }
 
-#ifHaveHouse .ifHaveHouse {
+#if_have_house .if-have-house {
   margin-top: 84px; }
-  #ifHaveHouse .ifHaveHouse .card {
+  #if_have_house .if-have-house .card {
     box-shadow: none; }
-  #ifHaveHouse .ifHaveHouse p.loading {
+  #if_have_house .if-have-house p.loading {
     margin: 100px 0 100px;
     font-size: 50px;
     text-align: center; }
-    #ifHaveHouse .ifHaveHouse p.loading .spinner svg {
+    #if_have_house .if-have-house p.loading .spinner svg {
       width: 60px !important;
       height: 60px !important; }
-  #ifHaveHouse .ifHaveHouse .ershou p.baseLine {
+  #if_have_house .if-have-house .ershou p.baseLine {
     margin: 0;
     padding: 15px 12px 15px;
     background-color: #f6f6f6; }
-    #ifHaveHouse .ifHaveHouse .ershou p.baseLine span {
+    #if_have_house .if-have-house .ershou p.baseLine span {
       text-align: center;
       display: block;
       /*设置为块级元素会独占一行形成上下居中的效果*/
@@ -25102,7 +25102,7 @@ a.button {
       color: #969696;
       position: relative;
       /*定位横线（当横线的父元素）*/ }
-    #ifHaveHouse .ifHaveHouse .ershou p.baseLine span:before {
+    #if_have_house .if-have-house .ershou p.baseLine span:before {
       content: '';
       /*CSS伪类用法*/
       position: absolute;
@@ -25112,7 +25112,7 @@ a.button {
       /*宽和高做出来的背景横线*/
       width: 28%;
       height: 1px; }
-    #ifHaveHouse .ifHaveHouse .ershou p.baseLine span:after {
+    #if_have_house .if-have-house .ershou p.baseLine span:after {
       content: '';
       /*CSS伪类用法*/
       position: absolute;
@@ -25122,44 +25122,44 @@ a.button {
       /*宽和高做出来的背景横线*/
       width: 28%;
       height: 1px; }
-    #ifHaveHouse .ifHaveHouse .ershou p.baseLine span:before {
+    #if_have_house .if-have-house .ershou p.baseLine span:before {
       left: 0;
       /*调整背景横线的左右距离*/ }
-    #ifHaveHouse .ifHaveHouse .ershou p.baseLine span:after {
+    #if_have_house .if-have-house .ershou p.baseLine span:after {
       right: 0; }
-  #ifHaveHouse .ifHaveHouse .ershou .list {
+  #if_have_house .if-have-house .ershou .list {
     padding-left: 12px; }
-    #ifHaveHouse .ifHaveHouse .ershou .list .item:last-child .item-content {
+    #if_have_house .if-have-house .ershou .list .item:last-child .item-content {
       border-bottom: none; }
-    #ifHaveHouse .ifHaveHouse .ershou .list .item {
+    #if_have_house .if-have-house .ershou .list .item {
       border: none;
       margin: 0; }
-      #ifHaveHouse .ifHaveHouse .ershou .list .item .item-content.activated {
+      #if_have_house .if-have-house .ershou .list .item .item-content.activated {
         background-color: #f6f6f6; }
-      #ifHaveHouse .ifHaveHouse .ershou .list .item .item-content {
+      #if_have_house .if-have-house .ershou .list .item .item-content {
         width: 100%;
         padding: 12px 12px 12px 0;
         border-bottom: 1px solid #e6e6e6; }
-        #ifHaveHouse .ifHaveHouse .ershou .list .item .item-content .img {
+        #if_have_house .if-have-house .ershou .list .item .item-content .img {
           width: 35vw;
           height: auto;
           float: left;
           position: relative; }
-          #ifHaveHouse .ifHaveHouse .ershou .list .item .item-content .img img {
+          #if_have_house .if-have-house .ershou .list .item .item-content .img img {
             border-radius: 3px;
             width: 100%;
             height: 85px; }
-          #ifHaveHouse .ifHaveHouse .ershou .list .item .item-content .img .zhutui {
+          #if_have_house .if-have-house .ershou .list .item .item-content .img .zhutui {
             width: 8vw;
             height: auto;
             position: absolute;
             top: 0;
             right: 0; }
-        #ifHaveHouse .ifHaveHouse .ershou .list .item .item-content .description {
+        #if_have_house .if-have-house .ershou .list .item .item-content .description {
           float: left;
           width: calc(65vw - 38px);
           margin-left: 10px; }
-          #ifHaveHouse .ifHaveHouse .ershou .list .item .item-content .description h6 {
+          #if_have_house .if-have-house .ershou .list .item .item-content .description h6 {
             color: #333333;
             font-size: 16px;
             height: 20px;
@@ -25169,25 +25169,25 @@ a.button {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-          #ifHaveHouse .ifHaveHouse .ershou .list .item .item-content .description p {
+          #if_have_house .if-have-house .ershou .list .item .item-content .description p {
             width: 100%;
             margin: 0;
             font-size: 14px;
             height: 20px;
             overflow: hidden;
             color: #969696; }
-            #ifHaveHouse .ifHaveHouse .ershou .list .item .item-content .description p span {
+            #if_have_house .if-have-house .ershou .list .item .item-content .description p span {
               border-radius: 2px;
               font-size: 12px;
               padding: 2px 3px 2px;
               background-color: #e6f2ff;
               color: #59abfd;
               margin-right: 3px; }
-          #ifHaveHouse .ifHaveHouse .ershou .list .item .item-content .description div {
+          #if_have_house .if-have-house .ershou .list .item .item-content .description div {
             font-size: 14px;
             color: #969696;
             width: calc(65vw - 38px); }
-            #ifHaveHouse .ifHaveHouse .ershou .list .item .item-content .description div .space {
+            #if_have_house .if-have-house .ershou .list .item .item-content .description div .space {
               float: left;
               height: 25px;
               line-height: 25px;
@@ -25196,7 +25196,7 @@ a.button {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis; }
-            #ifHaveHouse .ifHaveHouse .ershou .list .item .item-content .description div .price {
+            #if_have_house .if-have-house .ershou .list .item .item-content .description div .price {
               text-align: right;
               float: right;
               height: 25px;
@@ -25207,28 +25207,28 @@ a.button {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis; }
-              #ifHaveHouse .ifHaveHouse .ershou .list .item .item-content .description div .price span {
+              #if_have_house .if-have-house .ershou .list .item .item-content .description div .price span {
                 font-size: 16px;
                 font-weight: 600; }
-      #ifHaveHouse .ifHaveHouse .ershou .list .item .item-options .button {
+      #if_have_house .if-have-house .ershou .list .item .item-options .button {
         background-color: #41a0ff;
         color: white;
         padding: 0 24px 0; }
-        #ifHaveHouse .ifHaveHouse .ershou .list .item .item-options .button div {
+        #if_have_house .if-have-house .ershou .list .item .item-options .button div {
           line-height: 20px;
           font-size: 18px; }
-  #ifHaveHouse .ifHaveHouse .noresult {
+  #if_have_house .if-have-house .noresult {
     padding: 50px 30px 0;
     height: 130px; }
-    #ifHaveHouse .ifHaveHouse .noresult .top {
+    #if_have_house .if-have-house .noresult .top {
       width: 100%;
       height: 50px;
       line-height: 50px;
       text-align: center; }
-      #ifHaveHouse .ifHaveHouse .noresult .top .iconfont {
+      #if_have_house .if-have-house .noresult .top .iconfont {
         font-size: 40px;
         color: #969696; }
-    #ifHaveHouse .ifHaveHouse .noresult .bottom {
+    #if_have_house .if-have-house .noresult .bottom {
       margin: 0;
       padding: 0;
       width: 100%;
@@ -25237,25 +25237,25 @@ a.button {
       line-height: 30px;
       font-size: 16px;
       color: #969696; }
-      #ifHaveHouse .ifHaveHouse .noresult .bottom span {
+      #if_have_house .if-have-house .noresult .bottom span {
         color: #41a0ff; }
 
-#ifHaveHouse .plus {
+#if_have_house .plus {
   margin-top: 84px; }
-  #ifHaveHouse .plus .card {
+  #if_have_house .plus .card {
     box-shadow: none; }
-  #ifHaveHouse .plus p.loading {
+  #if_have_house .plus p.loading {
     margin: 100px 0 100px;
     font-size: 50px;
     text-align: center; }
-    #ifHaveHouse .plus p.loading .spinner svg {
+    #if_have_house .plus p.loading .spinner svg {
       width: 60px !important;
       height: 60px !important; }
-  #ifHaveHouse .plus .ershou p.baseLine {
+  #if_have_house .plus .ershou p.baseLine {
     margin: 0;
     padding: 15px 12px 15px;
     background-color: #f6f6f6; }
-    #ifHaveHouse .plus .ershou p.baseLine span {
+    #if_have_house .plus .ershou p.baseLine span {
       text-align: center;
       display: block;
       /*设置为块级元素会独占一行形成上下居中的效果*/
@@ -25263,7 +25263,7 @@ a.button {
       color: #969696;
       position: relative;
       /*定位横线（当横线的父元素）*/ }
-    #ifHaveHouse .plus .ershou p.baseLine span:before {
+    #if_have_house .plus .ershou p.baseLine span:before {
       content: '';
       /*CSS伪类用法*/
       position: absolute;
@@ -25273,7 +25273,7 @@ a.button {
       /*宽和高做出来的背景横线*/
       width: 28%;
       height: 1px; }
-    #ifHaveHouse .plus .ershou p.baseLine span:after {
+    #if_have_house .plus .ershou p.baseLine span:after {
       content: '';
       /*CSS伪类用法*/
       position: absolute;
@@ -25283,44 +25283,44 @@ a.button {
       /*宽和高做出来的背景横线*/
       width: 28%;
       height: 1px; }
-    #ifHaveHouse .plus .ershou p.baseLine span:before {
+    #if_have_house .plus .ershou p.baseLine span:before {
       left: 0;
       /*调整背景横线的左右距离*/ }
-    #ifHaveHouse .plus .ershou p.baseLine span:after {
+    #if_have_house .plus .ershou p.baseLine span:after {
       right: 0; }
-  #ifHaveHouse .plus .ershou .list {
+  #if_have_house .plus .ershou .list {
     padding-left: 12px; }
-    #ifHaveHouse .plus .ershou .list .item:last-child .item-content {
+    #if_have_house .plus .ershou .list .item:last-child .item-content {
       border-bottom: none; }
-    #ifHaveHouse .plus .ershou .list .item {
+    #if_have_house .plus .ershou .list .item {
       border: none;
       margin: 0; }
-      #ifHaveHouse .plus .ershou .list .item .item-content.activated {
+      #if_have_house .plus .ershou .list .item .item-content.activated {
         background-color: #f6f6f6; }
-      #ifHaveHouse .plus .ershou .list .item .item-content {
+      #if_have_house .plus .ershou .list .item .item-content {
         width: 100%;
         padding: 12px 12px 12px 0;
         border-bottom: 1px solid #e6e6e6; }
-        #ifHaveHouse .plus .ershou .list .item .item-content .img {
+        #if_have_house .plus .ershou .list .item .item-content .img {
           width: 28vw;
           height: auto;
           float: left;
           position: relative; }
-          #ifHaveHouse .plus .ershou .list .item .item-content .img img {
+          #if_have_house .plus .ershou .list .item .item-content .img img {
             border-radius: 3px;
             width: 100%;
             height: 85px; }
-          #ifHaveHouse .plus .ershou .list .item .item-content .img .zhutui {
+          #if_have_house .plus .ershou .list .item .item-content .img .zhutui {
             width: 8vw;
             height: auto;
             position: absolute;
             top: 0;
             right: 0; }
-        #ifHaveHouse .plus .ershou .list .item .item-content .description {
+        #if_have_house .plus .ershou .list .item .item-content .description {
           float: left;
           width: calc(72vw - 38px);
           margin-left: 10px; }
-          #ifHaveHouse .plus .ershou .list .item .item-content .description h6 {
+          #if_have_house .plus .ershou .list .item .item-content .description h6 {
             color: #333333;
             font-size: 16px;
             height: 20px;
@@ -25330,25 +25330,25 @@ a.button {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-          #ifHaveHouse .plus .ershou .list .item .item-content .description p {
+          #if_have_house .plus .ershou .list .item .item-content .description p {
             width: 100%;
             margin: 0;
             font-size: 14px;
             height: 20px;
             overflow: hidden;
             color: #969696; }
-            #ifHaveHouse .plus .ershou .list .item .item-content .description p span {
+            #if_have_house .plus .ershou .list .item .item-content .description p span {
               border-radius: 2px;
               font-size: 12px;
               padding: 2px 3px 2px;
               background-color: #e6f2ff;
               color: #59abfd;
               margin-right: 3px; }
-          #ifHaveHouse .plus .ershou .list .item .item-content .description div {
+          #if_have_house .plus .ershou .list .item .item-content .description div {
             font-size: 14px;
             color: #969696;
             width: calc(72vw - 38px); }
-            #ifHaveHouse .plus .ershou .list .item .item-content .description div .space {
+            #if_have_house .plus .ershou .list .item .item-content .description div .space {
               float: left;
               height: 25px;
               line-height: 25px;
@@ -25357,7 +25357,7 @@ a.button {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis; }
-            #ifHaveHouse .plus .ershou .list .item .item-content .description div .price {
+            #if_have_house .plus .ershou .list .item .item-content .description div .price {
               text-align: right;
               float: right;
               height: 25px;
@@ -25368,28 +25368,28 @@ a.button {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis; }
-              #ifHaveHouse .plus .ershou .list .item .item-content .description div .price span {
+              #if_have_house .plus .ershou .list .item .item-content .description div .price span {
                 font-size: 16px;
                 font-weight: 600; }
-      #ifHaveHouse .plus .ershou .list .item .item-options .button {
+      #if_have_house .plus .ershou .list .item .item-options .button {
         background-color: #41a0ff;
         color: white;
         padding: 0 24px 0; }
-        #ifHaveHouse .plus .ershou .list .item .item-options .button div {
+        #if_have_house .plus .ershou .list .item .item-options .button div {
           line-height: 20px;
           font-size: 18px; }
-  #ifHaveHouse .plus .noresult {
+  #if_have_house .plus .noresult {
     padding: 50px 30px 0;
     height: 130px; }
-    #ifHaveHouse .plus .noresult .top {
+    #if_have_house .plus .noresult .top {
       width: 100%;
       height: 50px;
       line-height: 50px;
       text-align: center; }
-      #ifHaveHouse .plus .noresult .top .iconfont {
+      #if_have_house .plus .noresult .top .iconfont {
         font-size: 40px;
         color: #969696; }
-    #ifHaveHouse .plus .noresult .bottom {
+    #if_have_house .plus .noresult .bottom {
       margin: 0;
       padding: 0;
       width: 100%;
@@ -25398,11 +25398,11 @@ a.button {
       line-height: 30px;
       font-size: 16px;
       color: #969696; }
-      #ifHaveHouse .plus .noresult .bottom span {
+      #if_have_house .plus .noresult .bottom span {
         color: #41a0ff; }
 
 /*卡片*/
-#clientSearch .searchhouse-header {
+#client_search .searchhouse-header {
   position: fixed;
   z-index: 999;
   width: 100% !important;
@@ -25412,56 +25412,56 @@ a.button {
   border-bottom: 1px solid #e6e6e6;
   background-image: none;
   background-color: #f6f6f6; }
-  #clientSearch .searchhouse-header span.goback {
+  #client_search .searchhouse-header span.goback {
     width: 15%;
     height: 40px;
     text-align: left;
     line-height: 40px; }
-    #clientSearch .searchhouse-header span.goback i {
+    #client_search .searchhouse-header span.goback i {
       font-size: 30px;
       color: #333333; }
-  #clientSearch .searchhouse-header span.item-input-wrapper {
+  #client_search .searchhouse-header span.item-input-wrapper {
     width: 85%;
     height: 28px;
     background-color: #e4e4e4; }
-    #clientSearch .searchhouse-header span.item-input-wrapper span {
+    #client_search .searchhouse-header span.item-input-wrapper span {
       display: inline-block;
       height: 28px;
       text-align: center;
       line-height: 28px; }
-    #clientSearch .searchhouse-header span.item-input-wrapper i.icon--pulldown {
+    #client_search .searchhouse-header span.item-input-wrapper i.icon--pulldown {
       color: gray; }
-    #clientSearch .searchhouse-header span.item-input-wrapper input {
+    #client_search .searchhouse-header span.item-input-wrapper input {
       padding-left: 10px; }
-  #clientSearch .searchhouse-header span.search {
+  #client_search .searchhouse-header span.search {
     width: 15%;
     text-align: center;
     padding-left: 10px; }
 
-#clientSearch .clientSearch {
+#client_search .client-search {
   margin-top: 44px;
   padding: 0; }
-  #clientSearch .clientSearch .card {
+  #client_search .client-search .card {
     box-shadow: none; }
-  #clientSearch .clientSearch .havent {
+  #client_search .client-search .havent {
     margin-top: 180px;
     box-shadow: none; }
-    #clientSearch .clientSearch .havent img {
+    #client_search .client-search .havent img {
       display: block;
       width: 150px;
       height: 150px;
       margin: auto; }
-    #clientSearch .clientSearch .havent p {
+    #client_search .client-search .havent p {
       text-align: center;
       color: #666666; }
-  #clientSearch .clientSearch .searchhistory .list {
+  #client_search .client-search .searchhistory .list {
     padding: 0 0 0 12px; }
-    #clientSearch .clientSearch .searchhistory .list .item {
+    #client_search .client-search .searchhistory .list .item {
       padding: 15px 12px 15px 0; }
-      #clientSearch .clientSearch .searchhistory .list .item span {
+      #client_search .client-search .searchhistory .list .item span {
         display: block !important;
         float: left; }
-      #clientSearch .clientSearch .searchhistory .list .item .lef {
+      #client_search .client-search .searchhistory .list .item .lef {
         width: 80%;
         height: 100%;
         color: #666666;
@@ -25469,18 +25469,18 @@ a.button {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis; }
-      #clientSearch .clientSearch .searchhistory .list .item .rig {
+      #client_search .client-search .searchhistory .list .item .rig {
         text-align: right;
         width: 20%;
         height: 100%;
         color: #adadad; }
-        #clientSearch .clientSearch .searchhistory .list .item .rig i {
+        #client_search .client-search .searchhistory .list .item .rig i {
           font-size: 22px; }
-  #clientSearch .clientSearch .searchhistory .button {
+  #client_search .client-search .searchhistory .button {
     display: block;
     width: 100%;
     margin-top: 15px; }
-  #clientSearch .clientSearch .searchhistory p.nohistory {
+  #client_search .client-search .searchhistory p.nohistory {
     margin: 0;
     padding: 0;
     height: 30px;
@@ -25489,7 +25489,7 @@ a.button {
     font-size: 14px;
     color: #969696;
     background-color: white; }
-  #clientSearch .clientSearch .searchhistory .hotsearch h5 {
+  #client_search .client-search .searchhistory .hotsearch h5 {
     background-color: white;
     margin: 0;
     padding: 0 0 0 12px;
@@ -25497,10 +25497,10 @@ a.button {
     line-height: 40px;
     font-size: 16px;
     color: #333; }
-  #clientSearch .clientSearch .searchhistory .hotsearch ul {
+  #client_search .client-search .searchhistory .hotsearch ul {
     width: 100%;
     padding: 0 0 0 12px; }
-    #clientSearch .clientSearch .searchhistory .hotsearch ul li {
+    #client_search .client-search .searchhistory .hotsearch ul li {
       width: 100%;
       height: 50px;
       line-height: 50px;
@@ -25509,7 +25509,7 @@ a.button {
       font-size: 16px;
       color: #333;
       border-bottom: 1px solid #e6e6e6; }
-      #clientSearch .clientSearch .searchhistory .hotsearch ul li span {
+      #client_search .client-search .searchhistory .hotsearch ul li span {
         display: block;
         margin: 1px 10px 0 0;
         float: left;
@@ -25521,9 +25521,134 @@ a.button {
         line-height: 18px;
         background-color: #ff504c;
         color: #fff; }
-    #clientSearch .clientSearch .searchhistory .hotsearch ul li:nth-child(2) span {
+    #client_search .client-search .searchhistory .hotsearch ul li:nth-child(2) span {
       background-color: #ff9e40; }
-    #clientSearch .clientSearch .searchhistory .hotsearch ul li:nth-child(3) span {
+    #client_search .client-search .searchhistory .hotsearch ul li:nth-child(3) span {
+      background-color: #83cc2b; }
+
+/*卡片*/
+#house_search .searchhouse-header {
+  position: fixed;
+  z-index: 999;
+  width: 100% !important;
+  height: 44px !important;
+  top: 0;
+  padding-top: 10px !important;
+  border-bottom: 1px solid #e6e6e6;
+  background-image: none;
+  background-color: #f6f6f6; }
+  #house_search .searchhouse-header span.goback {
+    width: 15%;
+    height: 40px;
+    text-align: left;
+    line-height: 40px; }
+    #house_search .searchhouse-header span.goback i {
+      font-size: 30px;
+      color: #333333; }
+  #house_search .searchhouse-header span.item-input-wrapper {
+    width: 85%;
+    height: 28px;
+    background-color: #e4e4e4; }
+    #house_search .searchhouse-header span.item-input-wrapper span {
+      display: inline-block;
+      height: 28px;
+      text-align: center;
+      line-height: 28px; }
+    #house_search .searchhouse-header span.item-input-wrapper i.icon--pulldown {
+      color: gray; }
+    #house_search .searchhouse-header span.item-input-wrapper input {
+      padding-left: 10px; }
+  #house_search .searchhouse-header span.search {
+    width: 15%;
+    text-align: center;
+    padding-left: 10px; }
+
+#house_search .house-search {
+  margin-top: 44px;
+  padding: 0; }
+  #house_search .house-search .card {
+    box-shadow: none; }
+  #house_search .house-search .havent {
+    margin-top: 180px;
+    box-shadow: none; }
+    #house_search .house-search .havent img {
+      display: block;
+      width: 150px;
+      height: 150px;
+      margin: auto; }
+    #house_search .house-search .havent p {
+      text-align: center;
+      color: #666666; }
+  #house_search .house-search .searchhistory .list {
+    padding: 0 0 0 12px; }
+    #house_search .house-search .searchhistory .list .item {
+      padding: 15px 12px 15px 0; }
+      #house_search .house-search .searchhistory .list .item span {
+        display: block !important;
+        float: left; }
+      #house_search .house-search .searchhistory .list .item .lef {
+        width: 80%;
+        height: 100%;
+        color: #666666;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      #house_search .house-search .searchhistory .list .item .rig {
+        text-align: right;
+        width: 20%;
+        height: 100%;
+        color: #adadad; }
+        #house_search .house-search .searchhistory .list .item .rig i {
+          font-size: 22px; }
+  #house_search .house-search .searchhistory .button {
+    display: block;
+    width: 100%;
+    margin-top: 15px; }
+  #house_search .house-search .searchhistory p.nohistory {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #969696;
+    background-color: white; }
+  #house_search .house-search .searchhistory .hotsearch h5 {
+    background-color: white;
+    margin: 0;
+    padding: 0 0 0 12px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #333; }
+  #house_search .house-search .searchhistory .hotsearch ul {
+    width: 100%;
+    padding: 0 0 0 12px; }
+    #house_search .house-search .searchhistory .hotsearch ul li {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      padding: 15px 12px 15px 0;
+      line-height: 20px;
+      font-size: 16px;
+      color: #333;
+      border-bottom: 1px solid #e6e6e6; }
+      #house_search .house-search .searchhistory .hotsearch ul li span {
+        display: block;
+        margin: 1px 10px 0 0;
+        float: left;
+        font-size: 14px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 18px;
+        background-color: #ff504c;
+        color: #fff; }
+    #house_search .house-search .searchhistory .hotsearch ul li:nth-child(2) span {
+      background-color: #ff9e40; }
+    #house_search .house-search .searchhistory .hotsearch ul li:nth-child(3) span {
       background-color: #83cc2b; }
 
 #my_set .my-set {
@@ -25959,6 +26084,66 @@ a.button {
                 font-size: 16px;
                 font-weight: 600; }
 
+#add_need .header {
+  background-color: #f6f6f6; }
+
+#add_need .add-need {
+  background-color: white;
+  height: 100%;
+  margin-top: 44px; }
+  #add_need .add-need .card {
+    box-shadow: none;
+    font-size: 14px;
+    height: 44px;
+    line-height: 34px;
+    padding: 5px 12px 5px; }
+    #add_need .add-need .card .cont {
+      float: right;
+      text-align: right;
+      width: calc(77vw - 24px);
+      word-break: keep-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    #add_need .add-need .card .tex {
+      width: 40%;
+      float: left;
+      color: #333333; }
+    #add_need .add-need .card input {
+      float: right;
+      width: 60%;
+      text-align: right;
+      position: relative;
+      bottom: 0px; }
+  #add_need .add-need .list {
+    height: 45px;
+    padding: 5px 0 5px; }
+    #add_need .add-need .list .item-checkbox {
+      width: 25vw;
+      font-size: 14px;
+      line-height: 34px;
+      margin-top: 3px;
+      padding-top: 0px;
+      padding-right: 0;
+      padding-left: 35px;
+      padding-bottom: 00px;
+      float: left;
+      border: 0; }
+      #add_need .add-need .list .item-checkbox .checkbox-circle {
+        padding-left: 0; }
+        #add_need .add-need .list .item-checkbox .checkbox-circle .checkbox-icon {
+          width: 20px;
+          height: 20px;
+          margin-top: 4px; }
+  #add_need .add-need .subbtn {
+    margin: 15px 0 0;
+    width: 100%;
+    height: 50px; }
+    #add_need .add-need .subbtn .button {
+      width: 60%;
+      height: 100%;
+      margin-left: 20%; }
+
 #about_us .about-us {
   margin-top: 44px; }
   #about_us .about-us .card {
@@ -25999,20 +26184,20 @@ a.button {
   #change_pwd .change-pwd .card {
     box-shadow: none; }
 
-#add_fy .add-fy {
+#add_sell .add-sell {
   margin-top: 44px;
   background-color: #f6f6f6; }
-  #add_fy .add-fy .card {
+  #add_sell .add-sell .card {
     box-shadow: none;
     font-size: 14px;
     height: 44px;
     line-height: 34px;
     padding: 5px 12px 5px; }
-    #add_fy .add-fy .card .tex {
+    #add_sell .add-sell .card .tex {
       width: 20vw;
       float: left;
       color: #333333; }
-    #add_fy .add-fy .card .cont {
+    #add_sell .add-sell .card .cont {
       float: right;
       text-align: right;
       width: calc(77vw - 24px);
@@ -26020,21 +26205,21 @@ a.button {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
-    #add_fy .add-fy .card .right {
+    #add_sell .add-sell .card .right {
       width: 3vw;
       float: right;
       text-align: right; }
-    #add_fy .add-fy .card .righttext {
+    #add_sell .add-sell .card .righttext {
       width: 10vw;
       line-height: 34px;
       float: right;
       text-align: right; }
-    #add_fy .add-fy .card .picker {
+    #add_sell .add-sell .card .picker {
       float: right;
       background-color: white; }
-    #add_fy .add-fy .card .checkpicker {
+    #add_sell .add-sell .card .checkpicker {
       float: right; }
-      #add_fy .add-fy .card .checkpicker .item-checkbox {
+      #add_sell .add-sell .card .checkpicker .item-checkbox {
         font-size: 14px;
         line-height: 34px;
         padding-top: 0px;
@@ -26043,41 +26228,41 @@ a.button {
         padding-bottom: 00px;
         float: left;
         border: 0; }
-        #add_fy .add-fy .card .checkpicker .item-checkbox .checkbox-icon {
+        #add_sell .add-sell .card .checkpicker .item-checkbox .checkbox-icon {
           width: 20px;
           height: 20px;
           margin-top: 4px; }
-    #add_fy .add-fy .card input {
+    #add_sell .add-sell .card input {
       float: right;
       width: calc(80vw - 24px);
       text-align: right;
       position: relative;
       bottom: 0px; }
-    #add_fy .add-fy .card input.cellinput {
+    #add_sell .add-sell .card input.cellinput {
       width: calc(70vw - 24px); }
-    #add_fy .add-fy .card input.bianhao {
+    #add_sell .add-sell .card input.bianhao {
       float: right;
       width: calc(80vw - 24px);
       text-align: right;
       position: relative;
       bottom: 3px; }
-  #add_fy .add-fy #ershouIndoorImg {
+  #add_sell .add-sell #ershouIndoorImg {
     height: auto;
     padding: 0; }
-    #add_fy .add-fy #ershouIndoorImg h4 {
+    #add_sell .add-sell #ershouIndoorImg h4 {
       font-size: 16px;
       padding: 0 12px 0;
       margin-bottom: 0; }
-    #add_fy .add-fy #ershouIndoorImg ul li {
+    #add_sell .add-sell #ershouIndoorImg ul li {
       position: relative;
       float: left;
       margin: 2vw;
       width: 20vw;
       height: 20vw; }
-      #add_fy .add-fy #ershouIndoorImg ul li img {
+      #add_sell .add-sell #ershouIndoorImg ul li img {
         width: 20vw;
         height: 20vw; }
-      #add_fy .add-fy #ershouIndoorImg ul li span {
+      #add_sell .add-sell #ershouIndoorImg ul li span {
         position: absolute;
         z-index: 999;
         display: block;
@@ -26090,44 +26275,44 @@ a.button {
         border-radius: 50%;
         top: -5px;
         right: -5px; }
-    #add_fy .add-fy #ershouIndoorImg ul #chooseImg {
+    #add_sell .add-sell #ershouIndoorImg ul #chooseImg {
       height: auto; }
-      #add_fy .add-fy #ershouIndoorImg ul #chooseImg input {
+      #add_sell .add-sell #ershouIndoorImg ul #chooseImg input {
         display: none; }
-      #add_fy .add-fy #ershouIndoorImg ul #chooseImg img {
+      #add_sell .add-sell #ershouIndoorImg ul #chooseImg img {
         width: 20vw;
         height: 20vw; }
-    #add_fy .add-fy #ershouIndoorImg ul #changechooseImg {
+    #add_sell .add-sell #ershouIndoorImg ul #changechooseImg {
       height: auto; }
-      #add_fy .add-fy #ershouIndoorImg ul #changechooseImg input {
+      #add_sell .add-sell #ershouIndoorImg ul #changechooseImg input {
         display: none; }
-      #add_fy .add-fy #ershouIndoorImg ul #changechooseImg img {
+      #add_sell .add-sell #ershouIndoorImg ul #changechooseImg img {
         width: 20vw;
         height: 20vw; }
-    #add_fy .add-fy #ershouIndoorImg input {
+    #add_sell .add-sell #ershouIndoorImg input {
       display: none; }
-    #add_fy .add-fy #ershouIndoorImg img {
+    #add_sell .add-sell #ershouIndoorImg img {
       float: left;
       display: block;
       width: 20vw;
       height: 20vw; }
-  #add_fy .add-fy #ershouLayoutImg {
+  #add_sell .add-sell #ershouLayoutImg {
     height: auto;
     padding: 0; }
-    #add_fy .add-fy #ershouLayoutImg h4 {
+    #add_sell .add-sell #ershouLayoutImg h4 {
       font-size: 16px;
       padding: 0 12px 0;
       margin-bottom: 0; }
-    #add_fy .add-fy #ershouLayoutImg ul li {
+    #add_sell .add-sell #ershouLayoutImg ul li {
       position: relative;
       float: left;
       margin: 2vw;
       width: 20vw;
       height: 20vw; }
-      #add_fy .add-fy #ershouLayoutImg ul li img {
+      #add_sell .add-sell #ershouLayoutImg ul li img {
         width: 20vw;
         height: 20vw; }
-      #add_fy .add-fy #ershouLayoutImg ul li span {
+      #add_sell .add-sell #ershouLayoutImg ul li span {
         position: absolute;
         z-index: 999;
         display: block;
@@ -26140,11 +26325,151 @@ a.button {
         border-radius: 50%;
         top: -5px;
         right: -5px; }
-    #add_fy .add-fy #ershouLayoutImg ul #chooseLayoutImg {
+    #add_sell .add-sell #ershouLayoutImg ul #chooseLayoutImg {
       height: auto; }
-      #add_fy .add-fy #ershouLayoutImg ul #chooseLayoutImg input {
+      #add_sell .add-sell #ershouLayoutImg ul #chooseLayoutImg input {
         display: none; }
-      #add_fy .add-fy #ershouLayoutImg ul #chooseLayoutImg img {
+      #add_sell .add-sell #ershouLayoutImg ul #chooseLayoutImg img {
+        width: 20vw;
+        height: 20vw; }
+
+#add_rent .add-rent {
+  margin-top: 44px;
+  background-color: #f6f6f6; }
+  #add_rent .add-rent .card {
+    box-shadow: none;
+    font-size: 14px;
+    height: 44px;
+    line-height: 34px;
+    padding: 5px 12px 5px; }
+    #add_rent .add-rent .card .rightcell {
+      width: 15vw;
+      float: right;
+      text-align: right; }
+    #add_rent .add-rent .card .right {
+      width: 3vw;
+      float: right;
+      text-align: right; }
+    #add_rent .add-rent .card .cont {
+      float: right;
+      text-align: right;
+      width: calc(77vw - 24px);
+      word-break: keep-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    #add_rent .add-rent .card .tex {
+      width: 20vw;
+      float: left;
+      color: #333333; }
+    #add_rent .add-rent .card input {
+      float: right;
+      width: calc(80vw - 24px);
+      text-align: right;
+      position: relative;
+      bottom: 0px; }
+    #add_rent .add-rent .card input.cellinput {
+      width: calc(65vw - 24px); }
+    #add_rent .add-rent .card .picker {
+      float: right;
+      background-color: white; }
+  #add_rent .add-rent .list {
+    height: 150px;
+    padding: 5px 0 5px; }
+    #add_rent .add-rent .list .item-checkbox {
+      width: 25vw;
+      font-size: 14px;
+      line-height: 34px;
+      margin-top: 3px;
+      padding-top: 0px;
+      padding-right: 0;
+      padding-left: 35px;
+      padding-bottom: 00px;
+      float: left;
+      border: 0; }
+      #add_rent .add-rent .list .item-checkbox .checkbox-circle {
+        padding-left: 0; }
+        #add_rent .add-rent .list .item-checkbox .checkbox-circle .checkbox-icon {
+          width: 20px;
+          height: 20px;
+          margin-top: 4px; }
+  #add_rent .add-rent #zufangIndoorImg {
+    height: auto;
+    padding: 0; }
+    #add_rent .add-rent #zufangIndoorImg h4 {
+      font-size: 16px;
+      padding: 0 12px 0;
+      margin-bottom: 0; }
+    #add_rent .add-rent #zufangIndoorImg ul li {
+      position: relative;
+      float: left;
+      margin: 2vw;
+      width: 20vw;
+      height: 20vw; }
+      #add_rent .add-rent #zufangIndoorImg ul li img {
+        width: 20vw;
+        height: 20vw; }
+      #add_rent .add-rent #zufangIndoorImg ul li span {
+        position: absolute;
+        z-index: 999;
+        display: block;
+        width: 15px;
+        height: 15px;
+        font-size: 14px;
+        text-align: center;
+        line-height: 15px;
+        border: 1px solid gray;
+        border-radius: 50%;
+        top: -5px;
+        right: -5px; }
+    #add_rent .add-rent #zufangIndoorImg ul #zufangchooseImg {
+      height: auto; }
+      #add_rent .add-rent #zufangIndoorImg ul #zufangchooseImg input {
+        display: none; }
+      #add_rent .add-rent #zufangIndoorImg ul #zufangchooseImg img {
+        width: 20vw;
+        height: 20vw; }
+    #add_rent .add-rent #zufangIndoorImg input {
+      display: none; }
+    #add_rent .add-rent #zufangIndoorImg img {
+      float: left;
+      display: block;
+      width: 20vw;
+      height: 20vw; }
+  #add_rent .add-rent #zufangLayoutImg {
+    height: auto;
+    padding: 0; }
+    #add_rent .add-rent #zufangLayoutImg h4 {
+      font-size: 16px;
+      padding: 0 12px 0;
+      margin-bottom: 0; }
+    #add_rent .add-rent #zufangLayoutImg ul li {
+      position: relative;
+      float: left;
+      margin: 2vw;
+      width: 20vw;
+      height: 20vw; }
+      #add_rent .add-rent #zufangLayoutImg ul li img {
+        width: 20vw;
+        height: 20vw; }
+      #add_rent .add-rent #zufangLayoutImg ul li span {
+        position: absolute;
+        z-index: 999;
+        display: block;
+        width: 15px;
+        height: 15px;
+        font-size: 14px;
+        line-height: 15px;
+        text-align: center;
+        border: 1px solid gray;
+        border-radius: 50%;
+        top: -5px;
+        right: -5px; }
+    #add_rent .add-rent #zufangLayoutImg ul #zufangchooseLayoutImg {
+      height: auto; }
+      #add_rent .add-rent #zufangLayoutImg ul #zufangchooseLayoutImg input {
+        display: none; }
+      #add_rent .add-rent #zufangLayoutImg ul #zufangchooseLayoutImg img {
         width: 20vw;
         height: 20vw; }
 
@@ -26422,3 +26747,181 @@ a.button {
       margin: 0;
       height: 20px;
       font-size: 14px; }
+
+#chat_list .header {
+  background-color: #387ef5; }
+  #chat_list .header .title .switch {
+    width: 100%;
+    height: 100%;
+    padding: 7px 0; }
+    #chat_list .header .title .switch .button {
+      width: 50%;
+      height: 30px;
+      float: left;
+      border-color: #e6e6e6; }
+
+#chat_list .chat-list {
+  margin-top: 44px; }
+
+#dialog_box .bar-footer {
+  overflow: visible !important; }
+
+#dialog_box .bar-footer textarea {
+  resize: none;
+  height: 25px;
+  /* fixes an ios bug bear */ }
+
+#dialog_box button.ion-android-send {
+  padding-top: 2px;
+  /* add this to keep your footer buttons down 
+    at the bottom as the textarea resizes */ }
+
+#dialog_box .footer-btn-wrap {
+  position: relative;
+  height: 100%;
+  width: 50px;
+  top: 7px; }
+
+#dialog_box .footer-btn {
+  position: absolute !important;
+  bottom: 0; }
+
+#dialog_box img.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px; }
+
+#dialog_box img.profile-pic.left {
+  left: 10px; }
+
+#dialog_box img.profile-pic.right {
+  right: 10px; }
+
+#dialog_box .ion-email {
+  float: right;
+  font-size: 32px;
+  vertical-align: middle; }
+
+#dialog_box .message {
+  font-size: 14px; }
+
+#dialog_box .message-detail {
+  white-space: nowrap;
+  font-size: 14px; }
+
+#dialog_box .bar.item-input-inset .item-input-wrapper input {
+  width: 100% !important; }
+
+#dialog_box .message-wrapper {
+  position: relative; }
+
+#dialog_box .message-wrapper:last-child {
+  margin-bottom: 10px; }
+
+#dialog_box .chat-bubble {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 18px;
+  position: relative;
+  margin: 10px;
+  max-width: 80%; }
+
+#dialog_box .chat-bubble:before {
+  content: "\00a0";
+  display: block;
+  height: 16px;
+  width: 9px;
+  position: absolute;
+  bottom: -7.5px; }
+
+#dialog_box .chat-bubble.left {
+  background-color: #e6e5eb;
+  float: left;
+  margin-left: 55px; }
+
+#dialog_box .chat-bubble.left:before {
+  background-color: #e6e5eb;
+  left: 10px;
+  -webkit-transform: rotate(70deg) skew(5deg); }
+
+#dialog_box .chat-bubble.right {
+  background-color: #158ffe;
+  color: #fff;
+  float: right;
+  margin-right: 55px; }
+
+#dialog_box .chat-bubble.right:before {
+  background-color: #158ffe;
+  right: 10px;
+  -webkit-transform: rotate(118deg) skew(-5deg); }
+
+#dialog_box .chat-bubble.right a.autolinker {
+  color: #fff;
+  font-weight: bold; }
+
+#dialog_box .user-messages-top-icon {
+  font-size: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+  right: 5px; }
+
+#dialog_box .msg-header-username {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px; }
+
+#dialog_box input,
+#dialog_box textarea,
+#dialog_box .item-input,
+#dialog_box .item-input-wrapper {
+  background-color: #f4f4f4 !important; }
+
+#dialog_box .bold {
+  font-weight: bold; }
+
+#dialog_box .cf {
+  clear: both !important; }
+
+#dialog_box a.autolinker {
+  color: #3b88c3;
+  text-decoration: none;
+  /* loading */ }
+
+#dialog_box .loader-center {
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+#dialog_box .loader .ion-loading-c {
+  font-size: 64px; }

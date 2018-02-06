@@ -10,9 +10,9 @@
 			<i class=" iconfont icon-xiangzuo1"></i>
 		</div>
 		<div class="title">
-			房源发布
+			需求列表
 		</div>
-		<div class="right" ui-sref="tabs.addFy({type:type})">
+		<div class="right" ui-sref="tabs.addNeed({type:showType})">
 			新增需求
 		</div>
 	</div>
@@ -23,7 +23,7 @@
 		<div class="line"></div>
 	</ul> -->
 	
-	<div ng-show="type==0">
+	<div ng-if="showType==0">
 		<ion-content on-swipe-right="onSwipeRight()" class="need-manage">
 			<!--下拉刷新-->
 			<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="ershoudoRefresh(false)"></ion-refresher>
@@ -66,7 +66,7 @@
 	</div>	
 	
 	
-	<div ng-show="type==1">
+	<div ng-if="showType==1">
 		<ion-content on-swipe-right="onSwipeRight()" class="need-manage">
 			<!--下拉刷新-->
 			<ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="ershoudoRefresh(false)"></ion-refresher>

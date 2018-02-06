@@ -7,13 +7,13 @@ angular.module('App').controller('needManageCtl',function($ionicLoading,$ionicHi
 //		$('.fyfabu').css('margin-top',$('.header').outerHeight()+40)
 		$('#view-popover').css('top',$('.header').outerHeight())
 		
-		if($('#fbManage .fbManage').innerWidth()>375){
-			$('#fbManage .fbManage').addClass('plus')
-			$('#fbManage .fbManage').removeClass('fbManage')
+		if($('#need_manage .need-manage').innerWidth()>375){
+			$('#need_manage .need-manage').addClass('plus')
+			$('#need_manage .need-manage').removeClass('need-manage')
 		}
 	})
 
-	$scope.type=$stateParams.type;
+	$scope.showType=$stateParams.type;
 	$scope.back=function(){
 		$ionicHistory.goBack()
 	}				
@@ -68,11 +68,12 @@ angular.module('App').controller('needManageCtl',function($ionicLoading,$ionicHi
 
 	
   	
-//	$http.get($Factory.HouseSource.query.url,{params:{houseType:1,pagenum:0,pagesize:10}}).then(function(resData){
-//			
-//				$scope.sellhouse=resData.data;
-//				$scope.housetype='sell'
-//			})
+	// $http.get($Factory.HouseSource.query.url,{params:{houseType:1,pagenum:1,pagesize:10}}).then(function(resData){
+	// 		console.log(resData)
+	// 			// $scope.sellhouse=resData.data;
+	// 			// $scope.housetype='sell'
+	// 			// $scope.noMore = true;
+	// 		})
 
   	
   	//刷新和加载方法

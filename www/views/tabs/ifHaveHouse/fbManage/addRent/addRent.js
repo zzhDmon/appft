@@ -1,24 +1,11 @@
 
-angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory,$timeout,$http,$Factory,$scope,$rootScope,$stateParams,$ionicPopover,$timeout){
+angular.module('App').controller('addRentCtl',function($ionicLoading,$ionicHistory,$http,$Factory,$rootScope,$scope,$stateParams,$ionicPopover,$timeout){
 	
-
 	$scope.back=function(){
 		$ionicHistory.goBack();
 	}
 	
-	$scope.type = $stateParams.type;
-	if($scope.type==0){
-		$scope.headtitle = '二手房源新增';
-	}else{
-		$scope.headtitle = '租房源新增';
-	}
-	$scope.id=$stateParams.id;
-	
-//	
-//	$scope.$on('$ionicView.beforeEnter',function(event,data){
-//		//console.log('离开'+data.stateName+'视图');
-//		console.log(data)
-//	})
+	$scope.headtitle = '租房源新增';
 	
 	(function($){
     //如果有元素移除
@@ -179,7 +166,7 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
         var eleNo = params.eleNo || '';  //第
         var eleTotal = params.eleTotal || '';  //共
         var beforeAction = params.beforeAction || function(){}; //执行前的动作  无参数
-        var afterAction = params.afterAction || function (){data, data2};//执行后的动作   参数1：选择的文字1； 参数2 选择的文字2 
+        var afterAction = params.afterAction || function (){data1, data2};//执行后的动作   参数1：选择的文字1； 参数2 选择的文字2 
 
         $(evEle).attr('readonly','readonly');
         eleName!=''?eleName = '<div class="cell" style="font-size:14px;color:#b2b2b2;">'+eleName+'</div>':eleName = '';
@@ -242,7 +229,7 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
             // 确认选择
             $('.sel-box .ok').click(function(){
                 $(evEle).attr('data-sel01', scText);
-//              $(evEle).attr('data-sel02', scText2);
+                $(evEle).attr('data-sel02', scText2);
                 afterAction(scText, scText2);
 
                 $('.sel-boxs').find('.sel-box').removeClass('fadeInUp').addClass('fadeInDown');
@@ -255,6 +242,8 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
             });   
         });
     };
+
+
     // 封装说明：
     // 基于jQuery
     // 适合场景，只适用于三个值的选取模式
@@ -360,25 +349,54 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
             });   
         });
     };
+
 })($);
 
-
-
-	
 	$http.get($Factory.Server.hjson.url).then(function(resData){
-		
-		$scope.chaoxiang=resData.data.Bounds;
-		$scope.chaoxiangarr=[]
-		for(var i=0;i<$scope.chaoxiang.length;i++){
-			$scope.chaoxiangarr.push($scope.chaoxiang[i].text)
+		//租房方式
+		var zufang=resData.data.RentTypes;
+		var zufangarr=[];
+		for(var i=0;i<zufang.length;i++){
+			zufangarr.push(zufang[i].text)
+		}
+	    $.scrEvent({
+	      data: zufangarr,   //数据
+	      evEle: '.zf-zufang',            //选择器
+	      title: '租房方式',            // 标题
+	      defValue: '整租',             // 默认值
+	      afterAction: function (data) {   //  点击确定按钮后,执行的动作
+	        $(".zf-zufang").val(data);
+	      }
+	    });
+
+	     //付款方式
+	    var fukuang=resData.data.PayTypes;
+		var fukuangarr=[];
+		for(var i=0;i<fukuang.length;i++){
+			fukuangarr.push(fukuang[i].text)
+		}
+	    $.scrEvent({
+	      data: fukuangarr,   //数据
+	      evEle: '.zf-fukuang',            //选择器
+	      title: '付款方式',            // 标题
+	      defValue: '押1付1',             // 默认值
+	      afterAction: function (data) {   //  点击确定按钮后,执行的动作
+	        $(".zf-fukuang").val(data);
+	      }
+	    });
+		//朝向
+		var chaoxiang=resData.data.Bounds;
+		var chaoxiangarr=[]
+		for(var i=0;i<chaoxiang.length;i++){
+			chaoxiangarr.push(chaoxiang[i].text)
 		}	
 	    $.scrEvent({
-	      data: $scope.chaoxiangarr,   //数据
-	      evEle: '.qu-chaoxiang',            //选择器
+	      data: chaoxiangarr,   //数据
+	      evEle: '.zf-chaoxiang',            //选择器
 	      title: '请选择朝向',            // 标题
 	      defValue: '东',             // 默认值
 	      afterAction: function (data) {   //  点击确定按钮后,执行的动作
-	        $(".qu-chaoxiang").val(data);
+	        $(".zf-chaoxiang").val(data);
 	      }
 	    });
 	    
@@ -391,7 +409,7 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
 		$.scrEvent2({
 	        data: loucengarr,
 	        data2: loucengarr,
-	        evEle: '.qu-louceng',
+	        evEle: '.zf-louceng',
 	        title: '楼层',
 	        defValue: 1,
 	        defValue2: 1,
@@ -400,7 +418,7 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
 	        eleNo:'第',
 	        eleName2: '层',
 	        afterAction: function (data1, data2) {
-	          $('.qu-louceng').val(data1 + '/' + data2);
+	          $('.zf-louceng').val(data1 + '/' + data2);
 	          $scope.TotalFloor=data2;
 	          $scope.Floor=data1;
 	        }
@@ -427,7 +445,7 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
 	        data: shiarr,
 	        data2: tingarr,
 	        data3: weiarr,
-	        evEle: '.qu-fangxing',
+	        evEle: '.zf-fangxing',
 	        title: '房型',
 	        defValue: 1,
 	        defValue2: 1,
@@ -436,7 +454,7 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
 	        eleName2: '厅',
 	        eleName3: '卫',
 	        afterAction: function (data1, data2,data3) {
-	          $('.qu-fangxing').val(data1 + '室' + data2 + '厅'+data3+'卫');
+	          $('.zf-fangxing').val(data1 + '室' + data2 + '厅'+data3+'卫');
 	          $scope.RoomType=data1;
 	          $scope.HallType=data2;
 	          $scope.BathType=data3;
@@ -452,11 +470,11 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
 		}
 	    $.scrEvent({
 	      data: leixingarr,   //数据
-	      evEle: '.qu-leixing',            //选择器
+	      evEle: '.zf-leixing',            //选择器
 	      title: '',            // 标题
 	      defValue: '普通住宅',             // 默认值
 	      afterAction: function (data) {   //  点击确定按钮后,执行的动作
-	        $(".qu-leixing").val(data);
+	        $(".zf-leixing").val(data);
 	      }
 	    });
 	    
@@ -468,33 +486,21 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
 		}
 	    $.scrEvent({
 	      data: zhuangxiuarr,   //数据
-	      evEle: '.qu-zhuangxiu',            //选择器
+	      evEle: '.zf-zhuangxiu',            //选择器
 	      title: '装修',            // 标题
 	      defValue: '豪装',             // 默认值
 	      afterAction: function (data) {   //  点击确定按钮后,执行的动作
-	        $(".qu-zhuangxiu").val(data);
+	        $(".zf-zhuangxiu").val(data);
 	      }
 	    });
 	    
-	    //年代
-	    var niandai=resData.data.YearOptions;
-	    var niandaiarr=[];
-	    for(var i=0;i<niandai.length;i++){
-			niandaiarr.push(niandai[i].text)
-		}
-	    $.scrEvent({
-	      data:niandaiarr,   //数据
-	      evEle: '.qu-niandai',            //选择器
-	      title: '年代',            // 标题
-	      defValue: 1995,             // 默认值
-	      afterAction: function (data) {   //  点击确定按钮后,执行的动作
-	        $(".qu-niandai").val(data);
-	      }
-	    });
+	   
 	    
-	    $scope.chooseList=resData.data.Specials;
-	    
+		//special
+	    $scope.devList=resData.data.Configures;
+		console.log($scope.devList)
 	})
+
 	$scope.createtime=function(){
 			var day=new Date();
 			var year=day.getFullYear();
@@ -505,42 +511,42 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
 			var second=day.getSeconds();
 			return year+'-'+month+'-'+date+' '+hour+':'+minute+':'+second;
 		}
-
-	
-	
-	
 	
 	if($scope.title=='修改'){
 		$http.get($Factory.HouseSource.detail.url,{params:{id:$scope.id}}).then(function(resData){
-//				$rootScope.ershouxiaoqu=resData.data.house.CommunityName;
-//				$rootScope.ershouxiaoquid=resData.data.house.CommunityId;
-//				$rootScope.ershoutitle=resData.data.house.Title;
-//				$rootScope.ershoudes=resData.data.house.Discription;
+//				$rootScope.zufangxiaoqu=resData.data.house.CommunityName;
+//				$rootScope.zufangxiaoquid=resData.data.house.CommunityId;
+//				$rootScope.zufangtitle=resData.data.house.Title;
+//				$rootScope.zufangdes=resData.data.house.Discription;
 				$scope.TotalFloor=resData.data.house.TotalFloor;
 				$scope.Floor=resData.data.house.Floor;
 				$scope.RoomType=resData.data.house.RoomType;
 				$scope.HallType=resData.data.house.HallType;
 				$scope.BathType=resData.data.house.BathType;
 				$timeout(function(){
-					for(var i=0;i<resData.data.house.Special.length;i++){
-						var num=resData.data.house.Special[i]*1-1;
-						$scope.chooseList[num].isChecked=true;
-					}	
+					for(var i=0;i<resData.data.house.Configure.length;i++){
+						var num=resData.data.house.Configure[i]*1-1;
+						$scope.devList[num].isChecked=true;
+					}
+					
 				})
+				
 				$scope.publishdata={
 					AccountId:resData.data.house.AccountId,
 					Id:resData.data.house.Id,
 					xiaoqu:resData.data.house.CommunityName,
 					xiaoquid:resData.data.house.Id,
-					number:resData.data.house.Number,
-					price:resData.data.house.Price,
+					zufang:resData.data.house.RentType,
+					zujin:resData.data.house.Price,
 					area:resData.data.house.Space,
 					fangxing:resData.data.house.RoomType+'室'+resData.data.house.HallType+'厅'+resData.data.house.BathType+'卫',
 					louceng:resData.data.house.Floor+'/'+resData.data.house.TotalFloor,
 					type:resData.data.house.BuildType,
 					chaoxiang:resData.data.house.Orientation,
 					zhuangxiu:resData.data.house.Fitment,
-					year:resData.data.house.Year,
+					peizhi:resData.data.house.Configure,
+//					peizhi:$scope.chooseList,
+					pay:resData.data.house.PayType,
 					special:resData.data.house.Special,
 					IndoorImages:resData.data.house.IndoorImages,
 					IndoorShowImages:resData.data.house.IndoorShowImages,
@@ -549,36 +555,33 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
 					title:resData.data.house.Title,
 					des:resData.data.house.Discription
 				}
-//				$scope.chooseList=resData.data.house.Special
-//				for(var i=0;i<resData.data.house.Special.length;i++){
-//					var num=resData.data.house.Special[i]*1;
-//					$scope.chooseList[num].isChecked=true;
-//				}
+				
 			})
 	}else{
 		$scope.publishdata={
 			AccountId:'',
 			Id:'',
 			xiaoqu:$rootScope.ershouxiaoqu,
-			number:'',
-			price:'',
+			zujin:'',
+			zufang:'',
 			area:'',
 			fangxing:'',
 			louceng:'',
 			type:'',
 			chaoxiang:'',
 			zhuangxiu:'',
-			year:'',
-			special:[],
+			pay:'',
+			peizhi:[],
 			IndoorImages:[],
 			IndoorShowImages:[],
 			LayoutImages:[],
 			LayoutShowImages:[],
-			title:$rootScope.ershoutitle,
-			des:$rootScope.ershoudes
+			title:$rootScope.zufangtitle,
+			des:$rootScope.zufangdes
 		}
 	}
-	//base64转url
+
+		//base64转url
 	$scope.changeBase64=function(url){
 		var mycans = document.getElementById("mycans");
 		var cxt = mycans.getContext("2d");
@@ -595,7 +598,7 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
 					   'Content-Type': 'application/json'
 					 },
 					 data:{path:'HouseSource',file:base}
-			}
+				}
 				$http(req).then(function(resData){
 					if(resData.data.error==0){
 						$scope.publishdata.IndoorImages.push(resData.data.url)
@@ -632,6 +635,7 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
 				return;
 		}
 	}
+	
 	//点击叉号去除
 	$scope.remove=function(index){
 		$scope.publishdata.IndoorImages.splice(index,1)
@@ -641,93 +645,86 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
 		$scope.publishdata.LayoutImages.splice(index,1)
 		$scope.publishdata.LayoutShowImages.splice(index,1);
 	}
-
 	
-	
-	
-		//室内图片获取
-	    $('#chooseImg').on('click','img',function(){
+		//图片获取
+	    $('#zufangchooseImg').on('click','img',function(){
 			$(this).next().click();
 		});
-		$('#chooseImg').on('change','input',function(){
-			var file = $(this)[0].files[0];
-				$scope.changeBase64(URL.createObjectURL(file))
-//			}
-		});
-		//室外图片获取
-	    $('#chooseLayoutImg').on('click','img',function(){
-			$(this).next().click();
-		});
-		$('#chooseLayoutImg').on('change','input',function(){
+		$('#zufangchooseImg').on('change','input',function(){
 			var file = $(this)[0].files[0];
 //			$scope.changeBase64(file)
 			// 其实这里可以不用判断，因为 accept="image/*"
 //			if (file.type.startsWith('image')) {
-//				$(this).prev().attr('src',URL.createObjectURL(file))
-				$scope.changeLayoutBase64(URL.createObjectURL(file))
+				$scope.changeBase64(URL.createObjectURL(file))
 //			}
 		});
-	
-    
+		//室外图片获取
+	    $('#zufangchooseLayoutImg').on('click','img',function(){
+			$(this).next().click();
+		});
+		$('#zufangchooseLayoutImg').on('change','input',function(){
+			var file = $(this)[0].files[0];
+			$scope.changeLayoutBase64(URL.createObjectURL(file))
+		});
+			
 		
-		
-	
-	    $scope.publish=function(){
-	    	$scope.publishdata.xiaoqu=$scope.ershouxiaoqu
-	    	$scope.publishdata.title=$scope.ershoutitle
-	    	$scope.publishdata.des=$rootScope.ershoudes
-	    	$scope.publishdata.year=$(".qu-niandai").val()
-	    	$scope.publishdata.chaoxiang=$(".qu-chaoxiang").val()
-	    	$scope.publishdata.fangxing=$(".qu-fangxing").val()
-	    	$scope.publishdata.louceng=$(".qu-louceng").val()
-	    	$scope.publishdata.type=$(".qu-leixing").val()
-	    	$scope.publishdata.zhuangxiu=$(".qu-zhuangxiu").val()
+		$scope.publish=function(){
+	    	$scope.publishdata.xiaoqu=$scope.zufangxiaoqu
+	    	$scope.publishdata.title=$scope.zufangtitle
+	    	$scope.publishdata.des=$rootScope.zufangdes
+	    	$scope.publishdata.zufang=$(".zf-zufang").val()
+	    	$scope.publishdata.pay=$(".zf-fukuang").val()
+	    	$scope.publishdata.chaoxiang=$(".zf-chaoxiang").val()
+	    	$scope.publishdata.fangxing=$(".zf-fangxing").val()
+	    	$scope.publishdata.louceng=$(".zf-louceng").val()
+	    	$scope.publishdata.type=$(".zf-leixing").val()
+	    	$scope.publishdata.zhuangxiu=$(".zf-zhuangxiu").val()
 	    	
 	    	var obj=$('input[type="checkbox"]'); 
-			//取到对象数组后，我们来循环检测它是不是被选中  
-			$scope.publishdata.special=[];
+	    	$scope.publishdata.peizhi=[];
 			for(var i=0; i<obj.length; i++){ 
 				if(obj[i].checked){
-					$scope.publishdata.special.push(i+1); //如果选中，将value添加到变量s中
+					$scope.publishdata.peizhi.push(i+1); //如果选中，将value添加到变量s中
 				} 
 			} 
+			
 			//发布的信息$scope.publishdata
 			//提交的信息
 			$scope.Data={
 				AccountId:$scope.publishdata.AccountId,
 				Id:$scope.publishdata.Id,
 				BathType:$scope.BathType,
-				BuildType:$(".qu-leixing").val(),
-				CommunityId:$rootScope.ershouxiaoquid,
-				CommunityName:$rootScope.ershouxiaoqu,
-				Configure:[],
+				BuildType:$(".zf-leixing").val(),
+				CommunityId:$rootScope.zufangxiaoquid,
+				CommunityName:$rootScope.zufangxiaoqu,
+				Configure:$scope.publishdata.peizhi,
 				CreateTime:$scope.createtime,
-				Discription:$rootScope.ershoudes,
-				Fitment:$(".qu-zhuangxiu").val(),
+				Discription:$rootScope.zufangdes,
+				Fitment:$(".zf-zhuangxiu").val(),
 				Floor:$scope.Floor,
 				HallType:$scope.HallType,
 				IndoorImages:$scope.publishdata.IndoorImages,
-				IndoorShowImages:[],
+				IndoorShowImages:$scope.publishdata.IndoorShowImages,
 				LayoutImages:$scope.publishdata.LayoutImages,
-				LayoutShowImages:[],
+				LayoutShowImages:$scope.publishdata.LayoutShowImages,
 				Number:$scope.publishdata.number,
-				Orientation:$(".qu-chaoxiang").val(),
-				PayType:'',
+				Orientation:$(".zf-chaoxiang").val(),
+				PayType:$(".zf-fukuang").val(),
 				Phone:localStorage.getItem('agentphone'),
-				Price:$scope.publishdata.price,
+				Price:$scope.publishdata.zujin,
 				Recommend:'',
-				RentType:'',
+				RentType:$(".zf-zufang").val(),
 				RoomType:$scope.RoomType,
 				Space:$scope.publishdata.area,
-				Special:$scope.publishdata.special,
+				Special:'',
 				Tags:'',
-				Title:$rootScope.ershoutitle,
+				Title:$rootScope.zufangtitle,
 				TotalFloor:$scope.TotalFloor,
-				Type:1,
-				Year:$scope.publishdata.year
+				Type:2,
+				Year:''
 			}
-			if($scope.Data.BathType==''||$scope.Data.BuildType==''||$scope.Data.Year==''||$scope.Data.CommunityName==''||$scope.Data.Discription==''||$scope.Data.IndoorImages.length<1||$scope.Data.Special.length<1||
-			$scope.Data.Fitment==''||$scope.Data.Floor==''||$scope.Data.Number==''||$scope.Data.Orientation==''||$scope.Data.Price==''||$scope.Data.Space==''||$scope.Data.Title==''){
+			if($scope.Data.BathType==''||$scope.Data.BuildType==''||$scope.Data.RentType==''||$scope.Data.CommunityName==''||$scope.Data.Discription==''||$scope.Data.IndoorImages.length<1||$scope.Data.Configure.length<1||
+			$scope.Data.Fitment==''||$scope.Data.Floor==''||$scope.Data.PayType==''||$scope.Data.Orientation==''||$scope.Data.Price==''||$scope.Data.Space==''||$scope.Data.Title==''){
 				$ionicLoading.show({
 								template:'除房型图其他为必填',
 								duration:1000
@@ -754,14 +751,15 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
 							 method: 'POST',
 							 url: $Factory.Score.add.url,
 							 headers: {
+					//			'Content-Type': 'application/json'
 								'Content-Type': 'application/x-www-form-urlencoded'
 							 },
+					//		 data: {actId:$scope.uid}
 							 data: "actId="+11
 							}
 						$http(req).then(function(resData){
 							
 						})
-						
 						$timeout(function(){
 							$ionicHistory.goBack()
 						},1000)
@@ -781,7 +779,10 @@ angular.module('App').controller('addFyCtl',function($ionicLoading,$ionicHistory
 			}
 			
 			
+			
+			
 	    }
-	    
-	   
+ 	
+    	  	
+			
 })

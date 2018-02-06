@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment'])
+angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monospaced.elastic'])
 .config(function($ionicConfigProvider,$stateProvider,$urlRouterProvider,$httpProvider){
 	$httpProvider.defaults.withCredentials = true;
 	$httpProvider.defaults.headers.post['Content-Type'] = 'application/json';
@@ -28,6 +28,13 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment'])
 		data:{isPublic:true}
 	})
 	
+	
+	.state('dialogbox',{
+		url: '/dialogbox/:id',
+		templateUrl: 'views/publicPage/dialogBox/dialogBox.html',
+		controller:'dialogBoxCtl',
+		data:{isPublic:true}
+	})
 	.state('tabs',{
 		url:'/tabs',
 		abstract: true,
@@ -84,11 +91,21 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment'])
 		data:{isPublic:true}
 	})
 	.state('tabs.clientSearch',{
-		url:'/ifhavehouse/clientsearch/:type',
+		url:'/ifhavehouse/clientsearch',
 		views:{
 			home:{
 				templateUrl:'views/tabs/ifHaveHouse/clientSearch/clientSearch.html',
 				controller:'clientSearchCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.houseSearch',{
+		url:'/ifhavehouse/housesearch',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/houseSearch/houseSearch.html',
+				controller:'houseSearchCtl'
 			}
 		},
 		data:{isPublic:true}
@@ -103,12 +120,22 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment'])
 		},
 		data:{isPublic:true}
 	})
-	.state('tabs.addFy',{
-		url:'/ifhavehouse/fbmanage/addfy/:type',
+	.state('tabs.addSell',{
+		url:'/ifhavehouse/fbmanage/addsell',
 		views:{
 			home:{
-				templateUrl:'views/tabs/ifHaveHouse/fbManage/addFy/addFy.html',
-				controller:'addFyCtl'
+				templateUrl:'views/tabs/ifHaveHouse/fbManage/addSell/addSell.html',
+				controller:'addSellCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.addRent',{
+		url:'/ifhavehouse/fbmanage/addrent',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/fbManage/addRent/addRent.html',
+				controller:'addRentCtl'
 			}
 		},
 		data:{isPublic:true}
@@ -133,6 +160,16 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment'])
 		},
 		data:{isPublic:true}
 	})
+	.state('tabs.addNeed',{
+		url:'/ifhavehouse/needmanage/addneed/:type',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/needManage/addNeed/addNeed.html',
+				controller:'addNeedCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
 	.state('tabs.perCenter',{
 		url:'/percenter',
 		views:{
@@ -143,6 +180,17 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment'])
 		},
 		data:{isPublic:true}
 	})
+	.state('tabs.chatList',{
+		url:'/chatlist',
+		views:{
+			classify:{
+				templateUrl:'views/tabs/chatList/chatList.html',
+				controller:'chatListCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	
 
 
 	.state('tabs.home',{
