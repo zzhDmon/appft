@@ -9,11 +9,55 @@ angular.module('App').controller('ifHaveHouseCtl',function($ionicScrollDelegate,
 		}
 	})
 
+	
+
+// 旋轉導航
+	var items = $('#if_have_house .menuItem');
+	for(var i = 0, l = items.length; i < l; i++) {
+		
+		items[i].style.left = (50 - 35*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
+		items[i].style.top = (50 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
+	}
+	$scope.toggleOpen=function(e){
+		$('#if_have_house .circle').toggleClass('open')
+	}
+
+
 	if($stateParams.query==0){
 		$scope.haveHouse=true;
+		$scope.homeTypeParams=$rootScope.homeTypeParams=0;
+		$('#if_have_house .tabNav .havehouse').css('display','block')
+		$('#if_have_house .tabNav .nohouse').css('display','none')
 	}else{
 		$scope.haveHouse=false;
+		$scope.homeTypeParams=$rootScope.homeTypeParams=1;
+		$('#if_have_house .tabNav .havehouse').css('display','none')
+		$('#if_have_house .tabNav .nohouse').css('display','block')
 	}
+	//切换有房没房 
+	$scope.onSwipeRight=function(){
+		$scope.haveHouse=!$scope.haveHouse
+		if($scope.haveHouse){
+			$scope.homeTypeParams=$rootScope.homeTypeParams=0;
+			// $('#if_have_house .tabNav .havehouse').removeClass('animated slideOutLeft')
+			// $('#if_have_house .tabNav .havehouse').addClass('animated slideInRight')
+			// $('#if_have_house .tabNav .nohouse').removeClass('animated slideInRight')
+			// $('#if_have_house .tabNav .nohouse').addClass('animated slideOutleft')
+			$('#if_have_house .tabNav .havehouse').toggle('fast',function(){
+				$('#if_have_house .tabNav .nohouse').toggle('slow')
+			})
+		}else{
+			$scope.homeTypeParams=$rootScope.homeTypeParams=1;
+			$('#if_have_house .tabNav .nohouse').toggle('fast',function(){
+				$('#if_have_house .tabNav .havehouse').toggle('slow')
+			})
+			// $('#if_have_house .tabNav .nohouse').removeClass('animated slideOutLeft')
+			// $('#if_have_house .tabNav .nohouse').addClass('animated slideInRight')
+			// $('#if_have_house .tabNav .havehouse').removeClass('animated slideInRight')
+			// $('#if_have_house .tabNav .havehouse').addClass('animated slideOutleft')
+		}
+	}
+	
 	//GPS定位
 	$scope.getarea=function(){
 		//myaddr(116.324499,39.899216);
@@ -96,17 +140,35 @@ angular.module('App').controller('ifHaveHouseCtl',function($ionicScrollDelegate,
 	
 	$scope.openchoose=function(index){
 		$scope.topindex=index;
-		$('#ifHaveHouse .pullchooselist').slideToggle('fast')
-		$('#ifHaveHouse .mask').toggle()
+		
+		$('.pullchooselist').eq(index).removeClass("menu_chioce");
+		$(".menu_chioce").slideUp('fast',$scope.showmask()); 
+		$('.pullchooselist').eq(index).slideToggle('fast');
+		$('.pullchooselist').eq(index).addClass("menu_chioce");
 	}
+	$scope.showmask=function(){
+		$scope.havenPullDown=$('.pullchooselist .pulllist .scroll-content').eq($scope.topindex).innerHeight()==0
+							
+		if($scope.havenPullDown){
+			$('#if_have_house .mask').addClass('open')
+		}else{
+			$('#if_have_house .mask').removeClass('open')
+		}
+	}
+
+
 	$scope.closechoose=function(){
-		$('#ifHaveHouse .pullchooselist').slideToggle('fast')
-		$('#ifHaveHouse .mask').toggle()
+		// $('#if_have_house .pullchooselist').slideToggle('fast')
+		// $('#if_have_house .mask').toggle()
+		$(".menu_chioce").slideUp('fast'); 
+		$('#if_have_house .mask').removeClass('open')
 	}
-	$scope.onlyclosechoose=function(){
-		$('#ifHaveHouse .pullchooselist').css('display','none')
-		$('#ifHaveHouse .mask').css('display','none')
-	}
+	// $scope.onlyclosechoose=function(){
+	// 	// $('#if_have_house .pullchooselist').css('display','none')
+	// 	// $('#if_have_house .mask').css('display','none')
+	// 	$(".menu_chioce").slideUp('fast'); 
+	// 	$('#if_have_house .mask').removeClass('open')
+	// }
 	
 	$scope.changeareaindex=function($index,$event){
 		$($event.target).addClass('clicked')

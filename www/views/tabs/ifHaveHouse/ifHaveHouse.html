@@ -1,11 +1,19 @@
 ﻿
 <!--对话模板-->
 <ion-view id="if_have_house" hide-nav-bar=true view-title="房源发布"  class='dark'>
-	<!--<ion-nav-buttons side="secondary">
-		<a  class="button button-small button-icon"  ng-click="openPopoverView($event)"><i style="color: gray;font-size: 25px!important;color: rgb(51,51,51);font-weight: 500;" class="iconfont icon-jiahao1"></i></a>	
-	</ion-nav-buttons>-->
 	
-	<div ng-click="onlyclosechoose()" class="bar searchhouse-header item-input-inset">
+	<div ng-click="toggleOpen()" class="circle" style="z-index:9999;">
+		<div class="ring">
+			<span class="menuItem iconfont icon-home" >{{homeTypeParams}}</span>
+			<span class="menuItem iconfont icon-kehu"></span>
+			<span class="menuItem iconfont icon-dianhua" ui-sref="tabs.chatList"></span>
+			<span class="menuItem iconfont icon-wode" ui-sref="tabs.perCenter"></span>
+		</div>
+		<span class="center iconfont icon-jiahao1"></span>
+	</div>
+
+	
+	<div ng-click="closechoose()" class="bar searchhouse-header item-input-inset">
 	    <span class="location" ng-click="getarea()">厦门<i class="iconfont icon-xialacaidanxiaosanjiao1"></i></span>
 		
 		<span ng-if="haveHouse" class="item-input-wrapper" ui-sref="tabs.clientSearch">
@@ -23,19 +31,20 @@
 	</div>
 
 	<div class="tabNav" style="position:absolute;bottom:0;width:100%;height:45px;z-index:1;">
-		<ul ng-if="haveHouse">
+		<ul class="havehouse">
 			<li class="lef" ui-sref="tabs.fbManage({type:0})">出售</li>
 			<li class="mid" ui-sref="tabs.perCenter">mid</li>
 			<li class="rig" ui-sref="tabs.fbManage({type:1})">出租</li>
 		</ul>
-		<ul ng-if="!haveHouse">
+		<ul class="nohouse">
 			<li class="lef" ui-sref="tabs.needManage({type:0})">买房</li>
 			<li class="mid" ui-sref="tabs.perCenter">mid</li>
 			<li class="rig" ui-sref="tabs.needManage({type:1})">租房</li>
 		</ul>
 	</div>
 	
-	<ul class="topfour" ui-sref="tabs.chatList">
+	<ul class="topfour" >
+	<!-- <ul class="topfour" ui-sref="tabs.chatList"> -->
 		<li ng-click="openchoose(0)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.district=='区域']"><div>{{querydata.district}} <span ng-if="querydata.area!==''">|{{querydata.area}}</span></div><i class="iconfont icon--pulldown"></i></li>
 		<li ng-click="openchoose(1)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.price=='售价']"><div>{{querydata.price}}</div><i class="iconfont icon--pulldown"></i></li>
 		<li ng-click="openchoose(2)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.type=='房型']"><div>{{querydata.type}}</div><i class="iconfont icon--pulldown"></i></li>
@@ -44,11 +53,9 @@
 	
 	<!--模态层-->
 	<div ng-click="closechoose()" class="mask"></div>
-	
-	<div class="pullchooselist">
-
+	<div class="pullchooselist first">
 		<div class="bottom"></div>
-		<div ng-if="topindex==0" class="district">
+		<div class="pulllist district">
 			<ion-content>
 				<ion-list>
 					<ion-item ng-click="changeareaindex($index,$event)" ng-repeat="district in districtdata track by $index">{{district.district}}</ion-item>
@@ -62,23 +69,27 @@
 				</ion-content>
 			</div>
 		</div>
-
-		<div ng-if="topindex==1" class="price">
+	</div>
+	<div class="pullchooselist second">
+		<div class="pulllist price">
 			<ion-content>
 				<ion-list>
 					<ion-item ng-click="changeprice($index,price,$event)" ng-repeat="price in pricedata track by $index">{{price}}</ion-item>
 				</ion-list>
 			</ion-content>
 		</div>
-
-		<div ng-if="topindex==2" class="type">
+	</div>
+	<div class="pullchooselist third">
+		<div class="pulllist type">
 			<ion-content>
 				<ion-list>
 					<ion-item ng-click="changetype($index,type,$event)" ng-repeat="type in typedata track by $index">{{type}}</ion-item>
 				</ion-list>
 			</ion-content>
 		</div>
-		<div ng-if="topindex==3" class="sort">
+	</div>
+	<div class="pullchooselist forth">
+		<div class="pulllist sort">
 			<ion-content>
 				<ion-list>
 					<ion-item ng-click="changesort($index,sort,$event)" ng-repeat="sort in sortdata track by $index">{{sort}}</ion-item>
@@ -87,6 +98,7 @@
 		</div>
 	</div>
 	
+
 	<div ng-if="haveHouse" class="haveHouse">
 		<ion-content delegate-handle="mainscroll" on-swipe-right="onSwipeRight()" on-swipe-down="onSwipeDown()" on-swipe-up="onSwipeUp()" class="if-have-house">
 				<div ng-if="sellhousearr.length<1" class="card noresult">
@@ -106,19 +118,19 @@
 					
 					<ion-list>
 							<ion-item on-finish-render-filters item="item" ng-click="closeoption($event)" ng-repeat="sellhouse in sellhousearr track by $index" ui-sref="tabs.alikehousedetail({id:sellhouse.Id,type:1})">
-								<div class="img">
-									<img ng-src="{{sellhouse.Thumb}}"/>
+								<div class="img clientImg">
+									<img ng-src="http://ionicframework.com/img/docs/spengler.jpg"/>
 								</div>
 								
 								<div class="description">
-									<h6>{{sellhouse.Title}}</h6>
+									<h6>{{sellhouse.HouseType}}/{{sellhouse.Space}}平米</h6>
 									<p>{{sellhouse.CommunityName}}</p>
 									<div>
 										<div class="space">
-											{{sellhouse.HouseType}}&nbsp;{{sellhouse.Space}}平米 
+											<!-- {{sellhouse.HouseType}}&nbsp;{{sellhouse.Space}}平米  -->
 										</div>
 										<div class="price">
-											<span>{{sellhouse.Price}}</span>万
+											<span>200~300</span>万
 										</div>
 									</div>
 									<p>
@@ -126,12 +138,12 @@
 									</p>
 								</div>
 								
-								<ion-option-button ng-click="closeoption($event)" ui-sref="tabs.alikehouse({minprize:sellhouse.Price,maxprize:sellhouse.Id,roomType:sellhouse.HouseType})">
+								<!-- <ion-option-button ng-click="closeoption($event)" ui-sref="tabs.alikehouse({minprize:sellhouse.Price,maxprize:sellhouse.Id,roomType:sellhouse.HouseType})">
 									<div>
 										相似<br />
 										房源
 									</div>
-								</ion-option-button>
+								</ion-option-button> -->
 							</ion-item>
 					</ion-list>
 					
@@ -184,12 +196,12 @@
 								</p>
 							</div>
 							
-							<ion-option-button ng-click="closeoption($event)" ui-sref="tabs.alikehouse({minprize:sellhouse.Price,maxprize:sellhouse.Id,roomType:sellhouse.HouseType})">
+							<!-- <ion-option-button ng-click="closeoption($event)" ui-sref="tabs.alikehouse({minprize:sellhouse.Price,maxprize:sellhouse.Id,roomType:sellhouse.HouseType})">
 								<div>
 									相似<br />
 									房源
 								</div>
-							</ion-option-button>
+							</ion-option-button> -->
 						</ion-item>
 				</ion-list>
 				

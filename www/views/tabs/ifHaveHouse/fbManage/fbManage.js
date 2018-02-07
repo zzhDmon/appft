@@ -16,7 +16,21 @@ angular.module('App').controller('fbManageCtl',function($ionicLoading,$ionicHist
 	$scope.showType=$stateParams.type;
 	$scope.back=function(){
 		$ionicHistory.goBack()
-	}				
+	}
+
+	$scope.changeInfo=function($event){
+		$event.stopPropagation();  
+	}
+	$scope.changeReal=function($event){
+		$event.stopPropagation();  
+	}
+	$scope.changePublic=function($event){
+		$event.stopPropagation();  
+	}
+	$scope.changePush=function($event){
+		$event.stopPropagation();  
+	}
+	
 	
 	$scope.update=function(){
 		if($scope.toptwo=='二手房'){

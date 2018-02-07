@@ -59,4 +59,5 @@
         <variable name="APP_KEY" value="05efb4abd755fffa53a87fe0" />
     </plugin>
     <plugin name="org.devgeeks.Canvas2ImagePlugin" spec="https://github.com/devgeeks/Canvas2ImagePlugin.git" />
+    <plugin name="cordova-plugin-image-picker" spec="^1.1.3" />
 </widget>

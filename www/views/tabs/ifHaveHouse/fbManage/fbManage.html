@@ -56,7 +56,10 @@
 							</div>
 							<p>
 								<!-- <span ng-repeat="Tag in sell.Tags">{{Tag}}</span> -->
-								<span>修改</span><span>已认证</span><span>停售</span><span>推广</span>
+								<span ng-click="changeInfo($event)">修改</span>
+								<span ng-click="changeReal($event)">已认证</span>
+								<span ng-click="changePublic($event)">发布</span>
+								<span ng-click="changePush($event)">推广</span>
 							</p>
 						</div>
 					</li>
@@ -99,7 +102,11 @@
 								</div>
 							</div>
 							<p>
-								<span ng-repeat="Tag in rent.Tags">{{Tag}}</span>
+								<!-- <span ng-repeat="Tag in rent.Tags">{{Tag}}</span> -->
+								<span ng-click="changeInfo($event)">修改</span>
+								<span ng-click="changeReal($event)">已认证</span>
+								<span ng-click="changePublic($event)">发布</span>
+								<span ng-click="changePush($event)">推广</span>
 							</p>
 						</div>
 					</li>

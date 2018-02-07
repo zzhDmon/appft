@@ -139,6 +139,9 @@
         z-index: 1000;
         top: 44px;
     }
+    .mask.open{
+        display:block;
+    }
     
     
     .pullchooselist{
@@ -307,8 +310,10 @@
                             float: left;
                             position: relative;
                             img{
-                                border-radius: 3px;
-                                width: 100%;
+                                display: block;
+                                margin: auto;
+                                border-radius: 50%;
+                                width: 85px;
                                 height: 85px;
                             } 
                             .zhutui{
@@ -506,8 +511,10 @@
                             float: left;
                             position: relative;
                             img{
-                                border-radius: 3px;
-                                width: 100%;
+                                display: block;
+                                margin: auto;
+                                border-radius: 50%;
+                                width: 85px;
                                 height: 85px;
                             } 
                             .zhutui{

@@ -29,10 +29,16 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 	})
 	
 	
-	.state('dialogbox',{
+	.state('dialogBox',{
 		url: '/dialogbox/:id',
 		templateUrl: 'views/publicPage/dialogBox/dialogBox.html',
 		controller:'dialogBoxCtl',
+		data:{isPublic:true}
+	})
+	.state('realName',{
+		url: '/realname',
+		templateUrl: 'views/publicPage/realName/realName.html',
+		controller:'realNameCtl',
 		data:{isPublic:true}
 	})
 	.state('tabs',{

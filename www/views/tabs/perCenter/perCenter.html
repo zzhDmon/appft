@@ -1,8 +1,17 @@
 <!--我的界面模板-->
-<ion-view id="mine"  view-title="我的" hide-nav-bar=true>
+<ion-view id="per_center"  view-title="我的" hide-nav-bar=true>
 	
+	<div ng-click="toggleOpen()" class="circle" style="z-index:9999;">
+		<div class="ring">
+			<span class="menuItem iconfont icon-home" ui-sref="tabs.ifHaveHouse({'query':homeTypeParams})">{{homeTypeParams}}</span>
+			<span class="menuItem iconfont icon-kehu"></span>
+			<span class="menuItem iconfont icon-dianhua" ui-sref="tabs.chatList"></span>
+			<span class="menuItem iconfont icon-wode" ui-sref="tabs.perCenter"></span>
+		</div>
+		<span class="center iconfont icon-jiahao1"></span>
+	</div>
 	
-	<ion-content class="mine" has-bouncing=false>
+	<ion-content class="per-center" has-bouncing=false>
 		<!-- <canvas width="100" height="100" id="testCanvas"></canvas> -->
 		
 		<div class="perinfo">

@@ -498,7 +498,6 @@ angular.module('App').controller('addRentCtl',function($ionicLoading,$ionicHisto
 	    
 		//special
 	    $scope.devList=resData.data.Configures;
-		console.log($scope.devList)
 	})
 
 	$scope.createtime=function(){

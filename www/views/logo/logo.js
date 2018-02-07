@@ -50,10 +50,12 @@ angular.module('App').controller('LogoController',function($timeout,$interval,$h
 	$scope.onSwipeUp=function(){
 			fanvas.gotoAndPlay("testCanvas",31);
 			$scope.query=0;
+			$rootScope.homeTypeParams=0;
 	}
 	$scope.onSwipeDown=function(){
 			fanvas.gotoAndPlay("testCanvas",31)
 			$scope.query=1;
+			$rootScope.homeTypeParams=1;
 	}
 
 })

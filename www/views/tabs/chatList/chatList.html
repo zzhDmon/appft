@@ -1,6 +1,15 @@
 <!--界面模板-->
 <ion-view id="chat_list" view-title="需求新增" hide-nav-bar=true>
-		
+		<div ng-click="toggleOpen()" class="circle" style="z-index:9999;">
+            <div class="ring">
+                <span class="menuItem iconfont icon-home" ui-sref="tabs.ifHaveHouse({'query':homeTypeParams})">{{homeTypeParams}}</span>
+                <span class="menuItem iconfont icon-kehu"></span>
+                <span class="menuItem iconfont icon-dianhua" ui-sref="tabs.chatList"></span>
+                <span class="menuItem iconfont icon-wode" ui-sref="tabs.perCenter"></span>
+            </div>
+            <span class="center iconfont icon-jiahao1"></span>
+        </div>
+        
         <div class="header">
             <div class="back">
                

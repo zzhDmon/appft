@@ -24892,6 +24892,208 @@ a.button {
                 font-size: 16px;
                 font-weight: 600; }
 
+#dialog_box .bar-footer {
+  overflow: visible !important; }
+
+#dialog_box .bar-footer textarea {
+  resize: none;
+  height: 25px;
+  /* fixes an ios bug bear */ }
+
+#dialog_box button.ion-android-send {
+  padding-top: 2px;
+  /* add this to keep your footer buttons down 
+    at the bottom as the textarea resizes */ }
+
+#dialog_box .footer-btn-wrap {
+  position: relative;
+  height: 100%;
+  width: 50px;
+  top: 7px; }
+
+#dialog_box .footer-btn {
+  position: absolute !important;
+  bottom: 0; }
+
+#dialog_box img.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px; }
+
+#dialog_box img.profile-pic.left {
+  left: 10px; }
+
+#dialog_box img.profile-pic.right {
+  right: 10px; }
+
+#dialog_box .ion-email {
+  float: right;
+  font-size: 32px;
+  vertical-align: middle; }
+
+#dialog_box .message {
+  font-size: 14px; }
+
+#dialog_box .message-detail {
+  white-space: nowrap;
+  font-size: 14px; }
+
+#dialog_box .bar.item-input-inset .item-input-wrapper input {
+  width: 100% !important; }
+
+#dialog_box .message-wrapper {
+  position: relative; }
+
+#dialog_box .message-wrapper:last-child {
+  margin-bottom: 10px; }
+
+#dialog_box .chat-bubble {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 18px;
+  position: relative;
+  margin: 10px;
+  max-width: 80%; }
+
+#dialog_box .chat-bubble:before {
+  content: "\00a0";
+  display: block;
+  height: 16px;
+  width: 9px;
+  position: absolute;
+  bottom: -7.5px; }
+
+#dialog_box .chat-bubble.left {
+  background-color: #e6e5eb;
+  float: left;
+  margin-left: 55px; }
+
+#dialog_box .chat-bubble.left:before {
+  background-color: #e6e5eb;
+  left: 10px;
+  -webkit-transform: rotate(70deg) skew(5deg); }
+
+#dialog_box .chat-bubble.right {
+  background-color: #158ffe;
+  color: #fff;
+  float: right;
+  margin-right: 55px; }
+
+#dialog_box .chat-bubble.right:before {
+  background-color: #158ffe;
+  right: 10px;
+  -webkit-transform: rotate(118deg) skew(-5deg); }
+
+#dialog_box .chat-bubble.right a.autolinker {
+  color: #fff;
+  font-weight: bold; }
+
+#dialog_box .user-messages-top-icon {
+  font-size: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+  right: 5px; }
+
+#dialog_box .msg-header-username {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px; }
+
+#dialog_box input,
+#dialog_box textarea,
+#dialog_box .item-input,
+#dialog_box .item-input-wrapper {
+  background-color: #f4f4f4 !important; }
+
+#dialog_box .bold {
+  font-weight: bold; }
+
+#dialog_box .cf {
+  clear: both !important; }
+
+#dialog_box a.autolinker {
+  color: #3b88c3;
+  text-decoration: none;
+  /* loading */ }
+
+#dialog_box .loader-center {
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+#dialog_box .loader .ion-loading-c {
+  font-size: 64px; }
+
+#real_name .header {
+  background-color: #f6f6f6; }
+
+#real_name .real-name {
+  background-color: white;
+  height: 100%;
+  margin-top: 44px; }
+  #real_name .real-name .card {
+    box-shadow: none; }
+  #real_name .real-name .list {
+    border: none; }
+    #real_name .real-name .list .input-label {
+      padding: 7px 0 7px;
+      font-size: 14px;
+      width: 20vw !important;
+      color: #939393; }
+    #real_name .real-name .list .item-input input {
+      font-size: 16px; }
+  #real_name .real-name .idimage {
+    padding: 20px 0 0;
+    width: 100%;
+    height: auto; }
+    #real_name .real-name .idimage img {
+      margin: auto;
+      display: block;
+      width: 60vw;
+      height: 38vw; }
+  #real_name .real-name .loginbtn {
+    position: relative;
+    background-color: white;
+    height: 100%; }
+    #real_name .real-name .loginbtn .subbtn {
+      width: 100%;
+      margin-top: 70px;
+      padding: 20px 5vw 10px; }
+      #real_name .real-name .loginbtn .subbtn .button {
+        width: 90vw;
+        background-color: #41a0ff; }
+
 #if_have_house .searchhouse-header {
   position: absolute;
   z-index: 1002;
@@ -25010,6 +25212,9 @@ a.button {
   position: absolute;
   z-index: 1000;
   top: 44px; }
+
+#if_have_house .mask.open {
+  display: block; }
 
 #if_have_house .pullchooselist {
   width: 100%;
@@ -25146,8 +25351,10 @@ a.button {
           float: left;
           position: relative; }
           #if_have_house .if-have-house .ershou .list .item .item-content .img img {
-            border-radius: 3px;
-            width: 100%;
+            display: block;
+            margin: auto;
+            border-radius: 50%;
+            width: 85px;
             height: 85px; }
           #if_have_house .if-have-house .ershou .list .item .item-content .img .zhutui {
             width: 8vw;
@@ -25307,8 +25514,10 @@ a.button {
           float: left;
           position: relative; }
           #if_have_house .plus .ershou .list .item .item-content .img img {
-            border-radius: 3px;
-            width: 100%;
+            display: block;
+            margin: auto;
+            border-radius: 50%;
+            width: 85px;
             height: 85px; }
           #if_have_house .plus .ershou .list .item .item-content .img .zhutui {
             width: 8vw;
@@ -26622,23 +26831,23 @@ a.button {
         width: 20vw;
         height: 20vw; }
 
-#mine .header {
+#per_center .header {
   background-color: white; }
 
-#mine .mine .perinfo {
+#per_center .per-center .perinfo {
   padding: 44px 12px 10px;
   background-color: #41a0ff; }
-  #mine .mine .perinfo .img {
+  #per_center .per-center .perinfo .img {
     width: 100%;
     height: 70px; }
-    #mine .mine .perinfo .img img {
+    #per_center .per-center .perinfo .img img {
       display: block;
       width: 70px;
       height: 70px;
       margin: auto;
       border-radius: 50%;
       border: 1px solid #f2f4f8; }
-    #mine .mine .perinfo .img .noneimg {
+    #per_center .per-center .perinfo .img .noneimg {
       width: 70px;
       height: 70px;
       line-height: 90px;
@@ -26649,9 +26858,9 @@ a.button {
       margin: auto;
       text-align: center;
       color: #FFFFFF; }
-      #mine .mine .perinfo .img .noneimg .iconfont {
+      #per_center .per-center .perinfo .img .noneimg .iconfont {
         font-size: 50px; }
-  #mine .mine .perinfo .name {
+  #per_center .per-center .perinfo .name {
     margin: 10px 0 0;
     padding: 0;
     width: 100%;
@@ -26660,7 +26869,7 @@ a.button {
     text-align: center;
     font-size: 16px;
     color: #fff; }
-  #mine .mine .perinfo .sign {
+  #per_center .per-center .perinfo .sign {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -26674,34 +26883,34 @@ a.button {
     overflow: hidden;
     text-overflow: ellipsis; }
 
-#mine .mine .lookdetails {
+#per_center .per-center .lookdetails {
   width: 100%;
   height: 40px;
   padding: 0 12px; }
-  #mine .mine .lookdetails .lefticon {
+  #per_center .per-center .lookdetails .lefticon {
     float: left;
     width: 20px;
     height: 100%;
     line-height: 40px;
     text-align: center;
     color: #41a0ff; }
-    #mine .mine .lookdetails .lefticon .iconfont {
+    #per_center .per-center .lookdetails .lefticon .iconfont {
       font-size: 20px; }
-  #mine .mine .lookdetails .minerool {
+  #per_center .per-center .lookdetails .minerool {
     float: left;
     width: calc(100% - 20px);
     height: 40px;
     overflow: hidden; }
-    #mine .mine .lookdetails .minerool ul {
+    #per_center .per-center .lookdetails .minerool ul {
       width: 100%;
       height: 40px;
       overflow: hidden; }
-      #mine .mine .lookdetails .minerool ul li {
+      #per_center .per-center .lookdetails .minerool ul li {
         width: 100%;
         padding: 0 0 0 10px;
         height: 40px;
         line-height: 40px; }
-        #mine .mine .lookdetails .minerool ul li .lef {
+        #per_center .per-center .lookdetails .minerool ul li .lef {
           display: block;
           float: left;
           width: 75%;
@@ -26711,7 +26920,7 @@ a.button {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis; }
-        #mine .mine .lookdetails .minerool ul li .rig {
+        #per_center .per-center .lookdetails .minerool ul li .rig {
           display: block;
           float: left;
           width: 25%;
@@ -26724,26 +26933,26 @@ a.button {
           text-overflow: ellipsis;
           color: #969696; }
 
-#mine .mine .enterlist {
+#per_center .per-center .enterlist {
   width: 100%;
   height: auto;
   margin: 10px 0 0;
   padding: 0 12px; }
-  #mine .mine .enterlist li {
+  #per_center .per-center .enterlist li {
     float: left;
     padding: 15px 0;
     width: 25%;
     height: 90px;
     text-align: center;
     color: #666; }
-    #mine .mine .enterlist li .tubiao {
+    #per_center .per-center .enterlist li .tubiao {
       width: 100%;
       height: 40px;
       line-height: 40px; }
-      #mine .mine .enterlist li .tubiao .iconfont {
+      #per_center .per-center .enterlist li .tubiao .iconfont {
         vertical-align: middle;
         font-size: 30px; }
-    #mine .mine .enterlist li p {
+    #per_center .per-center .enterlist li p {
       margin: 0;
       height: 20px;
       font-size: 14px; }
@@ -26762,166 +26971,3 @@ a.button {
 
 #chat_list .chat-list {
   margin-top: 44px; }
-
-#dialog_box .bar-footer {
-  overflow: visible !important; }
-
-#dialog_box .bar-footer textarea {
-  resize: none;
-  height: 25px;
-  /* fixes an ios bug bear */ }
-
-#dialog_box button.ion-android-send {
-  padding-top: 2px;
-  /* add this to keep your footer buttons down 
-    at the bottom as the textarea resizes */ }
-
-#dialog_box .footer-btn-wrap {
-  position: relative;
-  height: 100%;
-  width: 50px;
-  top: 7px; }
-
-#dialog_box .footer-btn {
-  position: absolute !important;
-  bottom: 0; }
-
-#dialog_box img.profile-pic {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 10px; }
-
-#dialog_box img.profile-pic.left {
-  left: 10px; }
-
-#dialog_box img.profile-pic.right {
-  right: 10px; }
-
-#dialog_box .ion-email {
-  float: right;
-  font-size: 32px;
-  vertical-align: middle; }
-
-#dialog_box .message {
-  font-size: 14px; }
-
-#dialog_box .message-detail {
-  white-space: nowrap;
-  font-size: 14px; }
-
-#dialog_box .bar.item-input-inset .item-input-wrapper input {
-  width: 100% !important; }
-
-#dialog_box .message-wrapper {
-  position: relative; }
-
-#dialog_box .message-wrapper:last-child {
-  margin-bottom: 10px; }
-
-#dialog_box .chat-bubble {
-  border-radius: 5px;
-  display: inline-block;
-  padding: 10px 18px;
-  position: relative;
-  margin: 10px;
-  max-width: 80%; }
-
-#dialog_box .chat-bubble:before {
-  content: "\00a0";
-  display: block;
-  height: 16px;
-  width: 9px;
-  position: absolute;
-  bottom: -7.5px; }
-
-#dialog_box .chat-bubble.left {
-  background-color: #e6e5eb;
-  float: left;
-  margin-left: 55px; }
-
-#dialog_box .chat-bubble.left:before {
-  background-color: #e6e5eb;
-  left: 10px;
-  -webkit-transform: rotate(70deg) skew(5deg); }
-
-#dialog_box .chat-bubble.right {
-  background-color: #158ffe;
-  color: #fff;
-  float: right;
-  margin-right: 55px; }
-
-#dialog_box .chat-bubble.right:before {
-  background-color: #158ffe;
-  right: 10px;
-  -webkit-transform: rotate(118deg) skew(-5deg); }
-
-#dialog_box .chat-bubble.right a.autolinker {
-  color: #fff;
-  font-weight: bold; }
-
-#dialog_box .user-messages-top-icon {
-  font-size: 28px;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  top: -3px;
-  right: 5px; }
-
-#dialog_box .msg-header-username {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  top: -3px; }
-
-#dialog_box input,
-#dialog_box textarea,
-#dialog_box .item-input,
-#dialog_box .item-input-wrapper {
-  background-color: #f4f4f4 !important; }
-
-#dialog_box .bold {
-  font-weight: bold; }
-
-#dialog_box .cf {
-  clear: both !important; }
-
-#dialog_box a.autolinker {
-  color: #3b88c3;
-  text-decoration: none;
-  /* loading */ }
-
-#dialog_box .loader-center {
-  height: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-#dialog_box .loader .ion-loading-c {
-  font-size: 64px; }
