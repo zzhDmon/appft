@@ -1,0 +1,212 @@
+
+<!--对话模板-->
+<ion-view id='rent_house_detail'  hide-nav-bar="true">
+	
+	
+	
+	<!--底部联系人-->
+	<div class="contacts">
+		<div class="name" ui-sref="tabs.hisweidian({uid:userinfo.uid})">
+			<div class="headimg">
+				<div ng-if="!userinfo.avatar" class="default">
+					<i class="iconfont icon-touxiangx"></i>
+				</div>	
+				<img ng-if="userinfo.avatar" ng-src="{{userinfo.avatar}}"/>
+								
+			</div>
+			<div class="hisname">{{userinfo.agentName}}</div>
+		</div>
+		<div class="communite">
+			<a href="tel:{{houseinfo.Phone}}"><i class="iconfont icon-dianhua1"></i>&nbsp;电话咨询</a>
+		</div>
+	</div>
+	
+	<ion-content class="rent-house-detail"  has-bouncing=false>
+		<div class="backbotton btn" ng-click="back()"><i class="icon ion-chevron-left"></i></div>
+		<div class="sharebotton btn" ng-click="openPopoverView($event)"><i class="iconfont icon-fenxiang1" style="font-size: 20px!important;"></i> </div>
+		<!--分享缩略图-->
+		<canvas style="display: none;" id="rent_house_detailmycans" width="100px" height="100px"></canvas>
+			
+		
+		<div class="show">
+			<div class="bannerposition">
+				<ion-slide-box does-continue="true"  class="detailcursor" on-slide-changed='changeindex()'  delegate-handle='fydetail-handle'>
+				  <ion-slide ng-repeat="banner in bannerarr track by $index">
+				    <div class="box"><img ng-src="{{banner}}"/></div>
+				  </ion-slide>
+				</ion-slide-box>
+				<div class="indexnum">{{currentindex}}/{{totalbanner}}</div>
+			</div>
+			
+		
+			<div class="card detailname">
+				<h4>{{houseinfo.Title}}</h4>
+				<div class="borderline"></div>
+				<ul>
+					<li>
+						<p class="top">租金</p>
+						<p class="bottom">{{houseinfo.Price}}元/月</p>
+					</li>
+					<li class="line"></li>
+					<li>
+						<p class="top">房型</p>
+						<p class="bottom">{{houseinfo.RoomType}}室{{houseinfo.HallType}}厅{{houseinfo.BathType}}卫</p>
+					</li>
+					<li class="line"></li>
+					<li>
+						<p class="top">面积</p>
+						<p class="bottom">{{houseinfo.Space}}m²</p>
+					</li>
+				</ul>
+			</div>
+			<div class="borderline"></div>
+			<div class="card houseinfo">
+				<ul>
+					<li><span class="leftdesc">租房方式：</span>{{houseinfo.RentType}}<span ng-if="!houseinfo.RentType">--</span></li>
+					<li><span class="leftdesc">付款方式：</span>{{houseinfo.PayType}}<span ng-if="!houseinfo.PayType">--</span></li>
+					<li><span class="leftdesc">朝向：</span>{{houseinfo.Orientation}}<span ng-if="!houseinfo.Orientation">--</span></li>
+					<li><span class="leftdesc">楼层：</span>{{houseinfo.Floor}}/{{houseinfo.TotalFloor}}<span ng-if="!houseinfo.Floor">--</span></li>
+					<li><span class="leftdesc">装修：</span>{{houseinfo.Fitment}}<span ng-if="!houseinfo.Fitment">--</span></li>
+					<li><span class="leftdesc">小区名称：</span>{{houseinfo.CommunityName}}<span ng-if="!houseinfo.CommunityName">--</span></li>
+				</ul>
+			</div>
+			
+			<div ng-if="houseinfo.Configure.length>0" class="offline"></div>
+			<div class="card fypeizhi" ng-if="houseinfo.Configure.length>0">
+				<h5>配置</h5>
+				<ul>
+					<li ng-if="config==1" ng-repeat="config in houseinfo.Configure track by $index">
+						<i class="iconfont icon-chuang"></i>
+						<p>床</p>
+					</li>
+					<li ng-if="config==2" ng-repeat="config in houseinfo.Configure track by $index">
+						<i class="iconfont icon-yigui"></i>
+						<p>衣柜</p>
+					</li>
+					<li ng-if="config==3" ng-repeat="config in houseinfo.Configure track by $index">
+						<i class="iconfont icon-shuzhuo"></i>
+						<p>书桌</p>
+					</li>
+					<li ng-if="config==4" ng-repeat="config in houseinfo.Configure track by $index">
+						<i class="iconfont icon-shafa"></i>
+						<p>沙发</p>
+					</li>
+					<li ng-if="config==5" ng-repeat="config in houseinfo.Configure track by $index">
+						<i class="iconfont icon-dianshi"></i>
+						<p>电视</p>
+					</li>
+					<li ng-if="config==6" ng-repeat="config in houseinfo.Configure track by $index">
+						<i class="iconfont icon-bingxiang"></i>
+						<p>冰箱</p>
+					</li>
+					<li ng-if="config==7" ng-repeat="config in houseinfo.Configure track by $index">
+						<i class="iconfont icon-xiyiji"></i>
+						<p>洗衣机</p>
+					</li>
+					<li ng-if="config==8" ng-repeat="config in houseinfo.Configure track by $index">
+						<i class="iconfont icon-kongtiao"></i>
+						<p>空调</p>
+					</li>
+					<li ng-if="config==9" ng-repeat="config in houseinfo.Configure track by $index">
+						<i class="iconfont icon-reshuiqi"></i>
+						<p>热水器</p>
+					</li>
+					<li ng-if="config==10" ng-repeat="config in houseinfo.Configure track by $index">
+						<i class="iconfont icon-iconfontkuandai"></i>
+						<p>宽带</p>
+					</li>
+					<li ng-if="config==11" ng-repeat="config in houseinfo.Configure track by $index">
+						<i class="iconfont icon-webiconyunxuzuofan"></i>
+						<p>可做饭</p>
+					</li>
+					<li ng-if="config==12" ng-repeat="config in houseinfo.Configure track by $index">
+						<i class="iconfont icon-duwei"></i>
+						<p>独卫</p>
+					</li>
+					<li ng-if="config==13" ng-repeat="config in houseinfo.Configure track by $index">
+						<i class="iconfont icon-31"></i>
+						<p>阳台</p>
+					</li>
+				</ul>
+			</div>
+			<div ng-if="houseinfo.Tags.length>0" class="offline"></div>
+			<div ng-if="houseinfo.Tags.length>0" class="card fyliangdian">
+				<h5>房源亮点</h5>
+				<div>
+					<span ng-repeat="Tag in houseinfo.Tags track by $index">{{Tag}}</span>
+				</div>
+			</div>
+			<div class="offline"></div>
+			<div class="card fymiaoshu">
+				<h5>房源描述</h5>
+				<p>{{houseinfo.Discription}}</p>
+			</div>
+			<div class="offline"></div>
+			<div class="card fyposition">
+				<h5>位置</h5>
+				<p>{{houseinfo.CommunityAddress}}</p>
+			</div>
+			<div ng-show="other.length>0" class="offline"></div>
+			<div ng-show="other.length>0" class="card hisonline" ng-if="other.length>0">
+				<h5>TA的其他在租房源</h5>
+				<ul>
+					<!--ui-sref="tabs.fydetail({id:otherhouse.Id,housetype:housetype})"-->
+					<li ng-repeat="otherhouse in other track by $index" ui-sref="tabs.fydetail({id:otherhouse.Id,housetype:housetype})">
+						<div class="img">
+							<img src="{{otherhouse.Thumb}}"/>
+							<img ng-show={{otherhouse.Recommend}} class="zhutui" src="imgs/主推.png"/>
+						</div>
+						<div class="description">
+							<h6>{{otherhouse.Title}}</h6>
+							<p>{{otherhouse.CommunityName}}</p>
+							<!--<p>{{otherhouse.HouseType}}&nbsp;{{otherhouse.Space}}平米</p>-->
+							<div>
+								<div class="space">
+									{{otherhouse.HouseType}}&nbsp;{{otherhouse.Space}}平米 
+								</div>
+								<div class="price">
+									<span>{{otherhouse.Price}}</span>元/月
+								</div>
+							</div>
+							<p>
+								<span ng-repeat="Tag in otherhouse.Tags track by $index">{{Tag}}</span>
+							</p>
+						</div>
+						<!--<div class="price">
+							{{otherhouse.Price}}元
+						</div>-->
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div style="width: 100%;height: 50px;"></div>
+		
+		<!--分享浮动框 ion-popover-view-->
+		<script id="rentHouseDetailpopover.html" type="text/ng-template">
+			<ion-popover-view class="Bottom-share-popover">
+				<ul>
+					<li class="weixin" ng-click="share(0)">
+						<div class="img">
+							<img src="imgs/微信.png"/>
+						</div>
+						<p>微信好友</p>
+					</li>
+					<li class="pengyouquan" ng-click="share(1)">
+						<div class="img">
+							<img src="imgs/朋友圈.png"/>
+							
+						</div>
+						<p>朋友圈</p>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<h4 ng-click="closePopoverView($event)">取消</h4>
+			</ion-popover-view>
+		</script>
+		
+		
+	</ion-content>
+	
+</ion-view>
+
