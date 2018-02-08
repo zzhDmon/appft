@@ -16,14 +16,14 @@
 		<span ng-click="move(0,$event)" class="fenlei">视频</span>
 		<span ng-click="move(1,$event)" class="fenlei">直播</span>
 		<span ng-click="move(2,$event)" class="fenlei">经纪人培训</span>		
-		<span class="fenlei"><i class="iconfont icon-fangdajing"></i></span>
+		<span class="fenlei" ui-sref="tabs.agentSearch"><i class="iconfont icon-fangdajing"></i></span>
 		<div class="underline"></div>
 	</div>
 	
 	
 <!--视频-->
 	<!--回到顶部-->
-	<div ng-if="headChoose=='0'" class="backtop" ng-click="videoSscrollTop()"><i class="iconfont icon-xiangshang"></i></div>
+	<div ng-if="headChoose=='0'" class="backtop" ng-click="videoScrollTop()"><i class="iconfont icon-xiangshang"></i></div>
 	
 	<div ng-if="headChoose=='0'">
 		<ion-content class="video" delegate-handle="videoScroll" on-scroll="videoScrollListen()">
@@ -39,6 +39,13 @@
 				</ion-slide-box>
 				<div class="indexnum">{{currentindex}}/{{totalbanner}}</div>
 			</div>
+			<div>
+				<ul>
+					<li ng-repeat="data in testData.room track by $index">
+						<img ng-src="{{data.pic}}" alt="">
+					</li>
+				</ul>
+			</div>
 		</ion-content>
 		
 	</div>
@@ -53,7 +60,21 @@
 		
 			
 			<ion-infinite-scroll on-infinite="lsloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll> -->
-		直播
+			<div class="bannerposition">
+				<ion-slide-box does-continue="true"  class="detailcursor" on-slide-changed='changeindex()'  delegate-handle='fydetail-handle'>
+					<ion-slide ng-repeat="banner in testData.room track by $index">
+					<div class="box"><img ng-src="{{banner.pic}}"/></div>
+					</ion-slide>
+				</ion-slide-box>
+				<div class="indexnum">{{currentindex}}/{{totalbanner}}</div>
+			</div>
+			<div>
+				<ul>
+					<li ng-repeat="data in testData.room track by $index">
+						<img ng-src="{{data.pic}}" alt="">
+					</li>
+				</ul>
+			</div>
 		</ion-content>
 		
 	</div>
@@ -66,6 +87,16 @@
 		
 			
 			<ion-infinite-scroll on-infinite="lsloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll> -->
+			<div>
+				<img src=https://rpic.douyucdn.cn/amrpic-180208/744244_1642.jpg alt="">
+			</div>
+			<p>我要报名</p>
+			<div>
+				<input type="text" placeholder="真实姓名">
+				<input type="text" placeholder="手机号">
+			</div>
+			<button class="button button-positive">我要报名</button>
+		
 		</ion-content>
 		
 	</div>
