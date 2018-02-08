@@ -60,6 +60,7 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 	})
 	.state('tabs.ifHaveHouse',{
 		url:'/ifhavehouse/:query',
+		cache:false,
 		views:{
 			home:{
 				templateUrl:'views/tabs/ifHaveHouse/ifHaveHouse.html',
@@ -89,7 +90,7 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 		data:{isPublic:true}
 	})
 	.state('tabs.feedBack',{
-		url:'/ifhavehouse/myset/feedback',
+		url:'/ifhavehouse/myset/feedback/:title',
 		views:{
 			home:{
 				templateUrl:'views/tabs/ifHaveHouse/mySet/feedBack/feedBack.html',
@@ -204,6 +205,16 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 			classify:{
 				templateUrl:'views/tabs/chatList/chatList.html',
 				controller:'chatListCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.beAgent',{
+		url:'/beagent',
+		views:{
+			find:{
+				templateUrl:'views/tabs/beAgent/beAgent.html',
+				controller:'beAgentCtl'
 			}
 		},
 		data:{isPublic:true}
@@ -941,25 +952,25 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 	
 	//登录拦截，判断后跳转到登录页面可跳转页面
 	//后台可进入微店 ||toState.name=='tabs.weidian' ||toState.name=='tabs.searchhouse'
-	// $rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
+	$rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
 		
-	// 	if(toState.name=='login'||toState.name=='registerorback'||toState.name=='agreement'||toState.name=='logo'||toState.name=='tabs.home'||toState.name=='tabs.chushoudetail'||toState.name=='tabs.readchushou'||toState.name=='tabs.chuzudetail'||toState.name=='tabs.readchuzu'||
-	// 	toState.name=='tabs.info'||toState.name=='tabs.contact'||toState.name=='tabs.infodetails'||toState.name=='tabs.uidinfodetails'||toState.name=='tabs.shareinfodetails'||toState.name=='tabs.find'||toState.name=='tabs.dazibao'||toState.name=='tabs.duanzi'||
-	// 	toState.name=='tabs.humor'||toState.name=='tabs.like'||toState.name=='tabs.fydetail'||toState.name=='tabs.chuzudetail'||toState.name=='tabs.fypic'||toState.name=='tabs.alikehouse'||toState.name=='tabs.alikehousedetail'||
-	// 	toState.name=='tabs.hisweidian'||toState.name=='tabs.homeinfodetail'||toState.name=='tabs.uidhomeinfodetail'||toState.name=='tabs.searchresult'||
-	// 	toState.name=='tabs.gpslocation'||toState.name=='tabs.ershoutd'||toState.name=='tabs.ershoulist'||toState.name=='tabs.zufanglist'||toState.name=='tabs.newhouse'||toState.name=='tabs.newhousedetail' ||
-	// 	toState.name=='tabs.findinfodetails' ||toState.name=='tabs.myweidian' ||toState.name=='tabs.myfydetail' ||toState.name=='tabs.sharerefcode'){
+		if(toState.name=='login'||toState.name=='registerorback'||toState.name=='agreement'||toState.name=='logo'||toState.name=='tabs.home'||toState.name=='tabs.chushoudetail'||toState.name=='tabs.readchushou'||toState.name=='tabs.chuzudetail'||toState.name=='tabs.readchuzu'||
+		toState.name=='tabs.info'||toState.name=='tabs.contact'||toState.name=='tabs.infodetails'||toState.name=='tabs.uidinfodetails'||toState.name=='tabs.shareinfodetails'||toState.name=='tabs.find'||toState.name=='tabs.dazibao'||toState.name=='tabs.duanzi'||
+		toState.name=='tabs.humor'||toState.name=='tabs.like'||toState.name=='tabs.fydetail'||toState.name=='tabs.chuzudetail'||toState.name=='tabs.fypic'||toState.name=='tabs.alikehouse'||toState.name=='tabs.alikehousedetail'||
+		toState.name=='tabs.hisweidian'||toState.name=='tabs.homeinfodetail'||toState.name=='tabs.uidhomeinfodetail'||toState.name=='tabs.searchresult'||
+		toState.name=='tabs.gpslocation'||toState.name=='tabs.ershoutd'||toState.name=='tabs.ershoulist'||toState.name=='tabs.zufanglist'||toState.name=='tabs.newhouse'||toState.name=='tabs.newhousedetail' ||
+		toState.name=='tabs.findinfodetails' ||toState.name=='tabs.myweidian' ||toState.name=='tabs.myfydetail' ||toState.name=='tabs.sharerefcode'){
 	
-	// 		return;// 如果是进入登录界面则允许			
-	// 	}
-	// 	// 如果用户不存在
-	// 	// if(localStorage.getItem('loged')=='0'){
-	// 	if(localStorage.getItem('loged')!=='0'){
-	// 		event.preventDefault();// 取消默认跳转行为
-	// 		$state.go("login",{from:fromState.name,w:'notLogin'});//跳转到登录界面			
-	// 	}else{
-	// 	}
-	// });
+			return;// 如果是进入登录界面则允许			
+		}
+		// 如果用户不存在
+		// if(localStorage.getItem('loged')=='0'){
+		if(localStorage.getItem('loged')!=='0'){
+			event.preventDefault();// 取消默认跳转行为
+			$state.go("login",{from:fromState.name,w:'notLogin'});//跳转到登录界面			
+		}else{
+		}
+	});
 	
 	// $rootScope.$on("$stateChangeStart", function (evt, toState, toParams, fromState, fromParams) {
     //     var isPublic = angular.isObject(toState.data) && toState.data.isPublic === true;    //判断当前state的data属性"isPublic" === true

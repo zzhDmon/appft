@@ -1,0 +1,74 @@
+<!--联系人界面模板-->
+<ion-view id="be_agent" view-title="经纪人" hide-nav-bar="true">
+	
+	<div ng-click="toggleOpen()" class="circle">
+		<div class="ring">
+			<span class="menuItem iconfont icon-home"  ui-sref="tabs.ifHaveHouse({'query':homeTypeParams})"></span>
+			<span class="menuItem iconfont icon-kehu" ui-sref="tabs.beAgent"></span>
+			<span class="menuItem iconfont icon-dianhua" ui-sref="tabs.chatList"></span>
+			<span class="menuItem iconfont icon-wode" ui-sref="tabs.perCenter"></span>
+		</div>
+		<span class="center iconfont icon-jiahao1"></span>
+	</div>
+	<div ng-click="openNav()" class="dao-hang"><i class="iconfont icon-daohang"></i></div>
+
+	<div class="fourchoose" >
+		<span ng-click="move(0,$event)" class="fenlei">视频</span>
+		<span ng-click="move(1,$event)" class="fenlei">直播</span>
+		<span ng-click="move(2,$event)" class="fenlei">经纪人培训</span>		
+		<span class="fenlei"><i class="iconfont icon-fangdajing"></i></span>
+		<div class="underline"></div>
+	</div>
+	
+	
+<!--视频-->
+	<!--回到顶部-->
+	<div ng-if="headChoose=='0'" class="backtop" ng-click="videoSscrollTop()"><i class="iconfont icon-xiangshang"></i></div>
+	
+	<div ng-if="headChoose=='0'">
+		<ion-content class="video" delegate-handle="videoScroll" on-scroll="videoScrollListen()">
+			<!-- <ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="lsdoRefresh(false)"></ion-refresher>
+		
+			
+			<ion-infinite-scroll on-infinite="lsloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll> -->
+			<div class="bannerposition">
+				<ion-slide-box does-continue="true"  class="detailcursor" on-slide-changed='changeindex()'  delegate-handle='fydetail-handle'>
+					<ion-slide ng-repeat="banner in testData.room track by $index">
+					<div class="box"><img ng-src="{{banner.pic}}"/></div>
+					</ion-slide>
+				</ion-slide-box>
+				<div class="indexnum">{{currentindex}}/{{totalbanner}}</div>
+			</div>
+		</ion-content>
+		
+	</div>
+	
+<!--直播-->
+	<!--回到顶部-->
+	<div ng-if="headChoose=='1'" class="backtop" ng-click="liveScrollTop()"><i class="iconfont icon-xiangshang"></i></div>
+	
+	<div ng-if="headChoose=='1'">
+		<ion-content class="live" delegate-handle="liveScroll" on-scroll="liveScrollListen()">
+			<!-- <ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="lsdoRefresh(false)"></ion-refresher>
+		
+			
+			<ion-infinite-scroll on-infinite="lsloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll> -->
+		直播
+		</ion-content>
+		
+	</div>
+
+<!--经纪人培训-->
+	<!--回到顶部-->
+	<div ng-if="headChoose=='2'"  class="train">
+		<ion-content class="train" delegate-handle="loushiscroll" on-scroll="loushiscrollListen()">
+			<!-- <ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="lsdoRefresh(false)"></ion-refresher>
+		
+			
+			<ion-infinite-scroll on-infinite="lsloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll> -->
+		</ion-content>
+		
+	</div>
+
+	
+</ion-view>

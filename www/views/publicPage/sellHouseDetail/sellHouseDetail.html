@@ -6,18 +6,14 @@
 	
 	<!--底部联系人-->
 	<div class="contacts">
-		<div class="name" ui-sref="tabs.hisweidian({uid:userinfo.uid})">
-			<div class="headimg">
-				<div ng-if="!userinfo.avatar" class="default">
-					<i class="iconfont icon-touxiangx"></i>
-				</div>	
-				<img ng-if="userinfo.avatar" ng-src="{{userinfo.avatar}}"/>
-								
-			</div>
-			<div class="hisname">{{userinfo.agentName}}</div>
+		<div ng-click="applyAgent()" class="agent">
+			我要代理
 		</div>
-		<div class="communite">
-			<a href="tel:{{houseinfo.Phone}}"><i class="iconfont icon-dianhua1"></i>&nbsp;电话咨询</a>
+		<div class="comment">
+			点评
+		</div>
+		<div class="chat" ng-click="goChat('老板')">
+			聊天
 		</div>
 	</div>
 	
@@ -100,6 +96,89 @@
 				<h5>位置</h5>
 				<p>{{houseinfo.CommunityAddress}}</p>
 			</div>
+
+			<div class="card commentlist">
+				<h5>价值评测</h5>
+				<ul>
+					<li>
+						<div class="head">
+							<div class="son commentinfo">
+								<img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+								<div class="name">任大炮</div>
+								<div style="clear:both;"></div>
+							</div>
+							<div class="son like">
+								<i class="iconfont icon-zan"></i>520
+							</div>
+						</div>
+						<div class="commentcontent">
+							<p>小区环境优雅，周围配套设施齐全，孩子读书附近的中小学校离的进。我任大炮觉得这个小区的房子非常不错</p>
+						</div>
+						<div class="foot">
+							<div class="time">2018-2-8</div>
+							<div ng-click="goReply()" class="reply">25回复</div>
+						</div>
+					</li>
+					<li>
+						<div class="head">
+							<div class="son commentinfo">
+								<img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+								<div class="name">任大炮</div>
+								<div style="clear:both;"></div>
+							</div>
+							<div class="son like">
+								<i class="iconfont icon-zan"></i>520
+							</div>
+						</div>
+						<div class="commentcontent">
+							<p>小区环境优雅，周围配套设施齐全，孩子读书附近的中小学校离的进。我任大炮觉得这个小区的房子非常不错</p>
+						</div>
+						<div class="foot">
+							<div class="time">2018-2-8</div>
+							<div ng-click="goReply()" class="reply">25回复</div>
+						</div>
+					</li>
+					<li>
+						<div class="head">
+							<div class="son commentinfo">
+								<img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+								<div class="name">任大炮</div>
+								<div style="clear:both;"></div>
+							</div>
+							<div class="son like">
+								<i class="iconfont icon-zan"></i>520
+							</div>
+						</div>
+						<div class="commentcontent">
+							<p>小区环境优雅，周围配套设施齐全，孩子读书附近的中小学校离的进。我任大炮觉得这个小区的房子非常不错</p>
+						</div>
+						<div class="foot">
+							<div class="time">2018-2-8</div>
+							<div ng-click="goReply()" class="reply">25回复</div>
+						</div>
+					</li>
+					<li>
+						<div class="head">
+							<div class="son commentinfo">
+								<img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+								<div class="name">任大炮</div>
+								<div style="clear:both;"></div>
+							</div>
+							<div class="son like">
+								<i class="iconfont icon-zan"></i>520
+							</div>
+						</div>
+						<div class="commentcontent">
+							<p>小区环境优雅，周围配套设施齐全，孩子读书附近的中小学校离的进。我任大炮觉得这个小区的房子非常不错</p>
+						</div>
+						<div class="foot">
+							<div class="time">2018-2-8</div>
+							<div ng-click="goReply()" class="reply">25回复</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
 			<div ng-if="other.length>0" class="offline"></div>
 			<div class="card hisonline" ng-if="other.length>0">
 				<h5>TA的其他在售房源</h5>
@@ -107,8 +186,8 @@
 					<!-- ui-sref="tabs.fydetail({id:otherhouse.Id,housetype:housetype})"-->
 					<li ng-repeat="otherhouse in other track by $index" ui-sref="tabs.fydetail({id:otherhouse.Id,housetype:housetype})">
 						<div class="img">
-							<img src="{{otherhouse.Thumb}}"/>
-							<img ng-show={{otherhouse.Recommend}} class="zhutui" src="imgs/主推.png"/>
+							<img ng-src="{{otherhouse.Thumb}}"/>
+							<img ng-show={{otherhouse.Recommend}} class="zhutui" ng-src="imgs/主推.png"/>
 						</div>
 						<div class="description">
 							<h6>{{otherhouse.Title}}</h6>
@@ -140,13 +219,13 @@
 				<ul>
 					<li class="weixin" ng-click="share(0)">
 						<div class="img">
-							<img src="imgs/微信.png"/>
+							<img ng-src="imgs/微信.png"/>
 						</div>
 						<p>微信好友</p>
 					</li>
 					<li class="pengyouquan" ng-click="share(1)">
 						<div class="img">
-							<img src="imgs/朋友圈.png"/>
+							<img ng-src="imgs/朋友圈.png"/>
 							
 						</div>
 						<p>朋友圈</p>
@@ -157,6 +236,60 @@
 			</ion-popover-view>
 		</script>
 		
+		<!-- 回复模态框 -->
+		<script id="templates/sellHouseReplymodal.html" type="text/ng-template">
+			<ion-modal-view>
+			  <ion-header-bar class="bar bar-header bar-positive">
+				<h1 class="title">25回复</h1>
+				<button class="button button-clear button-primary" ng-click="modal.hide()">关闭</button>
+			  </ion-header-bar>
+			  <ion-content class="padding">
+				<div class="list">
+						<ul>
+								<li>
+									<div class="head">
+										<div class="son commentinfo">
+											<img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+											<div class="name">任大炮</div>
+											<div style="clear:both;"></div>
+										</div>
+										<div class="son like">
+											<i class="iconfont icon-zan"></i>520
+										</div>
+									</div>
+									<div class="commentcontent">
+										<p>小区环境优雅，周围配套设施齐全，孩子读书附近的中小学校离的进。我任大炮觉得这个小区的房子非常不错</p>
+									</div>
+									<div class="foot">
+										<div class="time">2018-2-8</div>
+										<div ng-click="goReply()" class="reply">25回复</div>
+									</div>
+								</li>
+								<li>
+									<div class="head">
+										<div class="son commentinfo">
+											<img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+											<div class="name">任大炮</div>
+											<div style="clear:both;"></div>
+										</div>
+										<div class="son like">
+											<i class="iconfont icon-zan"></i>520
+										</div>
+									</div>
+									<div class="commentcontent">
+										<p>小区环境优雅，周围配套设施齐全，孩子读书附近的中小学校离的进。我任大炮觉得这个小区的房子非常不错</p>
+									</div>
+									<div class="foot">
+										<div class="time">2018-2-8</div>
+										<div ng-click="goReply()" class="reply">25回复</div>
+									</div>
+								</li>
+							</ul>
+				  	<button class="button button-full button-positive" ng-click="createContact(newUser)">Create</button>
+				</div>
+			  </ion-content>
+			</ion-modal-view>
+		  </script>
 		
 	</ion-content>
 	

@@ -1,16 +1,22 @@
 
-angular.module('App').controller('ifHaveHouseCtl',function($ionicScrollDelegate,$ionicLoading,$ionicHistory,$state,$http,$Factory,$scope,$rootScope,$stateParams,$ionicPopover,$ionicPopup,$timeout,$ionicActionSheet){
+angular.module('App').controller('ifHaveHouseCtl',function(goTo,$ionicScrollDelegate,$ionicLoading,$ionicHistory,$state,$http,$Factory,$scope,$rootScope,$stateParams,$ionicPopover,$ionicPopup,$timeout,$ionicActionSheet){
 	$timeout(function(){
 		$('#view-popover').css('top',$('.header').outerHeight())
 		
-		if($('#ifHaveHouse .ifHaveHouse').innerWidth()>375){
-			$('#ifHaveHouse .ifHaveHouse').addClass('plus')
-			$('#ifHaveHouse .ifHaveHouse').removeClass('ifHaveHouse')
+		if($('#if_have_house .if-have-house').innerWidth()>375){
+			$('#if_have_house .if-have-house').addClass('plus')
+			$('#if_have_house .if-have-house').removeClass('if-have-house')
 		}
 	})
-
-	
-
+// 详情跳转
+	$scope.goSellDetail=function(id){
+		goTo.goto('sellHouseDetail',{id:id})
+	}
+//切换买租 
+	$scope.needType=0;
+	$scope.changeNeedType=function(type){
+		$scope.needType=type;
+	}
 // 旋轉導航
 	var items = $('#if_have_house .menuItem');
 	for(var i = 0, l = items.length; i < l; i++) {
@@ -19,42 +25,40 @@ angular.module('App').controller('ifHaveHouseCtl',function($ionicScrollDelegate,
 		items[i].style.top = (50 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
 	}
 	$scope.toggleOpen=function(e){
-		$('#if_have_house .circle').toggleClass('open')
+		$('#if_have_house .circle').removeClass('open');
+		// $('#if_have_house .circle').toggleClass('open');
+		$timeout(function(){
+			$('#if_have_house .circle').css('display','none');
+		},100)
 	}
-
+	$scope.openNav=function(){
+		$('#if_have_house .circle').css('display','block');
+		// $('#if_have_house .circle').toggleClass('open');
+		$timeout(function(){
+			$('#if_have_house .circle').addClass('open');
+		},100)
+	}
 
 	if($stateParams.query==0){
 		$scope.haveHouse=true;
 		$scope.homeTypeParams=$rootScope.homeTypeParams=0;
-		$('#if_have_house .tabNav .havehouse').css('display','block')
-		$('#if_have_house .tabNav .nohouse').css('display','none')
+		// $('#if_have_house .tabNav .havehouse').css('height','100%')
+		// $('#if_have_house .tabNav .nohouse').css('height','0')		
 	}else{
 		$scope.haveHouse=false;
 		$scope.homeTypeParams=$rootScope.homeTypeParams=1;
-		$('#if_have_house .tabNav .havehouse').css('display','none')
-		$('#if_have_house .tabNav .nohouse').css('display','block')
+		// $('#if_have_house .tabNav .havehouse').css('height','0')
+		// $('#if_have_house .tabNav .nohouse').css('height','100%')
 	}
 	//切换有房没房 
 	$scope.onSwipeRight=function(){
-		$scope.haveHouse=!$scope.haveHouse
+		$scope.haveHouse=!$scope.haveHouse;
 		if($scope.haveHouse){
 			$scope.homeTypeParams=$rootScope.homeTypeParams=0;
-			// $('#if_have_house .tabNav .havehouse').removeClass('animated slideOutLeft')
-			// $('#if_have_house .tabNav .havehouse').addClass('animated slideInRight')
-			// $('#if_have_house .tabNav .nohouse').removeClass('animated slideInRight')
-			// $('#if_have_house .tabNav .nohouse').addClass('animated slideOutleft')
-			$('#if_have_house .tabNav .havehouse').toggle('fast',function(){
-				$('#if_have_house .tabNav .nohouse').toggle('slow')
-			})
+			
 		}else{
 			$scope.homeTypeParams=$rootScope.homeTypeParams=1;
-			$('#if_have_house .tabNav .nohouse').toggle('fast',function(){
-				$('#if_have_house .tabNav .havehouse').toggle('slow')
-			})
-			// $('#if_have_house .tabNav .nohouse').removeClass('animated slideOutLeft')
-			// $('#if_have_house .tabNav .nohouse').addClass('animated slideInRight')
-			// $('#if_have_house .tabNav .havehouse').removeClass('animated slideInRight')
-			// $('#if_have_house .tabNav .havehouse').addClass('animated slideOutleft')
+
 		}
 	}
 	
@@ -100,10 +104,6 @@ angular.module('App').controller('ifHaveHouseCtl',function($ionicScrollDelegate,
 		$ionicHistory.goBack()
 	}
 	
-	//关闭右侧相似房源option
-	$scope.closeoption=function($event){
-		$('#if_have_house .ershou .item-content').css('transform','translate3d(0px, 0px, 0px)')
-	}
 	
 	$scope.querydata={
 		district:'区域',

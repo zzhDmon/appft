@@ -25094,6 +25094,1037 @@ a.button {
         width: 90vw;
         background-color: #41a0ff; }
 
+#sell_house_detail .contacts {
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  height: 49px;
+  border-top: 1px solid #e6e6e6; }
+  #sell_house_detail .contacts div {
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 49px; }
+  #sell_house_detail .contacts .agent {
+    width: 35vw;
+    background-color: white;
+    color: #666666; }
+  #sell_house_detail .contacts .comment {
+    width: 30vw;
+    background-color: #41a0ff;
+    color: #666666; }
+  #sell_house_detail .contacts .chat {
+    width: 35vw;
+    color: white;
+    background-color: #4b7197; }
+
+#sell_house_detail .sell-house-detail {
+  position: absolute;
+  padding-bottom: 40px; }
+  #sell_house_detail .sell-house-detail .btn {
+    z-index: 999;
+    position: absolute;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 30px;
+    font-size: 2rem;
+    color: white; }
+  #sell_house_detail .sell-house-detail .backbotton {
+    left: 5px; }
+  #sell_house_detail .sell-house-detail .sharebotton {
+    right: 5px; }
+  #sell_house_detail .sell-house-detail .bannerposition {
+    position: relative;
+    width: 100%;
+    height: 230px; }
+    #sell_house_detail .sell-house-detail .bannerposition .detailcursor {
+      width: 100%;
+      height: 100%; }
+      #sell_house_detail .sell-house-detail .bannerposition .detailcursor .box {
+        width: 100%;
+        height: 100%; }
+        #sell_house_detail .sell-house-detail .bannerposition .detailcursor .box img {
+          width: 100%;
+          height: 100%; }
+      #sell_house_detail .sell-house-detail .bannerposition .detailcursor .slider-pager {
+        position: absolute;
+        bottom: 5px; }
+        #sell_house_detail .sell-house-detail .bannerposition .detailcursor .slider-pager .slider-pager-page {
+          font-size: 12px; }
+    #sell_house_detail .sell-house-detail .bannerposition .indexnum {
+      position: absolute;
+      z-index: 998;
+      bottom: 5px;
+      right: 5px;
+      color: white;
+      border-radius: 3px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0 5px 0; }
+  #sell_house_detail .sell-house-detail .card {
+    box-shadow: none;
+    padding: 0 12px 0; }
+  #sell_house_detail .sell-house-detail .detailname h4 {
+    font-size: 18px;
+    color: #333333;
+    margin: 15px 0 15px; }
+  #sell_house_detail .sell-house-detail .detailname ul {
+    width: 100%;
+    height: auto;
+    padding: 15px 0 15px; }
+    #sell_house_detail .sell-house-detail .detailname ul li {
+      width: calc(33.33% - 1px);
+      height: auto;
+      line-height: 30px;
+      text-align: center; }
+      #sell_house_detail .sell-house-detail .detailname ul li p {
+        font-size: 16px;
+        text-align: center;
+        line-height: 20px; }
+      #sell_house_detail .sell-house-detail .detailname ul li p.top {
+        color: #969696;
+        margin: 0 0 10px; }
+      #sell_house_detail .sell-house-detail .detailname ul li p.bottom {
+        color: #e64b00; }
+    #sell_house_detail .sell-house-detail .detailname ul .line {
+      width: 0;
+      height: 50px;
+      border-right: 1px solid gainsboro;
+      box-sizing: border-box; }
+  #sell_house_detail .sell-house-detail .houseinfo ul {
+    width: 100%;
+    height: 110px;
+    padding: 10px 0 10px; }
+    #sell_house_detail .sell-house-detail .houseinfo ul li {
+      width: 50%;
+      height: 30px;
+      font-size: 16px;
+      line-height: 30px;
+      text-align: left;
+      word-break: keep-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      #sell_house_detail .sell-house-detail .houseinfo ul li span.leftdesc {
+        color: #969696; }
+  #sell_house_detail .sell-house-detail .fypeizhi {
+    padding-bottom: 15px; }
+    #sell_house_detail .sell-house-detail .fypeizhi h5 {
+      border-left: 3px solid #3699f5;
+      font-size: 16px;
+      height: 18px;
+      line-height: 18px;
+      padding-left: 10px;
+      margin: 20px 0 015px; }
+    #sell_house_detail .sell-house-detail .fypeizhi ul {
+      width: 100%;
+      height: auto; }
+      #sell_house_detail .sell-house-detail .fypeizhi ul li {
+        width: 16.66%;
+        height: auto;
+        float: left !important;
+        margin-top: 15px; }
+        #sell_house_detail .sell-house-detail .fypeizhi ul li .iconfont {
+          display: block;
+          width: 80%;
+          height: 30px;
+          font-size: 25px;
+          line-height: 30px;
+          text-align: center;
+          margin: auto; }
+        #sell_house_detail .sell-house-detail .fypeizhi ul li p {
+          margin: 0;
+          width: 100%;
+          height: 20px;
+          line-height: 20px;
+          text-align: center; }
+  #sell_house_detail .sell-house-detail .fyliangdian {
+    padding-bottom: 20px; }
+    #sell_house_detail .sell-house-detail .fyliangdian h5 {
+      border-left: 3px solid #3699f5;
+      font-size: 16px;
+      height: 18px;
+      line-height: 18px;
+      padding-left: 10px;
+      margin: 20px 0 015px; }
+    #sell_house_detail .sell-house-detail .fyliangdian div {
+      width: 100%; }
+      #sell_house_detail .sell-house-detail .fyliangdian div span {
+        word-break: break-all;
+        border-radius: 2px;
+        line-height: 30px;
+        padding: 3px 5px 3px;
+        color: #59abfd;
+        background-color: #e6f2ff;
+        margin: 0 5px 5px 0; }
+  #sell_house_detail .sell-house-detail .fymiaoshu {
+    padding-bottom: 20px; }
+    #sell_house_detail .sell-house-detail .fymiaoshu h5 {
+      border-left: 3px solid #3699f5;
+      font-size: 16px;
+      height: 18px;
+      line-height: 18px;
+      padding-left: 10px;
+      margin: 20px 0 015px; }
+    #sell_house_detail .sell-house-detail .fymiaoshu h6 {
+      font-size: 16px;
+      color: #666666; }
+    #sell_house_detail .sell-house-detail .fymiaoshu p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      color: #333333; }
+  #sell_house_detail .sell-house-detail .fyposition {
+    padding-bottom: 20px; }
+    #sell_house_detail .sell-house-detail .fyposition h5 {
+      border-left: 3px solid #3699f5;
+      font-size: 16px;
+      height: 18px;
+      line-height: 18px;
+      padding-left: 10px;
+      margin: 20px 0 015px; }
+    #sell_house_detail .sell-house-detail .fyposition img {
+      width: 100%;
+      height: auto; }
+  #sell_house_detail .sell-house-detail .commentlist ul {
+    width: 100%; }
+    #sell_house_detail .sell-house-detail .commentlist ul li {
+      padding-top: 10px;
+      width: 100%; }
+      #sell_house_detail .sell-house-detail .commentlist ul li .head {
+        width: 100%;
+        height: 35px; }
+        #sell_house_detail .sell-house-detail .commentlist ul li .head .son {
+          float: left;
+          height: 100%; }
+        #sell_house_detail .sell-house-detail .commentlist ul li .head .commentinfo {
+          width: 70%; }
+          #sell_house_detail .sell-house-detail .commentlist ul li .head .commentinfo img {
+            float: left;
+            display: block;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%; }
+          #sell_house_detail .sell-house-detail .commentlist ul li .head .commentinfo .name {
+            float: left;
+            width: calc(100% - 35px);
+            height: 35px;
+            line-height: 35px;
+            text-align: left;
+            padding-left: 10px; }
+        #sell_house_detail .sell-house-detail .commentlist ul li .head .like {
+          width: 30%;
+          line-height: 35px;
+          text-align: right; }
+      #sell_house_detail .sell-house-detail .commentlist ul li .commentcontent {
+        padding-top: 10px; }
+      #sell_house_detail .sell-house-detail .commentlist ul li .foot {
+        width: 100%;
+        height: 20px; }
+        #sell_house_detail .sell-house-detail .commentlist ul li .foot .time {
+          float: left;
+          width: 80px;
+          height: 20px;
+          line-height: 20px; }
+        #sell_house_detail .sell-house-detail .commentlist ul li .foot .reply {
+          float: left;
+          width: 85px;
+          height: 20px;
+          text-align: center;
+          line-height: 20px;
+          border: 1px solid #666666;
+          border-radius: 10px; }
+  #sell_house_detail .sell-house-detail .hisonline {
+    padding: 0 0 0 12px; }
+    #sell_house_detail .sell-house-detail .hisonline h5 {
+      font-size: 16px;
+      height: 55px;
+      line-height: 30px;
+      margin: 0 0 5px;
+      padding: 15px 0 0 0;
+      border-bottom: 1px solid #e6e6e6; }
+    #sell_house_detail .sell-house-detail .hisonline ul {
+      width: 100%; }
+      #sell_house_detail .sell-house-detail .hisonline ul li:last-child {
+        border-bottom: none; }
+      #sell_house_detail .sell-house-detail .hisonline ul li {
+        width: 100%;
+        padding: 12px 12px 12px 0;
+        border-bottom: 1px solid #e6e6e6; }
+        #sell_house_detail .sell-house-detail .hisonline ul li .img {
+          width: 35vw;
+          height: auto;
+          float: left;
+          position: relative; }
+          #sell_house_detail .sell-house-detail .hisonline ul li .img img {
+            border-radius: 3px;
+            width: 100%;
+            height: 85px; }
+          #sell_house_detail .sell-house-detail .hisonline ul li .img .zhutui {
+            width: 8vw;
+            height: auto;
+            position: absolute;
+            top: 0;
+            right: 0; }
+        #sell_house_detail .sell-house-detail .hisonline ul li .description {
+          float: left;
+          width: calc(65vw - 38px);
+          margin-left: 10px; }
+          #sell_house_detail .sell-house-detail .hisonline ul li .description h6 {
+            color: #333333;
+            font-size: 15px;
+            font-weight: 400;
+            border: none;
+            height: 20px;
+            line-height: 20px;
+            margin: 0;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #sell_house_detail .sell-house-detail .hisonline ul li .description p {
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+            height: 20px;
+            overflow: hidden;
+            color: #666666; }
+            #sell_house_detail .sell-house-detail .hisonline ul li .description p span {
+              font-size: 12px;
+              border-radius: 2px;
+              padding: 2px 3px 2px;
+              background-color: #e6f2ff;
+              color: #59abfd;
+              margin-right: 3px; }
+          #sell_house_detail .sell-house-detail .hisonline ul li .description div {
+            font-size: 14px;
+            color: #666666;
+            width: calc(65vw - 38px); }
+            #sell_house_detail .sell-house-detail .hisonline ul li .description div .space {
+              float: left;
+              height: 25px;
+              line-height: 25px;
+              width: 60%;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #sell_house_detail .sell-house-detail .hisonline ul li .description div .price {
+              text-align: right;
+              float: right;
+              height: 25px;
+              line-height: 25px;
+              width: 40%;
+              color: #e64b00;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              #sell_house_detail .sell-house-detail .hisonline ul li .description div .price span {
+                font-size: 16px;
+                font-weight: 600; }
+
+#sell_house_detail .plus .bannerposition {
+  position: relative;
+  width: 100%;
+  height: 280px; }
+  #sell_house_detail .plus .bannerposition .detailcursor {
+    width: 100%;
+    height: 100%; }
+    #sell_house_detail .plus .bannerposition .detailcursor .box {
+      width: 100%;
+      height: 100%; }
+      #sell_house_detail .plus .bannerposition .detailcursor .box img {
+        width: 100%;
+        height: 100%; }
+    #sell_house_detail .plus .bannerposition .detailcursor .slider-pager {
+      position: absolute;
+      bottom: 5px; }
+      #sell_house_detail .plus .bannerposition .detailcursor .slider-pager .slider-pager-page {
+        font-size: 12px; }
+  #sell_house_detail .plus .bannerposition .indexnum {
+    position: absolute;
+    z-index: 998;
+    bottom: 5px;
+    right: 5px;
+    color: white;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 5px 0; }
+
+#sell_house_detail .plus .hisonline {
+  padding: 0 0 0 12px; }
+  #sell_house_detail .plus .hisonline h5 {
+    font-size: 16px;
+    height: 55px;
+    line-height: 30px;
+    margin: 0 0 5px;
+    padding: 15px 0 0 0;
+    border-bottom: 1px solid #e6e6e6; }
+  #sell_house_detail .plus .hisonline ul {
+    width: 100%; }
+    #sell_house_detail .plus .hisonline ul li:last-child {
+      border-bottom: none; }
+    #sell_house_detail .plus .hisonline ul li {
+      width: 100%;
+      padding: 12px 12px 12px 0;
+      border-bottom: 1px solid #e6e6e6; }
+      #sell_house_detail .plus .hisonline ul li .img {
+        width: 28vw;
+        height: auto;
+        float: left;
+        position: relative; }
+        #sell_house_detail .plus .hisonline ul li .img img {
+          border-radius: 3px;
+          width: 100%;
+          height: 85px; }
+        #sell_house_detail .plus .hisonline ul li .img .zhutui {
+          width: 8vw;
+          height: auto;
+          position: absolute;
+          top: 0;
+          right: 0; }
+      #sell_house_detail .plus .hisonline ul li .description {
+        float: left;
+        width: calc(72vw - 38px);
+        margin-left: 10px; }
+        #sell_house_detail .plus .hisonline ul li .description h6 {
+          color: #333333;
+          font-size: 15px;
+          font-weight: 400;
+          border: none;
+          height: 20px;
+          line-height: 20px;
+          margin: 0;
+          word-break: keep-all;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        #sell_house_detail .plus .hisonline ul li .description p {
+          width: 100%;
+          margin: 0;
+          font-size: 14px;
+          height: 20px;
+          overflow: hidden;
+          color: #666666; }
+          #sell_house_detail .plus .hisonline ul li .description p span {
+            border-radius: 2px;
+            padding: 2px 3px 2px;
+            font-size: 12px;
+            background-color: #e6f2ff;
+            color: #59abfd;
+            margin-right: 3px; }
+        #sell_house_detail .plus .hisonline ul li .description div {
+          font-size: 14px;
+          color: #666666;
+          width: calc(72vw - 38px); }
+          #sell_house_detail .plus .hisonline ul li .description div .space {
+            float: left;
+            height: 25px;
+            line-height: 25px;
+            width: 60%;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #sell_house_detail .plus .hisonline ul li .description div .price {
+            text-align: right;
+            float: right;
+            height: 25px;
+            line-height: 25px;
+            width: 40%;
+            color: #e64b00;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+            #sell_house_detail .plus .hisonline ul li .description div .price span {
+              font-size: 16px;
+              font-weight: 600; }
+
+#rent_house_detail .contacts {
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  height: 49px;
+  border-top: 1px solid #e6e6e6; }
+  #rent_house_detail .contacts .name {
+    float: left;
+    width: 40vw;
+    height: 100%;
+    padding: 7px 5px 7px 15px;
+    background-color: white;
+    color: #666666; }
+    #rent_house_detail .contacts .name .hisname {
+      padding-left: 5px;
+      width: calc(100% - 35px);
+      color: #333333;
+      height: 35px;
+      font-size: 16px;
+      float: left;
+      line-height: 35px; }
+    #rent_house_detail .contacts .name .headimg {
+      width: 35px;
+      height: 35px;
+      float: left;
+      line-height: 35px;
+      text-align: center; }
+      #rent_house_detail .contacts .name .headimg div {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: whitesmoke;
+        border: 1px solid #e0e0e0; }
+        #rent_house_detail .contacts .name .headimg div i.iconfont {
+          color: #d6d6d6;
+          font-size: 22px;
+          line-height: 35px; }
+      #rent_house_detail .contacts .name .headimg img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%; }
+  #rent_house_detail .contacts .communite {
+    float: left;
+    width: 60vw;
+    height: 100%;
+    color: white;
+    background-color: #3699f5; }
+    #rent_house_detail .contacts .communite a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      line-height: 49px;
+      text-align: center; }
+
+#rent_house_detail .rent-house-detail {
+  position: absolute;
+  padding-bottom: 40px; }
+  #rent_house_detail .rent-house-detail .btn {
+    z-index: 999;
+    position: absolute;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 30px;
+    font-size: 2rem;
+    color: white; }
+  #rent_house_detail .rent-house-detail .backbotton {
+    left: 5px; }
+  #rent_house_detail .rent-house-detail .sharebotton {
+    right: 5px; }
+  #rent_house_detail .rent-house-detail .bannerposition {
+    position: relative;
+    width: 100%;
+    height: 230px; }
+    #rent_house_detail .rent-house-detail .bannerposition .detailcursor {
+      width: 100%;
+      height: 100%; }
+      #rent_house_detail .rent-house-detail .bannerposition .detailcursor .box {
+        width: 100%;
+        height: 100%; }
+        #rent_house_detail .rent-house-detail .bannerposition .detailcursor .box img {
+          width: 100%;
+          height: 100%; }
+      #rent_house_detail .rent-house-detail .bannerposition .detailcursor .slider-pager {
+        position: absolute;
+        bottom: 5px; }
+        #rent_house_detail .rent-house-detail .bannerposition .detailcursor .slider-pager .slider-pager-page {
+          font-size: 12px; }
+    #rent_house_detail .rent-house-detail .bannerposition .indexnum {
+      position: absolute;
+      z-index: 998;
+      bottom: 5px;
+      right: 5px;
+      color: white;
+      border-radius: 3px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0 5px 0; }
+  #rent_house_detail .rent-house-detail .card {
+    box-shadow: none;
+    padding: 0 12px 0; }
+  #rent_house_detail .rent-house-detail .detailname h4 {
+    font-size: 18px;
+    color: #333333;
+    margin: 15px 0 15px; }
+  #rent_house_detail .rent-house-detail .detailname ul {
+    width: 100%;
+    height: auto;
+    padding: 15px 0 15px; }
+    #rent_house_detail .rent-house-detail .detailname ul li {
+      width: calc(33.33% - 1px);
+      height: auto;
+      line-height: 30px;
+      text-align: center; }
+      #rent_house_detail .rent-house-detail .detailname ul li p {
+        font-size: 16px;
+        text-align: center;
+        line-height: 20px; }
+      #rent_house_detail .rent-house-detail .detailname ul li p.top {
+        color: #969696;
+        margin: 0 0 10px; }
+      #rent_house_detail .rent-house-detail .detailname ul li p.bottom {
+        color: #e64b00; }
+    #rent_house_detail .rent-house-detail .detailname ul .line {
+      width: 0;
+      height: 50px;
+      border-right: 1px solid gainsboro;
+      box-sizing: border-box; }
+  #rent_house_detail .rent-house-detail .houseinfo ul {
+    width: 100%;
+    height: 110px;
+    padding: 10px 0 10px; }
+    #rent_house_detail .rent-house-detail .houseinfo ul li {
+      width: 50%;
+      height: 30px;
+      font-size: 16px;
+      line-height: 30px;
+      text-align: left;
+      word-break: keep-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      #rent_house_detail .rent-house-detail .houseinfo ul li span.leftdesc {
+        color: #969696; }
+  #rent_house_detail .rent-house-detail .fypeizhi {
+    padding-bottom: 15px; }
+    #rent_house_detail .rent-house-detail .fypeizhi h5 {
+      border-left: 3px solid #3699f5;
+      font-size: 16px;
+      height: 18px;
+      line-height: 18px;
+      padding-left: 10px;
+      margin: 20px 0 015px; }
+    #rent_house_detail .rent-house-detail .fypeizhi ul {
+      width: 100%;
+      height: auto; }
+      #rent_house_detail .rent-house-detail .fypeizhi ul li {
+        width: 16.66%;
+        height: auto;
+        float: left !important;
+        margin-top: 15px; }
+        #rent_house_detail .rent-house-detail .fypeizhi ul li .iconfont {
+          display: block;
+          width: 80%;
+          height: 30px;
+          font-size: 25px;
+          line-height: 30px;
+          text-align: center;
+          margin: auto; }
+        #rent_house_detail .rent-house-detail .fypeizhi ul li p {
+          margin: 0;
+          width: 100%;
+          height: 20px;
+          line-height: 20px;
+          text-align: center; }
+  #rent_house_detail .rent-house-detail .fyliangdian {
+    padding-bottom: 20px; }
+    #rent_house_detail .rent-house-detail .fyliangdian h5 {
+      border-left: 3px solid #3699f5;
+      font-size: 16px;
+      height: 18px;
+      line-height: 18px;
+      padding-left: 10px;
+      margin: 20px 0 015px; }
+    #rent_house_detail .rent-house-detail .fyliangdian div {
+      width: 100%; }
+      #rent_house_detail .rent-house-detail .fyliangdian div span {
+        word-break: break-all;
+        border-radius: 2px;
+        line-height: 30px;
+        padding: 3px 5px 3px;
+        color: #59abfd;
+        background-color: #e6f2ff;
+        margin: 0 5px 5px 0; }
+  #rent_house_detail .rent-house-detail .fymiaoshu {
+    padding-bottom: 20px; }
+    #rent_house_detail .rent-house-detail .fymiaoshu h5 {
+      border-left: 3px solid #3699f5;
+      font-size: 16px;
+      height: 18px;
+      line-height: 18px;
+      padding-left: 10px;
+      margin: 20px 0 015px; }
+    #rent_house_detail .rent-house-detail .fymiaoshu h6 {
+      font-size: 16px;
+      color: #666666; }
+    #rent_house_detail .rent-house-detail .fymiaoshu p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      color: #333333; }
+  #rent_house_detail .rent-house-detail .fyposition {
+    padding-bottom: 20px; }
+    #rent_house_detail .rent-house-detail .fyposition h5 {
+      border-left: 3px solid #3699f5;
+      font-size: 16px;
+      height: 18px;
+      line-height: 18px;
+      padding-left: 10px;
+      margin: 20px 0 015px; }
+    #rent_house_detail .rent-house-detail .fyposition img {
+      width: 100%;
+      height: auto; }
+  #rent_house_detail .rent-house-detail .hisonline {
+    padding: 0 0 0 12px; }
+    #rent_house_detail .rent-house-detail .hisonline h5 {
+      font-size: 16px;
+      height: 55px;
+      line-height: 30px;
+      margin: 0 0 5px;
+      padding: 15px 0 0 0;
+      border-bottom: 1px solid #e6e6e6; }
+    #rent_house_detail .rent-house-detail .hisonline ul {
+      width: 100%; }
+      #rent_house_detail .rent-house-detail .hisonline ul li:last-child {
+        border-bottom: none; }
+      #rent_house_detail .rent-house-detail .hisonline ul li {
+        width: 100%;
+        padding: 12px 12px 12px 0;
+        border-bottom: 1px solid #e6e6e6; }
+        #rent_house_detail .rent-house-detail .hisonline ul li .img {
+          width: 35vw;
+          height: auto;
+          float: left;
+          position: relative; }
+          #rent_house_detail .rent-house-detail .hisonline ul li .img img {
+            border-radius: 3px;
+            width: 100%;
+            height: 85px; }
+          #rent_house_detail .rent-house-detail .hisonline ul li .img .zhutui {
+            width: 8vw;
+            height: auto;
+            position: absolute;
+            top: 0;
+            right: 0; }
+        #rent_house_detail .rent-house-detail .hisonline ul li .description {
+          float: left;
+          width: calc(65vw - 38px);
+          margin-left: 10px; }
+          #rent_house_detail .rent-house-detail .hisonline ul li .description h6 {
+            color: #333333;
+            font-size: 15px;
+            font-weight: 400;
+            border: none;
+            height: 20px;
+            line-height: 20px;
+            margin: 0;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #rent_house_detail .rent-house-detail .hisonline ul li .description p {
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+            height: 20px;
+            overflow: hidden;
+            color: #666666; }
+            #rent_house_detail .rent-house-detail .hisonline ul li .description p span {
+              font-size: 12px;
+              border-radius: 2px;
+              padding: 2px 3px 2px;
+              background-color: #e6f2ff;
+              color: #59abfd;
+              margin-right: 3px; }
+          #rent_house_detail .rent-house-detail .hisonline ul li .description div {
+            font-size: 14px;
+            color: #666666;
+            width: calc(65vw - 38px); }
+            #rent_house_detail .rent-house-detail .hisonline ul li .description div .space {
+              float: left;
+              height: 25px;
+              line-height: 25px;
+              width: 60%;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #rent_house_detail .rent-house-detail .hisonline ul li .description div .price {
+              text-align: right;
+              float: right;
+              height: 25px;
+              line-height: 25px;
+              width: 40%;
+              color: #e64b00;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              #rent_house_detail .rent-house-detail .hisonline ul li .description div .price span {
+                font-size: 16px;
+                font-weight: 600; }
+
+#rent_house_detail .plus {
+  position: absolute;
+  padding-bottom: 40px; }
+  #rent_house_detail .plus .btn {
+    z-index: 999;
+    position: absolute;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 30px;
+    font-size: 2rem;
+    color: white; }
+  #rent_house_detail .plus .backbotton {
+    left: 5px; }
+  #rent_house_detail .plus .sharebotton {
+    right: 5px; }
+  #rent_house_detail .plus .bannerposition {
+    position: relative;
+    width: 100%;
+    height: 280px; }
+    #rent_house_detail .plus .bannerposition .detailcursor {
+      width: 100%;
+      height: 100%; }
+      #rent_house_detail .plus .bannerposition .detailcursor .box {
+        width: 100%;
+        height: 100%; }
+        #rent_house_detail .plus .bannerposition .detailcursor .box img {
+          width: 100%;
+          height: 100%; }
+      #rent_house_detail .plus .bannerposition .detailcursor .slider-pager {
+        position: absolute;
+        bottom: 5px; }
+        #rent_house_detail .plus .bannerposition .detailcursor .slider-pager .slider-pager-page {
+          font-size: 12px; }
+    #rent_house_detail .plus .bannerposition .indexnum {
+      position: absolute;
+      z-index: 998;
+      bottom: 5px;
+      right: 5px;
+      color: white;
+      border-radius: 3px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0 5px 0; }
+  #rent_house_detail .plus .card {
+    box-shadow: none;
+    padding: 0 12px 0; }
+  #rent_house_detail .plus .detailname h4 {
+    font-size: 18px;
+    color: #333333;
+    margin: 15px 0 15px; }
+  #rent_house_detail .plus .detailname ul {
+    width: 100%;
+    height: auto;
+    padding: 15px 0 15px; }
+    #rent_house_detail .plus .detailname ul li {
+      width: calc(33.33% - 1px);
+      height: auto;
+      line-height: 30px;
+      text-align: center; }
+      #rent_house_detail .plus .detailname ul li p {
+        font-size: 16px;
+        text-align: center;
+        line-height: 20px; }
+      #rent_house_detail .plus .detailname ul li p.top {
+        color: #969696;
+        margin: 0 0 10px; }
+      #rent_house_detail .plus .detailname ul li p.bottom {
+        color: #e64b00; }
+    #rent_house_detail .plus .detailname ul .line {
+      width: 0;
+      height: 50px;
+      border-right: 1px solid gainsboro;
+      box-sizing: border-box; }
+  #rent_house_detail .plus .houseinfo ul {
+    width: 100%;
+    height: 110px;
+    padding: 10px 0 10px; }
+    #rent_house_detail .plus .houseinfo ul li {
+      width: 50%;
+      height: 30px;
+      font-size: 16px;
+      line-height: 30px;
+      text-align: left;
+      word-break: keep-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      #rent_house_detail .plus .houseinfo ul li span.leftdesc {
+        color: #969696; }
+  #rent_house_detail .plus .fypeizhi {
+    padding-bottom: 15px; }
+    #rent_house_detail .plus .fypeizhi h5 {
+      border-left: 3px solid #3699f5;
+      font-size: 16px;
+      height: 18px;
+      line-height: 18px;
+      padding-left: 10px;
+      margin: 20px 0 015px; }
+    #rent_house_detail .plus .fypeizhi ul {
+      width: 100%;
+      height: auto; }
+      #rent_house_detail .plus .fypeizhi ul li {
+        width: 16.66%;
+        height: auto;
+        float: left !important;
+        margin-top: 15px; }
+        #rent_house_detail .plus .fypeizhi ul li .iconfont {
+          display: block;
+          width: 80%;
+          height: 30px;
+          font-size: 25px;
+          line-height: 30px;
+          text-align: center;
+          margin: auto; }
+        #rent_house_detail .plus .fypeizhi ul li p {
+          margin: 0;
+          width: 100%;
+          height: 20px;
+          line-height: 20px;
+          text-align: center; }
+  #rent_house_detail .plus .fyliangdian {
+    padding-bottom: 20px; }
+    #rent_house_detail .plus .fyliangdian h5 {
+      border-left: 3px solid #3699f5;
+      font-size: 16px;
+      height: 18px;
+      line-height: 18px;
+      padding-left: 10px;
+      margin: 20px 0 015px; }
+    #rent_house_detail .plus .fyliangdian div {
+      width: 100%; }
+      #rent_house_detail .plus .fyliangdian div span {
+        word-break: break-all;
+        border-radius: 2px;
+        line-height: 30px;
+        padding: 3px 5px 3px;
+        color: #59abfd;
+        background-color: #e6f2ff;
+        margin: 0 5px 5px 0; }
+  #rent_house_detail .plus .fymiaoshu {
+    padding-bottom: 20px; }
+    #rent_house_detail .plus .fymiaoshu h5 {
+      border-left: 3px solid #3699f5;
+      font-size: 16px;
+      height: 18px;
+      line-height: 18px;
+      padding-left: 10px;
+      margin: 20px 0 015px; }
+    #rent_house_detail .plus .fymiaoshu h6 {
+      font-size: 16px;
+      color: #666666; }
+    #rent_house_detail .plus .fymiaoshu p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      color: #333333; }
+  #rent_house_detail .plus .fyposition {
+    padding-bottom: 20px; }
+    #rent_house_detail .plus .fyposition h5 {
+      border-left: 3px solid #3699f5;
+      font-size: 16px;
+      height: 18px;
+      line-height: 18px;
+      padding-left: 10px;
+      margin: 20px 0 015px; }
+    #rent_house_detail .plus .fyposition img {
+      width: 100%;
+      height: auto; }
+  #rent_house_detail .plus .hisonline {
+    padding: 0 0 0 12px; }
+    #rent_house_detail .plus .hisonline h5 {
+      font-size: 16px;
+      height: 55px;
+      line-height: 30px;
+      margin: 0 0 5px;
+      padding: 15px 0 0 0;
+      border-bottom: 1px solid #e6e6e6; }
+    #rent_house_detail .plus .hisonline ul {
+      width: 100%; }
+      #rent_house_detail .plus .hisonline ul li:last-child {
+        border-bottom: none; }
+      #rent_house_detail .plus .hisonline ul li {
+        width: 100%;
+        padding: 12px 12px 12px 0;
+        border-bottom: 1px solid #e6e6e6; }
+        #rent_house_detail .plus .hisonline ul li .img {
+          width: 28vw;
+          height: auto;
+          float: left;
+          position: relative; }
+          #rent_house_detail .plus .hisonline ul li .img img {
+            border-radius: 3px;
+            width: 100%;
+            height: 85px; }
+          #rent_house_detail .plus .hisonline ul li .img .zhutui {
+            width: 8vw;
+            height: auto;
+            position: absolute;
+            top: 0;
+            right: 0; }
+        #rent_house_detail .plus .hisonline ul li .description {
+          float: left;
+          width: calc(72vw - 38px);
+          margin-left: 10px; }
+          #rent_house_detail .plus .hisonline ul li .description h6 {
+            color: #333333;
+            font-size: 15px;
+            font-weight: 400;
+            border: none;
+            height: 20px;
+            line-height: 20px;
+            margin: 0;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #rent_house_detail .plus .hisonline ul li .description p {
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+            height: 20px;
+            overflow: hidden;
+            color: #666666; }
+            #rent_house_detail .plus .hisonline ul li .description p span {
+              border-radius: 2px;
+              padding: 2px 3px 2px;
+              font-size: 12px;
+              background-color: #e6f2ff;
+              color: #59abfd;
+              margin-right: 3px; }
+          #rent_house_detail .plus .hisonline ul li .description div {
+            font-size: 14px;
+            color: #666666;
+            width: calc(72vw - 38px); }
+            #rent_house_detail .plus .hisonline ul li .description div .space {
+              float: left;
+              height: 25px;
+              line-height: 25px;
+              width: 60%;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #rent_house_detail .plus .hisonline ul li .description div .price {
+              text-align: right;
+              float: right;
+              height: 25px;
+              line-height: 25px;
+              width: 40%;
+              color: #e64b00;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              #rent_house_detail .plus .hisonline ul li .description div .price span {
+                font-size: 16px;
+                font-weight: 600; }
+
 #if_have_house .searchhouse-header {
   position: absolute;
   z-index: 1002;
@@ -25284,6 +26315,23 @@ a.button {
       #if_have_house .pullchooselist div .scroll-content .list .item:first-child {
         border-top: none; }
 
+#if_have_house .dao-hang {
+  position: fixed;
+  z-index: 99;
+  bottom: 60px;
+  right: 15px;
+  width: 39px;
+  height: 39px;
+  line-height: 39px;
+  text-align: center;
+  border-radius: 50%;
+  color: #e5f0f7;
+  background-color: rgba(78, 127, 184, 0.9); }
+  #if_have_house .dao-hang i {
+    position: relative;
+    top: 2px;
+    font-size: 20px; }
+
 #if_have_house .if-have-house {
   margin-top: 84px; }
   #if_have_house .if-have-house .card {
@@ -25295,6 +26343,27 @@ a.button {
     #if_have_house .if-have-house p.loading .spinner svg {
       width: 60px !important;
       height: 60px !important; }
+  #if_have_house .if-have-house .buyOrRent {
+    width: 50%;
+    margin: auto;
+    height: 35px; }
+    #if_have_house .if-have-house .buyOrRent .son {
+      width: 50%;
+      float: left;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      padding: 0;
+      color: #666666; }
+    #if_have_house .if-have-house .buyOrRent .active {
+      color: white;
+      background-color: #55c2d7; }
+    #if_have_house .if-have-house .buyOrRent .buy {
+      border-radius: 10px 0 0 10px;
+      border: 1px solid gray; }
+    #if_have_house .if-have-house .buyOrRent .rent {
+      border-radius: 0 10px 10px 0;
+      border: 1px solid gray; }
   #if_have_house .if-have-house .ershou p.baseLine {
     margin: 0;
     padding: 15px 12px 15px;
@@ -25458,6 +26527,27 @@ a.button {
     #if_have_house .plus p.loading .spinner svg {
       width: 60px !important;
       height: 60px !important; }
+  #if_have_house .plus .buyOrRent {
+    width: 50%;
+    margin: auto;
+    height: 35px; }
+    #if_have_house .plus .buyOrRent .son {
+      width: 50%;
+      float: left;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      padding: 0;
+      color: #666666; }
+    #if_have_house .plus .buyOrRent .active {
+      color: white;
+      background-color: #55c2d7; }
+    #if_have_house .plus .buyOrRent .buy {
+      border-radius: 10px 0 0 10px;
+      border: 1px solid gray; }
+    #if_have_house .plus .buyOrRent .rent {
+      border-radius: 0 10px 10px 0;
+      border: 1px solid gray; }
   #if_have_house .plus .ershou p.baseLine {
     margin: 0;
     padding: 15px 12px 15px;
@@ -26834,6 +27924,23 @@ a.button {
 #per_center .header {
   background-color: white; }
 
+#per_center .dao-hang {
+  position: fixed;
+  z-index: 99;
+  bottom: 60px;
+  right: 15px;
+  width: 39px;
+  height: 39px;
+  line-height: 39px;
+  text-align: center;
+  border-radius: 50%;
+  color: #e5f0f7;
+  background-color: rgba(78, 127, 184, 0.9); }
+  #per_center .dao-hang i {
+    position: relative;
+    top: 2px;
+    font-size: 20px; }
+
 #per_center .per-center .perinfo {
   padding: 44px 12px 10px;
   background-color: #41a0ff; }
@@ -26969,5 +28076,85 @@ a.button {
       float: left;
       border-color: #e6e6e6; }
 
+#chat_list .dao-hang {
+  position: fixed;
+  z-index: 99;
+  bottom: 60px;
+  right: 15px;
+  width: 39px;
+  height: 39px;
+  line-height: 39px;
+  text-align: center;
+  border-radius: 50%;
+  color: #e5f0f7;
+  background-color: rgba(78, 127, 184, 0.9); }
+  #chat_list .dao-hang i {
+    position: relative;
+    top: 2px;
+    font-size: 20px; }
+
 #chat_list .chat-list {
   margin-top: 44px; }
+
+#be_agent .fourchoose {
+  height: 44px;
+  width: 100vw;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e6e6e6; }
+  #be_agent .fourchoose .fenlei {
+    display: block;
+    float: left;
+    line-height: 44px;
+    width: 25vw;
+    font-size: 16px;
+    text-align: center;
+    color: #333333; }
+  #be_agent .fourchoose .underline {
+    position: absolute;
+    bottom: 0px;
+    left: 7vw;
+    width: 11vw;
+    height: 0;
+    border-bottom: 2px solid #3699f5; }
+
+#be_agent .backtop {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  bottom: 80px;
+  right: 15px;
+  width: 39px;
+  height: 39px;
+  line-height: 39px;
+  text-align: left;
+  border-radius: 50%;
+  color: #969696;
+  background-color: rgba(133, 64, 64, 0.9); }
+  #be_agent .backtop i {
+    position: relative;
+    top: 2px;
+    font-size: 38px; }
+
+#be_agent .dao-hang {
+  position: fixed;
+  z-index: 99;
+  bottom: 40px;
+  right: 15px;
+  width: 39px;
+  height: 39px;
+  line-height: 39px;
+  text-align: center;
+  border-radius: 50%;
+  color: #e5f0f7;
+  background-color: rgba(78, 127, 184, 0.9); }
+  #be_agent .dao-hang i {
+    position: relative;
+    top: 2px;
+    font-size: 20px; }
+
+#be_agent .scroll-content {
+  margin-top: 45px;
+  background-color: white; }

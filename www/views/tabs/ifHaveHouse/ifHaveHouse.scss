@@ -234,6 +234,24 @@
             }
         }
     }
+    .dao-hang{
+        position: fixed;
+        z-index: 99;
+        bottom:60px;
+        right:15px;
+        width: 39px;
+        height: 39px;
+        line-height:39px;
+        text-align: center;
+        border-radius: 50%;
+        color: rgb(229, 240, 247);
+        background-color: rgba(78, 127, 184, 0.9);
+        i{
+            position: relative;
+            top: 2px;
+            font-size: 20px;
+        }
+    }
     
     .if-have-house{
         margin-top: 84px;
@@ -247,6 +265,32 @@
             .spinner svg {
               width: 60px !important;
               height: 60px !important;
+            }
+        }
+        .buyOrRent{
+            width: 50%;
+            margin: auto;
+            height: 35px;
+            .son{
+                width: 50%;
+                float: left;
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                padding: 0;
+                color: rgb(102, 102, 102);
+            }
+            .active{
+                color: white;
+                background-color: rgb(85,194,215)
+            }
+            .buy{
+                border-radius: 10px 0 0 10px;
+                border:1px solid gray;
+            }
+            .rent{
+                border-radius: 0 10px 10px 0;
+                border:1px solid gray;
             }
         }
         .ershou{
@@ -449,6 +493,32 @@
             .spinner svg {
               width: 60px !important;
               height: 60px !important;
+            }
+        }
+        .buyOrRent{
+            width: 50%;
+            margin: auto;
+            height: 35px;
+            .son{
+                width: 50%;
+                float: left;
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                padding: 0;
+                color: rgb(102, 102, 102);
+            }
+            .active{
+                color: white;
+                background-color: rgb(85,194,215)
+            }
+            .buy{
+                border-radius: 10px 0 0 10px;
+                border:1px solid gray;
+            }
+            .rent{
+                border-radius: 0 10px 10px 0;
+                border:1px solid gray;
             }
         }
         .ershou{

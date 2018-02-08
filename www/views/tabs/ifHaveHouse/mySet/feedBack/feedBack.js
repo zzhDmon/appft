@@ -6,7 +6,7 @@ angular.module('App').controller('feedBackCtl',function($ionicHistory,$timeout,$
 	$scope.back=function(){
 		$ionicHistory.goBack()
 	}
-	
+	$scope.headTitle=$stateParams.title;
 	$scope.problem={
 		des:''
 	}

@@ -2,15 +2,16 @@
 <!--对话模板-->
 <ion-view id="if_have_house" hide-nav-bar=true view-title="房源发布"  class='dark'>
 	
-	<div ng-click="toggleOpen()" class="circle" style="z-index:9999;">
+	<div ng-click="toggleOpen()" class="circle">
 		<div class="ring">
-			<span class="menuItem iconfont icon-home" >{{homeTypeParams}}</span>
-			<span class="menuItem iconfont icon-kehu"></span>
+			<span class="menuItem iconfont icon-home" ></span>
+			<span class="menuItem iconfont icon-kehu" ui-sref="tabs.beAgent"></span>
 			<span class="menuItem iconfont icon-dianhua" ui-sref="tabs.chatList"></span>
 			<span class="menuItem iconfont icon-wode" ui-sref="tabs.perCenter"></span>
 		</div>
 		<span class="center iconfont icon-jiahao1"></span>
 	</div>
+	<div ng-click="openNav()" class="dao-hang"><i class="iconfont icon-daohang"></i></div>
 
 	
 	<div ng-click="closechoose()" class="bar searchhouse-header item-input-inset">
@@ -31,14 +32,14 @@
 	</div>
 
 	<div class="tabNav" style="position:absolute;bottom:0;width:100%;height:45px;z-index:1;">
-		<ul class="havehouse">
+		<ul ng-if="haveHouse" class="havehouse">
 			<li class="lef" ui-sref="tabs.fbManage({type:0})">出售</li>
-			<li class="mid" ui-sref="tabs.perCenter">mid</li>
+			<li class="mid">mid</li>
 			<li class="rig" ui-sref="tabs.fbManage({type:1})">出租</li>
 		</ul>
-		<ul class="nohouse">
+		<ul ng-if="!haveHouse" class="nohouse">
 			<li class="lef" ui-sref="tabs.needManage({type:0})">买房</li>
-			<li class="mid" ui-sref="tabs.perCenter">mid</li>
+			<li class="mid">mid</li>
 			<li class="rig" ui-sref="tabs.needManage({type:1})">租房</li>
 		</ul>
 	</div>
@@ -157,7 +158,7 @@
 			</ion-content>
 	</div>
 
-	<div ng-if="!haveHouse" class="need-house">
+	<div ng-if="!haveHouse" class="needHouse">
 		<ion-content delegate-handle="mainscroll" on-swipe-right="onSwipeRight()" on-swipe-down="onSwipeDown()" on-swipe-up="onSwipeUp()" class="if-have-house">
 			<div ng-if="sellhousearr.length<1" class="card noresult">
 				<div class="top">
@@ -172,16 +173,23 @@
 				<ion-spinner icon="lines" class=""></ion-spinner>
 			</p>
 			
+			<div class="buyOrRent">
+				<div ng-click="changeNeedType(0)" ng-class="{true:'active',false:''}[needType==0]" class="buy son">
+					买房
+				</div>
+				<div ng-click="changeNeedType(1)" ng-class="{true:'active',false:''}[needType==1]" class="rent son">
+					租房
+				</div>
+			</div>
 			<div ng-if="sellhousearr.length>0" class="card ershou">
-				
 				<ion-list>
-						<ion-item on-finish-render-filters item="item" ng-click="closeoption($event)" ng-repeat="sellhouse in sellhousearr track by $index" ui-sref="tabs.alikehousedetail({id:sellhouse.Id,type:1})">
+						<ion-item on-finish-render-filters item="item" ng-repeat="sellhouse in sellhousearr track by $index" ng-click="goSellDetail(sellhouse.Id)">
 							<div class="img">
 								<img ng-src="{{sellhouse.Thumb}}"/>
 							</div>
 							
 							<div class="description">
-								<h6>{{sellhouse.Title}}</h6>
+								<h6>{{sellhouse.Title}}22</h6>
 								<p>{{sellhouse.CommunityName}}</p>
 								<div>
 									<div class="space">

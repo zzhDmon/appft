@@ -1,11 +1,11 @@
 
-angular.module('App').controller('sellHouseDetailCtl',function(goBack,$ionicScrollDelegate,$ionicModal,$timeout,$ionicHistory,$scope,$state,$stateParams,$http,$Factory,$ionicSlideBoxDelegate,$ionicPopover,$timeout,$ionicLoading,WechatService,Apphost){
+angular.module('App').controller('sellHouseDetailCtl',function(goTo,goBack,$ionicScrollDelegate,$ionicModal,$timeout,$ionicHistory,$scope,$state,$stateParams,$http,$Factory,$ionicSlideBoxDelegate,$ionicPopover,$ionicPopup,$timeout,$ionicLoading,WechatService,Apphost){
 	$timeout(function(){
 		$('span.back-text').css('display','none');
 	
 		if($('#sell_house_detail .sell-house-detail').innerWidth()>375){
 			$('#sell_house_detail .sell-house-detail').addClass('plus')
-			$('#sell_house_detail .sell-house-detail').removeClass('sell-house-detail')
+			// $('#sell_house_detail .sell-house-detail').removeClass('sell-house-detail')
 		}
 	})
 	
@@ -14,15 +14,10 @@ angular.module('App').controller('sellHouseDetailCtl',function(goBack,$ionicScro
 	 }
 
 	$scope.id=$stateParams.id
-	// $scope.housetype=$stateParams.housetype
-	// if($stateParams.housetype==1){
-	// 	$scope.housetype='sell'
-	// }else if($stateParams.housetype==2){
-	// 	$scope.housetype='rent'
-	// }else{
-	// 	$scope.housetype = $stateParams.housetype		
-	// }
 	
+	$scope.goChat=function(id){
+		goTo.goto('dialogBox',{id:id})
+	}
 	$scope.back=function(){
 		goBack.goback()
 	}
@@ -70,23 +65,47 @@ angular.module('App').controller('sellHouseDetailCtl',function(goBack,$ionicScro
 		$scope.currentindex=$ionicSlideBoxDelegate.$getByHandle('fydetail-handle').currentIndex()+1;
 	}
 
+	// 回复模态框
+	$ionicModal.fromTemplateUrl('templates/sellHouseReplymodal.html', {
+	    scope: $scope
+	}).then(function(modal) {
+		$scope.modal = modal;
+	});
+	$scope.goReply=function(){
+		$scope.modal.show()
+	}
 
+	$scope.applyAgent = function() {
+		var confirmPopup = $ionicPopup.confirm({
+			title: '申请代理',
+			template: '确认申请代理这套房子?',
+			cancelText:'取消',
+			okText:'确认'
+		});
+		confirmPopup.then(function(res) {
+			if(res) {
+				$ionicLoading.show({
+					template:'申请成功',
+					duration:1000
+				})
+			} else {
+				$ionicLoading.show({
+					template:'申请失败',
+					duration:1000
+				})
+			}
+		});
+	};
 	
 	//把浮动框读取到作用域中
-	// .fromTemplateUrl() 方法
 	$ionicPopover.fromTemplateUrl('sellHouseDetailpopover.html', {
 	    scope: $scope
 	}).then(function(popoverView) {
 	    $scope.popover = popoverView;
 	});
-		
-	//点击加号绑定事件
 	$scope.openPopoverView=function($e){
-		//形参$e是事件对象
 		 $scope.popover.show($e);
 	}
-	
-	//关闭浮动框
 	$scope.closePopoverView = function(){
 		$scope.popover.hide()
 	}

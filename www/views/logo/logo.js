@@ -2,18 +2,7 @@ angular.module('App').controller('LogoController',function($timeout,$interval,$h
 // $timeout(function(){
 // 	$state.go('tabs.home')
 // },3000)
-//	$timeout(function(){
-//		if($('#logo .logo').innerWidth()>375){
-//			$('#logo .logo .normal').css('display','none')
-//			$('#logo .logo .plus').css('display','block')
-//		}
-//	})
 
-//	$http.get($Factory.Template.banner.url).then(function(resData){
-//		$rootScope.homebanner=resData.data;
-//	},function(){
-//		
-//	})
 	$scope.canvasinit=function () {
 		fanvas.play("testCanvas", swfData, {
 			cache: true, autoPlay: true,showFPS:0,clearAll:1,scale:1,
@@ -36,6 +25,9 @@ angular.module('App').controller('LogoController',function($timeout,$interval,$h
 			imagePath: "./canvasimg/"
 		});
 	}
+
+	$scope.canvasinit();
+	
 	//响应式canvas
 	$(window).resize(resizeCanvas);
 	function resizeCanvas() {
@@ -45,17 +37,14 @@ angular.module('App').controller('LogoController',function($timeout,$interval,$h
 	};
 	resizeCanvas();
 
-	$scope.canvasinit();
 
 	$scope.onSwipeUp=function(){
 			fanvas.gotoAndPlay("testCanvas",31);
 			$scope.query=0;
-			$rootScope.homeTypeParams=0;
 	}
 	$scope.onSwipeDown=function(){
 			fanvas.gotoAndPlay("testCanvas",31)
 			$scope.query=1;
-			$rootScope.homeTypeParams=1;
 	}
 
 })

@@ -9,7 +9,7 @@ angular.module('App').controller('perCenterCtl',function($timeout,$interval,$cor
 		}				
 	});
 
-	// 旋轉導航
+// 旋轉導航
 	var items = $('#per_center .menuItem');
 	for(var i = 0, l = items.length; i < l; i++) {
 		
@@ -17,7 +17,18 @@ angular.module('App').controller('perCenterCtl',function($timeout,$interval,$cor
 		items[i].style.top = (50 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
 	}
 	$scope.toggleOpen=function(e){
-		$('#per_center .circle').toggleClass('open')
+		$('#per_center .circle').removeClass('open');
+		// $('#per_center .circle').toggleClass('open');
+		$timeout(function(){
+			$('#per_center .circle').css('display','none');
+		},100)
+	}
+	$scope.openNav=function(){
+		$('#per_center .circle').css('display','block');
+		// $('#per_center .circle').toggleClass('open');
+		$timeout(function(){
+			$('#per_center .circle').addClass('open');
+		},100)
 	}
 
 
