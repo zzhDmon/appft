@@ -68,9 +68,179 @@
         background-color: rgb(255,255,255);
     }
     .video{
-
+        .bannerposition{
+            margin-bottom: 15px;
+            .box{
+                img{
+                    display: block;
+                    width: 100%; 
+                }
+            }
+        }
+        .videolist{
+            width: 100%;
+            ul{
+                width: 100%;
+                li{
+                    width: 50%;
+                    margin-bottom: 10px;
+                    img{
+                        display: block;
+                        width: 90%;
+                        height: 80px;
+                        margin: auto;
+                    }
+                    h6{
+                        width: 90%;
+                        margin: 0 auto;
+                        height: 20px;
+                        line-height: 20px;
+                        padding: 0;
+                    }
+                    .foot{
+                        width: 90%;
+                        margin: auto;
+                        .level{
+                            float: left;
+                            width: 30px;
+                            height: 20px;
+                            border-radius: 5px;
+                        }
+                        .levelheight{
+                            background-color: gold;
+                        }
+                        .levellow{
+                            background-color: aquamarine;
+                        }
+                        .comment{
+                            float: left;
+                            width: calc(50% - 15px);
+                            height: 20px;
+                            text-align: center;
+                            line-height: 20px;
+                        }
+                        .count{
+                            float: left;
+                            width: calc(50% - 15px);
+                            height: 20px;
+                            text-align: center;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
     }
     .live{
+        .bannerposition{
+            margin-bottom: 15px;
+            .box{
+                img{
+                    display: block;
+                    width: 100%; 
+                }
+            }
+        }
+        .livelist{
+            width: 100%;
+            ul{
+                width: 100%;
+                li{
+                    width: 50%;
+                    margin-bottom: 10px;
+                    img{
+                        display: block;
+                        width: 90%;
+                        height: 80px;
+                        margin: auto;
+                    }
+                    h6{
+                        width: 90%;
+                        margin: 0 auto;
+                        height: 20px;
+                        line-height: 20px;
+                        padding: 0;
+                    }
+                    .foot{
+                        width: 90%;
+                        margin: auto;
+                        .level{
+                            float: left;
+                            width: 30px;
+                            height: 20px;
+                            border-radius: 5px;
+                        }
+                        .levelheight{
+                            background-color: gold;
+                        }
+                        .levellow{
+                            background-color: aquamarine;
+                        }
+                        .comment{
+                            float: left;
+                            width: calc(50% - 15px);
+                            height: 20px;
+                            text-align: center;
+                            line-height: 20px;
+                        }
+                        .count{
+                            float: left;
+                            width: calc(50% - 15px);
+                            height: 20px;
+                            text-align: center;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .train{
+        img{
+            display: block;
+            width: 100%;
+        }
+        p.bothLine{
+            margin: 0;
+            padding: 15px 12px 15px;
+            background-color: rgb(246,246,246);
+            span {
+                text-align: center;
+                display: block;     /*设置为块级元素会独占一行形成上下居中的效果*/
+                font-size: 14px;
+                color: #969696;
+                position: relative;   /*定位横线（当横线的父元素）*/
+            }
+            span:before{
+                content: '';                 /*CSS伪类用法*/
+                position: absolute;         /*定位背景横线的位置*/
+                top: 52%;
+                background: #e6e6e6;       /*宽和高做出来的背景横线*/
+                width: 28%;
+                height: 1px;
+            }
+            span:after {
+                content: '';                 /*CSS伪类用法*/
+                position: absolute;         /*定位背景横线的位置*/
+                top: 52%;
+                background: #e6e6e6;       /*宽和高做出来的背景横线*/
+                width: 28%;
+                height: 1px;
+            }
+            span:before{
+                left: 0;        /*调整背景横线的左右距离*/
+            }
+            span:after {
+                right: 0;
+            }
+        }
+        .info{
 
+        }
+        .button{
+            display: block;
+            width: 50%;
+            margin: 15px auto 0;
+        }
     }
 }

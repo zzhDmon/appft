@@ -1,0 +1,97 @@
+
+<!--对话模板-->
+<ion-view id="agent_home_page" hide-nav-bar=true  view-title="{{headTitle}}" class='dark'>
+	
+	
+	
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1" style="font-size: 25px!important;"></i>
+		</div>
+		<div class="title">
+			{{headTitle}}
+		</div>
+		<div class="right">
+			
+		</div>
+	</div>
+	
+	<ion-content on-swipe-right="onSwipeRight()" class="agent-home-page" has-bouncing={{torf}}>
+		
+		<div class="card headinfo">
+			<img ng-if="info.ShowImg" ng-src="{{info.ShowImg}}"/>
+			<div ng-if="!info.ShowImg" class="img">
+				<i class="iconfont icon-touxiangx"></i>
+			</div>
+			<div class="description">
+				<h3>
+					<span>{{name}}</span>
+					<span class="tag">高级店经理</span>
+					<!-- (<span ng-if="!info.WorkYears">0</span>{{info.WorkYears}}年工作经验) -->
+				</h3>
+				<p>厦门-湖边店</p>
+				<p>入职房田3年</p>
+			</div>
+		</div>
+		<div class="borderline"></div>
+		<div class="performance">
+			<ul>
+				<li>
+					<h5>60</h5>
+					<p>历史成交（套）</p>
+				</li>
+				<li>
+					<h5>30</h5>
+					<p>平均成交周期（天）</p>
+				</li>
+				<li>
+					<h5>50</h5>
+					<p>近30天带看（次）</p>
+				</li>
+			</ul>
+		</div>
+		<div class="offline"></div>
+
+		<div class="changetype">
+			<ul>
+				<li ng-click="changeHaveType(0)" ng-class="{true:'active',false:''}[haveType==0]" class="self">他的房源</li>
+				<li ng-click="changeHaveType(1)" ng-class="{true:'active',false:''}[haveType==1]" class="agent">他代理的房源</li>
+			</ul>
+		</div>
+		
+		<div class="houseList">
+				<ul>
+					<li on-drag-left="dragLeft()" on-finish-render-filters ng-repeat="new in homehousearr">
+						<div class="img">
+							<img ng-src="{{new.Images}}"/>
+							<span class="newonline">
+								{{new.SellType}}
+							</span>
+						</div>
+						<div class="description">
+							<div class="tit"><div class="name">{{new.Title}}</div><div class="price"><span>{{new.Prize}}</span>元/㎡</div></div>
+							
+							<p class="devarea">{{new.Address}}</p>
+							<p>
+								<span ng-repeat="Special in new.Specialty">{{Special}}</span>
+							</p>
+							<div class="earn">
+								<div class="yongjin" ng-if="showmoney">
+									<span class="unit">佣金</span><span class="count">{{new.Bound}}/每套</span>
+								</div>
+								<div class="yongjin" ng-if="!showmoney">
+									<span class="nosignunit">佣金</span><span class="nosigncount">登录认证后可见</span>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+		</div>
+		
+	
+		
+		
+	</ion-content>
+	
+</ion-view>
+

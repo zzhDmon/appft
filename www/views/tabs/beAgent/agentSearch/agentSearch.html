@@ -10,11 +10,11 @@
             <!-- <i class="iconfont icon--pulldown"></i> -->
 			<i class="iconfont icon-sousuo2"></i>
 		    <form>
-	            <input type="search" placeholder="请输入客户名或需求" ng-model="searchName.key">
+	            <input type="search" placeholder="请输入经纪人姓名或电话" ng-model="searchName.key">
 			    <button style="display: none" ng-click="search()"></button>
 			</form>
-            <!--<i class="icon ion-close-circled placeholder-icon" style="vertical-align: middle;"
-                   ng-click="clear()" ng-if="searchName.key.length"></i>-->
+            <i class="icon ion-close-circled placeholder-icon" style="vertical-align: middle;"
+                   ng-click="clear()" ng-if="searchName.key.length"></i>
         </span>
 	    <span class="search" ng-if="searchName.key.length" ng-click="search()">搜索</span>
 	
@@ -26,25 +26,16 @@
 		<div class="card searchhistory ershou">
 			<!--<h5>历史记录</h5>-->
 			<ion-list>
-				<ion-item ng-repeat="ershouhistory in setershouhistory track by $index">
-					<span class="lef" ui-sref="tabs.searchresult({query:ershouhistory,type:1})">{{ershouhistory}}</span> <span class="rig" ng-click="Delershou($index)"><i class="iconfont icon-quxiao1"></i></span>
+				<ion-item ng-repeat="agenthistory in showAgentsearchHistory track by $index">
+					<span class="lef" ui-sref="tabs.agentSearchResult({query:agenthistory})">{{agenthistory}}</span> <span class="rig" ng-click="DelAgentSearch($index)"><i class="iconfont icon-quxiao1"></i></span>
 				</ion-item>
 			</ion-list>
-			<button ng-if="setershouhistory.length>0" ng-click="removeershouhistory()" class="button "><i class="iconfont icon-lajitong"></i>删除历史记录</button>
+			<button ng-if="showAgentsearchHistory.length>0" ng-click="removeershouhistory()" class="button "><i class="iconfont icon-lajitong"></i>删除历史记录</button>
 			
-			<p ng-if="setershouhistory.length<1" class="nohistory">
-				暂无二手房搜索记录
+			<p ng-if="showAgentsearchHistory.length<1" class="nohistory">
+				暂无搜索记录
 			</p>
 			
-			<div class="offline"></div>
-			<div class="hotsearch">
-				<h5>房田热门搜索</h5>
-				<ul>
-					<li ng-repeat="item in hotSearcharr track by $index" ui-sref="tabs.searchresult({query:item.Title,type:1})">
-						<span>{{$index+1}}</span>{{item.Title}}
-					</li>
-				</ul>
-			</div>
 		</div>
 		
 		

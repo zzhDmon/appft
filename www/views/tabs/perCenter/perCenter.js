@@ -1,4 +1,4 @@
-angular.module('App').controller('perCenterCtl',function($timeout,$interval,$cordovaContacts,$ionicHistory,$http,$Factory,$scope,$state,$http,$ionicPopup,$rootScope){
+angular.module('App').controller('perCenterCtl',function(goTo,$timeout,$interval,$cordovaContacts,$ionicHistory,$http,$Factory,$scope,$state,$http,$ionicPopup,$rootScope){
 	//清除浏览历史，即使手机上有回退按钮或者导航栏上显示回退按钮，都无法回退
 	$ionicHistory.clearHistory();
 	//状态栏
@@ -47,7 +47,11 @@ angular.module('App').controller('perCenterCtl',function($timeout,$interval,$cor
 				$scope.VStatus=resData.data.data.VStatus;
 				
 		})
-    });
+	});
+	
+	$scope.goRealname=function(){
+		goTo.goto('realName')
+	}
        	
 //	$scope.newslist=["推荐经纪人同行加入房田，马上换福利","经纪人同行加入房田，马上换福利","同行加入房田，马上换福利"]
 //  $scope.autoScroll = function(obj){  

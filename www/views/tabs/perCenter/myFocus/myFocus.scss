@@ -1,0 +1,59 @@
+#my_focus{
+    .header{    
+        .title{
+            .switch{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                .recommend{
+                    width: 50%;
+                    height: 100%;
+                    float: left;
+                    text-align: center;
+                    line-height: 45px;
+                }
+                .focused{
+                    width: 50%;
+                    height: 100%;
+                    float: left;
+                    text-align: center;
+                    line-height: 45px;
+                }
+                .bottomline{
+                    position: absolute;
+                    width:30%;
+                    height: 0;
+                    border-top:1px solid rgb(56, 126, 245); 
+                    left: 10%;
+                    bottom: 0; 
+                }
+            }
+        }
+    }
+    
+    .my-focus{
+        margin-top: 44px;
+        .item-avatar{
+            .recommend{
+                display: flex;
+                position: absolute;
+                right: 32px;
+                top: 20px;
+                padding: 3px 5px;
+                border: 1px solid rgb(102, 102, 102);
+                border-radius: 3px;
+            }
+            .focused{
+                display: flex;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                padding: 3px 5px;
+                color: rgb(150, 150, 150);
+                border: 1px solid rgb(150, 150, 150);
+                border-radius: 3px;
+            }
+        }
+    }
+}

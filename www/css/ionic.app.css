@@ -25094,6 +25094,755 @@ a.button {
         width: 90vw;
         background-color: #41a0ff; }
 
+#agent_home_page .header {
+  background-color: #3699f5;
+  border-bottom: none; }
+  #agent_home_page .header div {
+    color: white; }
+
+#agent_home_page .openshop {
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+  background-color: #3699f5;
+  z-index: 999;
+  width: 25px;
+  height: 120px;
+  padding: 10px 5px 0;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  line-height: 20px; }
+  #agent_home_page .openshop a {
+    color: white;
+    text-decoration: none; }
+
+#agent_home_page .agent-home-page {
+  margin-top: 44px;
+  padding: 0;
+  background-color: white; }
+  #agent_home_page .agent-home-page .card {
+    box-shadow: none; }
+  #agent_home_page .agent-home-page .headback {
+    width: 100%;
+    height: 44px;
+    background-color: #3699f5; }
+    #agent_home_page .agent-home-page .headback .backbotton {
+      float: left;
+      width: 30px;
+      height: 44px;
+      text-align: center; }
+      #agent_home_page .agent-home-page .headback .backbotton i.icon {
+        color: white;
+        font-size: 25px;
+        line-height: 44px; }
+    #agent_home_page .agent-home-page .headback .sharebotton {
+      float: right;
+      width: 30px;
+      height: 44px;
+      text-align: center; }
+      #agent_home_page .agent-home-page .headback .sharebotton i.iconfont {
+        color: white;
+        font-size: 25px;
+        line-height: 44px; }
+  #agent_home_page .agent-home-page .headinfo {
+    width: 100%;
+    height: 100px;
+    box-shadow: none;
+    background-color: #3699f5;
+    border-radius: 0;
+    padding: 20px 12px 0; }
+    #agent_home_page .agent-home-page .headinfo img {
+      display: block;
+      float: left;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%; }
+    #agent_home_page .agent-home-page .headinfo .img {
+      float: left;
+      width: 60px;
+      height: 60px;
+      background-color: #96d2ff;
+      border-radius: 50%;
+      text-align: center; }
+      #agent_home_page .agent-home-page .headinfo .img i.iconfont {
+        font-size: 30px;
+        line-height: 60px;
+        color: #edfaff; }
+    #agent_home_page .agent-home-page .headinfo .description {
+      width: calc(100% - 110px);
+      height: 60px;
+      margin-left: 10px;
+      float: left;
+      color: white; }
+      #agent_home_page .agent-home-page .headinfo .description h3 {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        height: 20px;
+        line-height: 20px;
+        border: none;
+        width: 100%;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+        #agent_home_page .agent-home-page .headinfo .description h3 .tag {
+          font-size: 14px;
+          padding: 2px 5px;
+          background-color: #4157b8;
+          border: 1px solid gray;
+          border-radius: 3px; }
+      #agent_home_page .agent-home-page .headinfo .description p {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        height: 20px;
+        line-height: 20px;
+        width: 100%;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+  #agent_home_page .agent-home-page .performance ul {
+    width: 100%;
+    padding: 15px 12px 0; }
+    #agent_home_page .agent-home-page .performance ul li {
+      float: left;
+      width: 33.33%; }
+      #agent_home_page .agent-home-page .performance ul li h5 {
+        width: 100%;
+        text-align: center; }
+      #agent_home_page .agent-home-page .performance ul li p {
+        width: 100%;
+        text-align: center; }
+  #agent_home_page .agent-home-page .changetype {
+    margin: auto;
+    width: 70%;
+    height: 35px; }
+    #agent_home_page .agent-home-page .changetype ul {
+      width: 100%; }
+      #agent_home_page .agent-home-page .changetype ul li {
+        text-align: center;
+        line-height: 35px;
+        float: left;
+        width: 50%;
+        height: 35px;
+        border: 1px solid #666666; }
+      #agent_home_page .agent-home-page .changetype ul .active {
+        color: white;
+        background-color: #55c2d7; }
+      #agent_home_page .agent-home-page .changetype ul .self {
+        border-radius: 10px 0 0 10px; }
+      #agent_home_page .agent-home-page .changetype ul .agent {
+        border-radius: 0 10px 10px 0; }
+  #agent_home_page .agent-home-page .houseList ul {
+    padding: 0 0 0 12px;
+    width: 100%; }
+    #agent_home_page .agent-home-page .houseList ul li:last-child {
+      border-bottom: none; }
+    #agent_home_page .agent-home-page .houseList ul li {
+      width: 100%;
+      padding: 15px 12px 13px 0;
+      border-bottom: 1px solid #e6e6e6; }
+      #agent_home_page .agent-home-page .houseList ul li .img {
+        width: 35vw;
+        height: auto;
+        float: left;
+        position: relative; }
+        #agent_home_page .agent-home-page .houseList ul li .img img {
+          border-radius: 3px;
+          width: 100%;
+          height: 85px; }
+        #agent_home_page .agent-home-page .houseList ul li .img .newonline {
+          position: absolute;
+          bottom: 6px;
+          right: 0;
+          text-align: center;
+          font-size: 12px;
+          color: white;
+          z-index: 998;
+          background-color: rgba(0, 0, 0, 0.3);
+          padding: 0 5px 0; }
+      #agent_home_page .agent-home-page .houseList ul li .description {
+        float: left;
+        width: calc(65vw - 38px);
+        margin-left: 10px; }
+        #agent_home_page .agent-home-page .houseList ul li .description .tit {
+          color: #333333;
+          font-size: 16px;
+          height: 20px;
+          line-height: 20px;
+          margin: 0; }
+          #agent_home_page .agent-home-page .houseList ul li .description .tit .name {
+            width: 50%;
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #agent_home_page .agent-home-page .houseList ul li .description .tit .price {
+            width: 50%;
+            float: left;
+            text-align: right;
+            float: right;
+            height: 20px;
+            line-height: 20px;
+            color: #e64b00;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px; }
+            #agent_home_page .agent-home-page .houseList ul li .description .tit .price span {
+              font-weight: 600; }
+        #agent_home_page .agent-home-page .houseList ul li .description p {
+          width: 100%;
+          margin: 0;
+          font-size: 14px;
+          height: 22px;
+          overflow: hidden;
+          color: #666666; }
+          #agent_home_page .agent-home-page .houseList ul li .description p span {
+            border-radius: 2px;
+            font-size: 12px;
+            padding: 3px;
+            background-color: #e6f2ff;
+            color: #59abfd;
+            margin-right: 3px; }
+        #agent_home_page .agent-home-page .houseList ul li .description p.devarea {
+          font-size: 14px;
+          color: #666;
+          height: 23px;
+          line-height: 23px;
+          word-break: keep-all;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        #agent_home_page .agent-home-page .houseList ul li .description div.earn {
+          margin: 0 0 2px;
+          font-size: 14px;
+          color: #666666;
+          width: calc(65vw - 38px); }
+          #agent_home_page .agent-home-page .houseList ul li .description div.earn .yongjin {
+            float: left;
+            height: 25px;
+            line-height: 25px;
+            font-size: 13px;
+            width: 100%; }
+            #agent_home_page .agent-home-page .houseList ul li .description div.earn .yongjin span.unit {
+              padding: 2px 5px;
+              background-color: #ff5a5a;
+              color: white;
+              border-radius: 5px 0 0 5px; }
+            #agent_home_page .agent-home-page .houseList ul li .description div.earn .yongjin span.count {
+              padding: 2px 5px;
+              background-color: #ffeeee;
+              color: #ff5a5a;
+              border-radius: 0 5px 5px 0; }
+            #agent_home_page .agent-home-page .houseList ul li .description div.earn .yongjin span.nosignunit {
+              padding: 0 3px;
+              border: 1px solid #ff5a5a;
+              color: #ff5a5a;
+              border-radius: 3px; }
+            #agent_home_page .agent-home-page .houseList ul li .description div.earn .yongjin span.nosigncount {
+              padding: 0 5px;
+              color: #969696; }
+  #agent_home_page .agent-home-page .card h4 {
+    padding: 10px 0 8px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 30px;
+    color: #333333;
+    border-bottom: 1px solid #e6e6e6; }
+  #agent_home_page .agent-home-page .zhutui {
+    padding: 0 0 5px 0; }
+    #agent_home_page .agent-home-page .zhutui div {
+      padding-left: 12px;
+      margin-bottom: 10px; }
+    #agent_home_page .agent-home-page .zhutui ul {
+      padding: 0 7px 0; }
+      #agent_home_page .agent-home-page .zhutui ul li {
+        margin: 5px;
+        float: left;
+        width: calc(50% - 10px);
+        box-sizing: border-box; }
+        #agent_home_page .agent-home-page .zhutui ul li img {
+          display: block;
+          width: 100%;
+          height: 105px; }
+        #agent_home_page .agent-home-page .zhutui ul li h5 {
+          margin: 10px 0px 5px;
+          width: 100%;
+          height: 25px;
+          font-size: 16px;
+          line-height: 25px;
+          word-break: keep-all;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        #agent_home_page .agent-home-page .zhutui ul li .desc {
+          margin: 5px 0 5px;
+          font-size: 14px;
+          color: #666666; }
+          #agent_home_page .agent-home-page .zhutui ul li .desc span {
+            margin-right: 5px; }
+        #agent_home_page .agent-home-page .zhutui ul li .about {
+          margin: 0;
+          font-size: 14px;
+          height: 20px;
+          overflow: hidden; }
+          #agent_home_page .agent-home-page .zhutui ul li .about span {
+            border-radius: 2px;
+            font-size: 12px;
+            padding: 2px 3px 2px;
+            background-color: #e6f2ff;
+            color: #59abfd;
+            margin-right: 3px; }
+        #agent_home_page .agent-home-page .zhutui ul li .price {
+          margin: 5px 5px 10px;
+          color: #e64b00;
+          font-size: 14px; }
+          #agent_home_page .agent-home-page .zhutui ul li .price .jiage {
+            font-weight: 600; }
+  #agent_home_page .agent-home-page .zaishou {
+    box-shadow: none;
+    padding: 0 0 5px 12px; }
+    #agent_home_page .agent-home-page .zaishou ul {
+      width: 100%; }
+      #agent_home_page .agent-home-page .zaishou ul li {
+        width: 100%;
+        padding: 15px 12px 12px 0;
+        border-bottom: 1px solid #e6e6e6; }
+        #agent_home_page .agent-home-page .zaishou ul li .img {
+          width: 35vw;
+          height: auto;
+          float: left;
+          position: relative; }
+          #agent_home_page .agent-home-page .zaishou ul li .img img {
+            border-radius: 3px;
+            width: 100%;
+            height: 85px; }
+        #agent_home_page .agent-home-page .zaishou ul li .description {
+          float: left;
+          width: calc(65vw - 38px);
+          margin-left: 10px; }
+          #agent_home_page .agent-home-page .zaishou ul li .description h5 {
+            color: #333333;
+            font-size: 16px;
+            height: 20px;
+            line-height: 20px;
+            margin: 0;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #agent_home_page .agent-home-page .zaishou ul li .description p {
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+            height: 20px;
+            overflow: hidden;
+            color: #666666; }
+            #agent_home_page .agent-home-page .zaishou ul li .description p span {
+              border-radius: 2px;
+              font-size: 12px;
+              padding: 2px 3px 2px;
+              background-color: #e6f2ff;
+              color: #59abfd;
+              margin-right: 3px; }
+          #agent_home_page .agent-home-page .zaishou ul li .description div {
+            font-size: 14px;
+            color: #666666;
+            width: calc(65vw - 38px); }
+            #agent_home_page .agent-home-page .zaishou ul li .description div .space {
+              float: left;
+              height: 25px;
+              line-height: 25px;
+              width: 60%;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #agent_home_page .agent-home-page .zaishou ul li .description div .price {
+              text-align: right;
+              float: right;
+              height: 25px;
+              line-height: 25px;
+              width: 40%;
+              color: #e64b00;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              #agent_home_page .agent-home-page .zaishou ul li .description div .price span {
+                font-size: 16px;
+                font-weight: 600; }
+      #agent_home_page .agent-home-page .zaishou ul li:last-child {
+        border-bottom: none; }
+  #agent_home_page .agent-home-page .zaizu {
+    padding: 0 0 5px 12px; }
+    #agent_home_page .agent-home-page .zaizu ul {
+      width: 100%; }
+      #agent_home_page .agent-home-page .zaizu ul li {
+        width: 100%;
+        padding: 15px 12px 12px 0;
+        border-bottom: 1px solid #e6e6e6; }
+        #agent_home_page .agent-home-page .zaizu ul li .img {
+          width: 35vw;
+          height: auto;
+          float: left;
+          position: relative; }
+          #agent_home_page .agent-home-page .zaizu ul li .img img {
+            border-radius: 3px;
+            width: 100%;
+            height: 85px; }
+        #agent_home_page .agent-home-page .zaizu ul li .description {
+          float: left;
+          width: calc(65vw - 38px);
+          margin-left: 10px; }
+          #agent_home_page .agent-home-page .zaizu ul li .description h5 {
+            color: #333333;
+            font-size: 16px;
+            height: 20px;
+            line-height: 20px;
+            margin: 0;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #agent_home_page .agent-home-page .zaizu ul li .description p {
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+            height: 20px;
+            overflow: hidden;
+            color: #666666; }
+            #agent_home_page .agent-home-page .zaizu ul li .description p span {
+              border-radius: 2px;
+              font-size: 12px;
+              padding: 2px 3px 2px;
+              background-color: #e6f2ff;
+              color: #59abfd;
+              margin-right: 3px; }
+          #agent_home_page .agent-home-page .zaizu ul li .description div {
+            font-size: 14px;
+            color: #666666;
+            width: calc(65vw - 38px); }
+            #agent_home_page .agent-home-page .zaizu ul li .description div .space {
+              float: left;
+              height: 25px;
+              line-height: 25px;
+              width: 60%;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #agent_home_page .agent-home-page .zaizu ul li .description div .price {
+              text-align: right;
+              float: right;
+              height: 25px;
+              line-height: 25px;
+              width: 40%;
+              color: #e64b00;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              #agent_home_page .agent-home-page .zaizu ul li .description div .price span {
+                font-size: 16px;
+                font-weight: 600; }
+      #agent_home_page .agent-home-page .zaizu ul li:last-child {
+        border-bottom: none; }
+
+#agent_home_page .plus {
+  margin-top: 44px;
+  padding: 0;
+  background-color: #f6f6f6; }
+  #agent_home_page .plus .card {
+    box-shadow: none; }
+  #agent_home_page .plus .headback {
+    width: 100%;
+    height: 44px;
+    background-color: #3699f5; }
+    #agent_home_page .plus .headback .backbotton {
+      float: left;
+      width: 30px;
+      height: 44px;
+      text-align: center; }
+      #agent_home_page .plus .headback .backbotton i.icon {
+        color: white;
+        font-size: 25px;
+        line-height: 44px; }
+    #agent_home_page .plus .headback .sharebotton {
+      float: right;
+      width: 30px;
+      height: 44px;
+      text-align: center; }
+      #agent_home_page .plus .headback .sharebotton i.iconfont {
+        color: white;
+        font-size: 25px;
+        line-height: 44px; }
+  #agent_home_page .plus .headinfo {
+    width: 100%;
+    height: 100px;
+    box-shadow: none;
+    background-color: #3699f5;
+    border-radius: 0;
+    padding: 20px 12px 0; }
+    #agent_home_page .plus .headinfo img {
+      display: block;
+      float: left;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%; }
+    #agent_home_page .plus .headinfo .img {
+      float: left;
+      width: 60px;
+      height: 60px;
+      background-color: #96d2ff;
+      border-radius: 50%;
+      text-align: center; }
+      #agent_home_page .plus .headinfo .img i.iconfont {
+        font-size: 30px;
+        line-height: 60px;
+        color: #edfaff; }
+    #agent_home_page .plus .headinfo .description {
+      width: calc(100% - 110px);
+      height: 60px;
+      margin-left: 10px;
+      float: left;
+      color: white; }
+      #agent_home_page .plus .headinfo .description h3 {
+        margin: 10px 0 5px;
+        padding: 0;
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        border: none;
+        width: 100%;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      #agent_home_page .plus .headinfo .description p {
+        font-size: 14px;
+        width: 100%;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+  #agent_home_page .plus .card h4 {
+    padding: 10px 0 8px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 30px;
+    color: #333333;
+    border-bottom: 1px solid #e6e6e6; }
+  #agent_home_page .plus .zhutui {
+    padding: 0 0 5px 0; }
+    #agent_home_page .plus .zhutui div {
+      padding-left: 12px;
+      margin-bottom: 10px; }
+    #agent_home_page .plus .zhutui ul {
+      padding: 0 7px 0; }
+      #agent_home_page .plus .zhutui ul li {
+        margin: 5px;
+        float: left;
+        width: calc(50% - 10px);
+        box-sizing: border-box; }
+        #agent_home_page .plus .zhutui ul li img {
+          display: block;
+          width: 100%;
+          height: 125px; }
+        #agent_home_page .plus .zhutui ul li h5 {
+          margin: 10px 0px 5px;
+          width: 100%;
+          height: 25px;
+          font-size: 16px;
+          line-height: 25px;
+          word-break: keep-all;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        #agent_home_page .plus .zhutui ul li .desc {
+          margin: 5px 0 5px;
+          font-size: 14px;
+          color: #666666; }
+          #agent_home_page .plus .zhutui ul li .desc span {
+            margin-right: 5px; }
+        #agent_home_page .plus .zhutui ul li .about {
+          margin: 0;
+          font-size: 14px;
+          height: 20px;
+          overflow: hidden; }
+          #agent_home_page .plus .zhutui ul li .about span {
+            border-radius: 2px;
+            font-size: 12px;
+            padding: 2px 3px 2px;
+            background-color: #e6f2ff;
+            color: #59abfd;
+            margin-right: 3px; }
+        #agent_home_page .plus .zhutui ul li .price {
+          margin: 5px 5px 10px;
+          color: #e64b00;
+          font-size: 14px; }
+          #agent_home_page .plus .zhutui ul li .price .jiage {
+            font-weight: 600; }
+  #agent_home_page .plus .zaishou {
+    box-shadow: none;
+    padding: 0 0 5px 12px; }
+    #agent_home_page .plus .zaishou ul {
+      width: 100%; }
+      #agent_home_page .plus .zaishou ul li {
+        width: 100%;
+        padding: 15px 12px 12px 0;
+        border-bottom: 1px solid #e6e6e6; }
+        #agent_home_page .plus .zaishou ul li .img {
+          width: 28vw;
+          height: auto;
+          float: left;
+          position: relative; }
+          #agent_home_page .plus .zaishou ul li .img img {
+            border-radius: 3px;
+            width: 100%;
+            height: 85px; }
+        #agent_home_page .plus .zaishou ul li .description {
+          float: left;
+          width: calc(72vw - 38px);
+          margin-left: 10px; }
+          #agent_home_page .plus .zaishou ul li .description h5 {
+            color: #333333;
+            font-size: 16px;
+            height: 20px;
+            line-height: 20px;
+            margin: 0;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #agent_home_page .plus .zaishou ul li .description p {
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+            height: 20px;
+            overflow: hidden;
+            color: #666666; }
+            #agent_home_page .plus .zaishou ul li .description p span {
+              border-radius: 2px;
+              font-size: 12px;
+              padding: 2px 3px 2px;
+              background-color: #e6f2ff;
+              color: #59abfd;
+              margin-right: 3px; }
+          #agent_home_page .plus .zaishou ul li .description div {
+            font-size: 14px;
+            color: #666666;
+            width: calc(72vw - 38px); }
+            #agent_home_page .plus .zaishou ul li .description div .space {
+              float: left;
+              height: 25px;
+              line-height: 25px;
+              width: 60%;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #agent_home_page .plus .zaishou ul li .description div .price {
+              text-align: right;
+              float: right;
+              height: 25px;
+              line-height: 25px;
+              width: 40%;
+              color: #e64b00;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              #agent_home_page .plus .zaishou ul li .description div .price span {
+                font-size: 16px;
+                font-weight: 600; }
+      #agent_home_page .plus .zaishou ul li:last-child {
+        border-bottom: none; }
+  #agent_home_page .plus .zaizu {
+    padding: 0 0 5px 12px; }
+    #agent_home_page .plus .zaizu ul {
+      width: 100%; }
+      #agent_home_page .plus .zaizu ul li {
+        width: 100%;
+        padding: 15px 12px 12px 0;
+        border-bottom: 1px solid #e6e6e6; }
+        #agent_home_page .plus .zaizu ul li .img {
+          width: 28vw;
+          height: auto;
+          float: left;
+          position: relative; }
+          #agent_home_page .plus .zaizu ul li .img img {
+            border-radius: 3px;
+            width: 100%;
+            height: 85px; }
+        #agent_home_page .plus .zaizu ul li .description {
+          float: left;
+          width: calc(72vw - 38px);
+          margin-left: 10px; }
+          #agent_home_page .plus .zaizu ul li .description h5 {
+            color: #333333;
+            font-size: 16px;
+            height: 20px;
+            line-height: 20px;
+            margin: 0;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #agent_home_page .plus .zaizu ul li .description p {
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+            height: 20px;
+            overflow: hidden;
+            color: #666666; }
+            #agent_home_page .plus .zaizu ul li .description p span {
+              border-radius: 2px;
+              font-size: 12px;
+              padding: 2px 3px 2px;
+              background-color: #e6f2ff;
+              color: #59abfd;
+              margin-right: 3px; }
+          #agent_home_page .plus .zaizu ul li .description div {
+            font-size: 14px;
+            color: #666666;
+            width: calc(72vw - 38px); }
+            #agent_home_page .plus .zaizu ul li .description div .space {
+              float: left;
+              height: 25px;
+              line-height: 25px;
+              width: 60%;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #agent_home_page .plus .zaizu ul li .description div .price {
+              text-align: right;
+              float: right;
+              height: 25px;
+              line-height: 25px;
+              width: 40%;
+              color: #e64b00;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              #agent_home_page .plus .zaizu ul li .description div .price span {
+                font-size: 16px;
+                font-weight: 600; }
+      #agent_home_page .plus .zaizu ul li:last-child {
+        border-bottom: none; }
+
 #sell_house_detail .contacts {
   position: absolute;
   z-index: 999;
@@ -27943,52 +28692,83 @@ a.button {
 
 #per_center .per-center .perinfo {
   padding: 44px 12px 10px;
+  height: 154px;
   background-color: #41a0ff; }
-  #per_center .per-center .perinfo .img {
-    width: 100%;
-    height: 70px; }
-    #per_center .per-center .perinfo .img img {
-      display: block;
+  #per_center .per-center .perinfo .userinfo {
+    width: 80%;
+    float: left; }
+    #per_center .per-center .perinfo .userinfo .img {
+      margin: 0;
       width: 70px;
       height: 70px;
-      margin: auto;
-      border-radius: 50%;
-      border: 1px solid #f2f4f8; }
-    #per_center .per-center .perinfo .img .noneimg {
+      float: left; }
+      #per_center .per-center .perinfo .userinfo .img img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 1px solid #f2f4f8; }
+      #per_center .per-center .perinfo .userinfo .img .noneimg {
+        width: 70px;
+        height: 70px;
+        line-height: 90px;
+        overflow: hidden;
+        background-color: #dee2ed;
+        border-radius: 50%;
+        border: 1px solid #f2f4f8;
+        text-align: center;
+        color: #FFFFFF; }
+        #per_center .per-center .perinfo .userinfo .img .noneimg .iconfont {
+          font-size: 50px; }
+    #per_center .per-center .perinfo .userinfo .textinfo {
+      padding-left: 10px;
+      width: calc(100% - 70px);
+      float: left; }
+      #per_center .per-center .perinfo .userinfo .textinfo .name {
+        margin: 10px 0 0;
+        padding: 0;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        color: #fff; }
+      #per_center .per-center .perinfo .userinfo .textinfo .sign {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        color: #fff;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+  #per_center .per-center .perinfo .vip {
+    width: 20%;
+    height: 70px;
+    float: left; }
+    #per_center .per-center .perinfo .vip div {
+      margin: 20px auto;
       width: 70px;
-      height: 70px;
-      line-height: 90px;
-      overflow: hidden;
-      background-color: #dee2ed;
-      border-radius: 50%;
-      border: 1px solid #f2f4f8;
-      margin: auto;
+      height: 30px;
+      border-radius: 15px;
+      border: 1px solid gray;
       text-align: center;
-      color: #FFFFFF; }
-      #per_center .per-center .perinfo .img .noneimg .iconfont {
-        font-size: 50px; }
-  #per_center .per-center .perinfo .name {
-    margin: 10px 0 0;
-    padding: 0;
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    font-size: 16px;
-    color: #fff; }
-  #per_center .per-center .perinfo .sign {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    font-size: 14px;
-    color: #fff;
-    word-break: keep-all;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; }
+      line-height: 30px; }
+
+#per_center .per-center .performance ul {
+  width: 100%;
+  padding: 15px 12px 0; }
+  #per_center .per-center .performance ul li {
+    float: left;
+    width: 33.33%; }
+    #per_center .per-center .performance ul li h5 {
+      width: 100%;
+      text-align: center; }
+    #per_center .per-center .performance ul li p {
+      width: 100%;
+      text-align: center; }
 
 #per_center .per-center .lookdetails {
   width: 100%;
@@ -28063,6 +28843,695 @@ a.button {
       margin: 0;
       height: 20px;
       font-size: 14px; }
+
+#my_agency .header {
+  background-color: #f6f6f6; }
+
+#my_agency .my-agency {
+  margin-top: 44px; }
+  #my_agency .my-agency .scroll-refresher .ionic-refresher-content .icon-refreshing i.iconfont {
+    font-size: 40px; }
+  #my_agency .my-agency .scroll-refresher .ionic-refresher-content .text-refreshing {
+    font-size: 14px;
+    color: #969696; }
+  #my_agency .my-agency .card {
+    box-shadow: none;
+    padding: 0 0 0 12px; }
+    #my_agency .my-agency .card ul {
+      width: 100%; }
+      #my_agency .my-agency .card ul li:last-child {
+        border-bottom: none; }
+      #my_agency .my-agency .card ul li {
+        width: 100%;
+        padding: 15px 12px 12px 0;
+        border-bottom: 1px solid #e6e6e6; }
+        #my_agency .my-agency .card ul li .img {
+          width: 35vw;
+          height: auto;
+          float: left;
+          position: relative; }
+          #my_agency .my-agency .card ul li .img img {
+            border-radius: 3px;
+            width: 100%;
+            height: 85px; }
+          #my_agency .my-agency .card ul li .img .zhutui {
+            width: 8vw;
+            height: auto;
+            position: absolute;
+            top: 0;
+            right: 0; }
+        #my_agency .my-agency .card ul li .description {
+          float: left;
+          width: calc(65vw - 38px);
+          margin-left: 10px; }
+          #my_agency .my-agency .card ul li .description h5 {
+            color: #333333;
+            font-size: 16px;
+            height: 20px;
+            line-height: 20px;
+            margin: 0;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #my_agency .my-agency .card ul li .description p {
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+            height: 20px;
+            overflow: hidden;
+            color: #666666; }
+            #my_agency .my-agency .card ul li .description p span {
+              border-radius: 2px;
+              font-size: 12px;
+              padding: 2px 3px 2px;
+              background-color: #e6f2ff;
+              color: #59abfd;
+              margin-right: 3px; }
+          #my_agency .my-agency .card ul li .description div {
+            font-size: 14px;
+            color: #666666;
+            width: calc(65vw - 38px); }
+            #my_agency .my-agency .card ul li .description div .space {
+              float: left;
+              height: 25px;
+              line-height: 25px;
+              width: 60%;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #my_agency .my-agency .card ul li .description div .price {
+              text-align: right;
+              float: right;
+              height: 25px;
+              line-height: 25px;
+              width: 40%;
+              color: #e64b00;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              #my_agency .my-agency .card ul li .description div .price span {
+                font-size: 16px;
+                font-weight: 600; }
+    #my_agency .my-agency .card p.baseLine {
+      margin: 0;
+      padding: 15px 12px 15px; }
+      #my_agency .my-agency .card p.baseLine span {
+        text-align: center;
+        display: block;
+        /*设置为块级元素会独占一行形成上下居中的效果*/
+        font-size: 14px;
+        color: #969696;
+        position: relative;
+        /*定位横线（当横线的父元素）*/ }
+      #my_agency .my-agency .card p.baseLine span:before {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #my_agency .my-agency .card p.baseLine span:after {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #my_agency .my-agency .card p.baseLine span:before {
+        left: 0;
+        /*调整背景横线的左右距离*/ }
+      #my_agency .my-agency .card p.baseLine span:after {
+        right: 0; }
+
+#my_agency .plus {
+  margin-top: 44px; }
+  #my_agency .plus .scroll-refresher .ionic-refresher-content .icon-refreshing i.iconfont {
+    font-size: 40px; }
+  #my_agency .plus .card {
+    box-shadow: none;
+    padding: 0 0 0 12px; }
+    #my_agency .plus .card ul {
+      width: 100%; }
+      #my_agency .plus .card ul li:last-child {
+        border-bottom: none; }
+      #my_agency .plus .card ul li {
+        width: 100%;
+        padding: 15px 12px 12px 0;
+        border-bottom: 1px solid #e6e6e6; }
+        #my_agency .plus .card ul li .img {
+          width: 28vw;
+          height: auto;
+          float: left;
+          position: relative; }
+          #my_agency .plus .card ul li .img img {
+            border-radius: 3px;
+            width: 100%;
+            height: 85px; }
+          #my_agency .plus .card ul li .img .zhutui {
+            width: 8vw;
+            height: auto;
+            position: absolute;
+            top: 0;
+            right: 0; }
+        #my_agency .plus .card ul li .description {
+          float: left;
+          width: calc(72vw - 38px);
+          margin-left: 10px; }
+          #my_agency .plus .card ul li .description h5 {
+            color: #333333;
+            font-size: 16px;
+            height: 20px;
+            line-height: 20px;
+            margin: 0;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #my_agency .plus .card ul li .description p {
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+            height: 20px;
+            overflow: hidden;
+            color: #666666; }
+            #my_agency .plus .card ul li .description p span {
+              border-radius: 2px;
+              font-size: 12px;
+              padding: 2px 3px 2px;
+              background-color: #e6f2ff;
+              color: #59abfd;
+              margin-right: 3px; }
+          #my_agency .plus .card ul li .description div {
+            font-size: 14px;
+            color: #666666;
+            width: calc(72vw - 38px); }
+            #my_agency .plus .card ul li .description div .space {
+              float: left;
+              height: 25px;
+              line-height: 25px;
+              width: 60%;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #my_agency .plus .card ul li .description div .price {
+              text-align: right;
+              float: right;
+              height: 25px;
+              line-height: 25px;
+              width: 40%;
+              color: #e64b00;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              #my_agency .plus .card ul li .description div .price span {
+                font-size: 16px;
+                font-weight: 600; }
+    #my_agency .plus .card p.baseLine {
+      margin: 0;
+      padding: 15px 12px 15px; }
+      #my_agency .plus .card p.baseLine span {
+        text-align: center;
+        display: block;
+        /*设置为块级元素会独占一行形成上下居中的效果*/
+        font-size: 14px;
+        color: #969696;
+        position: relative;
+        /*定位横线（当横线的父元素）*/ }
+      #my_agency .plus .card p.baseLine span:before {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #my_agency .plus .card p.baseLine span:after {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #my_agency .plus .card p.baseLine span:before {
+        left: 0;
+        /*调整背景横线的左右距离*/ }
+      #my_agency .plus .card p.baseLine span:after {
+        right: 0; }
+
+#my_houses .header {
+  background-color: #f6f6f6; }
+
+#my_houses .my-houses {
+  margin-top: 44px; }
+  #my_houses .my-houses .scroll-refresher .ionic-refresher-content .icon-refreshing i.iconfont {
+    font-size: 40px; }
+  #my_houses .my-houses .scroll-refresher .ionic-refresher-content .text-refreshing {
+    font-size: 14px;
+    color: #969696; }
+  #my_houses .my-houses .card {
+    box-shadow: none;
+    padding: 0 0 0 12px; }
+    #my_houses .my-houses .card ul {
+      width: 100%; }
+      #my_houses .my-houses .card ul li:last-child {
+        border-bottom: none; }
+      #my_houses .my-houses .card ul li {
+        width: 100%;
+        padding: 15px 12px 12px 0;
+        border-bottom: 1px solid #e6e6e6; }
+        #my_houses .my-houses .card ul li .img {
+          width: 35vw;
+          height: auto;
+          float: left;
+          position: relative; }
+          #my_houses .my-houses .card ul li .img img {
+            border-radius: 3px;
+            width: 100%;
+            height: 85px; }
+          #my_houses .my-houses .card ul li .img .zhutui {
+            width: 8vw;
+            height: auto;
+            position: absolute;
+            top: 0;
+            right: 0; }
+        #my_houses .my-houses .card ul li .description {
+          float: left;
+          width: calc(65vw - 38px);
+          margin-left: 10px; }
+          #my_houses .my-houses .card ul li .description h5 {
+            color: #333333;
+            font-size: 16px;
+            height: 20px;
+            line-height: 20px;
+            margin: 0;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #my_houses .my-houses .card ul li .description p {
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+            height: 20px;
+            overflow: hidden;
+            color: #666666; }
+            #my_houses .my-houses .card ul li .description p span {
+              border-radius: 2px;
+              font-size: 12px;
+              padding: 2px 3px 2px;
+              background-color: #e6f2ff;
+              color: #59abfd;
+              margin-right: 3px; }
+          #my_houses .my-houses .card ul li .description div {
+            font-size: 14px;
+            color: #666666;
+            width: calc(65vw - 38px); }
+            #my_houses .my-houses .card ul li .description div .space {
+              float: left;
+              height: 25px;
+              line-height: 25px;
+              width: 60%;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #my_houses .my-houses .card ul li .description div .price {
+              text-align: right;
+              float: right;
+              height: 25px;
+              line-height: 25px;
+              width: 40%;
+              color: #e64b00;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              #my_houses .my-houses .card ul li .description div .price span {
+                font-size: 16px;
+                font-weight: 600; }
+    #my_houses .my-houses .card p.baseLine {
+      margin: 0;
+      padding: 15px 12px 15px; }
+      #my_houses .my-houses .card p.baseLine span {
+        text-align: center;
+        display: block;
+        /*设置为块级元素会独占一行形成上下居中的效果*/
+        font-size: 14px;
+        color: #969696;
+        position: relative;
+        /*定位横线（当横线的父元素）*/ }
+      #my_houses .my-houses .card p.baseLine span:before {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #my_houses .my-houses .card p.baseLine span:after {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #my_houses .my-houses .card p.baseLine span:before {
+        left: 0;
+        /*调整背景横线的左右距离*/ }
+      #my_houses .my-houses .card p.baseLine span:after {
+        right: 0; }
+
+#my_houses .plus {
+  margin-top: 44px; }
+  #my_houses .plus .scroll-refresher .ionic-refresher-content .icon-refreshing i.iconfont {
+    font-size: 40px; }
+  #my_houses .plus .card {
+    box-shadow: none;
+    padding: 0 0 0 12px; }
+    #my_houses .plus .card ul {
+      width: 100%; }
+      #my_houses .plus .card ul li:last-child {
+        border-bottom: none; }
+      #my_houses .plus .card ul li {
+        width: 100%;
+        padding: 15px 12px 12px 0;
+        border-bottom: 1px solid #e6e6e6; }
+        #my_houses .plus .card ul li .img {
+          width: 28vw;
+          height: auto;
+          float: left;
+          position: relative; }
+          #my_houses .plus .card ul li .img img {
+            border-radius: 3px;
+            width: 100%;
+            height: 85px; }
+          #my_houses .plus .card ul li .img .zhutui {
+            width: 8vw;
+            height: auto;
+            position: absolute;
+            top: 0;
+            right: 0; }
+        #my_houses .plus .card ul li .description {
+          float: left;
+          width: calc(72vw - 38px);
+          margin-left: 10px; }
+          #my_houses .plus .card ul li .description h5 {
+            color: #333333;
+            font-size: 16px;
+            height: 20px;
+            line-height: 20px;
+            margin: 0;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #my_houses .plus .card ul li .description p {
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+            height: 20px;
+            overflow: hidden;
+            color: #666666; }
+            #my_houses .plus .card ul li .description p span {
+              border-radius: 2px;
+              font-size: 12px;
+              padding: 2px 3px 2px;
+              background-color: #e6f2ff;
+              color: #59abfd;
+              margin-right: 3px; }
+          #my_houses .plus .card ul li .description div {
+            font-size: 14px;
+            color: #666666;
+            width: calc(72vw - 38px); }
+            #my_houses .plus .card ul li .description div .space {
+              float: left;
+              height: 25px;
+              line-height: 25px;
+              width: 60%;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #my_houses .plus .card ul li .description div .price {
+              text-align: right;
+              float: right;
+              height: 25px;
+              line-height: 25px;
+              width: 40%;
+              color: #e64b00;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              #my_houses .plus .card ul li .description div .price span {
+                font-size: 16px;
+                font-weight: 600; }
+    #my_houses .plus .card p.baseLine {
+      margin: 0;
+      padding: 15px 12px 15px; }
+      #my_houses .plus .card p.baseLine span {
+        text-align: center;
+        display: block;
+        /*设置为块级元素会独占一行形成上下居中的效果*/
+        font-size: 14px;
+        color: #969696;
+        position: relative;
+        /*定位横线（当横线的父元素）*/ }
+      #my_houses .plus .card p.baseLine span:before {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #my_houses .plus .card p.baseLine span:after {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #my_houses .plus .card p.baseLine span:before {
+        left: 0;
+        /*调整背景横线的左右距离*/ }
+      #my_houses .plus .card p.baseLine span:after {
+        right: 0; }
+
+#my_focus .header .title .switch {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0; }
+  #my_focus .header .title .switch .recommend {
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 45px; }
+  #my_focus .header .title .switch .focused {
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 45px; }
+  #my_focus .header .title .switch .bottomline {
+    position: absolute;
+    width: 30%;
+    height: 0;
+    border-top: 1px solid #387ef5;
+    left: 10%;
+    bottom: 0; }
+
+#my_focus .my-focus {
+  margin-top: 44px; }
+  #my_focus .my-focus .item-avatar .recommend {
+    display: flex;
+    position: absolute;
+    right: 32px;
+    top: 20px;
+    padding: 3px 5px;
+    border: 1px solid #666666;
+    border-radius: 3px; }
+  #my_focus .my-focus .item-avatar .focused {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 3px 5px;
+    color: #969696;
+    border: 1px solid #969696;
+    border-radius: 3px; }
+
+#open_vip .header .back {
+  width: 25%; }
+
+#open_vip .header .title {
+  width: 50%; }
+
+#open_vip .header .right {
+  width: 25%;
+  color: #969696;
+  padding: 0 12px 0 0; }
+
+#open_vip .open-vip {
+  margin-top: 44px; }
+  #open_vip .open-vip .head {
+    width: 100%;
+    height: 150px;
+    background-color: #f6f6f6; }
+    #open_vip .open-vip .head .borderline {
+      position: absolute;
+      z-index: -1;
+      top: 75px; }
+    #open_vip .open-vip .head ul {
+      padding: 55px 0 0; }
+      #open_vip .open-vip .head ul li {
+        width: 20vw;
+        height: 40px; }
+        #open_vip .open-vip .head ul li div {
+          margin: auto;
+          width: 40px;
+          height: 40px;
+          line-height: 20px;
+          text-align: center;
+          border-radius: 50%;
+          background-color: #969696;
+          border: 1px solid gray; }
+        #open_vip .open-vip .head ul li img {
+          display: block;
+          margin: auto;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%; }
+  #open_vip .open-vip .vipserve {
+    padding: 20px 0 0; }
+    #open_vip .open-vip .vipserve h5 {
+      width: 50%;
+      height: 35px;
+      margin: auto;
+      text-align: center;
+      line-height: 35px;
+      border: 1px solid gray;
+      border-radius: 5px; }
+    #open_vip .open-vip .vipserve ul {
+      width: 100%; }
+      #open_vip .open-vip .vipserve ul li {
+        width: 33.33vw; }
+        #open_vip .open-vip .vipserve ul li img {
+          display: block;
+          margin: auto;
+          width: 30vw;
+          height: 30vw; }
+        #open_vip .open-vip .vipserve ul li p {
+          text-align: center; }
+  #open_vip .open-vip .foot {
+    padding: 15px 0 0; }
+    #open_vip .open-vip .foot p {
+      text-align: center;
+      line-height: 20px; }
+    #open_vip .open-vip .foot h5 {
+      text-align: center;
+      font-weight: 600;
+      font-size: 16px; }
+
+#high_serve .header .back {
+  width: 25%; }
+
+#high_serve .header .title {
+  width: 50%; }
+
+#high_serve .header .right {
+  width: 25%;
+  color: #969696;
+  padding: 0 12px 0 0; }
+
+#high_serve .high-serve {
+  margin-top: 44px; }
+  #high_serve .high-serve .head {
+    width: 100%;
+    height: 150px;
+    background-color: #f6f6f6; }
+    #high_serve .high-serve .head .borderline {
+      position: absolute;
+      z-index: -1;
+      top: 75px; }
+    #high_serve .high-serve .head ul {
+      padding: 55px 0 0; }
+      #high_serve .high-serve .head ul li {
+        width: 20vw;
+        height: 40px; }
+        #high_serve .high-serve .head ul li div {
+          margin: auto;
+          width: 40px;
+          height: 40px;
+          line-height: 20px;
+          text-align: center;
+          border-radius: 50%;
+          background-color: #969696;
+          border: 1px solid gray; }
+        #high_serve .high-serve .head ul li img {
+          display: block;
+          margin: auto;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%; }
+  #high_serve .high-serve .vipserve {
+    padding: 20px 0 0; }
+    #high_serve .high-serve .vipserve h5 {
+      width: 50%;
+      height: 35px;
+      margin: auto;
+      text-align: center;
+      line-height: 35px;
+      border: 1px solid gray;
+      border-radius: 5px; }
+    #high_serve .high-serve .vipserve ul {
+      width: 100%; }
+      #high_serve .high-serve .vipserve ul li {
+        width: 33.33vw; }
+        #high_serve .high-serve .vipserve ul li img {
+          display: block;
+          margin: auto;
+          width: 30vw;
+          height: 30vw; }
+        #high_serve .high-serve .vipserve ul li p {
+          text-align: center; }
+  #high_serve .high-serve .foot {
+    padding: 15px 0 0; }
+    #high_serve .high-serve .foot p {
+      text-align: center;
+      line-height: 20px; }
+    #high_serve .high-serve .foot h5 {
+      text-align: center;
+      font-weight: 600;
+      font-size: 16px; }
 
 #chat_list .header {
   background-color: #387ef5; }
@@ -28158,3 +29627,288 @@ a.button {
 #be_agent .scroll-content {
   margin-top: 45px;
   background-color: white; }
+
+#be_agent .video .bannerposition {
+  margin-bottom: 15px; }
+  #be_agent .video .bannerposition .box img {
+    display: block;
+    width: 100%; }
+
+#be_agent .video .videolist {
+  width: 100%; }
+  #be_agent .video .videolist ul {
+    width: 100%; }
+    #be_agent .video .videolist ul li {
+      width: 50%;
+      margin-bottom: 10px; }
+      #be_agent .video .videolist ul li img {
+        display: block;
+        width: 90%;
+        height: 80px;
+        margin: auto; }
+      #be_agent .video .videolist ul li h6 {
+        width: 90%;
+        margin: 0 auto;
+        height: 20px;
+        line-height: 20px;
+        padding: 0; }
+      #be_agent .video .videolist ul li .foot {
+        width: 90%;
+        margin: auto; }
+        #be_agent .video .videolist ul li .foot .level {
+          float: left;
+          width: 30px;
+          height: 20px;
+          border-radius: 5px; }
+        #be_agent .video .videolist ul li .foot .levelheight {
+          background-color: gold; }
+        #be_agent .video .videolist ul li .foot .levellow {
+          background-color: aquamarine; }
+        #be_agent .video .videolist ul li .foot .comment {
+          float: left;
+          width: calc(50% - 15px);
+          height: 20px;
+          text-align: center;
+          line-height: 20px; }
+        #be_agent .video .videolist ul li .foot .count {
+          float: left;
+          width: calc(50% - 15px);
+          height: 20px;
+          text-align: center;
+          line-height: 20px; }
+
+#be_agent .live .bannerposition {
+  margin-bottom: 15px; }
+  #be_agent .live .bannerposition .box img {
+    display: block;
+    width: 100%; }
+
+#be_agent .live .livelist {
+  width: 100%; }
+  #be_agent .live .livelist ul {
+    width: 100%; }
+    #be_agent .live .livelist ul li {
+      width: 50%;
+      margin-bottom: 10px; }
+      #be_agent .live .livelist ul li img {
+        display: block;
+        width: 90%;
+        height: 80px;
+        margin: auto; }
+      #be_agent .live .livelist ul li h6 {
+        width: 90%;
+        margin: 0 auto;
+        height: 20px;
+        line-height: 20px;
+        padding: 0; }
+      #be_agent .live .livelist ul li .foot {
+        width: 90%;
+        margin: auto; }
+        #be_agent .live .livelist ul li .foot .level {
+          float: left;
+          width: 30px;
+          height: 20px;
+          border-radius: 5px; }
+        #be_agent .live .livelist ul li .foot .levelheight {
+          background-color: gold; }
+        #be_agent .live .livelist ul li .foot .levellow {
+          background-color: aquamarine; }
+        #be_agent .live .livelist ul li .foot .comment {
+          float: left;
+          width: calc(50% - 15px);
+          height: 20px;
+          text-align: center;
+          line-height: 20px; }
+        #be_agent .live .livelist ul li .foot .count {
+          float: left;
+          width: calc(50% - 15px);
+          height: 20px;
+          text-align: center;
+          line-height: 20px; }
+
+#be_agent .train img {
+  display: block;
+  width: 100%; }
+
+#be_agent .train p.bothLine {
+  margin: 0;
+  padding: 15px 12px 15px;
+  background-color: #f6f6f6; }
+  #be_agent .train p.bothLine span {
+    text-align: center;
+    display: block;
+    /*设置为块级元素会独占一行形成上下居中的效果*/
+    font-size: 14px;
+    color: #969696;
+    position: relative;
+    /*定位横线（当横线的父元素）*/ }
+  #be_agent .train p.bothLine span:before {
+    content: '';
+    /*CSS伪类用法*/
+    position: absolute;
+    /*定位背景横线的位置*/
+    top: 52%;
+    background: #e6e6e6;
+    /*宽和高做出来的背景横线*/
+    width: 28%;
+    height: 1px; }
+  #be_agent .train p.bothLine span:after {
+    content: '';
+    /*CSS伪类用法*/
+    position: absolute;
+    /*定位背景横线的位置*/
+    top: 52%;
+    background: #e6e6e6;
+    /*宽和高做出来的背景横线*/
+    width: 28%;
+    height: 1px; }
+  #be_agent .train p.bothLine span:before {
+    left: 0;
+    /*调整背景横线的左右距离*/ }
+  #be_agent .train p.bothLine span:after {
+    right: 0; }
+
+#be_agent .train .button {
+  display: block;
+  width: 50%;
+  margin: 15px auto 0; }
+
+/*卡片*/
+#agent_search .searchhouse-header {
+  position: fixed;
+  z-index: 999;
+  width: 100% !important;
+  height: 44px !important;
+  top: 0;
+  padding-top: 10px !important;
+  border-bottom: 1px solid #e6e6e6;
+  background-image: none;
+  background-color: #f6f6f6; }
+  #agent_search .searchhouse-header span.goback {
+    width: 15%;
+    height: 40px;
+    text-align: left;
+    line-height: 40px; }
+    #agent_search .searchhouse-header span.goback i {
+      font-size: 30px;
+      color: #333333; }
+  #agent_search .searchhouse-header span.item-input-wrapper {
+    width: 85%;
+    height: 28px;
+    background-color: #e4e4e4; }
+    #agent_search .searchhouse-header span.item-input-wrapper span {
+      display: inline-block;
+      height: 28px;
+      text-align: center;
+      line-height: 28px; }
+    #agent_search .searchhouse-header span.item-input-wrapper i.icon--pulldown {
+      color: gray; }
+    #agent_search .searchhouse-header span.item-input-wrapper input {
+      padding-left: 10px; }
+  #agent_search .searchhouse-header span.search {
+    width: 15%;
+    text-align: center;
+    padding-left: 10px; }
+
+#agent_search .agent-search {
+  margin-top: 44px;
+  padding: 0; }
+  #agent_search .agent-search .card {
+    box-shadow: none; }
+  #agent_search .agent-search .havent {
+    margin-top: 180px;
+    box-shadow: none; }
+    #agent_search .agent-search .havent img {
+      display: block;
+      width: 150px;
+      height: 150px;
+      margin: auto; }
+    #agent_search .agent-search .havent p {
+      text-align: center;
+      color: #666666; }
+  #agent_search .agent-search .searchhistory .list {
+    padding: 0 0 0 12px; }
+    #agent_search .agent-search .searchhistory .list .item {
+      padding: 15px 12px 15px 0; }
+      #agent_search .agent-search .searchhistory .list .item span {
+        display: block !important;
+        float: left; }
+      #agent_search .agent-search .searchhistory .list .item .lef {
+        width: 80%;
+        height: 100%;
+        color: #666666;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      #agent_search .agent-search .searchhistory .list .item .rig {
+        text-align: right;
+        width: 20%;
+        height: 100%;
+        color: #adadad; }
+        #agent_search .agent-search .searchhistory .list .item .rig i {
+          font-size: 22px; }
+  #agent_search .agent-search .searchhistory .button {
+    display: block;
+    width: 100%;
+    margin-top: 15px; }
+  #agent_search .agent-search .searchhistory p.nohistory {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #969696;
+    background-color: white; }
+  #agent_search .agent-search .searchhistory .hotsearch h5 {
+    background-color: white;
+    margin: 0;
+    padding: 0 0 0 12px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #333; }
+  #agent_search .agent-search .searchhistory .hotsearch ul {
+    width: 100%;
+    padding: 0 0 0 12px; }
+    #agent_search .agent-search .searchhistory .hotsearch ul li {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      padding: 15px 12px 15px 0;
+      line-height: 20px;
+      font-size: 16px;
+      color: #333;
+      border-bottom: 1px solid #e6e6e6; }
+      #agent_search .agent-search .searchhistory .hotsearch ul li span {
+        display: block;
+        margin: 1px 10px 0 0;
+        float: left;
+        font-size: 14px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 18px;
+        background-color: #ff504c;
+        color: #fff; }
+    #agent_search .agent-search .searchhistory .hotsearch ul li:nth-child(2) span {
+      background-color: #ff9e40; }
+    #agent_search .agent-search .searchhistory .hotsearch ul li:nth-child(3) span {
+      background-color: #83cc2b; }
+
+#agent_search_result .header {
+  background-color: #387ef5; }
+  #agent_search_result .header .title .switch {
+    width: 100%;
+    height: 100%;
+    padding: 7px 0; }
+    #agent_search_result .header .title .switch .button {
+      width: 50%;
+      height: 30px;
+      float: left;
+      border-color: #e6e6e6; }
+
+#agent_search_result .agent-search-result {
+  margin-top: 44px; }

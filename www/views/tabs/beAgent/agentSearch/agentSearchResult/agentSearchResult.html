@@ -1,0 +1,71 @@
+<!--界面模板-->
+<ion-view id="agent_search_result" view-title="需求新增" hide-nav-bar=true>
+    
+        
+        <div class="header">
+            <div ng-click="back()" class="back">
+               <i class="iconfont icon-fanhuishangyiji"></i>
+            </div>
+            <div class="title">
+                {{headTitle}}
+            </div>
+            <div class="right" >
+                
+            </div>
+        </div>
+        
+         <!--页面内容-->
+         <ion-content class="agent-search-result" has-bouncing="true">
+                <ion-list>
+                    <!--把下面数据封装成一个数组(从后台服务器来的)，格式[{name:'林丹',headerSrc:'path',content:''}]-->
+                    <!--<ion-item ng-repeat="obj in array" class="item-avatar" ui-sref="tabs.dialog">{{obj.name}}</ion-item>-->
+                    <ion-item class="item-avatar" ng-click="goto('林丹')">
+                        <img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+                        <h2>林丹</h2>
+                        <p>嘿，林丹好啊！马蓉语言真准啊</p>
+                    </ion-item>
+                    <ion-item class="item-avatar" ng-click="goto('马蓉')">
+                        <img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+                        <h2>小姐</h2>
+                        <p>容易劈腿</p>
+                    </ion-item>
+                    <ion-item class="item-avatar" ui-sref="tabs.dialogBox({id:'林丹'})">
+                        <img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+                        <h2>林丹</h2>
+                        <p>嘿，林丹好啊！马蓉语言真准啊</p>
+                    </ion-item>
+                    <ion-item class="item-avatar" ng-click="goto('马蓉')">
+                        <img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+                        <h2>小姐</h2>
+                        <p>容易劈腿</p>
+                    </ion-item>
+                    <ion-item class="item-avatar" ng-click="goto('林丹')">
+                        <img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+                        <h2>林丹</h2>
+                        <p>嘿，林丹好啊！马蓉语言真准啊</p>
+                    </ion-item>
+                    <ion-item class="item-avatar" ng-click="goto('马蓉')">
+                        <img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+                        <h2>小姐</h2>
+                        <p>容易劈腿</p>
+                    </ion-item>
+                    <ion-item class="item-avatar" ng-click="goto('林丹')">
+                        <img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+                        <h2>林丹</h2>
+                        <p>嘿，林丹好啊！马蓉语言真准啊</p>
+                    </ion-item>
+                    <ion-item class="item-avatar" ng-click="goto('马蓉')">
+                        <img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+                        <h2>小姐</h2>
+                        <p>容易劈腿</p>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        
+    </ion-view>
+
+    
+    
+    
+    
+    

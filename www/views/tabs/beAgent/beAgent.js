@@ -34,7 +34,6 @@ angular.module('App').controller('beAgentCtl',function($timeout,$ionicScrollDele
 	$scope.videoScrollListen = function(){
 		//根据滚动控制回到顶部的显示
 		var scrollTop = $ionicScrollDelegate.$getByHandle('videoScroll').getScrollPosition().top;
-	console.log(scrollTop)
 		$scope.showBackTopBtn(scrollTop)
 	}
 	$scope.videoScrollTop = function() {
@@ -230,7 +229,6 @@ angular.module('App').controller('beAgentCtl',function($timeout,$ionicScrollDele
 		type: 3
 		}
 
-console.log($scope.testData.room)
 
 	
 	//起始请求页码

@@ -41,6 +41,12 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 		controller:'realNameCtl',
 		data:{isPublic:true}
 	})
+	.state('agentHomePage',{
+		url: '/agenthomepage/:id',
+		templateUrl: 'views/publicPage/agentHomePage/agentHomePage.html',
+		controller:'agentHomePageCtl',
+		data:{isPublic:true}
+	})
 	.state('sellHouseDetail',{
 		url: '/sellhousedetail/:id',
 		templateUrl: 'views/publicPage/sellHouseDetail/sellHouseDetail.html',
@@ -199,6 +205,56 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 		},
 		data:{isPublic:true}
 	})
+	.state('tabs.myHouses',{
+		url:'/percenter/myhouses/:uid',
+		views:{
+			mine:{
+				templateUrl:'views/tabs/perCenter/myHouses/myHouses.html',
+				controller:'myHousesCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.myAgency',{
+		url:'/percenter/myagency/:uid',
+		views:{
+			mine:{
+				templateUrl:'views/tabs/perCenter/myAgency/myAgency.html',
+				controller:'myAgencyCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.myFocus',{
+		url:'/percenter/myfocus',
+		views:{
+			mine:{
+				templateUrl:'views/tabs/perCenter/myFocus/myFocus.html',
+				controller:'myFocusCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.openVip',{
+		url:'/percenter/openvip',
+		views:{
+			mine:{
+				templateUrl:'views/tabs/perCenter/openVip/openVip.html',
+				controller:'openVipCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.highServe',{
+		url:'/percenter/openvip/highserve',
+		views:{
+			mine:{
+				templateUrl:'views/tabs/perCenter/openVip/highServe/highServe.html',
+				controller:'highServeCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
 	.state('tabs.chatList',{
 		url:'/chatlist',
 		views:{
@@ -225,6 +281,16 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 			find:{
 				templateUrl:'views/tabs/beAgent/agentSearch/agentSearch.html',
 				controller:'agentSearchCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.agentSearchResult',{
+		url:'/beagent/agentsearch/agentsearchresult/:query',
+		views:{
+			find:{
+				templateUrl:'views/tabs/beAgent/agentSearch/agentSearchResult/agentSearchResult.html',
+				controller:'agentSearchResultCtl'
 			}
 		},
 		data:{isPublic:true}

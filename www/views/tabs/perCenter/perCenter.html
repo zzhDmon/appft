@@ -17,32 +17,43 @@
 		<!-- <canvas width="100" height="100" id="testCanvas"></canvas> -->
 		
 		<div class="perinfo">
-			<div ng-if="myinfo.ShowImg!=='/app/images/broker_logo.png'" class="img">
-				<img class="headimg" ng-src="{{myinfo.ShowImg}}"/>
-			</div>
-			<div ng-if="myinfo.ShowImg=='/app/images/broker_logo.png'" class="img">
-				<div class="noneimg">
-					<i class="iconfont icon-touxiangx"></i>
+			<div ui-sref="tabs.myinfo" class="userinfo">
+				<div ng-if="myinfo.ShowImg!=='/app/images/broker_logo.png'" class="img">
+					<img class="headimg" ng-src="{{myinfo.ShowImg}}"/>
+				</div>
+				<div ng-if="myinfo.ShowImg=='/app/images/broker_logo.png'" class="img">
+					<div class="noneimg">
+						<i class="iconfont icon-touxiangx"></i>
+					</div>
+				</div>
+				<div class="textinfo">
+					<p class="name"><span ng-if="myinfo.Name">{{myinfo.Name}}</span><span ng-if="!myinfo.Name">房田用户<span>{{myinfo.Phone | limitTo:-6 }}</span></span></p>
+					<p class="sign"><span ng-if="myinfo.Discription">{{myinfo.Discription}}</span><span ng-if="!myinfo.Discription">完善个性签名</span></p>
 				</div>
 			</div>
-			
-			<p class="name"><span ng-if="myinfo.Name">{{myinfo.Name}}</span><span ng-if="!myinfo.Name">房田用户<span>{{myinfo.Phone | limitTo:-6 }}</span></span></p>
-			<p class="sign"><span ng-if="myinfo.Discription">{{myinfo.Discription}}</span><span ng-if="!myinfo.Discription">完善个性签名</span></p>
+			<div ui-sref="tabs.openVip" class="vip">
+				<div><i class="iconfont icon-viptehuishiduan"></i>vip会员</div>
+			</div>
+		</div>
+		<div class="borderline"></div>
+		<div class="performance">
+			<ul>
+				<li ui-sref="tabs.myHouses({'uid':22})">
+					<h5>60</h5>
+					<p>我的房源</p>
+				</li>
+				<li ui-sref="tabs.myFocus">
+					<h5>250</h5>
+					<p>我的关注</p>
+				</li>
+				<li ui-sref="tabs.mypoints">
+					<h5>520</h5>
+					<p>我的积分</p>
+				</li>
+			</ul>
 		</div>
 		
 		<div class="offline"></div>
-		<div class="lookdetails" style="position: relative;">
-	       
-	        <div class="lefticon">
-	         	  <i class="iconfont icon-xiaoxilaba"></i> 
-	        </div> 
-		    <div class="minerool">
-				<ul>
-					<li><span class="lef">推荐经纪人同行加入房田，马上换福利</span><span class="rig" ui-sref="tabs.refcode">查看详情</span></li>
-				</ul>
-			</div>
-	    </div>
-	    
 	    
 	    <div class="borderline"></div>
 	    <ul class="enterlist">
@@ -58,37 +69,37 @@
 	    		</div>
 	    		<p>我的账户</p>
 	    	</li>
-			<li ui-sref="tabs.myweidian({uid:uid})">
+			<!-- <li ui-sref="tabs.myweidian({uid:uid})">
 				<div class="tubiao">
 					<i class="iconfont icon-weidian1"></i>
 				</div>
 				<p>我的房源</p>
-			</li>
-			<li ui-sref="tabs.myweidian({uid:uid})">
+			</li> -->
+			<li ui-sref="tabs.myAgency({'uid':22})">
 				<div class="tubiao">
 					<i class="iconfont icon-icon-xinfang"></i>
 				</div>
 				<p>代理房源</p>
 			</li>
-	    	<li ui-sref="tabs.mypoints">
+	    	<!-- <li ui-sref="tabs.mypoints">
 	    		<div class="tubiao">
 	    			<i class="iconfont icon-jifen"></i>
 	    		</div>
 	    		<p>我的积分</p>
-	    	</li>
+	    	</li> -->
 	    	<li ui-sref="tabs.mypoints">
 	    		<div class="tubiao">
 	    			<i class="iconfont icon-wenhao"></i>
 	    		</div>
 	    		<p>我的任务</p>
 	    	</li>
-	    	<li ui-sref="tabs.mypoints">
+	    	<li ng-click="goRealname()">
 	    		<div class="tubiao">
-	    			<i class="iconfont icon-biaoxing"></i>
+	    			<i class="iconfont icon-renzheng1"></i>
 	    		</div>
-	    		<p>我的关注</p>
+	    		<p>实名认证</p>
 	    	</li>
-	    	<li ng-if="VStatus!==0 && VStatus!==undefined" ui-sref="tabs.checkprogress">
+	    	<!-- <li ng-if="VStatus!==0 && VStatus!==undefined" ui-sref="tabs.checkprogress">
 	    		<div class="tubiao">
 	    			<i class="iconfont icon-renzheng1"></i>
 	    		</div>
@@ -99,7 +110,7 @@
 	    			<i class="iconfont icon-renzheng1"></i>
 	    		</div>
 	    		<p>实名认证</p>
-	    	</li>
+	    	</li> -->
 	    	<li ui-sref="tabs.refcode">
 	    		<div class="tubiao">
 	    			<i class="iconfont icon-jifen2"></i>
@@ -117,14 +128,7 @@
 	    			<i class="iconfont icon-shezhi "></i>
 	    		</div>
 	    		<p>更多设置</p>
-	    	</li>
-	    	<li ui-sref="tabs.aboutus">
-	    		<div class="tubiao">
-	    			<i class="iconfont icon-guanyuwomen"></i>
-	    		</div>
-	    		<p>关于我们</p>
 	    	</li> -->
-	    	<div style="clear: both;"></div>
 	    </ul>
 	</ion-content>
 </ion-view>

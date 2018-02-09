@@ -1,0 +1,98 @@
+
+<!--对话模板-->
+<ion-view id="high_serve" view-title="我的等级" hide-nav-bar=true>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			我的等级
+		</div>
+		<div class="right">
+		</div>
+	</div>
+	<ion-content on-swipe-right="onSwipeRight()" class="high-serve">
+		<div class="head">
+			<ul>
+				<li>
+					<div>一星会员</div>
+				</li>
+				<li>
+					<div>二星会员</div>
+				</li>
+				<li>
+					<img src="imgs/108x108.png" alt="">
+				</li>
+				<li>
+					<div>三星会员</div>
+				</li>
+				<li>
+					<div>四星会员</div>
+				</li>
+			</ul>
+			<div class="borderline"></div>
+		</div>
+		<div class="borderline"></div>
+		
+		<div class="vipserve">
+			<h5>我的三星特权</h5>
+			<ul>
+				<li>
+					<img src="imgs/broker_logo.png" alt="">
+					<p>详情制作页8.8折</p>
+				</li>
+				<li>
+					<img src="imgs/broker_logo.png" alt="">
+					<p>详情制作页8.8折</p>
+				</li>
+				<li>
+					<img src="imgs/broker_logo.png" alt="">
+					<p>详情制作页8.8折</p>
+				</li>
+				<li>
+					<img src="imgs/broker_logo.png" alt="">
+					<p>详情制作页8.8折</p>
+				</li>
+				<li>
+					<img src="imgs/broker_logo.png" alt="">
+					<p>详情制作页8.8折</p>
+				</li>
+			</ul>
+		</div>
+		<div class="foot">
+			<p>再加500点成长值拥有四星特权</p>
+			<h5 ng-click="renew()">查看四星特权</h5>
+		</div>
+	</ion-content>
+	
+
+	<!-- 回复模态框 -->
+	<script id="templates/highServemodal.html" type="text/ng-template">
+		<ion-modal-view>
+		  <ion-header-bar class="bar bar-header">
+			<button class="button button-clear button-positive" ng-click="modal.hide()">
+				<i class="iconfont icon-guanbi1"></i>
+			</button>
+			<h1 class="title">购买会员</h1>
+		  </ion-header-bar>
+		  <ion-content class="padding">
+				<div class="list">
+					<label class="item item-input">
+						<span class="input-label">开通服务</span>
+						<input ng-model="newUser.firstName" type="text">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">付款模式</span>
+						<input ng-model="newUser.lastName" type="text">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">应付金额</span>
+						<input ng-model="newUser.email" type="text">
+					</label>
+					<button class="button button-full button-positive" ng-click="createContact(newUser)">立即支付</button>
+					</div>
+		  </ion-content>
+		</ion-modal-view>
+	  </script>
+</ion-view>
+
