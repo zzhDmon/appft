@@ -1,5 +1,7 @@
 #if_have_house{
+    background-image: url('../imgs/bg.png');
     .searchhouse-header{
+        background-image: url('../imgs/头.png');
         position: absolute;
         z-index: 1002;
         width: 100%!important;
@@ -56,11 +58,23 @@
             }
         }
     }
+    .tiantian{
+        position: fixed;
+        z-index: 1;
+        right: 5px;
+        top: 200px;
+        img{
+            display: block;
+            width: 80px;
+            height: 100px;
+        }
+    }
     .tabNav{
         position: fixed;
         bottom: 0;
         width: 100%;
-        height: 45px;
+        height: 50px;
+        padding: 5px 0 0;
         background-color: #e6e6e6;
         ul{
             width: 100%;
@@ -68,7 +82,21 @@
             li{
                 height: 100%;
                 text-align: center;
-                line-height: 45px
+                // line-height: 45px;
+                img{
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    margin: auto;
+                }
+                p{
+                    margin: 0;
+                    padding: 0;
+                    height: 15px;
+                    line-height: 15px;
+                    text-align: center;
+                    line-height: 15px;
+                }
             }
             .rig{
                 width: 35%;
@@ -254,7 +282,15 @@
     }
     
     .if-have-house{
-        margin-top: 84px;
+        margin-top: 44px;
+        .headimg{
+            width: 100%;
+            img{
+                display: block;
+                width: 100%;
+                height: 54vw;
+            }
+        }
         .card{
             box-shadow: none;
         }
@@ -481,8 +517,15 @@
     }
     //大屏
     .plus{
-        margin-top: 84px;
-        
+        margin-top: 44px;
+        .headimg{
+            width: 100%;
+            img{
+                display: block;
+                width: 100%;
+                height: 54vw;
+            }
+        }
         .card{
             box-shadow: none;
         }

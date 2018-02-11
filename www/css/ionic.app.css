@@ -26874,580 +26874,608 @@ a.button {
                 font-size: 16px;
                 font-weight: 600; }
 
-#if_have_house .searchhouse-header {
-  position: absolute;
-  z-index: 1002;
-  width: 100% !important;
-  height: 44px !important;
-  top: 0;
-  padding: 10px 0 !important;
-  border-bottom: none !important;
-  background-color: #f6f6f6;
-  background-image: none; }
-  #if_have_house .searchhouse-header span.location {
-    width: 20%;
-    height: 40px;
-    line-height: 40px;
-    text-align: left;
-    padding-left: 10px;
-    color: dimgray; }
-  #if_have_house .searchhouse-header span.set {
-    width: 10%;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    color: dimgray; }
-    #if_have_house .searchhouse-header span.set .iconfont {
-      font-size: 25px; }
-  #if_have_house .searchhouse-header span.item-input-wrapper {
-    width: 70%;
-    height: 28px;
-    text-align: center;
-    background-color: #e4e4e4;
-    padding-left: 15%; }
-    #if_have_house .searchhouse-header span.item-input-wrapper i.icon-sousuo2 {
-      color: #969696;
-      line-height: 28px; }
-    #if_have_house .searchhouse-header span.item-input-wrapper input {
-      padding-left: 10px; }
-    #if_have_house .searchhouse-header span.item-input-wrapper input::-webkit-input-placeholder {
-      /* WebKit, Blink, Edge */
-      color: #969696; }
-    #if_have_house .searchhouse-header span.item-input-wrapper input:-moz-placeholder {
-      /* Mozilla Firefox 4 to 18 */
-      color: #969696;
-      opacity: 1; }
-    #if_have_house .searchhouse-header span.item-input-wrapper input::-moz-placeholder {
-      /* Mozilla Firefox 19+ */
-      color: #969696;
-      opacity: 1; }
-    #if_have_house .searchhouse-header span.item-input-wrapper input:-ms-input-placeholder {
-      /* Internet Explorer 10-11 */
-      color: #969696; }
-
-#if_have_house .tabNav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 45px;
-  background-color: #e6e6e6; }
-  #if_have_house .tabNav ul {
-    width: 100%;
-    height: 100%; }
-    #if_have_house .tabNav ul li {
-      height: 100%;
-      text-align: center;
-      line-height: 45px; }
-    #if_have_house .tabNav ul .rig {
-      width: 35%; }
-    #if_have_house .tabNav ul .lef {
-      width: 30%; }
-    #if_have_house .tabNav ul .mid {
-      width: 35%; }
-
-#if_have_house .topfour {
-  width: 100%;
-  height: 40px;
-  top: 43px;
-  position: absolute;
-  background-color: #f6f6f6;
-  border-top: none;
-  border-bottom: 1px solid #e6e6e6;
-  z-index: 1001; }
-  #if_have_house .topfour li {
-    width: 25%;
-    text-align: center;
-    padding: 0 10px 0;
-    height: 40px;
-    font-size: 16px;
-    line-height: 40px;
-    color: #666666; }
-    #if_have_house .topfour li div {
-      display: inline-block;
-      word-break: keep-all;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-align: center;
-      height: 100%;
-      max-width: 85%; }
-    #if_have_house .topfour li i.icon--pulldown {
-      position: relative;
-      display: inline-block;
-      width: 15%;
-      text-align: center;
-      height: 100%;
-      top: -15px;
-      color: #666666; }
-  #if_have_house .topfour li.havechoose {
-    color: #41a0ff; }
-    #if_have_house .topfour li.havechoose i.icon--pulldown {
-      color: #41a0ff; }
-
-#if_have_house .mask {
-  width: 100%;
-  height: calc(100% - 44px);
-  background-color: rgba(0, 0, 0, 0.3);
-  display: none;
-  position: absolute;
-  z-index: 1000;
-  top: 44px; }
-
-#if_have_house .mask.open {
-  display: block; }
-
-#if_have_house .pullchooselist {
-  width: 100%;
-  height: 300px;
-  position: absolute;
-  z-index: 1001;
-  top: 83px;
-  background-color: white;
-  display: none; }
-  #if_have_house .pullchooselist .scroll-bar {
-    display: none; }
-  #if_have_house .pullchooselist .bottom {
+#if_have_house {
+  background-image: url("../imgs/bg.png"); }
+  #if_have_house .searchhouse-header {
+    background-image: url("../imgs/头.png");
     position: absolute;
     z-index: 1002;
-    bottom: -2px;
+    width: 100% !important;
+    height: 44px !important;
+    top: 0;
+    padding: 10px 0 !important;
+    border-bottom: none !important;
+    background-color: #f6f6f6;
+    background-image: none; }
+    #if_have_house .searchhouse-header span.location {
+      width: 20%;
+      height: 40px;
+      line-height: 40px;
+      text-align: left;
+      padding-left: 10px;
+      color: dimgray; }
+    #if_have_house .searchhouse-header span.set {
+      width: 10%;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      color: dimgray; }
+      #if_have_house .searchhouse-header span.set .iconfont {
+        font-size: 25px; }
+    #if_have_house .searchhouse-header span.item-input-wrapper {
+      width: 70%;
+      height: 28px;
+      text-align: center;
+      background-color: #e4e4e4;
+      padding-left: 15%; }
+      #if_have_house .searchhouse-header span.item-input-wrapper i.icon-sousuo2 {
+        color: #969696;
+        line-height: 28px; }
+      #if_have_house .searchhouse-header span.item-input-wrapper input {
+        padding-left: 10px; }
+      #if_have_house .searchhouse-header span.item-input-wrapper input::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: #969696; }
+      #if_have_house .searchhouse-header span.item-input-wrapper input:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: #969696;
+        opacity: 1; }
+      #if_have_house .searchhouse-header span.item-input-wrapper input::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: #969696;
+        opacity: 1; }
+      #if_have_house .searchhouse-header span.item-input-wrapper input:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #969696; }
+  #if_have_house .tiantian {
+    position: fixed;
+    z-index: 1;
+    right: 5px;
+    top: 200px; }
+    #if_have_house .tiantian img {
+      display: block;
+      width: 80px;
+      height: 100px; }
+  #if_have_house .tabNav {
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    height: 15px;
-    background-color: white; }
-  #if_have_house .pullchooselist div {
-    height: 100%;
-    border: none; }
-    #if_have_house .pullchooselist div .area {
-      width: 50%;
+    height: 50px;
+    padding: 5px 0 0;
+    background-color: #e6e6e6; }
+    #if_have_house .tabNav ul {
+      width: 100%;
+      height: 100%; }
+      #if_have_house .tabNav ul li {
+        height: 100%;
+        text-align: center; }
+        #if_have_house .tabNav ul li img {
+          display: block;
+          width: 30px;
+          height: 30px;
+          margin: auto; }
+        #if_have_house .tabNav ul li p {
+          margin: 0;
+          padding: 0;
+          height: 15px;
+          line-height: 15px;
+          text-align: center;
+          line-height: 15px; }
+      #if_have_house .tabNav ul .rig {
+        width: 35%; }
+      #if_have_house .tabNav ul .lef {
+        width: 30%; }
+      #if_have_house .tabNav ul .mid {
+        width: 35%; }
+  #if_have_house .topfour {
+    width: 100%;
+    height: 40px;
+    top: 43px;
+    position: absolute;
+    background-color: #f6f6f6;
+    border-top: none;
+    border-bottom: 1px solid #e6e6e6;
+    z-index: 1001; }
+    #if_have_house .topfour li {
+      width: 25%;
+      text-align: center;
+      padding: 0 10px 0;
+      height: 40px;
+      font-size: 16px;
+      line-height: 40px;
+      color: #666666; }
+      #if_have_house .topfour li div {
+        display: inline-block;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        height: 100%;
+        max-width: 85%; }
+      #if_have_house .topfour li i.icon--pulldown {
+        position: relative;
+        display: inline-block;
+        width: 15%;
+        text-align: center;
+        height: 100%;
+        top: -15px;
+        color: #666666; }
+    #if_have_house .topfour li.havechoose {
+      color: #41a0ff; }
+      #if_have_house .topfour li.havechoose i.icon--pulldown {
+        color: #41a0ff; }
+  #if_have_house .mask {
+    width: 100%;
+    height: calc(100% - 44px);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    top: 44px; }
+  #if_have_house .mask.open {
+    display: block; }
+  #if_have_house .pullchooselist {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    z-index: 1001;
+    top: 83px;
+    background-color: white;
+    display: none; }
+    #if_have_house .pullchooselist .scroll-bar {
+      display: none; }
+    #if_have_house .pullchooselist .bottom {
+      position: absolute;
+      z-index: 1002;
+      bottom: -2px;
+      width: 100%;
+      height: 15px;
+      background-color: white; }
+    #if_have_house .pullchooselist div {
       height: 100%;
-      position: absolute;
-      right: 0;
-      top: 1px;
-      border-left: 1px solid #e6e6e6;
-      background-color: #f6f6f6; }
-      #if_have_house .pullchooselist div .area .bottom {
+      border: none; }
+      #if_have_house .pullchooselist div .area {
+        width: 50%;
+        height: 100%;
         position: absolute;
-        z-index: 1003;
-        bottom: -1px;
-        width: 100%;
-        height: 15px;
+        right: 0;
+        top: 1px;
+        border-left: 1px solid #e6e6e6;
         background-color: #f6f6f6; }
-      #if_have_house .pullchooselist div .area .scroll-content {
-        margin: 0 0 0 12px; }
-        #if_have_house .pullchooselist div .area .scroll-content .item {
-          padding: 12px 16px 12px 0;
+        #if_have_house .pullchooselist div .area .bottom {
+          position: absolute;
+          z-index: 1003;
+          bottom: -1px;
+          width: 100%;
+          height: 15px;
+          background-color: #f6f6f6; }
+        #if_have_house .pullchooselist div .area .scroll-content {
+          margin: 0 0 0 12px; }
+          #if_have_house .pullchooselist div .area .scroll-content .item {
+            padding: 12px 16px 12px 0;
+            color: #666666;
+            background-color: #f6f6f6;
+            border-color: #e6e6e6; }
+          #if_have_house .pullchooselist div .area .scroll-content .item.clicked {
+            color: #41a0ff; }
+          #if_have_house .pullchooselist div .area .scroll-content .item.activated {
+            background-color: #f6f6f6;
+            color: #41a0ff; }
+          #if_have_house .pullchooselist div .area .scroll-content .item:last-child {
+            border-bottom: none; }
+          #if_have_house .pullchooselist div .area .scroll-content .item:first-child {
+            border-top: none; }
+      #if_have_house .pullchooselist div .scroll-content {
+        margin: 0 0 0 12px;
+        padding: 0 0 30px; }
+        #if_have_house .pullchooselist div .scroll-content .list .item {
           color: #666666;
-          background-color: #f6f6f6;
+          padding: 12px 16px 12px 0;
           border-color: #e6e6e6; }
-        #if_have_house .pullchooselist div .area .scroll-content .item.clicked {
+        #if_have_house .pullchooselist div .scroll-content .list .item.clicked {
           color: #41a0ff; }
-        #if_have_house .pullchooselist div .area .scroll-content .item.activated {
-          background-color: #f6f6f6;
+        #if_have_house .pullchooselist div .scroll-content .list .item.activated {
+          background-color: white;
           color: #41a0ff; }
-        #if_have_house .pullchooselist div .area .scroll-content .item:last-child {
+        #if_have_house .pullchooselist div .scroll-content .list .item:last-child {
           border-bottom: none; }
-        #if_have_house .pullchooselist div .area .scroll-content .item:first-child {
+        #if_have_house .pullchooselist div .scroll-content .list .item:first-child {
           border-top: none; }
-    #if_have_house .pullchooselist div .scroll-content {
-      margin: 0 0 0 12px;
-      padding: 0 0 30px; }
-      #if_have_house .pullchooselist div .scroll-content .list .item {
-        color: #666666;
-        padding: 12px 16px 12px 0;
-        border-color: #e6e6e6; }
-      #if_have_house .pullchooselist div .scroll-content .list .item.clicked {
-        color: #41a0ff; }
-      #if_have_house .pullchooselist div .scroll-content .list .item.activated {
-        background-color: white;
-        color: #41a0ff; }
-      #if_have_house .pullchooselist div .scroll-content .list .item:last-child {
+  #if_have_house .dao-hang {
+    position: fixed;
+    z-index: 99;
+    bottom: 60px;
+    right: 15px;
+    width: 39px;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    border-radius: 50%;
+    color: #e5f0f7;
+    background-color: rgba(78, 127, 184, 0.9); }
+    #if_have_house .dao-hang i {
+      position: relative;
+      top: 2px;
+      font-size: 20px; }
+  #if_have_house .if-have-house {
+    margin-top: 44px; }
+    #if_have_house .if-have-house .headimg {
+      width: 100%; }
+      #if_have_house .if-have-house .headimg img {
+        display: block;
+        width: 100%;
+        height: 54vw; }
+    #if_have_house .if-have-house .card {
+      box-shadow: none; }
+    #if_have_house .if-have-house p.loading {
+      margin: 100px 0 100px;
+      font-size: 50px;
+      text-align: center; }
+      #if_have_house .if-have-house p.loading .spinner svg {
+        width: 60px !important;
+        height: 60px !important; }
+    #if_have_house .if-have-house .buyOrRent {
+      width: 50%;
+      margin: auto;
+      height: 35px; }
+      #if_have_house .if-have-house .buyOrRent .son {
+        width: 50%;
+        float: left;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        padding: 0;
+        color: #666666; }
+      #if_have_house .if-have-house .buyOrRent .active {
+        color: white;
+        background-color: #55c2d7; }
+      #if_have_house .if-have-house .buyOrRent .buy {
+        border-radius: 10px 0 0 10px;
+        border: 1px solid gray; }
+      #if_have_house .if-have-house .buyOrRent .rent {
+        border-radius: 0 10px 10px 0;
+        border: 1px solid gray; }
+    #if_have_house .if-have-house .ershou p.baseLine {
+      margin: 0;
+      padding: 15px 12px 15px;
+      background-color: #f6f6f6; }
+      #if_have_house .if-have-house .ershou p.baseLine span {
+        text-align: center;
+        display: block;
+        /*设置为块级元素会独占一行形成上下居中的效果*/
+        font-size: 14px;
+        color: #969696;
+        position: relative;
+        /*定位横线（当横线的父元素）*/ }
+      #if_have_house .if-have-house .ershou p.baseLine span:before {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #if_have_house .if-have-house .ershou p.baseLine span:after {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #if_have_house .if-have-house .ershou p.baseLine span:before {
+        left: 0;
+        /*调整背景横线的左右距离*/ }
+      #if_have_house .if-have-house .ershou p.baseLine span:after {
+        right: 0; }
+    #if_have_house .if-have-house .ershou .list {
+      padding-left: 12px; }
+      #if_have_house .if-have-house .ershou .list .item:last-child .item-content {
         border-bottom: none; }
-      #if_have_house .pullchooselist div .scroll-content .list .item:first-child {
-        border-top: none; }
-
-#if_have_house .dao-hang {
-  position: fixed;
-  z-index: 99;
-  bottom: 60px;
-  right: 15px;
-  width: 39px;
-  height: 39px;
-  line-height: 39px;
-  text-align: center;
-  border-radius: 50%;
-  color: #e5f0f7;
-  background-color: rgba(78, 127, 184, 0.9); }
-  #if_have_house .dao-hang i {
-    position: relative;
-    top: 2px;
-    font-size: 20px; }
-
-#if_have_house .if-have-house {
-  margin-top: 84px; }
-  #if_have_house .if-have-house .card {
-    box-shadow: none; }
-  #if_have_house .if-have-house p.loading {
-    margin: 100px 0 100px;
-    font-size: 50px;
-    text-align: center; }
-    #if_have_house .if-have-house p.loading .spinner svg {
-      width: 60px !important;
-      height: 60px !important; }
-  #if_have_house .if-have-house .buyOrRent {
-    width: 50%;
-    margin: auto;
-    height: 35px; }
-    #if_have_house .if-have-house .buyOrRent .son {
-      width: 50%;
-      float: left;
-      height: 35px;
-      line-height: 35px;
-      text-align: center;
-      padding: 0;
-      color: #666666; }
-    #if_have_house .if-have-house .buyOrRent .active {
-      color: white;
-      background-color: #55c2d7; }
-    #if_have_house .if-have-house .buyOrRent .buy {
-      border-radius: 10px 0 0 10px;
-      border: 1px solid gray; }
-    #if_have_house .if-have-house .buyOrRent .rent {
-      border-radius: 0 10px 10px 0;
-      border: 1px solid gray; }
-  #if_have_house .if-have-house .ershou p.baseLine {
-    margin: 0;
-    padding: 15px 12px 15px;
-    background-color: #f6f6f6; }
-    #if_have_house .if-have-house .ershou p.baseLine span {
-      text-align: center;
-      display: block;
-      /*设置为块级元素会独占一行形成上下居中的效果*/
-      font-size: 14px;
-      color: #969696;
-      position: relative;
-      /*定位横线（当横线的父元素）*/ }
-    #if_have_house .if-have-house .ershou p.baseLine span:before {
-      content: '';
-      /*CSS伪类用法*/
-      position: absolute;
-      /*定位背景横线的位置*/
-      top: 52%;
-      background: #e6e6e6;
-      /*宽和高做出来的背景横线*/
-      width: 28%;
-      height: 1px; }
-    #if_have_house .if-have-house .ershou p.baseLine span:after {
-      content: '';
-      /*CSS伪类用法*/
-      position: absolute;
-      /*定位背景横线的位置*/
-      top: 52%;
-      background: #e6e6e6;
-      /*宽和高做出来的背景横线*/
-      width: 28%;
-      height: 1px; }
-    #if_have_house .if-have-house .ershou p.baseLine span:before {
-      left: 0;
-      /*调整背景横线的左右距离*/ }
-    #if_have_house .if-have-house .ershou p.baseLine span:after {
-      right: 0; }
-  #if_have_house .if-have-house .ershou .list {
-    padding-left: 12px; }
-    #if_have_house .if-have-house .ershou .list .item:last-child .item-content {
-      border-bottom: none; }
-    #if_have_house .if-have-house .ershou .list .item {
-      border: none;
-      margin: 0; }
-      #if_have_house .if-have-house .ershou .list .item .item-content.activated {
-        background-color: #f6f6f6; }
-      #if_have_house .if-have-house .ershou .list .item .item-content {
-        width: 100%;
-        padding: 12px 12px 12px 0;
-        border-bottom: 1px solid #e6e6e6; }
-        #if_have_house .if-have-house .ershou .list .item .item-content .img {
-          width: 35vw;
-          height: auto;
-          float: left;
-          position: relative; }
-          #if_have_house .if-have-house .ershou .list .item .item-content .img img {
-            display: block;
-            margin: auto;
-            border-radius: 50%;
-            width: 85px;
-            height: 85px; }
-          #if_have_house .if-have-house .ershou .list .item .item-content .img .zhutui {
-            width: 8vw;
+      #if_have_house .if-have-house .ershou .list .item {
+        border: none;
+        margin: 0; }
+        #if_have_house .if-have-house .ershou .list .item .item-content.activated {
+          background-color: #f6f6f6; }
+        #if_have_house .if-have-house .ershou .list .item .item-content {
+          width: 100%;
+          padding: 12px 12px 12px 0;
+          border-bottom: 1px solid #e6e6e6; }
+          #if_have_house .if-have-house .ershou .list .item .item-content .img {
+            width: 35vw;
             height: auto;
-            position: absolute;
-            top: 0;
-            right: 0; }
-        #if_have_house .if-have-house .ershou .list .item .item-content .description {
-          float: left;
-          width: calc(65vw - 38px);
-          margin-left: 10px; }
-          #if_have_house .if-have-house .ershou .list .item .item-content .description h6 {
-            color: #333333;
-            font-size: 16px;
-            height: 20px;
+            float: left;
+            position: relative; }
+            #if_have_house .if-have-house .ershou .list .item .item-content .img img {
+              display: block;
+              margin: auto;
+              border-radius: 50%;
+              width: 85px;
+              height: 85px; }
+            #if_have_house .if-have-house .ershou .list .item .item-content .img .zhutui {
+              width: 8vw;
+              height: auto;
+              position: absolute;
+              top: 0;
+              right: 0; }
+          #if_have_house .if-have-house .ershou .list .item .item-content .description {
+            float: left;
+            width: calc(65vw - 38px);
+            margin-left: 10px; }
+            #if_have_house .if-have-house .ershou .list .item .item-content .description h6 {
+              color: #333333;
+              font-size: 16px;
+              height: 20px;
+              line-height: 20px;
+              margin: 0;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #if_have_house .if-have-house .ershou .list .item .item-content .description p {
+              width: 100%;
+              margin: 0;
+              font-size: 14px;
+              height: 20px;
+              overflow: hidden;
+              color: #969696; }
+              #if_have_house .if-have-house .ershou .list .item .item-content .description p span {
+                border-radius: 2px;
+                font-size: 12px;
+                padding: 2px 3px 2px;
+                background-color: #e6f2ff;
+                color: #59abfd;
+                margin-right: 3px; }
+            #if_have_house .if-have-house .ershou .list .item .item-content .description div {
+              font-size: 14px;
+              color: #969696;
+              width: calc(65vw - 38px); }
+              #if_have_house .if-have-house .ershou .list .item .item-content .description div .space {
+                float: left;
+                height: 25px;
+                line-height: 25px;
+                width: 65%;
+                word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+              #if_have_house .if-have-house .ershou .list .item .item-content .description div .price {
+                text-align: right;
+                float: right;
+                height: 25px;
+                line-height: 25px;
+                width: 35%;
+                color: #e64b00;
+                word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+                #if_have_house .if-have-house .ershou .list .item .item-content .description div .price span {
+                  font-size: 16px;
+                  font-weight: 600; }
+        #if_have_house .if-have-house .ershou .list .item .item-options .button {
+          background-color: #41a0ff;
+          color: white;
+          padding: 0 24px 0; }
+          #if_have_house .if-have-house .ershou .list .item .item-options .button div {
             line-height: 20px;
-            margin: 0;
-            word-break: keep-all;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis; }
-          #if_have_house .if-have-house .ershou .list .item .item-content .description p {
-            width: 100%;
-            margin: 0;
-            font-size: 14px;
-            height: 20px;
-            overflow: hidden;
-            color: #969696; }
-            #if_have_house .if-have-house .ershou .list .item .item-content .description p span {
-              border-radius: 2px;
-              font-size: 12px;
-              padding: 2px 3px 2px;
-              background-color: #e6f2ff;
-              color: #59abfd;
-              margin-right: 3px; }
-          #if_have_house .if-have-house .ershou .list .item .item-content .description div {
-            font-size: 14px;
-            color: #969696;
-            width: calc(65vw - 38px); }
-            #if_have_house .if-have-house .ershou .list .item .item-content .description div .space {
-              float: left;
-              height: 25px;
-              line-height: 25px;
-              width: 65%;
-              word-break: keep-all;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis; }
-            #if_have_house .if-have-house .ershou .list .item .item-content .description div .price {
-              text-align: right;
-              float: right;
-              height: 25px;
-              line-height: 25px;
-              width: 35%;
-              color: #e64b00;
-              word-break: keep-all;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis; }
-              #if_have_house .if-have-house .ershou .list .item .item-content .description div .price span {
-                font-size: 16px;
-                font-weight: 600; }
-      #if_have_house .if-have-house .ershou .list .item .item-options .button {
-        background-color: #41a0ff;
-        color: white;
-        padding: 0 24px 0; }
-        #if_have_house .if-have-house .ershou .list .item .item-options .button div {
-          line-height: 20px;
-          font-size: 18px; }
-  #if_have_house .if-have-house .noresult {
-    padding: 50px 30px 0;
-    height: 130px; }
-    #if_have_house .if-have-house .noresult .top {
-      width: 100%;
-      height: 50px;
-      line-height: 50px;
-      text-align: center; }
-      #if_have_house .if-have-house .noresult .top .iconfont {
-        font-size: 40px;
-        color: #969696; }
-    #if_have_house .if-have-house .noresult .bottom {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      text-align: center;
-      height: 30px;
-      line-height: 30px;
-      font-size: 16px;
-      color: #969696; }
-      #if_have_house .if-have-house .noresult .bottom span {
-        color: #41a0ff; }
-
-#if_have_house .plus {
-  margin-top: 84px; }
-  #if_have_house .plus .card {
-    box-shadow: none; }
-  #if_have_house .plus p.loading {
-    margin: 100px 0 100px;
-    font-size: 50px;
-    text-align: center; }
-    #if_have_house .plus p.loading .spinner svg {
-      width: 60px !important;
-      height: 60px !important; }
-  #if_have_house .plus .buyOrRent {
-    width: 50%;
-    margin: auto;
-    height: 35px; }
-    #if_have_house .plus .buyOrRent .son {
-      width: 50%;
-      float: left;
-      height: 35px;
-      line-height: 35px;
-      text-align: center;
-      padding: 0;
-      color: #666666; }
-    #if_have_house .plus .buyOrRent .active {
-      color: white;
-      background-color: #55c2d7; }
-    #if_have_house .plus .buyOrRent .buy {
-      border-radius: 10px 0 0 10px;
-      border: 1px solid gray; }
-    #if_have_house .plus .buyOrRent .rent {
-      border-radius: 0 10px 10px 0;
-      border: 1px solid gray; }
-  #if_have_house .plus .ershou p.baseLine {
-    margin: 0;
-    padding: 15px 12px 15px;
-    background-color: #f6f6f6; }
-    #if_have_house .plus .ershou p.baseLine span {
-      text-align: center;
-      display: block;
-      /*设置为块级元素会独占一行形成上下居中的效果*/
-      font-size: 14px;
-      color: #969696;
-      position: relative;
-      /*定位横线（当横线的父元素）*/ }
-    #if_have_house .plus .ershou p.baseLine span:before {
-      content: '';
-      /*CSS伪类用法*/
-      position: absolute;
-      /*定位背景横线的位置*/
-      top: 52%;
-      background: #e6e6e6;
-      /*宽和高做出来的背景横线*/
-      width: 28%;
-      height: 1px; }
-    #if_have_house .plus .ershou p.baseLine span:after {
-      content: '';
-      /*CSS伪类用法*/
-      position: absolute;
-      /*定位背景横线的位置*/
-      top: 52%;
-      background: #e6e6e6;
-      /*宽和高做出来的背景横线*/
-      width: 28%;
-      height: 1px; }
-    #if_have_house .plus .ershou p.baseLine span:before {
-      left: 0;
-      /*调整背景横线的左右距离*/ }
-    #if_have_house .plus .ershou p.baseLine span:after {
-      right: 0; }
-  #if_have_house .plus .ershou .list {
-    padding-left: 12px; }
-    #if_have_house .plus .ershou .list .item:last-child .item-content {
-      border-bottom: none; }
-    #if_have_house .plus .ershou .list .item {
-      border: none;
-      margin: 0; }
-      #if_have_house .plus .ershou .list .item .item-content.activated {
-        background-color: #f6f6f6; }
-      #if_have_house .plus .ershou .list .item .item-content {
+            font-size: 18px; }
+    #if_have_house .if-have-house .noresult {
+      padding: 50px 30px 0;
+      height: 130px; }
+      #if_have_house .if-have-house .noresult .top {
         width: 100%;
-        padding: 12px 12px 12px 0;
-        border-bottom: 1px solid #e6e6e6; }
-        #if_have_house .plus .ershou .list .item .item-content .img {
-          width: 28vw;
-          height: auto;
-          float: left;
-          position: relative; }
-          #if_have_house .plus .ershou .list .item .item-content .img img {
-            display: block;
-            margin: auto;
-            border-radius: 50%;
-            width: 85px;
-            height: 85px; }
-          #if_have_house .plus .ershou .list .item .item-content .img .zhutui {
-            width: 8vw;
-            height: auto;
-            position: absolute;
-            top: 0;
-            right: 0; }
-        #if_have_house .plus .ershou .list .item .item-content .description {
-          float: left;
-          width: calc(72vw - 38px);
-          margin-left: 10px; }
-          #if_have_house .plus .ershou .list .item .item-content .description h6 {
-            color: #333333;
-            font-size: 16px;
-            height: 20px;
-            line-height: 20px;
-            margin: 0;
-            word-break: keep-all;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis; }
-          #if_have_house .plus .ershou .list .item .item-content .description p {
-            width: 100%;
-            margin: 0;
-            font-size: 14px;
-            height: 20px;
-            overflow: hidden;
-            color: #969696; }
-            #if_have_house .plus .ershou .list .item .item-content .description p span {
-              border-radius: 2px;
-              font-size: 12px;
-              padding: 2px 3px 2px;
-              background-color: #e6f2ff;
-              color: #59abfd;
-              margin-right: 3px; }
-          #if_have_house .plus .ershou .list .item .item-content .description div {
-            font-size: 14px;
-            color: #969696;
-            width: calc(72vw - 38px); }
-            #if_have_house .plus .ershou .list .item .item-content .description div .space {
-              float: left;
-              height: 25px;
-              line-height: 25px;
-              width: 65%;
-              word-break: keep-all;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis; }
-            #if_have_house .plus .ershou .list .item .item-content .description div .price {
-              text-align: right;
-              float: right;
-              height: 25px;
-              line-height: 25px;
-              width: 35%;
-              color: #e64b00;
-              word-break: keep-all;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis; }
-              #if_have_house .plus .ershou .list .item .item-content .description div .price span {
-                font-size: 16px;
-                font-weight: 600; }
-      #if_have_house .plus .ershou .list .item .item-options .button {
-        background-color: #41a0ff;
-        color: white;
-        padding: 0 24px 0; }
-        #if_have_house .plus .ershou .list .item .item-options .button div {
-          line-height: 20px;
-          font-size: 18px; }
-  #if_have_house .plus .noresult {
-    padding: 50px 30px 0;
-    height: 130px; }
-    #if_have_house .plus .noresult .top {
-      width: 100%;
-      height: 50px;
-      line-height: 50px;
-      text-align: center; }
-      #if_have_house .plus .noresult .top .iconfont {
-        font-size: 40px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center; }
+        #if_have_house .if-have-house .noresult .top .iconfont {
+          font-size: 40px;
+          color: #969696; }
+      #if_have_house .if-have-house .noresult .bottom {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
         color: #969696; }
-    #if_have_house .plus .noresult .bottom {
+        #if_have_house .if-have-house .noresult .bottom span {
+          color: #41a0ff; }
+  #if_have_house .plus {
+    margin-top: 44px; }
+    #if_have_house .plus .headimg {
+      width: 100%; }
+      #if_have_house .plus .headimg img {
+        display: block;
+        width: 100%;
+        height: 54vw; }
+    #if_have_house .plus .card {
+      box-shadow: none; }
+    #if_have_house .plus p.loading {
+      margin: 100px 0 100px;
+      font-size: 50px;
+      text-align: center; }
+      #if_have_house .plus p.loading .spinner svg {
+        width: 60px !important;
+        height: 60px !important; }
+    #if_have_house .plus .buyOrRent {
+      width: 50%;
+      margin: auto;
+      height: 35px; }
+      #if_have_house .plus .buyOrRent .son {
+        width: 50%;
+        float: left;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        padding: 0;
+        color: #666666; }
+      #if_have_house .plus .buyOrRent .active {
+        color: white;
+        background-color: #55c2d7; }
+      #if_have_house .plus .buyOrRent .buy {
+        border-radius: 10px 0 0 10px;
+        border: 1px solid gray; }
+      #if_have_house .plus .buyOrRent .rent {
+        border-radius: 0 10px 10px 0;
+        border: 1px solid gray; }
+    #if_have_house .plus .ershou p.baseLine {
       margin: 0;
-      padding: 0;
-      width: 100%;
-      text-align: center;
-      height: 30px;
-      line-height: 30px;
-      font-size: 16px;
-      color: #969696; }
-      #if_have_house .plus .noresult .bottom span {
-        color: #41a0ff; }
+      padding: 15px 12px 15px;
+      background-color: #f6f6f6; }
+      #if_have_house .plus .ershou p.baseLine span {
+        text-align: center;
+        display: block;
+        /*设置为块级元素会独占一行形成上下居中的效果*/
+        font-size: 14px;
+        color: #969696;
+        position: relative;
+        /*定位横线（当横线的父元素）*/ }
+      #if_have_house .plus .ershou p.baseLine span:before {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #if_have_house .plus .ershou p.baseLine span:after {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #if_have_house .plus .ershou p.baseLine span:before {
+        left: 0;
+        /*调整背景横线的左右距离*/ }
+      #if_have_house .plus .ershou p.baseLine span:after {
+        right: 0; }
+    #if_have_house .plus .ershou .list {
+      padding-left: 12px; }
+      #if_have_house .plus .ershou .list .item:last-child .item-content {
+        border-bottom: none; }
+      #if_have_house .plus .ershou .list .item {
+        border: none;
+        margin: 0; }
+        #if_have_house .plus .ershou .list .item .item-content.activated {
+          background-color: #f6f6f6; }
+        #if_have_house .plus .ershou .list .item .item-content {
+          width: 100%;
+          padding: 12px 12px 12px 0;
+          border-bottom: 1px solid #e6e6e6; }
+          #if_have_house .plus .ershou .list .item .item-content .img {
+            width: 28vw;
+            height: auto;
+            float: left;
+            position: relative; }
+            #if_have_house .plus .ershou .list .item .item-content .img img {
+              display: block;
+              margin: auto;
+              border-radius: 50%;
+              width: 85px;
+              height: 85px; }
+            #if_have_house .plus .ershou .list .item .item-content .img .zhutui {
+              width: 8vw;
+              height: auto;
+              position: absolute;
+              top: 0;
+              right: 0; }
+          #if_have_house .plus .ershou .list .item .item-content .description {
+            float: left;
+            width: calc(72vw - 38px);
+            margin-left: 10px; }
+            #if_have_house .plus .ershou .list .item .item-content .description h6 {
+              color: #333333;
+              font-size: 16px;
+              height: 20px;
+              line-height: 20px;
+              margin: 0;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            #if_have_house .plus .ershou .list .item .item-content .description p {
+              width: 100%;
+              margin: 0;
+              font-size: 14px;
+              height: 20px;
+              overflow: hidden;
+              color: #969696; }
+              #if_have_house .plus .ershou .list .item .item-content .description p span {
+                border-radius: 2px;
+                font-size: 12px;
+                padding: 2px 3px 2px;
+                background-color: #e6f2ff;
+                color: #59abfd;
+                margin-right: 3px; }
+            #if_have_house .plus .ershou .list .item .item-content .description div {
+              font-size: 14px;
+              color: #969696;
+              width: calc(72vw - 38px); }
+              #if_have_house .plus .ershou .list .item .item-content .description div .space {
+                float: left;
+                height: 25px;
+                line-height: 25px;
+                width: 65%;
+                word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+              #if_have_house .plus .ershou .list .item .item-content .description div .price {
+                text-align: right;
+                float: right;
+                height: 25px;
+                line-height: 25px;
+                width: 35%;
+                color: #e64b00;
+                word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+                #if_have_house .plus .ershou .list .item .item-content .description div .price span {
+                  font-size: 16px;
+                  font-weight: 600; }
+        #if_have_house .plus .ershou .list .item .item-options .button {
+          background-color: #41a0ff;
+          color: white;
+          padding: 0 24px 0; }
+          #if_have_house .plus .ershou .list .item .item-options .button div {
+            line-height: 20px;
+            font-size: 18px; }
+    #if_have_house .plus .noresult {
+      padding: 50px 30px 0;
+      height: 130px; }
+      #if_have_house .plus .noresult .top {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center; }
+        #if_have_house .plus .noresult .top .iconfont {
+          font-size: 40px;
+          color: #969696; }
+      #if_have_house .plus .noresult .bottom {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        color: #969696; }
+        #if_have_house .plus .noresult .bottom span {
+          color: #41a0ff; }
 
 /*卡片*/
 #client_search .searchhouse-header {
