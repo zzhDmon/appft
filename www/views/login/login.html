@@ -14,7 +14,7 @@
 		<div class="title">
 			登录
 		</div>
-		<div ui-sref="registerorback({name:'注册'})" class="right" >
+		<div ng-click="goregister('注册')" class="right" >
 			注册
 		</div>
 	</div>
@@ -33,7 +33,7 @@
 		        </label>
 			</div>
 			<div class="card loginbtn">
-				<div ui-sref="registerorback({name:'找回密码'})" class="getBack">
+				<div  ng-click="goregister('找回密码')" class="getBack">
 					忘记密码？
 				</div>
 				<div class="subbtn">

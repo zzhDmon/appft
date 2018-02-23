@@ -1,5 +1,5 @@
 
-angular.module('App').controller('agentHomePageCtl',function(goBack,$rootScope,$ionicHistory,$ionicPopover,$ionicActionSheet,$http,$Factory,$scope,$state,$stateParams,$timeout,WechatService,$ionicLoading,Apphost){
+angular.module('App').controller('agentHomePageCtl',function($ionicSlideBoxDelegate,goTo,goBack,$rootScope,$ionicHistory,$ionicPopover,$ionicActionSheet,$http,$Factory,$scope,$state,$stateParams,$timeout,WechatService,$ionicLoading,Apphost){
 	setTimeout(function(){
 		$('span.back-text').css('display','none');
 		
@@ -40,6 +40,20 @@ angular.module('App').controller('agentHomePageCtl',function(goBack,$rootScope,$
 		$scope.haveType=type;
 	}
 	
+	$scope.goDetail=function(){
+		goTo.goto('sellHouseDetail',{id:38418})
+	}
+	$scope.changeindex=function(){
+		$scope.currentindex=$ionicSlideBoxDelegate.$getByHandle('agentHome-handle').currentIndex();
+		if($scope.currentindex>1){
+			$scope.currentindex=$scope.currentindex-2;
+			$scope.haveType=$scope.currentindex;
+		}else{
+			$scope.haveType=$scope.currentindex;
+		}
+	}
+
+
 	//请求新房
 	$http.get($Factory.NewHouse.query.url,{params:{pagesize:10,pagenum:0,CityId:1}}).then(function(resData){
 		$scope.homehousearr=resData.data;

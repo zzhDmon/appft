@@ -1,5 +1,5 @@
 
-angular.module('App').controller('fbManageCtl',function($ionicLoading,$ionicHistory,$state,$http,$Factory,$scope,$rootScope,$stateParams,$ionicPopover,$ionicPopup,$timeout,$ionicActionSheet){
+angular.module('App').controller('fbManageCtl',function(goTo,$ionicLoading,$ionicHistory,$state,$http,$Factory,$scope,$rootScope,$stateParams,$ionicPopover,$ionicPopup,$timeout,$ionicActionSheet){
 	$timeout(function(){
 		$('span.back-text').css('display','none');
 //		//根据导航栏绝对定位
@@ -157,110 +157,112 @@ angular.module('App').controller('fbManageCtl',function($ionicLoading,$ionicHist
 	
   	//底部弹出框
 	$scope.show = function($event,id,housetype) {
-	   var hideSheet = $ionicActionSheet.show({
-	     buttons: [
-	       { text: '查看详情' },
-	       { text: '设置/取消主推房源' },
-	       { text: '修该' },
-	       { text: '删除' }
-	     ],
-	    cancelText: '取消',
-	    cancel: function() {
-	      },
-	    buttonClicked: function(index) {
-		    if(index==0){
-		       $state.go("tabs.fydetail",{id:id,housetype:housetype})
-		    }else if(index==1){
-		    	if($scope.toptwo=='二手房'){
-			       	var req = {
-					 method: 'POST',
-					 url: $Factory.HouseSource.setRecommend.url,
-					 headers: {
-					   'Content-Type': 'application/json'
-					 },
-					 data: {id:id}
-					}
-					$http(req).then(function(resData){
-						if(resData.data.status==0){		
-							$scope.update();
-						}
-					},function(resData){
+
+		goTo.goto('sellHouseDetail',{id:38420})
+// 	   var hideSheet = $ionicActionSheet.show({
+// 	     buttons: [
+// 	       { text: '查看详情' },
+// 	       { text: '设置/取消主推房源' },
+// 	       { text: '修该' },
+// 	       { text: '删除' }
+// 	     ],
+// 	    cancelText: '取消',
+// 	    cancel: function() {
+// 	      },
+// 	    buttonClicked: function(index) {
+// 		    if(index==0){
+// 		       $state.go("tabs.fydetail",{id:id,housetype:housetype})
+// 		    }else if(index==1){
+// 		    	if($scope.toptwo=='二手房'){
+// 			       	var req = {
+// 					 method: 'POST',
+// 					 url: $Factory.HouseSource.setRecommend.url,
+// 					 headers: {
+// 					   'Content-Type': 'application/json'
+// 					 },
+// 					 data: {id:id}
+// 					}
+// 					$http(req).then(function(resData){
+// 						if(resData.data.status==0){		
+// 							$scope.update();
+// 						}
+// 					},function(resData){
 						
-					})
+// 					})
 		    		
-		    	}else{
-		    		var req = {
-					 method: 'POST',
-					 url: $Factory.HouseSource.setRecommend.url,
-					 headers: {
-					   'Content-Type': 'application/json'
-					 },
-					 data: {id:id}
-					}
-					$http(req).then(function(resData){
-						console.log(resData)
-						if(resData.data.status==0){		
-							$scope.update();
-						}
-					},function(resData){
+// 		    	}else{
+// 		    		var req = {
+// 					 method: 'POST',
+// 					 url: $Factory.HouseSource.setRecommend.url,
+// 					 headers: {
+// 					   'Content-Type': 'application/json'
+// 					 },
+// 					 data: {id:id}
+// 					}
+// 					$http(req).then(function(resData){
+// 						console.log(resData)
+// 						if(resData.data.status==0){		
+// 							$scope.update();
+// 						}
+// 					},function(resData){
 						
-					})
-		    	}
-		    }else if(index==2){
-		    	if($scope.toptwo=='二手房'){
-		    		$http.get($Factory.HouseSource.detail.url,{params:{id:id}}).then(function(resData){
-		    			$rootScope.ershouxiaoqu=resData.data.house.CommunityName;
-						$rootScope.ershouxiaoquid=resData.data.house.CommunityId;
-						$rootScope.ershoutitle=resData.data.house.Title;
-						$rootScope.ershoudes=resData.data.house.Discription;
+// 					})
+// 		    	}
+// 		    }else if(index==2){
+// 		    	if($scope.toptwo=='二手房'){
+// 		    		$http.get($Factory.HouseSource.detail.url,{params:{id:id}}).then(function(resData){
+// 		    			$rootScope.ershouxiaoqu=resData.data.house.CommunityName;
+// 						$rootScope.ershouxiaoquid=resData.data.house.CommunityId;
+// 						$rootScope.ershoutitle=resData.data.house.Title;
+// 						$rootScope.ershoudes=resData.data.house.Discription;
 						
-		    		})
-		    		$state.go('tabs.addershou',{title:'修改',id:id})
+// 		    		})
+// 		    		$state.go('tabs.addershou',{title:'修改',id:id})
 		    		
-		    	}else{
-		    		$http.get($Factory.HouseSource.detail.url,{params:{id:id}}).then(function(resData){
-		    			$rootScope.zufangxiaoqu=resData.data.house.CommunityName;
-						$rootScope.zufangxiaoquid=resData.data.house.CommunityId;
-						$rootScope.zufangtitle=resData.data.house.Title;
-						$rootScope.zufangdes=resData.data.house.Discription;
+// 		    	}else{
+// 		    		$http.get($Factory.HouseSource.detail.url,{params:{id:id}}).then(function(resData){
+// 		    			$rootScope.zufangxiaoqu=resData.data.house.CommunityName;
+// 						$rootScope.zufangxiaoquid=resData.data.house.CommunityId;
+// 						$rootScope.zufangtitle=resData.data.house.Title;
+// 						$rootScope.zufangdes=resData.data.house.Discription;
 						
-		    		})
-		    		$state.go('tabs.addzufang',{title:'修改',id:id})
-		    	}
-		    }else if(index==3){
-	             var confirmPopup = $ionicPopup.confirm({
-	               title: '确认删除？'
-	             });
-	             confirmPopup.then(function(res) {
-		                if(res) {
-		                  	var req = {
-								 method: 'POST',
-								 url: $Factory.HouseSource.delete.url,
-								 headers: {
-								   'Content-Type': 'application/json'								 	
-//								   'Content-Type': 'application/x-www-form-urlencoded'
-								 },
-								 data: {id:id}								 
-//								 data: 'id='+id
-								}
-								$http(req).then(function(resData){
-									if(resData.data.status==0){
-										$scope.update();
-									}
-								},function(err){
+// 		    		})
+// 		    		$state.go('tabs.addzufang',{title:'修改',id:id})
+// 		    	}
+// 		    }else if(index==3){
+// 	             var confirmPopup = $ionicPopup.confirm({
+// 	               title: '确认删除？'
+// 	             });
+// 	             confirmPopup.then(function(res) {
+// 		                if(res) {
+// 		                  	var req = {
+// 								 method: 'POST',
+// 								 url: $Factory.HouseSource.delete.url,
+// 								 headers: {
+// 								   'Content-Type': 'application/json'								 	
+// //								   'Content-Type': 'application/x-www-form-urlencoded'
+// 								 },
+// 								 data: {id:id}								 
+// //								 data: 'id='+id
+// 								}
+// 								$http(req).then(function(resData){
+// 									if(resData.data.status==0){
+// 										$scope.update();
+// 									}
+// 								},function(err){
 									
-								})
-		                } else {
+// 								})
+// 		                } else {
 		                  
-		                }
-	             });
+// 		                }
+// 	             });
            
-		    }
+// 		    }
 		    
-		       return true;
+// 		       return true;
 	       
-	    }
-	   });
+// 	    }
+// 	   });
 	
 	
 	 };

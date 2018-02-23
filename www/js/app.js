@@ -41,6 +41,12 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 		controller:'realNameCtl',
 		data:{isPublic:true}
 	})
+	.state('realHouse',{
+		url: '/realhouse',
+		templateUrl: 'views/publicPage/realHouse/realHouse.html',
+		controller:'realHouseCtl',
+		data:{isPublic:true}
+	})
 	.state('agentHomePage',{
 		url: '/agenthomepage/:id',
 		templateUrl: 'views/publicPage/agentHomePage/agentHomePage.html',
@@ -65,12 +71,33 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 		templateUrl:'views/tabs.html'
 	})
 	.state('tabs.ifHaveHouse',{
-		url:'/ifhavehouse/:query',
-		cache:false,
+		url:'/ifhavehouse',
 		views:{
 			home:{
 				templateUrl:'views/tabs/ifHaveHouse/ifHaveHouse.html',
 				controller:'ifHaveHouseCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.houseClass',{
+		url:'/ifhavehouse/houseClass',
+		cache:false,
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/houseClass/houseClass.html',
+				controller:'houseClassCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.agentList',{
+		url:'/ifhavehouse/agentlist',
+		cache:false,
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/agentList/agentList.html',
+				controller:'agentListCtl'
 			}
 		},
 		data:{isPublic:true}
@@ -121,6 +148,16 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 			home:{
 				templateUrl:'views/tabs/ifHaveHouse/clientSearch/clientSearch.html',
 				controller:'clientSearchCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.clientDetail',{
+		url:'/ifhavehouse/next/clientdetail',
+		views:{
+			home:{
+				templateUrl:'views/tabs/ifHaveHouse/clientDetail/clientDetail.html',
+				controller:'clientDetailCtl'
 			}
 		},
 		data:{isPublic:true}
@@ -205,6 +242,17 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 		},
 		data:{isPublic:true}
 	})
+	.state('tabs.myInfo',{
+		url:'/perCenter/myinfo',
+		cache:false,
+		views:{
+			mine:{
+				templateUrl:'views/tabs/perCenter/myinfo/myinfo.html',
+				controller:'myInfoCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
 	.state('tabs.myHouses',{
 		url:'/percenter/myhouses/:uid',
 		views:{
@@ -231,6 +279,56 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 			mine:{
 				templateUrl:'views/tabs/perCenter/myFocus/myFocus.html',
 				controller:'myFocusCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.mySafe',{
+		url:'/percenter/mysafe',
+		views:{
+			mine:{
+				templateUrl:'views/tabs/perCenter/mySafe/mySafe.html',
+				controller:'mySafeCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.myTask',{
+		url:'/percenter/mytask',
+		views:{
+			mine:{
+				templateUrl:'views/tabs/perCenter/myTask/myTask.html',
+				controller:'myTaskCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.myAccount',{
+		url:'/percenter/myaccount',
+		views:{
+			mine:{
+				templateUrl:'views/tabs/perCenter/myAccount/myAccount.html',
+				controller:'myAccountCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.dealRecord',{
+		url:'/percenter/myaccount/dealrecord',
+		views:{
+			mine:{
+				templateUrl:'views/tabs/perCenter/myAccount/dealRecord/dealRecord.html',
+				controller:'dealRecordCtl'
+			}
+		},
+		data:{isPublic:true}
+	})
+	.state('tabs.dealDetail',{
+		url:'/percenter/myaccount/dealrecord/dealdetail',
+		views:{
+			mine:{
+				templateUrl:'views/tabs/perCenter/myAccount/dealRecord/dealDetail/dealDetail.html',
+				controller:'dealDetailCtl'
 			}
 		},
 		data:{isPublic:true}
@@ -998,8 +1096,7 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 
 .constant('views',{currentView:null})
 
-.run(function(goTo,$rootScope,$ionicSideMenuDelegate,$ionicTabsDelegate,views,$state,ModalService){
-	
+.run(function($rootScope,$ionicSideMenuDelegate,$ionicTabsDelegate,views,$state){
 	
 	$rootScope.closeshare=function(){
 		$('#sharelist').css('display','none');
@@ -1043,40 +1140,17 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 	// 	// if(localStorage.getItem('loged')=='0'){
 	// 	if(localStorage.getItem('loged')!=='0'){
 	// 		event.preventDefault();// 取消默认跳转行为
-	// 		$state.go("login",{from:fromState.name,w:'notLogin'});//跳转到登录界面			
+	// 		goTo.goto('login')//跳转到登录界面			
+	// 		// $state.go("login",{from:fromState.name,w:'notLogin'});//跳转到登录界面			
 	// 	}else{
 	// 	}
 	// });
 	
-	// $rootScope.$on("$stateChangeStart", function (evt, toState, toParams, fromState, fromParams) {
-    //     var isPublic = angular.isObject(toState.data) && toState.data.isPublic === true;    //判断当前state的data属性"isPublic" === true
-    //     // var token = Passport.getToken();    //这里的getToken()是我自己写的取得当前token的方法，可以换成你自己的方法
-    //     if (!isPublic) {     
-    //              //do nothing
-    //     }
-    //     else {    //表示该state访问需要权限
-    //       ModalService.show('views/login/login-model.html', 'LoginController', {'login': true})    //调用ModalService.show()方法，显示登录modal框，这里还要指定Controller为LoginController，你也可以替换为自己的Controller
-    //         .then(function (data) {
-	// 			console.log(data)
-    //           if (data.login) {    //login 是我自定义的参数，后面会讲到
-    //             $rootScope.$broadcast('login', 'true');        //向下广播 login事件，这样就可以在其他controller中接收到该事件，从而进行相应的操作
-    //           }
-    //           else {
-	// 			$state.go(fromState.name);
-    //             // if(data.state){    //state也是我自定义的参数
-	// 			// 	$state.go(data.state);
-    //             // }else{
-	// 			// 	$state.go(fromState.name);
-    //             // }
-    //           }
-    //         });
-    //     }
-    //   });
 })
 
-.run(function($timeout,$ionicPopup,$cordovaAppVersion,$cordovaFileTransfer, $cordovaFile, $cordovaFileOpener2,$ionicPlatform,$rootScope
+.run(function(goBack,$ionicPopup,$cordovaAppVersion,$cordovaFileTransfer, $cordovaFile, $cordovaFileOpener2,$ionicPlatform,$rootScope
 	,$q,$http,$Factory,$ionicHistory,$cordovaToast,$location,$cordovaStatusbar,$ionicLoading,$cordovaNetwork) {
-	
+  	
 	//ios风格显示
  	ionic.Platform.setPlatform('ios');
   	$ionicPlatform.ready(function() {
@@ -1205,7 +1279,7 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 	// 双击退出
     $ionicPlatform.registerBackButtonAction(function (e) {
         //可以双击退出的页面
-        if ($location.path() == '/login' || $location.path() == '/tabs/home' || $location.path() == '/tabs/info' || $location.path() == '/tabs/find' || $location.path() == '/tabs/mine' || $location.path() == '/tabs/contact' ) {
+        if ($location.path() == '/login' || $location.path() == '/tabs/home' || $location.path() == '/tabs/info' || $location.path() == '/tabs/find' || $location.path() == '/tabs/mine' || $location.path() == '/tabs/contact' || $location.path() == '/tabs/ifhavehouse' || $location.path() == '/tabs/ifhavehouse/0' || $location.path() == '/tabs/ifhavehouse/1' || $location.path() == '/tabs/percenter' || $location.path() == '/tabs/chatlist' || $location.path() == '/tabs/beagent' ) {
             if ($rootScope.backButtonPressedOnceToExit) {
                 ionic.Platform.exitApp();
             } else {
@@ -1216,14 +1290,6 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
                 }, 2000);
             }
         }
-//      else if($location.path() == '/tabs/contact/createcli/-1'){
-//      	$rootScope.showSelfModal=true;
-//      	$('#createcli .selfbackdrop').css('display','block');
-//			$('#createcli .selfmodal').css('display','block');
-//      }
-//      else if ($ionicHistory.backView()&&$location.path() !== '/tabs/contact/createcli/-1') {
-//          	$ionicHistory.goBack()
-//      }
         else if ($ionicHistory.backView()) {
 			if($location.path() == '/tabs/contact/createcli/-1'){
 				// 返回确定退出？
@@ -1232,7 +1298,8 @@ angular.module('App', ['ionic','App.imglist','ngCordova','angularMoment','monosp
 			   	$('#createcli .selfmodal').css('display','block');
 		   	}
 		   	else{
-				$ionicHistory.goBack()
+				// $ionicHistory.goBack()
+				goBack.goback();
 		   	}
         }
 		else {

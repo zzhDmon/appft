@@ -1,0 +1,39 @@
+#my_account{
+    .header{
+        .back{
+           width: 25%; 
+        }
+        .title{
+            width: 50%;
+        }
+        .right{
+            width: 25%;
+            color: #969696;
+            padding: 0 12px 0 0;
+        }
+    }
+    .my-account{
+        margin-top: 44px;
+        img{
+            display: block;
+            margin: 50px auto 0;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+        h6{
+            margin: 15px 0 0;
+            font-size: 16px;
+            text-align: center;
+        }
+        h5{
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        p{
+            text-align: center;
+            color: rgb(102,102,102)
+        }
+    }
+}

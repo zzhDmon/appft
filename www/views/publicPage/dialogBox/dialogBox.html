@@ -7,8 +7,8 @@
 		<div class="title">
 			{{headTitle}}
 		</div>
-		<div class="right" >
-			
+		<div class="right" ng-click="goAgentHomePage()">
+			<i class="iconfont icon-wode1"></i>
 		</div>
 	</div>
 
@@ -23,36 +23,29 @@
 		<div ng-repeat="message in messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">
 
 			<div ng-if="user._id !== message.userId">
-
 				<img ng-click="viewProfile(message)" class="profile-pic left" ng-src="{{toUser.pic}}" onerror="onProfilePicError(this)" />
-
 				<div class="chat-bubble left">
-
 					<div class="message" ng-bind-html="message.text | nl2br" autolinker>
 					</div>
 
-					<div class="message-detail">
+					<!-- <div class="message-detail">
 						<span ng-click="viewProfile(message)" class="bold">{{toUser.username}}</span>,
 						<span am-time-ago="message.date"></span>
-					</div>
-
+					</div> -->
 				</div>
 			</div>
 
 			<div ng-if="user._id === message.userId">
 
 				<img ng-click="viewProfile(message)" class="profile-pic right" ng-src="{{user.pic}}" onerror="onProfilePicError(this)" />
-
 				<div class="chat-bubble right">
-
 					<div class="message" ng-bind-html="message.text | nl2br" autolinker>
 					</div>
 
-					<div class="message-detail">
+					<!-- <div class="message-detail">
 						<span ng-click="viewProfile(message)" class="bold">{{user.username}}</span>,
 						<span am-time-ago="message.date"></span>
-					</div>
-
+					</div> -->
 				</div>
 
 			</div>
@@ -62,7 +55,42 @@
 		</div>
 	</ion-content>
 
-	<form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
+	<!-- <ion-footer-bar>
+		<label class="item-input-wrapper">
+			<textarea ng-model="input.message" value="" placeholder="输入..." required minlength="1" maxlength="1500" rows="1" msd-elastic></textarea>
+		</label>
+		<div class="footer-btn-wrap">
+			<button class="button button-icon icon ion-android-send footer-btn" type="submit" ng-disabled="!input.message || input.message === ''">
+			</button>
+		</div>
+	</ion-footer-bar> -->
+
+	<!-- <div style="position:fixed;bottom:0;width:100%;height:auto;max-height:150px;overflow: scroll;">
+		<label class="item-input-wrapper">
+			<textarea ng-model="input.message" value="" placeholder="Send {{toUser.username}} a message..." required minlength="1" maxlength="1500" msd-elastic></textarea>
+		</label>
+		<div class="footer-btn-wrap">
+			<button class="button button-icon icon ion-android-send footer-btn" type="submit" ng-disabled="!input.message || input.message === ''">
+			</button>
+		</div>
+	</div> -->
+	<ion-footer-bar class="bar-stable item-input-inset message-footer" >
+		<div class="footer-lef-wrap">
+			<button class="button" type="submit" ng-disabled="!input.message || input.message === ''">
+				<i class="iconfont icon-yuyin"></i>
+			</button>
+		</div>
+		<label class="item-input-wrapper">
+			<textarea ng-model="input.message" value="" placeholder="Send {{toUser.username}} a message..." required minlength="1" maxlength="1500" msd-elastic></textarea>
+		</label>
+		<div class="footer-btn-wrap">
+			<button class="button footer-btn" type="submit" ng-disabled="!input.message || input.message === ''">
+				发送
+			</button>
+		</div>
+	</ion-footer-bar>
+	
+	<!-- <form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
 		<ion-footer-bar style="max-height:300px;overflow:hidden;" class="bar-stable item-input-inset message-footer" keyboard-attach>
 			<label class="item-input-wrapper">
 				<textarea ng-model="input.message" value="" placeholder="输入..." required minlength="1" maxlength="1500" rows="1" msd-elastic></textarea>
@@ -72,6 +100,6 @@
 				</button>
 			</div>
 		</ion-footer-bar>
-	</form>
+	</form> -->
 
 </ion-view>

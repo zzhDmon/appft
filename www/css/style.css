@@ -56,15 +56,16 @@ li{
 /*自定义导航栏*/
 .header{
         width: 100%;
-        height: 44px;
-        background-color: rgb(255,255,255);
+		height: 44px;
+		background-color: rgb(255,255,255);
+		background-image: url('../imgs/头.png');
         position: absolute;
         z-index: 9999;
         top: 0; 
-        border-bottom: 1px solid rgb(230,230,230); 
+        /* border-bottom: 1px solid rgb(230,230,230);  */
     }
 .header>div{
-	color: rgb(51,51,51);
+	color: rgb(255,255,255);
 }
 .header>div .iconfont{
 	font-size: 25px;
@@ -92,10 +93,12 @@ li{
             text-align: right;
             padding-right: 6px;
             line-height: 44px;
-        }
-
-
-
+		}
+		
+/* 滚动区 */
+		.scroll-content{
+			padding: 0;
+		}
 
 /*卡片间隔断区域*/
 .offline{
@@ -120,7 +123,8 @@ li{
     position: absolute;
     z-index: 999;
     left: 0;
-    background: rgb(230,230,230);
+    /* background: rgb(230,230,230); */
+    background: rgb(8,21,53);
     width: 100%;
     height: 1px;
     -webkit-transform: scaleY(0.5);

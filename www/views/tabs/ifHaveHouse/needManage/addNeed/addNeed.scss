@@ -59,12 +59,13 @@
                 }
         }
        .subbtn{
-           margin: 15px 0 0;
+            margin: 15px 0 0;
             width: 100%;
             height: 50px;
             .button{
                 width: 60%;
                 height: 100%;
+                background-color: $bg-main-color;
                 margin-left: 20%;
             }
        }

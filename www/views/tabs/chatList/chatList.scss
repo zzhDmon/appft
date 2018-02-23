@@ -1,6 +1,6 @@
 #chat_list{
     .header{
-        background-color: rgb(56, 126, 245);     
+        background-color: $bg-main-color;     
         .title{
             .switch{
                 width: 100%;
@@ -10,7 +10,18 @@
                     width: 50%;
                     height: 30px;
                     float: left;
+                    background-color: $bg-main-color;
                     border-color:#e6e6e6;
+                }
+                .button.activated{
+                    background-color: #e6e6e6;
+                    color: $bg-main-color;
+                    border-color:$bg-main-color;
+                }
+                .button.clicked{
+                    background-color: #e6e6e6;
+                    color: $bg-main-color;
+                    border-color:$bg-main-color;
                 }
             }
         }

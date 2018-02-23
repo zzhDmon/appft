@@ -1,0 +1,25 @@
+
+<!--对话模板-->
+<ion-view id="my_account" view-title="我的积分" hide-nav-bar=true>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			我的账户
+		</div>
+		<div class="right" ui-sref="tabs.dealRecord">
+			交易记录
+		</div>
+	</div>
+	<ion-content on-swipe-right="onSwipeRight()" class="my-account">
+		<div class="">
+				<img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+				<h6>我的余额</h6>
+				<h5>￥131488.59</h5>
+				<p>我的佣金：￥130000</p>
+		</div>
+	</ion-content>
+	
+</ion-view>
+

@@ -1,4 +1,4 @@
-angular.module('App').controller('LoginController',function(goBack,$http,$Factory,$state,$scope,$rootScope,$ionicLoading,$document,$ionicHistory){
+angular.module('App').controller('LoginController',function(goTo,goBack,$http,$Factory,$state,$scope,$rootScope,$ionicLoading,$document,$ionicHistory){
 	
 	
 	$scope.user = {};
@@ -12,13 +12,14 @@ angular.module('App').controller('LoginController',function(goBack,$http,$Factor
 	};
 	
 
-  
-
 	/***/ 
 	$scope.back=function(){
-		console.log(111)
 		goBack.goback()
 	};
+	$scope.goregister=function(name){
+		goTo.goto('registerorback',{name:name})
+	};
+
 	$scope.logininfo={
 		Status:0,
 //		isRegist: 3,

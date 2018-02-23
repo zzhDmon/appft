@@ -18,6 +18,11 @@ $dark:                            #444 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
+$bg-main-color:rgb(8,21,53);
+$border-main-color:rgb(8,21,53);
+$font-main-color:rgb(51,51,51);
+$font-sup-color:rgb(102,102,102);
+$font-minor-color:rgb(150,150,150);
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 @import "www/views/logo/logo";
@@ -105,11 +110,15 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 @import "www/views/publicPage/dialogBox/dialogBox";
 @import "www/views/publicPage/realName/realName";
+@import "www/views/publicPage/realHouse/realHouse";
 @import "www/views/publicPage/agentHomePage/agentHomePage";
 @import "www/views/publicPage/sellHouseDetail/sellHouseDetail";
 @import "www/views/publicPage/rentHouseDetail/rentHouseDetail";
 @import "www/views/tabs/ifhavehouse/ifhavehouse";
+@import "www/views/tabs/ifhavehouse/houseClass/houseClass";
+@import "www/views/tabs/ifhavehouse/agentList/agentList";
 @import "www/views/tabs/ifhavehouse/clientSearch/clientSearch";
+@import "www/views/tabs/ifhavehouse/clientDetail/clientDetail";
 @import "www/views/tabs/ifhavehouse/houseSearch/houseSearch";
 @import "www/views/tabs/ifhavehouse/mySet/mySet";
 @import "www/views/tabs/ifhavehouse/fbManage/fbManage";
@@ -122,9 +131,15 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/views/tabs/ifhavehouse/fbManage/addRent/addRent";
 @import "www/views/tabs/ifhavehouse/fbManage/changeFy/changeFy";
 @import "www/views/tabs/perCenter/perCenter";
+@import "www/views/tabs/perCenter/myInfo/myInfo";
 @import "www/views/tabs/perCenter/myHouses/myHouses";
 @import "www/views/tabs/perCenter/myAgency/myAgency";
 @import "www/views/tabs/perCenter/myFocus/myFocus";
+@import "www/views/tabs/perCenter/mySafe/mySafe";
+@import "www/views/tabs/perCenter/myTask/myTask";
+@import "www/views/tabs/perCenter/myAccount/myAccount";
+@import "www/views/tabs/perCenter/myAccount/dealRecord/dealRecord";
+@import "www/views/tabs/perCenter/myAccount/dealRecord/dealDetail/dealDetail";
 @import "www/views/tabs/perCenter/openVip/openVip";
 @import "www/views/tabs/perCenter/openVip/highServe/highServe";
 @import "www/views/tabs/chatList/chatList";

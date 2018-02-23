@@ -35,10 +35,10 @@
 				</p>
 				
 				<ul>
-					<li on-finish-render-filters ng-repeat="sell in sellhouse" ng-click='show($event,sell.Id,housetype)'>
+					<li on-finish-render-filters ng-repeat="sell in sellhouse">
 						<div class="img">
-							<img ng-src="{{sell.Thumb}}"/>
-							<img ng-show={{sell.Recommend}} class="zhutui" src="imgs/主推.png"/>
+							<img ng-src="imgs/右.png"/>
+							<!-- <img ng-src="{{sell.Thumb}}"/> -->
 						</div>
 						<div class="description">
 							<h5>{{sell.Title}}</h5>
@@ -78,14 +78,14 @@
 				</p>
 				
 				<ul>
-					<li on-finish-render-filters ng-repeat="rent in renthouse" ng-click='show($event,rent.Id,housetype)'>
+					<li on-finish-render-filters ng-repeat="rent in renthouse" >
 						<div class="img">
-							<img ng-src="{{rent.Thumb}}"/>
-							<img ng-show={{rent.Recommend}} class="zhutui" src="imgs/主推.png"/>
+							<img ng-src="imgs/中.png"/>
+							<!-- <img ng-src="{{rent.Thumb}}"/> -->
 						</div>
 						<div class="description">
-							<h5>{{rent.Title}}</h5>
-							<p>{{rent.CommunityName}}</p>
+							<h5>要三室一厅的</h5>
+							<p>在软件园附近</p>
 							<!--<p>{{rent.HouseType}}&nbsp;{{rent.Space}}平米</p>-->
 							<div>
 								<div class="space">

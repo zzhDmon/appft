@@ -9871,7 +9871,7 @@ a.button {
       padding: 20px 5vw 10px; }
       #login .login .loginbtn .subbtn .button {
         width: 90vw;
-        background-color: #41a0ff; }
+        background-color: #081535; }
 
 #registerorback .header {
   background-color: #f6f6f6; }
@@ -9892,8 +9892,8 @@ a.button {
       font-size: 14px;
       top: 7px;
       right: 10px;
-      color: #41a0ff;
-      border: 1px solid #41a0ff;
+      color: #081535;
+      border: 1px solid #081535;
       border-radius: 3px; }
     #registerorback .registerorback .list .item-input {
       margin: 0;
@@ -9914,7 +9914,20 @@ a.button {
       #registerorback .registerorback .agreement .list .item span {
         position: absolute;
         z-index: 9999;
-        color: #41a0ff; }
+        color: #081535; }
+  #registerorback .registerorback .idimg {
+    margin: 10px 0 0; }
+    #registerorback .registerorback .idimg p {
+      margin: 0;
+      padding: 0;
+      height: 30px;
+      width: 100%;
+      line-height: 30px; }
+    #registerorback .registerorback .idimg img {
+      display: block;
+      width: 80vw;
+      height: 50vw;
+      margin: auto; }
   #registerorback .registerorback .loginbtn .subbtn {
     width: 100%;
     margin-top: 20px;
@@ -9922,7 +9935,7 @@ a.button {
     #registerorback .registerorback .loginbtn .subbtn .button {
       width: 90vw;
       font-size: 16px;
-      background-color: #41a0ff; }
+      background-color: #081535; }
   #registerorback .registerorback .expl {
     margin: 0;
     padding: 0;
@@ -24893,7 +24906,14 @@ a.button {
                 font-weight: 600; }
 
 #dialog_box .bar-footer {
-  overflow: visible !important; }
+  overflow: hidden;
+  max-height: 100px;
+  height: auto;
+  position: absolute; }
+  #dialog_box .bar-footer .item-input-wrapper {
+    overflow: scroll;
+    max-height: 100px;
+    height: auto; }
 
 #dialog_box .bar-footer textarea {
   resize: none;
@@ -24904,16 +24924,6 @@ a.button {
   padding-top: 2px;
   /* add this to keep your footer buttons down 
     at the bottom as the textarea resizes */ }
-
-#dialog_box .footer-btn-wrap {
-  position: relative;
-  height: 100%;
-  width: 50px;
-  top: 7px; }
-
-#dialog_box .footer-btn {
-  position: absolute !important;
-  bottom: 0; }
 
 #dialog_box img.profile-pic {
   width: 40px;
@@ -25094,6 +25104,45 @@ a.button {
         width: 90vw;
         background-color: #41a0ff; }
 
+#real_house .header {
+  background-color: #f6f6f6; }
+
+#real_house .real-house {
+  background-color: white;
+  height: 100%;
+  margin-top: 44px; }
+  #real_house .real-house .card {
+    box-shadow: none; }
+  #real_house .real-house .list {
+    border: none; }
+    #real_house .real-house .list .input-label {
+      padding: 7px 0 7px;
+      font-size: 14px;
+      width: 20vw !important;
+      color: #939393; }
+    #real_house .real-house .list .item-input input {
+      font-size: 16px; }
+  #real_house .real-house .idimage {
+    padding: 20px 0 0;
+    width: 100%;
+    height: auto; }
+    #real_house .real-house .idimage img {
+      margin: auto;
+      display: block;
+      width: 60vw;
+      height: 38vw; }
+  #real_house .real-house .loginbtn {
+    position: relative;
+    background-color: white;
+    height: 100%; }
+    #real_house .real-house .loginbtn .subbtn {
+      width: 100%;
+      margin-top: 70px;
+      padding: 20px 5vw 10px; }
+      #real_house .real-house .loginbtn .subbtn .button {
+        width: 90vw;
+        background-color: #41a0ff; }
+
 #agent_home_page .header {
   background-color: #3699f5;
   border-bottom: none; }
@@ -25126,7 +25175,7 @@ a.button {
   #agent_home_page .agent-home-page .headback {
     width: 100%;
     height: 44px;
-    background-color: #3699f5; }
+    background-color: #081733; }
     #agent_home_page .agent-home-page .headback .backbotton {
       float: left;
       width: 30px;
@@ -25149,7 +25198,7 @@ a.button {
     width: 100%;
     height: 100px;
     box-shadow: none;
-    background-color: #3699f5;
+    background-color: #002162;
     border-radius: 0;
     padding: 20px 12px 0; }
     #agent_home_page .agent-home-page .headinfo img {
@@ -25233,7 +25282,7 @@ a.button {
         border: 1px solid #666666; }
       #agent_home_page .agent-home-page .changetype ul .active {
         color: white;
-        background-color: #55c2d7; }
+        background-color: #081535; }
       #agent_home_page .agent-home-page .changetype ul .self {
         border-radius: 10px 0 0 10px; }
       #agent_home_page .agent-home-page .changetype ul .agent {
@@ -25865,7 +25914,7 @@ a.button {
   #sell_house_detail .contacts .chat {
     width: 35vw;
     color: white;
-    background-color: #4b7197; }
+    background-color: #081535; }
 
 #sell_house_detail .sell-house-detail {
   position: absolute;
@@ -26874,250 +26923,930 @@ a.button {
                 font-size: 16px;
                 font-weight: 600; }
 
-#if_have_house .searchhouse-header {
-  position: absolute;
-  z-index: 1002;
-  width: 100% !important;
-  height: 44px !important;
-  top: 0;
-  padding: 10px 0 !important;
-  border-bottom: none !important;
-  background-color: #f6f6f6;
-  background-image: none; }
-  #if_have_house .searchhouse-header span.location {
-    width: 20%;
-    height: 40px;
-    line-height: 40px;
-    text-align: left;
-    padding-left: 10px;
-    color: dimgray; }
-  #if_have_house .searchhouse-header span.set {
-    width: 10%;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    color: dimgray; }
-    #if_have_house .searchhouse-header span.set .iconfont {
-      font-size: 25px; }
-  #if_have_house .searchhouse-header span.item-input-wrapper {
-    width: 70%;
-    height: 28px;
-    text-align: center;
-    background-color: #e4e4e4;
-    padding-left: 15%; }
-    #if_have_house .searchhouse-header span.item-input-wrapper i.icon-sousuo2 {
-      color: #969696;
-      line-height: 28px; }
-    #if_have_house .searchhouse-header span.item-input-wrapper input {
-      padding-left: 10px; }
-    #if_have_house .searchhouse-header span.item-input-wrapper input::-webkit-input-placeholder {
-      /* WebKit, Blink, Edge */
-      color: #969696; }
-    #if_have_house .searchhouse-header span.item-input-wrapper input:-moz-placeholder {
-      /* Mozilla Firefox 4 to 18 */
-      color: #969696;
-      opacity: 1; }
-    #if_have_house .searchhouse-header span.item-input-wrapper input::-moz-placeholder {
-      /* Mozilla Firefox 19+ */
-      color: #969696;
-      opacity: 1; }
-    #if_have_house .searchhouse-header span.item-input-wrapper input:-ms-input-placeholder {
-      /* Internet Explorer 10-11 */
-      color: #969696; }
-
-#if_have_house .tabNav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 45px;
-  background-color: #e6e6e6; }
-  #if_have_house .tabNav ul {
-    width: 100%;
-    height: 100%; }
-    #if_have_house .tabNav ul li {
-      height: 100%;
-      text-align: center;
-      line-height: 45px; }
-    #if_have_house .tabNav ul .rig {
-      width: 35%; }
-    #if_have_house .tabNav ul .lef {
-      width: 30%; }
-    #if_have_house .tabNav ul .mid {
-      width: 35%; }
-
-#if_have_house .topfour {
-  width: 100%;
-  height: 40px;
-  top: 43px;
-  position: absolute;
-  background-color: #f6f6f6;
-  border-top: none;
-  border-bottom: 1px solid #e6e6e6;
-  z-index: 1001; }
-  #if_have_house .topfour li {
-    width: 25%;
-    text-align: center;
-    padding: 0 10px 0;
-    height: 40px;
-    font-size: 16px;
-    line-height: 40px;
-    color: #666666; }
-    #if_have_house .topfour li div {
-      display: inline-block;
-      word-break: keep-all;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-align: center;
-      height: 100%;
-      max-width: 85%; }
-    #if_have_house .topfour li i.icon--pulldown {
-      position: relative;
-      display: inline-block;
-      width: 15%;
-      text-align: center;
-      height: 100%;
-      top: -15px;
-      color: #666666; }
-  #if_have_house .topfour li.havechoose {
-    color: #41a0ff; }
-    #if_have_house .topfour li.havechoose i.icon--pulldown {
-      color: #41a0ff; }
-
-#if_have_house .mask {
-  width: 100%;
-  height: calc(100% - 44px);
-  background-color: rgba(0, 0, 0, 0.3);
-  display: none;
-  position: absolute;
-  z-index: 1000;
-  top: 44px; }
-
-#if_have_house .mask.open {
-  display: block; }
-
-#if_have_house .pullchooselist {
-  width: 100%;
-  height: 300px;
-  position: absolute;
-  z-index: 1001;
-  top: 83px;
-  background-color: white;
-  display: none; }
-  #if_have_house .pullchooselist .scroll-bar {
-    display: none; }
-  #if_have_house .pullchooselist .bottom {
+#if_have_house {
+  background-image: url("../imgs/bg.png"); }
+  #if_have_house .searchhouse-header {
+    background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
     z-index: 1002;
-    bottom: -2px;
-    width: 100%;
-    height: 15px;
-    background-color: white; }
-  #if_have_house .pullchooselist div {
-    height: 100%;
-    border: none; }
-    #if_have_house .pullchooselist div .area {
-      width: 50%;
-      height: 100%;
-      position: absolute;
-      right: 0;
-      top: 1px;
-      border-left: 1px solid #e6e6e6;
-      background-color: #f6f6f6; }
-      #if_have_house .pullchooselist div .area .bottom {
-        position: absolute;
-        z-index: 1003;
-        bottom: -1px;
-        width: 100%;
-        height: 15px;
-        background-color: #f6f6f6; }
-      #if_have_house .pullchooselist div .area .scroll-content {
-        margin: 0 0 0 12px; }
-        #if_have_house .pullchooselist div .area .scroll-content .item {
-          padding: 12px 16px 12px 0;
-          color: #666666;
-          background-color: #f6f6f6;
-          border-color: #e6e6e6; }
-        #if_have_house .pullchooselist div .area .scroll-content .item.clicked {
-          color: #41a0ff; }
-        #if_have_house .pullchooselist div .area .scroll-content .item.activated {
-          background-color: #f6f6f6;
-          color: #41a0ff; }
-        #if_have_house .pullchooselist div .area .scroll-content .item:last-child {
-          border-bottom: none; }
-        #if_have_house .pullchooselist div .area .scroll-content .item:first-child {
-          border-top: none; }
-    #if_have_house .pullchooselist div .scroll-content {
-      margin: 0 0 0 12px;
-      padding: 0 0 30px; }
-      #if_have_house .pullchooselist div .scroll-content .list .item {
-        color: #666666;
-        padding: 12px 16px 12px 0;
-        border-color: #e6e6e6; }
-      #if_have_house .pullchooselist div .scroll-content .list .item.clicked {
-        color: #41a0ff; }
-      #if_have_house .pullchooselist div .scroll-content .list .item.activated {
-        background-color: white;
-        color: #41a0ff; }
-      #if_have_house .pullchooselist div .scroll-content .list .item:last-child {
-        border-bottom: none; }
-      #if_have_house .pullchooselist div .scroll-content .list .item:first-child {
-        border-top: none; }
-
-#if_have_house .dao-hang {
-  position: fixed;
-  z-index: 99;
-  bottom: 60px;
-  right: 15px;
-  width: 39px;
-  height: 39px;
-  line-height: 39px;
-  text-align: center;
-  border-radius: 50%;
-  color: #e5f0f7;
-  background-color: rgba(78, 127, 184, 0.9); }
-  #if_have_house .dao-hang i {
-    position: relative;
-    top: 2px;
-    font-size: 20px; }
-
-#if_have_house .if-have-house {
-  margin-top: 84px; }
-  #if_have_house .if-have-house .card {
-    box-shadow: none; }
-  #if_have_house .if-have-house p.loading {
-    margin: 100px 0 100px;
-    font-size: 50px;
-    text-align: center; }
-    #if_have_house .if-have-house p.loading .spinner svg {
-      width: 60px !important;
-      height: 60px !important; }
-  #if_have_house .if-have-house .buyOrRent {
-    width: 50%;
-    margin: auto;
-    height: 35px; }
-    #if_have_house .if-have-house .buyOrRent .son {
-      width: 50%;
-      float: left;
-      height: 35px;
-      line-height: 35px;
+    width: 100% !important;
+    height: 44px !important;
+    top: 0;
+    padding: 10px 0 !important;
+    border-bottom: none !important;
+    background-image: none; }
+    #if_have_house .searchhouse-header span.location {
+      width: 20%;
+      height: 40px;
+      line-height: 40px;
+      text-align: left;
+      padding-left: 10px;
+      color: white; }
+    #if_have_house .searchhouse-header span.set {
+      width: 10%;
+      height: 40px;
+      line-height: 40px;
       text-align: center;
-      padding: 0;
-      color: #666666; }
-    #if_have_house .if-have-house .buyOrRent .active {
-      color: white;
-      background-color: #55c2d7; }
-    #if_have_house .if-have-house .buyOrRent .buy {
-      border-radius: 10px 0 0 10px;
-      border: 1px solid gray; }
-    #if_have_house .if-have-house .buyOrRent .rent {
-      border-radius: 0 10px 10px 0;
-      border: 1px solid gray; }
-  #if_have_house .if-have-house .ershou p.baseLine {
+      color: white; }
+      #if_have_house .searchhouse-header span.set .iconfont {
+        font-size: 25px; }
+    #if_have_house .searchhouse-header span.item-min {
+      width: 70%; }
+    #if_have_house .searchhouse-header span.item-input-wrapper {
+      width: 70%;
+      height: 28px;
+      text-align: center;
+      padding-left: 15%; }
+      #if_have_house .searchhouse-header span.item-input-wrapper i.icon-sousuo2 {
+        color: #969696;
+        line-height: 28px; }
+      #if_have_house .searchhouse-header span.item-input-wrapper input {
+        padding-left: 10px; }
+      #if_have_house .searchhouse-header span.item-input-wrapper input::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: #969696; }
+      #if_have_house .searchhouse-header span.item-input-wrapper input:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: #969696;
+        opacity: 1; }
+      #if_have_house .searchhouse-header span.item-input-wrapper input::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: #969696;
+        opacity: 1; }
+      #if_have_house .searchhouse-header span.item-input-wrapper input:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #969696; }
+  #if_have_house .slide-page-num {
+    width: 100%;
+    height: 10px;
+    position: fixed;
+    z-index: 1;
+    bottom: 59px; }
+    #if_have_house .slide-page-num ul {
+      width: 40px;
+      height: 10px;
+      margin: auto; }
+      #if_have_house .slide-page-num ul li {
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.3); }
+      #if_have_house .slide-page-num ul li.active {
+        background-color: rgba(0, 0, 0, 0.7); }
+  #if_have_house .navTop {
+    position: fixed;
+    z-index: -1;
+    bottom: 49px;
+    width: 100%;
+    height: 10px;
+    background-color: white; }
+    #if_have_house .navTop .left {
+      background-image: url("../imgs/头.png");
+      width: 50%;
+      height: 10px;
+      float: left;
+      border-radius: 10px 0 0 50vw; }
+    #if_have_house .navTop .right {
+      background-image: url("../imgs/头.png");
+      width: 50%;
+      height: 10px;
+      float: left;
+      border-radius: 0 10px 50vw 0; }
+  #if_have_house .tabNav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 49px;
+    padding: 0;
+    background-color: white; }
+    #if_have_house .tabNav ul {
+      width: 100%;
+      height: 100%; }
+      #if_have_house .tabNav ul li {
+        height: 100%;
+        text-align: center;
+        line-height: 50px; }
+        #if_have_house .tabNav ul li img {
+          display: block;
+          width: 30px;
+          height: 30px;
+          margin: auto; }
+        #if_have_house .tabNav ul li p {
+          margin: 0;
+          padding: 0;
+          height: 19px;
+          line-height: 19px; }
+        #if_have_house .tabNav ul li .top {
+          margin: 5px auto 0;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          border-radius: 50%;
+          background-color: #081535;
+          color: white; }
+          #if_have_house .tabNav ul li .top .iconfont {
+            font-size: 25px; }
+          #if_have_house .tabNav ul li .top .iconfont:before {
+            line-height: 1; }
+      #if_have_house .tabNav ul .rig {
+        width: 35%; }
+      #if_have_house .tabNav ul .lef {
+        width: 35%; }
+      #if_have_house .tabNav ul .mid {
+        width: 30%; }
+  #if_have_house .tiantian {
+    position: fixed;
+    z-index: 1;
+    top: 200px;
+    right: -50px;
+    width: 80px; }
+    #if_have_house .tiantian .search {
+      display: none;
+      position: absolute;
+      top: 25px;
+      left: -35px;
+      width: 45px;
+      height: 30px;
+      font-size: 25px;
+      line-height: 30px;
+      text-align: center;
+      background-color: rgba(102, 102, 102, 0.5);
+      border-radius: 10px;
+      color: white; }
+      #if_have_house .tiantian .search .iconfont:before {
+        line-height: 1; }
+      #if_have_house .tiantian .search span {
+        width: 0;
+        height: 0;
+        font-size: 0;
+        overflow: hidden;
+        position: absolute; }
+        #if_have_house .tiantian .search span.bot {
+          border-width: 15px;
+          border-style: solid dashed dashed;
+          border-color: transparent transparent transparent rgba(102, 102, 102, 0.5);
+          left: 15px;
+          top: -29px; }
+        #if_have_house .tiantian .search span.top {
+          border-width: 13px;
+          border-style: solid dashed dashed;
+          border-color: transparent transparent transparent rgba(102, 102, 102, 0.5);
+          left: 17px;
+          top: -25px; }
+    #if_have_house .tiantian .search.active {
+      display: block; }
+    #if_have_house .tiantian .upimg {
+      position: absolute;
+      z-index: 2;
+      width: 80px;
+      height: 80px;
+      display: none; }
+    #if_have_house .tiantian img {
+      display: block;
+      width: 80px;
+      height: 80px; }
+    #if_have_house .tiantian ul {
+      width: 100%;
+      height: 0px;
+      overflow: hidden;
+      background-color: rgba(114, 200, 201, 0.7); }
+      #if_have_house .tiantian ul li {
+        width: 100%;
+        height: 0px;
+        color: white; }
+        #if_have_house .tiantian ul li p {
+          margin: 5px auto;
+          width: 80%;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+          background-color: rgba(0, 0, 0, 0.3);
+          color: white;
+          border-radius: 3px; }
+      #if_have_house .tiantian ul div {
+        color: white;
+        width: 100%; }
+        #if_have_house .tiantian ul div p {
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          height: 0px;
+          line-height: 20px; }
+  #if_have_house .dao-hang {
+    position: fixed;
+    z-index: 99;
+    bottom: 60px;
+    right: 15px;
+    width: 39px;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    border-radius: 50%;
+    color: #e5f0f7;
+    background-color: rgba(78, 127, 184, 0.9); }
+    #if_have_house .dao-hang i {
+      position: relative;
+      top: 2px;
+      font-size: 20px; }
+  #if_have_house .if-have-house {
+    padding: 0;
+    margin: 44px 0 49px; }
+    #if_have_house .if-have-house p.loading {
+      margin: 100px 0 100px;
+      font-size: 50px;
+      text-align: center; }
+      #if_have_house .if-have-house p.loading .spinner svg {
+        width: 60px !important;
+        height: 60px !important; }
+    #if_have_house .if-have-house .buyOrRent {
+      width: 50%;
+      margin: auto;
+      height: 35px; }
+      #if_have_house .if-have-house .buyOrRent .son {
+        width: 50%;
+        float: left;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        padding: 0;
+        color: #666666; }
+      #if_have_house .if-have-house .buyOrRent .active {
+        color: white;
+        background-color: #081535; }
+      #if_have_house .if-have-house .buyOrRent .buy {
+        border-radius: 10px 0 0 10px;
+        border: 1px solid gray; }
+      #if_have_house .if-have-house .buyOrRent .rent {
+        border-radius: 0 10px 10px 0;
+        border: 1px solid gray; }
+    #if_have_house .if-have-house .ershou {
+      background-color: rgba(255, 255, 255, 0); }
+      #if_have_house .if-have-house .ershou .headimg {
+        width: 100%;
+        height: 50vw;
+        padding: 5px 0 0;
+        background-color: rgba(255, 255, 255, 0.5); }
+        #if_have_house .if-have-house .ershou .headimg img {
+          display: block;
+          margin: auto;
+          border-radius: 10px;
+          width: 95%;
+          height: 47vw; }
+      #if_have_house .if-have-house .ershou .underhead {
+        width: 100%;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.5); }
+        #if_have_house .if-have-house .ershou .underhead .left {
+          background-image: url("../imgs/头.png");
+          width: 50%;
+          height: 10px;
+          float: left;
+          border-radius: 10px 0 0 0; }
+        #if_have_house .if-have-house .ershou .underhead .right {
+          background-image: url("../imgs/头.png");
+          width: 50%;
+          height: 10px;
+          float: left;
+          border-radius: 0 10px 0 0; }
+      #if_have_house .if-have-house .ershou p.baseLine {
+        margin: 0;
+        padding: 15px 12px 15px;
+        background-color: #f6f6f6; }
+        #if_have_house .if-have-house .ershou p.baseLine span {
+          text-align: center;
+          display: block;
+          /*设置为块级元素会独占一行形成上下居中的效果*/
+          font-size: 14px;
+          color: #969696;
+          position: relative;
+          /*定位横线（当横线的父元素）*/ }
+        #if_have_house .if-have-house .ershou p.baseLine span:before {
+          content: '';
+          /*CSS伪类用法*/
+          position: absolute;
+          /*定位背景横线的位置*/
+          top: 52%;
+          background: #e6e6e6;
+          /*宽和高做出来的背景横线*/
+          width: 28%;
+          height: 1px; }
+        #if_have_house .if-have-house .ershou p.baseLine span:after {
+          content: '';
+          /*CSS伪类用法*/
+          position: absolute;
+          /*定位背景横线的位置*/
+          top: 52%;
+          background: #e6e6e6;
+          /*宽和高做出来的背景横线*/
+          width: 28%;
+          height: 1px; }
+        #if_have_house .if-have-house .ershou p.baseLine span:before {
+          left: 0;
+          /*调整背景横线的左右距离*/ }
+        #if_have_house .if-have-house .ershou p.baseLine span:after {
+          right: 0; }
+      #if_have_house .if-have-house .ershou .list {
+        padding-left: 6px;
+        padding-right: 6px; }
+        #if_have_house .if-have-house .ershou .list .item:last-child .item-content {
+          border-bottom: none; }
+        #if_have_house .if-have-house .ershou .list .item {
+          border-radius: 10px;
+          border: none;
+          margin: 0 0 8px;
+          box-shadow: 0 6px 5px #000; }
+          #if_have_house .if-have-house .ershou .list .item .item-content.activated {
+            background-color: #f6f6f6; }
+          #if_have_house .if-have-house .ershou .list .item .item-content {
+            width: 100%;
+            padding: 12px 12px 12px 0;
+            border-bottom: 1px solid #e6e6e6; }
+            #if_have_house .if-have-house .ershou .list .item .item-content .img {
+              width: 35vw;
+              height: auto;
+              float: left;
+              position: relative; }
+              #if_have_house .if-have-house .ershou .list .item .item-content .img img {
+                display: block;
+                margin: auto;
+                border-radius: 50%;
+                width: 85px;
+                height: 85px; }
+              #if_have_house .if-have-house .ershou .list .item .item-content .img .tag {
+                position: absolute;
+                z-index: 1;
+                top: 5px;
+                left: 15px;
+                width: 60px;
+                height: 20px;
+                border-radius: 10px; }
+                #if_have_house .if-have-house .ershou .list .item .item-content .img .tag .left {
+                  width: 40px;
+                  height: 20px;
+                  border-radius: 5px 0 0 5px;
+                  float: left;
+                  text-align: center;
+                  line-height: 20px;
+                  background-color: #ffcc34; }
+                #if_have_house .if-have-house .ershou .list .item .item-content .img .tag .right {
+                  float: left;
+                  border-left: 10px solid #ffcc34;
+                  border-top: 10px solid #ffcc34;
+                  border-bottom: 10px solid #ffcc34;
+                  border-right: 10px solid transparent; }
+            #if_have_house .if-have-house .ershou .list .item .item-content .description {
+              float: left;
+              width: calc(65vw - 38px);
+              margin-left: 10px; }
+              #if_have_house .if-have-house .ershou .list .item .item-content .description h6 {
+                color: #333333;
+                font-size: 16px;
+                height: 20px;
+                line-height: 20px;
+                margin: 0;
+                word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+              #if_have_house .if-have-house .ershou .list .item .item-content .description p {
+                width: 100%;
+                margin: 0;
+                font-size: 14px;
+                height: 20px;
+                overflow: hidden;
+                color: #969696; }
+                #if_have_house .if-have-house .ershou .list .item .item-content .description p span {
+                  border-radius: 2px;
+                  font-size: 12px;
+                  padding: 2px 3px 2px;
+                  color: #666666;
+                  margin-right: 3px; }
+              #if_have_house .if-have-house .ershou .list .item .item-content .description div {
+                font-size: 14px;
+                color: #969696;
+                width: calc(65vw - 38px); }
+                #if_have_house .if-have-house .ershou .list .item .item-content .description div .space {
+                  float: left;
+                  height: 25px;
+                  line-height: 25px;
+                  width: 65%;
+                  word-break: keep-all;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis; }
+                #if_have_house .if-have-house .ershou .list .item .item-content .description div .price {
+                  text-align: right;
+                  float: right;
+                  height: 25px;
+                  line-height: 25px;
+                  width: 35%;
+                  color: #e64b00;
+                  word-break: keep-all;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis; }
+                  #if_have_house .if-have-house .ershou .list .item .item-content .description div .price span {
+                    font-size: 16px;
+                    font-weight: 600; }
+          #if_have_house .if-have-house .ershou .list .item .item-options .button {
+            background-color: #41a0ff;
+            color: white;
+            padding: 0 24px 0; }
+            #if_have_house .if-have-house .ershou .list .item .item-options .button div {
+              line-height: 20px;
+              font-size: 18px; }
+    #if_have_house .if-have-house .noresult {
+      padding: 50px 30px 0;
+      height: 130px; }
+      #if_have_house .if-have-house .noresult .top {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center; }
+        #if_have_house .if-have-house .noresult .top .iconfont {
+          font-size: 40px;
+          color: #969696; }
+      #if_have_house .if-have-house .noresult .bottom {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        color: #969696; }
+        #if_have_house .if-have-house .noresult .bottom span {
+          color: #41a0ff; }
+  #if_have_house .plus {
+    padding: 0;
+    margin-top: 44px 0 49px; }
+    #if_have_house .plus p.loading {
+      margin: 100px 0 100px;
+      font-size: 50px;
+      text-align: center; }
+      #if_have_house .plus p.loading .spinner svg {
+        width: 60px !important;
+        height: 60px !important; }
+    #if_have_house .plus .buyOrRent {
+      width: 50%;
+      margin: auto;
+      height: 35px; }
+      #if_have_house .plus .buyOrRent .son {
+        width: 50%;
+        float: left;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        padding: 0;
+        color: #666666; }
+      #if_have_house .plus .buyOrRent .active {
+        color: white;
+        background-color: #081535; }
+      #if_have_house .plus .buyOrRent .buy {
+        border-radius: 10px 0 0 10px;
+        border: 1px solid gray; }
+      #if_have_house .plus .buyOrRent .rent {
+        border-radius: 0 10px 10px 0;
+        border: 1px solid gray; }
+    #if_have_house .plus .ershou {
+      background-color: rgba(255, 255, 255, 0); }
+      #if_have_house .plus .ershou .headimg {
+        width: 100%;
+        height: 50vw;
+        background-color: rgba(255, 255, 255, 0.5); }
+        #if_have_house .plus .ershou .headimg img {
+          display: block;
+          margin: auto;
+          border-radius: 10px;
+          width: 95%;
+          height: 47vw; }
+      #if_have_house .plus .ershou .underhead {
+        width: 100%;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.5); }
+        #if_have_house .plus .ershou .underhead .left {
+          background-image: url("../imgs/头.png");
+          width: 50%;
+          height: 10px;
+          float: left;
+          border-radius: 10px 0 0 0; }
+        #if_have_house .plus .ershou .underhead .right {
+          background-image: url("../imgs/头.png");
+          width: 50%;
+          height: 10px;
+          float: left;
+          border-radius: 0 10px 0 0; }
+      #if_have_house .plus .ershou p.baseLine {
+        margin: 0;
+        padding: 15px 12px 15px;
+        background-color: #f6f6f6; }
+        #if_have_house .plus .ershou p.baseLine span {
+          text-align: center;
+          display: block;
+          /*设置为块级元素会独占一行形成上下居中的效果*/
+          font-size: 14px;
+          color: #969696;
+          position: relative;
+          /*定位横线（当横线的父元素）*/ }
+        #if_have_house .plus .ershou p.baseLine span:before {
+          content: '';
+          /*CSS伪类用法*/
+          position: absolute;
+          /*定位背景横线的位置*/
+          top: 52%;
+          background: #e6e6e6;
+          /*宽和高做出来的背景横线*/
+          width: 28%;
+          height: 1px; }
+        #if_have_house .plus .ershou p.baseLine span:after {
+          content: '';
+          /*CSS伪类用法*/
+          position: absolute;
+          /*定位背景横线的位置*/
+          top: 52%;
+          background: #e6e6e6;
+          /*宽和高做出来的背景横线*/
+          width: 28%;
+          height: 1px; }
+        #if_have_house .plus .ershou p.baseLine span:before {
+          left: 0;
+          /*调整背景横线的左右距离*/ }
+        #if_have_house .plus .ershou p.baseLine span:after {
+          right: 0; }
+      #if_have_house .plus .ershou .list {
+        padding-left: 6px;
+        padding-right: 6px; }
+        #if_have_house .plus .ershou .list .item:last-child .item-content {
+          border-bottom: none; }
+        #if_have_house .plus .ershou .list .item {
+          border-radius: 10px;
+          border: none;
+          margin: 0 0 8px;
+          box-shadow: 0 6px 5px #000; }
+          #if_have_house .plus .ershou .list .item .item-content.activated {
+            background-color: #f6f6f6; }
+          #if_have_house .plus .ershou .list .item .item-content {
+            width: 100%;
+            padding: 12px 12px 12px 0;
+            border-bottom: 1px solid #e6e6e6; }
+            #if_have_house .plus .ershou .list .item .item-content .img {
+              width: 28vw;
+              height: auto;
+              float: left;
+              position: relative; }
+              #if_have_house .plus .ershou .list .item .item-content .img img {
+                display: block;
+                margin: auto;
+                border-radius: 50%;
+                width: 85px;
+                height: 85px; }
+              #if_have_house .plus .ershou .list .item .item-content .img .tag {
+                position: absolute;
+                z-index: 1;
+                top: 5px;
+                left: 15px;
+                width: 60px;
+                height: 20px;
+                border-radius: 10px; }
+                #if_have_house .plus .ershou .list .item .item-content .img .tag .left {
+                  width: 40px;
+                  height: 20px;
+                  border-radius: 5px 0 0 5px;
+                  float: left;
+                  text-align: center;
+                  line-height: 20px;
+                  background-color: #ffcc34; }
+                #if_have_house .plus .ershou .list .item .item-content .img .tag .right {
+                  float: left;
+                  border-left: 10px solid #ffcc34;
+                  border-top: 10px solid #ffcc34;
+                  border-bottom: 10px solid #ffcc34;
+                  border-right: 10px solid transparent; }
+            #if_have_house .plus .ershou .list .item .item-content .description {
+              float: left;
+              width: calc(72vw - 38px);
+              margin-left: 10px; }
+              #if_have_house .plus .ershou .list .item .item-content .description h6 {
+                color: #333333;
+                font-size: 16px;
+                height: 20px;
+                line-height: 20px;
+                margin: 0;
+                word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+              #if_have_house .plus .ershou .list .item .item-content .description p {
+                width: 100%;
+                margin: 0;
+                font-size: 14px;
+                height: 20px;
+                overflow: hidden;
+                color: #969696; }
+                #if_have_house .plus .ershou .list .item .item-content .description p span {
+                  border-radius: 2px;
+                  font-size: 12px;
+                  padding: 2px 3px 2px;
+                  background-color: #e6f2ff;
+                  color: #666666;
+                  margin-right: 3px; }
+              #if_have_house .plus .ershou .list .item .item-content .description div {
+                font-size: 14px;
+                color: #969696;
+                width: calc(72vw - 38px); }
+                #if_have_house .plus .ershou .list .item .item-content .description div .space {
+                  float: left;
+                  height: 25px;
+                  line-height: 25px;
+                  width: 65%;
+                  word-break: keep-all;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis; }
+                #if_have_house .plus .ershou .list .item .item-content .description div .price {
+                  text-align: right;
+                  float: right;
+                  height: 25px;
+                  line-height: 25px;
+                  width: 35%;
+                  color: #e64b00;
+                  word-break: keep-all;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis; }
+                  #if_have_house .plus .ershou .list .item .item-content .description div .price span {
+                    font-size: 16px;
+                    font-weight: 600; }
+          #if_have_house .plus .ershou .list .item .item-options .button {
+            background-color: #41a0ff;
+            color: white;
+            padding: 0 24px 0; }
+            #if_have_house .plus .ershou .list .item .item-options .button div {
+              line-height: 20px;
+              font-size: 18px; }
+    #if_have_house .plus .noresult {
+      padding: 50px 30px 0;
+      height: 130px; }
+      #if_have_house .plus .noresult .top {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center; }
+        #if_have_house .plus .noresult .top .iconfont {
+          font-size: 40px;
+          color: #969696; }
+      #if_have_house .plus .noresult .bottom {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        color: #969696; }
+        #if_have_house .plus .noresult .bottom span {
+          color: #41a0ff; }
+
+#house_class {
+  background-image: url("../imgs/bg.png"); }
+  #house_class .backtop {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    bottom: 80px;
+    right: 15px;
+    width: 39px;
+    height: 39px;
+    line-height: 39px;
+    text-align: left;
+    border-radius: 50%;
+    color: #969696;
+    background-color: rgba(133, 64, 64, 0.9); }
+    #house_class .backtop i {
+      position: relative;
+      top: 2px;
+      font-size: 38px; }
+  #house_class .house-class {
+    margin-top: 45px;
+    background-color: rgba(255, 255, 255, 0); }
+    #house_class .house-class .bigbox .box {
+      width: 100%;
+      height: calc(100vh - 80px); }
+      #house_class .house-class .bigbox .box .traininfo img {
+        display: block;
+        width: 100%;
+        height: 53vw; }
+      #house_class .house-class .bigbox .box .traininfo .info {
+        padding: 20px 0 0;
+        width: 100%;
+        height: 150px; }
+        #house_class .house-class .bigbox .box .traininfo .info .item {
+          background-color: rgba(255, 255, 255, 0); }
+          #house_class .house-class .bigbox .box .traininfo .info .item .input-label {
+            color: white; }
+        #house_class .house-class .bigbox .box .traininfo .info .button {
+          display: block;
+          margin: 20px auto;
+          width: 50%;
+          height: 35px;
+          text-align: center;
+          line-height: 50px;
+          background-color: #081535;
+          color: white; }
+      #house_class .house-class .bigbox .box .livelist {
+        width: 100%; }
+        #house_class .house-class .bigbox .box .livelist ul {
+          width: 100%; }
+          #house_class .house-class .bigbox .box .livelist ul li {
+            width: 50%;
+            margin-bottom: 10px; }
+            #house_class .house-class .bigbox .box .livelist ul li img {
+              display: block;
+              width: 90%;
+              height: 80px;
+              margin: auto; }
+            #house_class .house-class .bigbox .box .livelist ul li h6 {
+              color: white;
+              width: 90%;
+              margin: 0 auto;
+              height: 20px;
+              line-height: 20px;
+              padding: 0; }
+            #house_class .house-class .bigbox .box .livelist ul li .foot {
+              width: 90%;
+              margin: auto; }
+              #house_class .house-class .bigbox .box .livelist ul li .foot .level {
+                float: left;
+                width: 30px;
+                height: 20px;
+                border-radius: 5px; }
+              #house_class .house-class .bigbox .box .livelist ul li .foot .levelheight {
+                background-color: gold; }
+              #house_class .house-class .bigbox .box .livelist ul li .foot .levellow {
+                background-color: aquamarine; }
+              #house_class .house-class .bigbox .box .livelist ul li .foot .comment {
+                color: white;
+                float: left;
+                width: calc(50% - 15px);
+                height: 20px;
+                text-align: center;
+                line-height: 20px; }
+              #house_class .house-class .bigbox .box .livelist ul li .foot .count {
+                color: white;
+                float: left;
+                width: calc(50% - 15px);
+                height: 20px;
+                text-align: center;
+                line-height: 20px; }
+      #house_class .house-class .bigbox .box .videolist {
+        width: 100%; }
+        #house_class .house-class .bigbox .box .videolist ul {
+          width: 100%; }
+          #house_class .house-class .bigbox .box .videolist ul li {
+            width: 50%;
+            margin-bottom: 10px; }
+            #house_class .house-class .bigbox .box .videolist ul li img {
+              display: block;
+              width: 90%;
+              height: 80px;
+              margin: auto; }
+            #house_class .house-class .bigbox .box .videolist ul li h6 {
+              width: 90%;
+              margin: 0 auto;
+              height: 20px;
+              line-height: 20px;
+              padding: 0;
+              color: white; }
+            #house_class .house-class .bigbox .box .videolist ul li .foot {
+              width: 90%;
+              margin: auto; }
+              #house_class .house-class .bigbox .box .videolist ul li .foot .level {
+                float: left;
+                width: 30px;
+                height: 20px;
+                border-radius: 5px; }
+              #house_class .house-class .bigbox .box .videolist ul li .foot .levelheight {
+                background-color: gold; }
+              #house_class .house-class .bigbox .box .videolist ul li .foot .levellow {
+                background-color: aquamarine; }
+              #house_class .house-class .bigbox .box .videolist ul li .foot .comment {
+                color: white;
+                float: left;
+                width: calc(50% - 15px);
+                height: 20px;
+                text-align: center;
+                line-height: 20px; }
+              #house_class .house-class .bigbox .box .videolist ul li .foot .count {
+                color: white;
+                float: left;
+                width: calc(50% - 15px);
+                height: 20px;
+                text-align: center;
+                line-height: 20px; }
+  #house_class .video .bannerposition {
+    margin-bottom: 15px; }
+    #house_class .video .bannerposition .box img {
+      display: block;
+      width: 100%; }
+  #house_class .video .videolist {
+    width: 100%; }
+    #house_class .video .videolist ul {
+      width: 100%; }
+      #house_class .video .videolist ul li {
+        width: 50%;
+        margin-bottom: 10px; }
+        #house_class .video .videolist ul li img {
+          display: block;
+          width: 90%;
+          height: 80px;
+          margin: auto; }
+        #house_class .video .videolist ul li h6 {
+          width: 90%;
+          margin: 0 auto;
+          height: 20px;
+          line-height: 20px;
+          padding: 0; }
+        #house_class .video .videolist ul li .foot {
+          width: 90%;
+          margin: auto; }
+          #house_class .video .videolist ul li .foot .level {
+            float: left;
+            width: 30px;
+            height: 20px;
+            border-radius: 5px; }
+          #house_class .video .videolist ul li .foot .levelheight {
+            background-color: gold; }
+          #house_class .video .videolist ul li .foot .levellow {
+            background-color: aquamarine; }
+          #house_class .video .videolist ul li .foot .comment {
+            float: left;
+            width: calc(50% - 15px);
+            height: 20px;
+            text-align: center;
+            line-height: 20px; }
+          #house_class .video .videolist ul li .foot .count {
+            float: left;
+            width: calc(50% - 15px);
+            height: 20px;
+            text-align: center;
+            line-height: 20px; }
+  #house_class .live .bannerposition {
+    margin-bottom: 15px; }
+    #house_class .live .bannerposition .box img {
+      display: block;
+      width: 100%; }
+  #house_class .live .livelist {
+    width: 100%; }
+    #house_class .live .livelist ul {
+      width: 100%; }
+      #house_class .live .livelist ul li {
+        width: 50%;
+        margin-bottom: 10px; }
+        #house_class .live .livelist ul li img {
+          display: block;
+          width: 90%;
+          height: 80px;
+          margin: auto; }
+        #house_class .live .livelist ul li h6 {
+          width: 90%;
+          margin: 0 auto;
+          height: 20px;
+          line-height: 20px;
+          padding: 0; }
+        #house_class .live .livelist ul li .foot {
+          width: 90%;
+          margin: auto; }
+          #house_class .live .livelist ul li .foot .level {
+            float: left;
+            width: 30px;
+            height: 20px;
+            border-radius: 5px; }
+          #house_class .live .livelist ul li .foot .levelheight {
+            background-color: gold; }
+          #house_class .live .livelist ul li .foot .levellow {
+            background-color: aquamarine; }
+          #house_class .live .livelist ul li .foot .comment {
+            float: left;
+            width: calc(50% - 15px);
+            height: 20px;
+            text-align: center;
+            line-height: 20px; }
+          #house_class .live .livelist ul li .foot .count {
+            float: left;
+            width: calc(50% - 15px);
+            height: 20px;
+            text-align: center;
+            line-height: 20px; }
+  #house_class .train img {
+    display: block;
+    width: 100%; }
+  #house_class .train p.bothLine {
     margin: 0;
     padding: 15px 12px 15px;
     background-color: #f6f6f6; }
-    #if_have_house .if-have-house .ershou p.baseLine span {
+    #house_class .train p.bothLine span {
       text-align: center;
       display: block;
       /*设置为块级元素会独占一行形成上下居中的效果*/
@@ -27125,7 +27854,7 @@ a.button {
       color: #969696;
       position: relative;
       /*定位横线（当横线的父元素）*/ }
-    #if_have_house .if-have-house .ershou p.baseLine span:before {
+    #house_class .train p.bothLine span:before {
       content: '';
       /*CSS伪类用法*/
       position: absolute;
@@ -27135,7 +27864,7 @@ a.button {
       /*宽和高做出来的背景横线*/
       width: 28%;
       height: 1px; }
-    #if_have_house .if-have-house .ershou p.baseLine span:after {
+    #house_class .train p.bothLine span:after {
       content: '';
       /*CSS伪类用法*/
       position: absolute;
@@ -27145,46 +27874,70 @@ a.button {
       /*宽和高做出来的背景横线*/
       width: 28%;
       height: 1px; }
-    #if_have_house .if-have-house .ershou p.baseLine span:before {
+    #house_class .train p.bothLine span:before {
       left: 0;
       /*调整背景横线的左右距离*/ }
-    #if_have_house .if-have-house .ershou p.baseLine span:after {
+    #house_class .train p.bothLine span:after {
       right: 0; }
-  #if_have_house .if-have-house .ershou .list {
-    padding-left: 12px; }
-    #if_have_house .if-have-house .ershou .list .item:last-child .item-content {
-      border-bottom: none; }
-    #if_have_house .if-have-house .ershou .list .item {
-      border: none;
-      margin: 0; }
-      #if_have_house .if-have-house .ershou .list .item .item-content.activated {
-        background-color: #f6f6f6; }
-      #if_have_house .if-have-house .ershou .list .item .item-content {
+  #house_class .train .button {
+    display: block;
+    width: 50%;
+    margin: 15px auto 0;
+    background-color: #081535; }
+
+#agent_list .header {
+  background-color: #f6f6f6; }
+
+#agent_list .agent-list {
+  margin-top: 44px; }
+  #agent_list .agent-list .scroll-refresher .ionic-refresher-content .icon-refreshing i.iconfont {
+    font-size: 40px; }
+  #agent_list .agent-list .scroll-refresher .ionic-refresher-content .text-refreshing {
+    font-size: 14px;
+    color: #969696; }
+  #agent_list .agent-list .card {
+    box-shadow: none;
+    padding: 0 0 0 12px; }
+    #agent_list .agent-list .card ul {
+      width: 100%; }
+      #agent_list .agent-list .card ul li:last-child {
+        border-bottom: none; }
+      #agent_list .agent-list .card ul li {
         width: 100%;
-        padding: 12px 12px 12px 0;
+        padding: 15px 12px 12px 0;
         border-bottom: 1px solid #e6e6e6; }
-        #if_have_house .if-have-house .ershou .list .item .item-content .img {
+        #agent_list .agent-list .card ul li .img {
           width: 35vw;
           height: auto;
           float: left;
           position: relative; }
-          #if_have_house .if-have-house .ershou .list .item .item-content .img img {
-            display: block;
-            margin: auto;
-            border-radius: 50%;
-            width: 85px;
+          #agent_list .agent-list .card ul li .img img {
+            border-radius: 3px;
+            width: 100%;
             height: 85px; }
-          #if_have_house .if-have-house .ershou .list .item .item-content .img .zhutui {
+          #agent_list .agent-list .card ul li .img .housetag {
+            position: absolute;
+            top: 5px;
+            width: 80px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 0 3px 3px 0; }
+          #agent_list .agent-list .card ul li .img .canagent {
+            background-color: rgba(123, 211, 98, 0.3); }
+          #agent_list .agent-list .card ul li .img .discussagent {
+            background-color: rgba(222, 221, 0, 0.3); }
+          #agent_list .agent-list .card ul li .img .zhutui {
             width: 8vw;
             height: auto;
             position: absolute;
             top: 0;
             right: 0; }
-        #if_have_house .if-have-house .ershou .list .item .item-content .description {
+        #agent_list .agent-list .card ul li .description {
           float: left;
           width: calc(65vw - 38px);
           margin-left: 10px; }
-          #if_have_house .if-have-house .ershou .list .item .item-content .description h6 {
+          #agent_list .agent-list .card ul li .description h5 {
             color: #333333;
             font-size: 16px;
             height: 20px;
@@ -27194,181 +27947,119 @@ a.button {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-          #if_have_house .if-have-house .ershou .list .item .item-content .description p {
+          #agent_list .agent-list .card ul li .description p {
             width: 100%;
             margin: 0;
             font-size: 14px;
             height: 20px;
             overflow: hidden;
-            color: #969696; }
-            #if_have_house .if-have-house .ershou .list .item .item-content .description p span {
+            color: #666666; }
+            #agent_list .agent-list .card ul li .description p span {
               border-radius: 2px;
               font-size: 12px;
               padding: 2px 3px 2px;
               background-color: #e6f2ff;
               color: #59abfd;
               margin-right: 3px; }
-          #if_have_house .if-have-house .ershou .list .item .item-content .description div {
+          #agent_list .agent-list .card ul li .description div {
             font-size: 14px;
-            color: #969696;
+            color: #666666;
             width: calc(65vw - 38px); }
-            #if_have_house .if-have-house .ershou .list .item .item-content .description div .space {
+            #agent_list .agent-list .card ul li .description div .space {
               float: left;
               height: 25px;
               line-height: 25px;
-              width: 65%;
+              width: 60%;
               word-break: keep-all;
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis; }
-            #if_have_house .if-have-house .ershou .list .item .item-content .description div .price {
+            #agent_list .agent-list .card ul li .description div .price {
               text-align: right;
               float: right;
               height: 25px;
               line-height: 25px;
-              width: 35%;
+              width: 40%;
               color: #e64b00;
               word-break: keep-all;
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis; }
-              #if_have_house .if-have-house .ershou .list .item .item-content .description div .price span {
+              #agent_list .agent-list .card ul li .description div .price span {
                 font-size: 16px;
                 font-weight: 600; }
-      #if_have_house .if-have-house .ershou .list .item .item-options .button {
-        background-color: #41a0ff;
-        color: white;
-        padding: 0 24px 0; }
-        #if_have_house .if-have-house .ershou .list .item .item-options .button div {
-          line-height: 20px;
-          font-size: 18px; }
-  #if_have_house .if-have-house .noresult {
-    padding: 50px 30px 0;
-    height: 130px; }
-    #if_have_house .if-have-house .noresult .top {
-      width: 100%;
-      height: 50px;
-      line-height: 50px;
-      text-align: center; }
-      #if_have_house .if-have-house .noresult .top .iconfont {
-        font-size: 40px;
-        color: #969696; }
-    #if_have_house .if-have-house .noresult .bottom {
+    #agent_list .agent-list .card p.baseLine {
       margin: 0;
-      padding: 0;
-      width: 100%;
-      text-align: center;
-      height: 30px;
-      line-height: 30px;
-      font-size: 16px;
-      color: #969696; }
-      #if_have_house .if-have-house .noresult .bottom span {
-        color: #41a0ff; }
+      padding: 15px 12px 15px; }
+      #agent_list .agent-list .card p.baseLine span {
+        text-align: center;
+        display: block;
+        /*设置为块级元素会独占一行形成上下居中的效果*/
+        font-size: 14px;
+        color: #969696;
+        position: relative;
+        /*定位横线（当横线的父元素）*/ }
+      #agent_list .agent-list .card p.baseLine span:before {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #agent_list .agent-list .card p.baseLine span:after {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #agent_list .agent-list .card p.baseLine span:before {
+        left: 0;
+        /*调整背景横线的左右距离*/ }
+      #agent_list .agent-list .card p.baseLine span:after {
+        right: 0; }
 
-#if_have_house .plus {
-  margin-top: 84px; }
-  #if_have_house .plus .card {
-    box-shadow: none; }
-  #if_have_house .plus p.loading {
-    margin: 100px 0 100px;
-    font-size: 50px;
-    text-align: center; }
-    #if_have_house .plus p.loading .spinner svg {
-      width: 60px !important;
-      height: 60px !important; }
-  #if_have_house .plus .buyOrRent {
-    width: 50%;
-    margin: auto;
-    height: 35px; }
-    #if_have_house .plus .buyOrRent .son {
-      width: 50%;
-      float: left;
-      height: 35px;
-      line-height: 35px;
-      text-align: center;
-      padding: 0;
-      color: #666666; }
-    #if_have_house .plus .buyOrRent .active {
-      color: white;
-      background-color: #55c2d7; }
-    #if_have_house .plus .buyOrRent .buy {
-      border-radius: 10px 0 0 10px;
-      border: 1px solid gray; }
-    #if_have_house .plus .buyOrRent .rent {
-      border-radius: 0 10px 10px 0;
-      border: 1px solid gray; }
-  #if_have_house .plus .ershou p.baseLine {
-    margin: 0;
-    padding: 15px 12px 15px;
-    background-color: #f6f6f6; }
-    #if_have_house .plus .ershou p.baseLine span {
-      text-align: center;
-      display: block;
-      /*设置为块级元素会独占一行形成上下居中的效果*/
-      font-size: 14px;
-      color: #969696;
-      position: relative;
-      /*定位横线（当横线的父元素）*/ }
-    #if_have_house .plus .ershou p.baseLine span:before {
-      content: '';
-      /*CSS伪类用法*/
-      position: absolute;
-      /*定位背景横线的位置*/
-      top: 52%;
-      background: #e6e6e6;
-      /*宽和高做出来的背景横线*/
-      width: 28%;
-      height: 1px; }
-    #if_have_house .plus .ershou p.baseLine span:after {
-      content: '';
-      /*CSS伪类用法*/
-      position: absolute;
-      /*定位背景横线的位置*/
-      top: 52%;
-      background: #e6e6e6;
-      /*宽和高做出来的背景横线*/
-      width: 28%;
-      height: 1px; }
-    #if_have_house .plus .ershou p.baseLine span:before {
-      left: 0;
-      /*调整背景横线的左右距离*/ }
-    #if_have_house .plus .ershou p.baseLine span:after {
-      right: 0; }
-  #if_have_house .plus .ershou .list {
-    padding-left: 12px; }
-    #if_have_house .plus .ershou .list .item:last-child .item-content {
-      border-bottom: none; }
-    #if_have_house .plus .ershou .list .item {
-      border: none;
-      margin: 0; }
-      #if_have_house .plus .ershou .list .item .item-content.activated {
-        background-color: #f6f6f6; }
-      #if_have_house .plus .ershou .list .item .item-content {
+#agent_list .plus {
+  margin-top: 44px; }
+  #agent_list .plus .scroll-refresher .ionic-refresher-content .icon-refreshing i.iconfont {
+    font-size: 40px; }
+  #agent_list .plus .card {
+    box-shadow: none;
+    padding: 0 0 0 12px; }
+    #agent_list .plus .card ul {
+      width: 100%; }
+      #agent_list .plus .card ul li:last-child {
+        border-bottom: none; }
+      #agent_list .plus .card ul li {
         width: 100%;
-        padding: 12px 12px 12px 0;
+        padding: 15px 12px 12px 0;
         border-bottom: 1px solid #e6e6e6; }
-        #if_have_house .plus .ershou .list .item .item-content .img {
+        #agent_list .plus .card ul li .img {
           width: 28vw;
           height: auto;
           float: left;
           position: relative; }
-          #if_have_house .plus .ershou .list .item .item-content .img img {
-            display: block;
-            margin: auto;
-            border-radius: 50%;
-            width: 85px;
+          #agent_list .plus .card ul li .img img {
+            border-radius: 3px;
+            width: 100%;
             height: 85px; }
-          #if_have_house .plus .ershou .list .item .item-content .img .zhutui {
+          #agent_list .plus .card ul li .img .zhutui {
             width: 8vw;
             height: auto;
             position: absolute;
             top: 0;
             right: 0; }
-        #if_have_house .plus .ershou .list .item .item-content .description {
+        #agent_list .plus .card ul li .description {
           float: left;
           width: calc(72vw - 38px);
           margin-left: 10px; }
-          #if_have_house .plus .ershou .list .item .item-content .description h6 {
+          #agent_list .plus .card ul li .description h5 {
             color: #333333;
             font-size: 16px;
             height: 20px;
@@ -27378,76 +28069,83 @@ a.button {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-          #if_have_house .plus .ershou .list .item .item-content .description p {
+          #agent_list .plus .card ul li .description p {
             width: 100%;
             margin: 0;
             font-size: 14px;
             height: 20px;
             overflow: hidden;
-            color: #969696; }
-            #if_have_house .plus .ershou .list .item .item-content .description p span {
+            color: #666666; }
+            #agent_list .plus .card ul li .description p span {
               border-radius: 2px;
               font-size: 12px;
               padding: 2px 3px 2px;
               background-color: #e6f2ff;
               color: #59abfd;
               margin-right: 3px; }
-          #if_have_house .plus .ershou .list .item .item-content .description div {
+          #agent_list .plus .card ul li .description div {
             font-size: 14px;
-            color: #969696;
+            color: #666666;
             width: calc(72vw - 38px); }
-            #if_have_house .plus .ershou .list .item .item-content .description div .space {
+            #agent_list .plus .card ul li .description div .space {
               float: left;
               height: 25px;
               line-height: 25px;
-              width: 65%;
+              width: 60%;
               word-break: keep-all;
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis; }
-            #if_have_house .plus .ershou .list .item .item-content .description div .price {
+            #agent_list .plus .card ul li .description div .price {
               text-align: right;
               float: right;
               height: 25px;
               line-height: 25px;
-              width: 35%;
+              width: 40%;
               color: #e64b00;
               word-break: keep-all;
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis; }
-              #if_have_house .plus .ershou .list .item .item-content .description div .price span {
+              #agent_list .plus .card ul li .description div .price span {
                 font-size: 16px;
                 font-weight: 600; }
-      #if_have_house .plus .ershou .list .item .item-options .button {
-        background-color: #41a0ff;
-        color: white;
-        padding: 0 24px 0; }
-        #if_have_house .plus .ershou .list .item .item-options .button div {
-          line-height: 20px;
-          font-size: 18px; }
-  #if_have_house .plus .noresult {
-    padding: 50px 30px 0;
-    height: 130px; }
-    #if_have_house .plus .noresult .top {
-      width: 100%;
-      height: 50px;
-      line-height: 50px;
-      text-align: center; }
-      #if_have_house .plus .noresult .top .iconfont {
-        font-size: 40px;
-        color: #969696; }
-    #if_have_house .plus .noresult .bottom {
+    #agent_list .plus .card p.baseLine {
       margin: 0;
-      padding: 0;
-      width: 100%;
-      text-align: center;
-      height: 30px;
-      line-height: 30px;
-      font-size: 16px;
-      color: #969696; }
-      #if_have_house .plus .noresult .bottom span {
-        color: #41a0ff; }
+      padding: 15px 12px 15px; }
+      #agent_list .plus .card p.baseLine span {
+        text-align: center;
+        display: block;
+        /*设置为块级元素会独占一行形成上下居中的效果*/
+        font-size: 14px;
+        color: #969696;
+        position: relative;
+        /*定位横线（当横线的父元素）*/ }
+      #agent_list .plus .card p.baseLine span:before {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #agent_list .plus .card p.baseLine span:after {
+        content: '';
+        /*CSS伪类用法*/
+        position: absolute;
+        /*定位背景横线的位置*/
+        top: 52%;
+        background: #e6e6e6;
+        /*宽和高做出来的背景横线*/
+        width: 28%;
+        height: 1px; }
+      #agent_list .plus .card p.baseLine span:before {
+        left: 0;
+        /*调整背景横线的左右距离*/ }
+      #agent_list .plus .card p.baseLine span:after {
+        right: 0; }
 
 /*卡片*/
 #client_search .searchhouse-header {
@@ -27573,6 +28271,65 @@ a.button {
       background-color: #ff9e40; }
     #client_search .client-search .searchhistory .hotsearch ul li:nth-child(3) span {
       background-color: #83cc2b; }
+
+#client_detail .client-detail {
+  margin-top: 44px; }
+  #client_detail .client-detail p.base, #client_detail .client-detail p.need {
+    margin: 0;
+    padding: 0 0 0 12px;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f2f2f2; }
+  #client_detail .client-detail .baseinfo ul {
+    width: 100%;
+    height: 176px;
+    padding: 0 0 0 12px; }
+    #client_detail .client-detail .baseinfo ul li {
+      width: 100%;
+      height: 44px;
+      border-bottom: 1px solid #e6e6e6; }
+      #client_detail .client-detail .baseinfo ul li .left {
+        float: left;
+        width: 25%;
+        height: 100%;
+        line-height: 44px;
+        font-size: 14px;
+        color: #969696; }
+      #client_detail .client-detail .baseinfo ul li .right {
+        float: left;
+        width: 75%;
+        height: 100%;
+        line-height: 44px;
+        font-size: 14px;
+        color: #333333; }
+    #client_detail .client-detail .baseinfo ul li:last-child {
+      border: none; }
+  #client_detail .client-detail .needinfo ul {
+    width: 100%;
+    padding: 0 0 0 12px; }
+    #client_detail .client-detail .needinfo ul li {
+      width: 100%;
+      height: 44px;
+      border-bottom: 1px solid #e6e6e6; }
+      #client_detail .client-detail .needinfo ul li .left {
+        float: left;
+        width: 25%;
+        height: 100%;
+        line-height: 44px;
+        font-size: 14px;
+        color: #969696; }
+      #client_detail .client-detail .needinfo ul li .right {
+        float: left;
+        width: 75%;
+        height: 100%;
+        line-height: 44px;
+        font-size: 14px;
+        color: #333333; }
+    #client_detail .client-detail .needinfo ul li:last-child {
+      border: none; }
 
 /*卡片*/
 #house_search .searchhouse-header {
@@ -27713,6 +28470,14 @@ a.button {
     float: right;
     color: #cccccc; }
   #my_set .my-set .logout {
+    width: 95%;
+    margin: auto;
+    padding: 5px 12px 5px 12px;
+    height: 44px;
+    line-height: 34px;
+    font-size: 16px;
+    background-color: #081535;
+    color: white;
     text-align: center;
     font-weight: 500; }
 
@@ -27768,9 +28533,23 @@ a.button {
           float: left;
           position: relative; }
           #fbManage .fbManage .card ul li .img img {
+            display: block;
             border-radius: 3px;
-            width: 100%;
+            margin: auto;
+            width: 69px;
             height: 85px; }
+          #fbManage .fbManage .card ul li .img .housetag {
+            position: absolute;
+            top: 5px;
+            width: 80px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 0 3px 3px 0; }
+          #fbManage .fbManage .card ul li .img .canagent {
+            background-color: rgba(123, 211, 98, 0.3); }
+          #fbManage .fbManage .card ul li .img .discussagent {
+            background-color: rgba(222, 221, 0, 0.3); }
           #fbManage .fbManage .card ul li .img .zhutui {
             width: 8vw;
             height: auto;
@@ -27859,8 +28638,10 @@ a.button {
           float: left;
           position: relative; }
           #fbManage .plus .card ul li .img img {
+            display: block;
             border-radius: 3px;
-            width: 100%;
+            margin: auto;
+            width: 69px;
             height: 85px; }
           #fbManage .plus .card ul li .img .zhutui {
             width: 8vw;
@@ -27976,8 +28757,10 @@ a.button {
           float: left;
           position: relative; }
           #need_manage .need-manage .card ul li .img img {
+            display: block;
             border-radius: 3px;
-            width: 100%;
+            margin: auto;
+            width: 69px;
             height: 85px; }
           #need_manage .need-manage .card ul li .img .zhutui {
             width: 8vw;
@@ -28067,8 +28850,10 @@ a.button {
           float: left;
           position: relative; }
           #need_manage .plus .card ul li .img img {
+            display: block;
             border-radius: 3px;
-            width: 100%;
+            margin: auto;
+            width: 69px;
             height: 85px; }
           #need_manage .plus .card ul li .img .zhutui {
             width: 8vw;
@@ -28190,6 +28975,7 @@ a.button {
     #add_need .add-need .subbtn .button {
       width: 60%;
       height: 100%;
+      background-color: #081535;
       margin-left: 20%; }
 
 #about_us .about-us {
@@ -28231,6 +29017,40 @@ a.button {
   padding: 0; }
   #change_pwd .change-pwd .card {
     box-shadow: none; }
+
+#sell_go_login_modal {
+  width: 250px;
+  min-height: 100px;
+  height: 210px;
+  top: calc(50% - 100px);
+  left: calc(50% - 125px);
+  border-radius: 5px; }
+  #sell_go_login_modal .img {
+    margin: auto;
+    width: 200px;
+    height: 100%;
+    position: relative; }
+    #sell_go_login_modal .img img {
+      display: block;
+      width: 130px;
+      height: 130px;
+      margin: auto; }
+    #sell_go_login_modal .img p {
+      margin: 0;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 18px;
+      color: #333; }
+    #sell_go_login_modal .img .button {
+      width: 100px;
+      margin-left: 50px;
+      height: 35px;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+      background-color: #081733; }
 
 #add_sell .add-sell {
   margin-top: 44px;
@@ -28380,6 +29200,102 @@ a.button {
       #add_sell .add-sell #ershouLayoutImg ul #chooseLayoutImg img {
         width: 20vw;
         height: 20vw; }
+  #add_sell .add-sell .progress {
+    width: 100%;
+    padding: 10px 0;
+    background-color: white; }
+    #add_sell .add-sell .progress ul {
+      width: 100%; }
+      #add_sell .add-sell .progress ul li {
+        float: left; }
+      #add_sell .add-sell .progress ul .big {
+        width: 23%;
+        height: 55px; }
+        #add_sell .add-sell .progress ul .big .top {
+          margin: auto;
+          width: 35px;
+          height: 35px;
+          text-align: center;
+          line-height: 35px;
+          color: white;
+          background-color: #081535;
+          border-radius: 50%; }
+          #add_sell .add-sell .progress ul .big .top .iconfont {
+            font-size: 25px; }
+          #add_sell .add-sell .progress ul .big .top .iconfont:before {
+            line-height: 1; }
+        #add_sell .add-sell .progress ul .big p {
+          margin: 0;
+          height: 20px;
+          text-align: center;
+          line-height: 20px; }
+      #add_sell .add-sell .progress ul .small {
+        width: 15.5%;
+        height: 55px; }
+        #add_sell .add-sell .progress ul .small .top {
+          margin: auto;
+          width: 35px;
+          height: 35px; }
+        #add_sell .add-sell .progress ul .small p {
+          margin: 0;
+          height: 20px;
+          text-align: center;
+          line-height: 20px; }
+  #add_sell .add-sell .twobutton {
+    margin: 0 0 15px;
+    padding: 0 12px 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: white; }
+    #add_sell .add-sell .twobutton .public {
+      width: 50%;
+      float: left;
+      height: 100%;
+      text-align: center;
+      background-color: #081535;
+      border: 1px solid white; }
+    #add_sell .add-sell .twobutton .keyMake {
+      width: 50%;
+      float: left;
+      height: 100%;
+      text-align: center;
+      background-color: #081535;
+      border: 1px solid white; }
+
+#rent_go_login_modal {
+  width: 250px;
+  min-height: 100px;
+  height: 210px;
+  top: calc(50% - 100px);
+  left: calc(50% - 125px);
+  border-radius: 5px; }
+  #rent_go_login_modal .img {
+    margin: auto;
+    width: 200px;
+    height: 100%;
+    position: relative; }
+    #rent_go_login_modal .img img {
+      display: block;
+      width: 130px;
+      height: 130px;
+      margin: auto; }
+    #rent_go_login_modal .img p {
+      margin: 0;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 18px;
+      color: #333; }
+    #rent_go_login_modal .img .button {
+      width: 100px;
+      margin-left: 50px;
+      height: 35px;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+      background-color: #081733; }
 
 #add_rent .add-rent {
   margin-top: 44px;
@@ -28520,6 +29436,68 @@ a.button {
       #add_rent .add-rent #zufangLayoutImg ul #zufangchooseLayoutImg img {
         width: 20vw;
         height: 20vw; }
+  #add_rent .add-rent .progress {
+    width: 100%;
+    padding: 10px 0;
+    background-color: white; }
+    #add_rent .add-rent .progress ul {
+      width: 100%; }
+      #add_rent .add-rent .progress ul li {
+        float: left; }
+      #add_rent .add-rent .progress ul .big {
+        width: 23%;
+        height: 55px; }
+        #add_rent .add-rent .progress ul .big .top {
+          margin: auto;
+          width: 35px;
+          height: 35px;
+          text-align: center;
+          line-height: 35px;
+          color: white;
+          background-color: #081535;
+          border-radius: 50%; }
+          #add_rent .add-rent .progress ul .big .top .iconfont {
+            font-size: 25px; }
+          #add_rent .add-rent .progress ul .big .top .iconfont:before {
+            line-height: 1; }
+        #add_rent .add-rent .progress ul .big p {
+          margin: 0;
+          height: 20px;
+          text-align: center;
+          line-height: 20px; }
+      #add_rent .add-rent .progress ul .small {
+        width: 15.5%;
+        height: 55px; }
+        #add_rent .add-rent .progress ul .small .top {
+          margin: auto;
+          width: 35px;
+          height: 35px; }
+        #add_rent .add-rent .progress ul .small p {
+          margin: 0;
+          height: 20px;
+          text-align: center;
+          line-height: 20px; }
+  #add_rent .add-rent .twobutton {
+    margin: 0 0 15px;
+    padding: 0 12px 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: white; }
+    #add_rent .add-rent .twobutton .public {
+      width: 50%;
+      float: left;
+      height: 100%;
+      text-align: center;
+      background-color: #081535;
+      border: 1px solid white; }
+    #add_rent .add-rent .twobutton .keyMake {
+      width: 50%;
+      float: left;
+      height: 100%;
+      text-align: center;
+      background-color: #081535;
+      border: 1px solid white; }
 
 #changeFy .changeFy {
   margin-top: 44px;
@@ -28690,159 +29668,234 @@ a.button {
     top: 2px;
     font-size: 20px; }
 
-#per_center .per-center .perinfo {
-  padding: 44px 12px 10px;
-  height: 154px;
-  background-color: #41a0ff; }
-  #per_center .per-center .perinfo .userinfo {
-    width: 80%;
-    float: left; }
-    #per_center .per-center .perinfo .userinfo .img {
-      margin: 0;
-      width: 70px;
-      height: 70px;
+#per_center .per-center {
+  margin-top: 44px;
+  padding: 0; }
+  #per_center .per-center .perinfo {
+    padding: 10px 12px 10px;
+    height: 120px; }
+    #per_center .per-center .perinfo .userinfo {
+      width: 80%;
       float: left; }
-      #per_center .per-center .perinfo .userinfo .img img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        border: 1px solid #f2f4f8; }
-      #per_center .per-center .perinfo .userinfo .img .noneimg {
+      #per_center .per-center .perinfo .userinfo .img {
+        margin: 0;
         width: 70px;
         height: 70px;
-        line-height: 90px;
-        overflow: hidden;
-        background-color: #dee2ed;
-        border-radius: 50%;
-        border: 1px solid #f2f4f8;
-        text-align: center;
-        color: #FFFFFF; }
-        #per_center .per-center .perinfo .userinfo .img .noneimg .iconfont {
-          font-size: 50px; }
-    #per_center .per-center .perinfo .userinfo .textinfo {
-      padding-left: 10px;
-      width: calc(100% - 70px);
-      float: left; }
-      #per_center .per-center .perinfo .userinfo .textinfo .name {
-        margin: 10px 0 0;
-        padding: 0;
-        width: 100%;
-        height: 30px;
-        line-height: 30px;
-        font-size: 16px;
-        color: #fff; }
-      #per_center .per-center .perinfo .userinfo .textinfo .sign {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 30px;
-        line-height: 30px;
-        font-size: 14px;
-        color: #fff;
-        word-break: keep-all;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis; }
-  #per_center .per-center .perinfo .vip {
-    width: 20%;
-    height: 70px;
-    float: left; }
-    #per_center .per-center .perinfo .vip div {
-      margin: 20px auto;
-      width: 70px;
-      height: 30px;
-      border-radius: 15px;
-      border: 1px solid gray;
-      text-align: center;
-      line-height: 30px; }
-
-#per_center .per-center .performance ul {
-  width: 100%;
-  padding: 15px 12px 0; }
-  #per_center .per-center .performance ul li {
-    float: left;
-    width: 33.33%; }
-    #per_center .per-center .performance ul li h5 {
-      width: 100%;
-      text-align: center; }
-    #per_center .per-center .performance ul li p {
-      width: 100%;
-      text-align: center; }
-
-#per_center .per-center .lookdetails {
-  width: 100%;
-  height: 40px;
-  padding: 0 12px; }
-  #per_center .per-center .lookdetails .lefticon {
-    float: left;
-    width: 20px;
-    height: 100%;
-    line-height: 40px;
-    text-align: center;
-    color: #41a0ff; }
-    #per_center .per-center .lookdetails .lefticon .iconfont {
-      font-size: 20px; }
-  #per_center .per-center .lookdetails .minerool {
-    float: left;
-    width: calc(100% - 20px);
-    height: 40px;
-    overflow: hidden; }
-    #per_center .per-center .lookdetails .minerool ul {
-      width: 100%;
-      height: 40px;
-      overflow: hidden; }
-      #per_center .per-center .lookdetails .minerool ul li {
-        width: 100%;
-        padding: 0 0 0 10px;
-        height: 40px;
-        line-height: 40px; }
-        #per_center .per-center .lookdetails .minerool ul li .lef {
+        float: left; }
+        #per_center .per-center .perinfo .userinfo .img img {
           display: block;
-          float: left;
-          width: 75%;
+          width: 100%;
           height: 100%;
-          line-height: 40px;
+          border-radius: 50%;
+          border: 1px solid #f2f4f8; }
+        #per_center .per-center .perinfo .userinfo .img .noneimg {
+          width: 70px;
+          height: 70px;
+          line-height: 90px;
+          overflow: hidden;
+          background-color: #dee2ed;
+          border-radius: 50%;
+          border: 1px solid #f2f4f8;
+          text-align: center;
+          color: #FFFFFF; }
+          #per_center .per-center .perinfo .userinfo .img .noneimg .iconfont {
+            font-size: 50px; }
+      #per_center .per-center .perinfo .userinfo .textinfo {
+        padding-left: 10px;
+        width: calc(100% - 70px);
+        float: left; }
+        #per_center .per-center .perinfo .userinfo .textinfo .name {
+          margin: 10px 0 0;
+          padding: 0;
+          width: 100%;
+          height: 30px;
+          line-height: 30px;
+          font-size: 16px;
+          color: #333333; }
+        #per_center .per-center .perinfo .userinfo .textinfo .sign {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 30px;
+          line-height: 30px;
+          font-size: 14px;
+          color: #666666;
           word-break: keep-all;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis; }
-        #per_center .per-center .lookdetails .minerool ul li .rig {
-          display: block;
-          float: left;
-          width: 25%;
-          height: 100%;
-          line-height: 40px;
-          text-align: right;
-          word-break: keep-all;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          color: #969696; }
-
-#per_center .per-center .enterlist {
-  width: 100%;
-  height: auto;
-  margin: 10px 0 0;
-  padding: 0 12px; }
-  #per_center .per-center .enterlist li {
-    float: left;
-    padding: 15px 0;
-    width: 25%;
-    height: 90px;
-    text-align: center;
-    color: #666; }
-    #per_center .per-center .enterlist li .tubiao {
-      width: 100%;
+    #per_center .per-center .perinfo .vip {
+      width: 20%;
+      height: 70px;
+      float: left; }
+      #per_center .per-center .perinfo .vip div {
+        margin: 20px auto;
+        width: 70px;
+        height: 30px;
+        border-radius: 15px;
+        border: 1px solid #f8962f;
+        color: #f8962f;
+        text-align: center;
+        line-height: 30px; }
+  #per_center .per-center .performance ul {
+    width: 100%;
+    padding: 15px 12px 0; }
+    #per_center .per-center .performance ul li {
+      float: left;
+      width: 33.33%; }
+      #per_center .per-center .performance ul li h5 {
+        width: 100%;
+        text-align: center; }
+      #per_center .per-center .performance ul li p {
+        width: 100%;
+        text-align: center; }
+  #per_center .per-center .lookdetails {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px; }
+    #per_center .per-center .lookdetails .lefticon {
+      float: left;
+      width: 20px;
+      height: 100%;
+      line-height: 40px;
+      text-align: center;
+      color: #41a0ff; }
+      #per_center .per-center .lookdetails .lefticon .iconfont {
+        font-size: 20px; }
+    #per_center .per-center .lookdetails .minerool {
+      float: left;
+      width: calc(100% - 20px);
       height: 40px;
-      line-height: 40px; }
-      #per_center .per-center .enterlist li .tubiao .iconfont {
+      overflow: hidden; }
+      #per_center .per-center .lookdetails .minerool ul {
+        width: 100%;
+        height: 40px;
+        overflow: hidden; }
+        #per_center .per-center .lookdetails .minerool ul li {
+          width: 100%;
+          padding: 0 0 0 10px;
+          height: 40px;
+          line-height: 40px; }
+          #per_center .per-center .lookdetails .minerool ul li .lef {
+            display: block;
+            float: left;
+            width: 75%;
+            height: 100%;
+            line-height: 40px;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          #per_center .per-center .lookdetails .minerool ul li .rig {
+            display: block;
+            float: left;
+            width: 25%;
+            height: 100%;
+            line-height: 40px;
+            text-align: right;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #969696; }
+  #per_center .per-center .enterlist {
+    width: 100%;
+    height: auto;
+    margin: 10px 0 0;
+    padding: 0 12px; }
+    #per_center .per-center .enterlist li {
+      float: left;
+      padding: 15px 0;
+      width: 25%;
+      height: 90px;
+      text-align: center;
+      color: #666; }
+      #per_center .per-center .enterlist li .tubiao {
+        width: 100%;
+        height: 40px;
+        line-height: 40px; }
+        #per_center .per-center .enterlist li .tubiao .iconfont {
+          vertical-align: middle;
+          font-size: 30px; }
+      #per_center .per-center .enterlist li p {
+        margin: 0;
+        height: 20px;
+        font-size: 14px; }
+
+#my_info .my-info {
+  padding: 0;
+  margin-top: 44px;
+  background-color: #f2f2f2; }
+  #my_info .my-info .card {
+    box-shadow: none;
+    padding: 0 12px 0;
+    height: 44px;
+    line-height: 44px; }
+    #my_info .my-info .card .tex {
+      float: left;
+      width: 20vw;
+      font-size: 16px;
+      color: #333333; }
+    #my_info .my-info .card .right {
+      float: right;
+      width: 3vw;
+      text-align: right;
+      color: #cccccc; }
+    #my_info .my-info .card .cont {
+      width: calc(77vw - 24px);
+      float: right;
+      text-align: right;
+      word-break: keep-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      #my_info .my-info .card .cont img {
+        width: 30px;
+        height: 30px;
+        margin-top: 7px;
+        font-size: 12px; }
+  #my_info .my-info .bigimg {
+    width: 100%;
+    height: 150px;
+    position: relative; }
+    #my_info .my-info .bigimg img {
+      display: block;
+      width: 100%;
+      height: 100%; }
+    #my_info .my-info .bigimg .headmask {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); }
+      #my_info .my-info .bigimg .headmask img {
+        display: block;
+        margin: 40px auto 40px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%; }
+  #my_info .my-info .headimg {
+    padding: 0 12px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6; }
+    #my_info .my-info .headimg .floatr {
+      height: 60px;
+      float: right;
+      line-height: 60px; }
+      #my_info .my-info .headimg .floatr img {
+        width: 40px;
+        height: 40px;
+        vertical-align: middle; }
+      #my_info .my-info .headimg .floatr .icon {
         vertical-align: middle;
-        font-size: 30px; }
-    #per_center .per-center .enterlist li p {
-      margin: 0;
-      height: 20px;
-      font-size: 14px; }
+        color: #cccccc; }
+    #my_info .my-info .headimg .classify {
+      float: left;
+      color: #333333;
+      line-height: 60px;
+      font-size: 16px; }
 
 #my_agency .header {
   background-color: #f6f6f6; }
@@ -29389,6 +30442,316 @@ a.button {
     border: 1px solid #969696;
     border-radius: 3px; }
 
+#my_safe .header .back {
+  width: 25%; }
+
+#my_safe .header .title {
+  width: 50%; }
+
+#my_safe .header .right {
+  width: 25%;
+  color: #969696;
+  padding: 0 12px 0 0; }
+
+#my_safe .my-safe {
+  margin-top: 44px; }
+  #my_safe .my-safe .bannerposition .slider-slide .box {
+    width: 100%;
+    height: 48vw; }
+    #my_safe .my-safe .bannerposition .slider-slide .box img {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  #my_safe .my-safe .safelist ul {
+    margin-top: 10px;
+    width: 100%; }
+    #my_safe .my-safe .safelist ul li {
+      width: 100%;
+      height: 130px;
+      padding: 10px 12px; }
+      #my_safe .my-safe .safelist ul li .left {
+        width: 30%;
+        height: 100%;
+        float: left; }
+        #my_safe .my-safe .safelist ul li .left img {
+          display: block;
+          margin: auto;
+          width: 110px;
+          height: 110px; }
+      #my_safe .my-safe .safelist ul li .right {
+        float: left;
+        width: 70%;
+        height: 100%;
+        padding: 0 0 0 10px;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+        #my_safe .my-safe .safelist ul li .right h5 {
+          margin: 0;
+          padding: 0;
+          font-size: 16px;
+          font-weight: 600;
+          width: 100%;
+          height: 30px;
+          line-height: 30px; }
+        #my_safe .my-safe .safelist ul li .right p {
+          width: 100%;
+          height: 40px;
+          line-height: 20px;
+          color: #666666; }
+        #my_safe .my-safe .safelist ul li .right .foot {
+          height: 30px;
+          line-height: 30px; }
+          #my_safe .my-safe .safelist ul li .right .foot .price {
+            color: #f5962f; }
+          #my_safe .my-safe .safelist ul li .right .foot .buy {
+            display: block;
+            float: right;
+            width: 30%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #f5962f;
+            border-radius: 10px;
+            color: #333333; }
+
+#my_task .header .back {
+  width: 25%; }
+
+#my_task .header .title {
+  width: 50%; }
+
+#my_task .header .right {
+  width: 25%;
+  color: #969696;
+  padding: 0 12px 0 0; }
+
+#my_task .my-task {
+  padding: 0;
+  margin-top: 44px; }
+  #my_task .my-task .headimg {
+    width: 100%;
+    height: 45.3vw; }
+    #my_task .my-task .headimg img {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  #my_task .my-task .taskrecord {
+    position: relative;
+    padding: 0 12px; }
+    #my_task .my-task .taskrecord .sideline {
+      width: 0;
+      height: 100%;
+      border-right: 1px solid #66cdcc;
+      position: absolute;
+      z-index: -1;
+      left: 22px; }
+    #my_task .my-task .taskrecord ul {
+      margin: 15px 0 0;
+      width: 100%; }
+      #my_task .my-task .taskrecord ul li {
+        width: 100%;
+        height: 20px;
+        margin: 8px 0; }
+        #my_task .my-task .taskrecord ul li .left {
+          float: left;
+          width: 20px;
+          height: 20px;
+          text-align: center;
+          line-height: 20px;
+          border-right: 50%;
+          background-color: white;
+          border: 1px solid #66cdcc;
+          color: #66cdcc;
+          border-radius: 50%; }
+        #my_task .my-task .taskrecord ul li .mid {
+          float: left;
+          padding: 0 10px;
+          width: calc(90% - 20px);
+          height: 20px;
+          line-height: 20px; }
+        #my_task .my-task .taskrecord ul li .right {
+          float: left;
+          width: 10%;
+          height: 20px;
+          line-height: 20px;
+          text-align: right;
+          color: #f5962f; }
+      #my_task .my-task .taskrecord ul li:first-child {
+        margin: 0; }
+        #my_task .my-task .taskrecord ul li:first-child .left {
+          background-color: #66cdcc; }
+  #my_task .my-task .tasklist {
+    position: relative;
+    padding: 0 12px; }
+    #my_task .my-task .tasklist .sideline {
+      width: 0;
+      height: 100%;
+      border-right: 1px solid #66cdcc;
+      position: absolute;
+      z-index: -1;
+      left: 22px; }
+    #my_task .my-task .tasklist ul {
+      margin: 15px 0 0;
+      width: 100%; }
+      #my_task .my-task .tasklist ul li {
+        width: 100%;
+        height: 40px;
+        margin: 8px 0; }
+        #my_task .my-task .tasklist ul li .left {
+          float: left;
+          width: 20px;
+          height: 20px;
+          text-align: center;
+          line-height: 20px;
+          border-right: 50%;
+          background-color: white;
+          border: 1px solid #66cdcc;
+          color: #66cdcc;
+          border-radius: 50%; }
+        #my_task .my-task .tasklist ul li .mid {
+          float: left;
+          padding: 0 10px;
+          width: calc(100% - 70px);
+          height: 40px; }
+          #my_task .my-task .tasklist ul li .mid h5 {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 20px;
+            line-height: 20px; }
+          #my_task .my-task .tasklist ul li .mid p {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            color: #666666; }
+        #my_task .my-task .tasklist ul li .right {
+          float: left;
+          width: 50px;
+          height: 40px; }
+          #my_task .my-task .tasklist ul li .right div {
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            margin: 8px 0 7px 0;
+            border-radius: 12px;
+            border: 1px solid #f5962f;
+            color: #f5962f; }
+      #my_task .my-task .tasklist ul li:first-child {
+        margin: 0; }
+        #my_task .my-task .tasklist ul li:first-child .left {
+          background-color: #66cdcc; }
+
+#my_account .header .back {
+  width: 25%; }
+
+#my_account .header .title {
+  width: 50%; }
+
+#my_account .header .right {
+  width: 25%;
+  color: #969696;
+  padding: 0 12px 0 0; }
+
+#my_account .my-account {
+  margin-top: 44px; }
+  #my_account .my-account img {
+    display: block;
+    margin: 50px auto 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; }
+  #my_account .my-account h6 {
+    margin: 15px 0 0;
+    font-size: 16px;
+    text-align: center; }
+  #my_account .my-account h5 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600; }
+  #my_account .my-account p {
+    text-align: center;
+    color: #666666; }
+
+#deal_record .deal-record {
+  margin-top: 44px; }
+  #deal_record .deal-record .deallist {
+    width: 100%;
+    height: auto; }
+    #deal_record .deal-record .deallist ul {
+      width: 100%; }
+      #deal_record .deal-record .deallist ul li {
+        width: 100%;
+        height: 60px;
+        padding: 5px 12px;
+        border-bottom: 1px solid #d5d5d5; }
+        #deal_record .deal-record .deallist ul li .left {
+          width: 80%;
+          float: left;
+          height: 100%; }
+          #deal_record .deal-record .deallist ul li .left h5 {
+            width: 100%;
+            height: 30px;
+            font-weight: 600;
+            line-height: 30px;
+            margin: 0;
+            padding: 0; }
+          #deal_record .deal-record .deallist ul li .left p {
+            width: 100%;
+            height: 20px;
+            color: #666666;
+            line-height: 20px;
+            margin: 0;
+            padding: 0; }
+        #deal_record .deal-record .deallist ul li .right {
+          width: 20%;
+          float: left;
+          height: 100%;
+          line-height: 50px;
+          text-align: right; }
+      #deal_record .deal-record .deallist ul li:last-child {
+        border: none; }
+
+#deal_detail .deal-detail {
+  margin-top: 44px; }
+  #deal_detail .deal-detail .head {
+    padding: 0 12px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px; }
+    #deal_detail .deal-detail .head .left {
+      width: 20%;
+      height: 100%;
+      float: left;
+      color: #666666; }
+    #deal_detail .deal-detail .head .right {
+      width: 80%;
+      height: 100%;
+      float: left;
+      text-align: right;
+      color: #f5962f; }
+  #deal_detail .deal-detail .borderline {
+    margin-bottom: 15px; }
+  #deal_detail .deal-detail .detail {
+    padding: 0 12px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px; }
+    #deal_detail .deal-detail .detail .left {
+      width: 20%;
+      height: 100%;
+      float: left;
+      color: #666666; }
+    #deal_detail .deal-detail .detail .right {
+      width: 80%;
+      height: 100%;
+      float: left;
+      text-align: right; }
+
 #open_vip .header .back {
   width: 25%; }
 
@@ -29404,15 +30767,16 @@ a.button {
   margin-top: 44px; }
   #open_vip .open-vip .head {
     width: 100%;
-    height: 150px;
-    background-color: #f6f6f6; }
+    height: 150px; }
     #open_vip .open-vip .head .borderline {
       position: absolute;
-      z-index: -1;
+      z-index: 1;
       top: 75px; }
     #open_vip .open-vip .head ul {
       padding: 55px 0 0; }
       #open_vip .open-vip .head ul li {
+        position: relative;
+        z-index: 2;
         width: 20vw;
         height: 40px; }
         #open_vip .open-vip .head ul li div {
@@ -29459,7 +30823,8 @@ a.button {
     #open_vip .open-vip .foot h5 {
       text-align: center;
       font-weight: 600;
-      font-size: 16px; }
+      font-size: 16px;
+      color: #41a0ff; }
 
 #high_serve .header .back {
   width: 25%; }
@@ -29472,69 +30837,57 @@ a.button {
   color: #969696;
   padding: 0 12px 0 0; }
 
+#high_serve .renew {
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 16px;
+  background-color: #41a0ff;
+  color: white;
+  position: fixed;
+  z-index: 99;
+  bottom: 0; }
+
 #high_serve .high-serve {
   margin-top: 44px; }
   #high_serve .high-serve .head {
     width: 100%;
-    height: 150px;
-    background-color: #f6f6f6; }
-    #high_serve .high-serve .head .borderline {
-      position: absolute;
-      z-index: -1;
-      top: 75px; }
-    #high_serve .high-serve .head ul {
-      padding: 55px 0 0; }
-      #high_serve .high-serve .head ul li {
-        width: 20vw;
-        height: 40px; }
-        #high_serve .high-serve .head ul li div {
-          margin: auto;
-          width: 40px;
-          height: 40px;
-          line-height: 20px;
-          text-align: center;
-          border-radius: 50%;
-          background-color: #969696;
-          border: 1px solid gray; }
-        #high_serve .high-serve .head ul li img {
-          display: block;
-          margin: auto;
-          width: 40px;
-          height: 40px;
-          border-radius: 50%; }
-  #high_serve .high-serve .vipserve {
-    padding: 20px 0 0; }
-    #high_serve .high-serve .vipserve h5 {
-      width: 50%;
+    padding: 20px 0 10px; }
+    #high_serve .high-serve .head h5 {
+      width: 70%;
       height: 35px;
+      line-height: 35px;
       margin: auto;
       text-align: center;
-      line-height: 35px;
-      border: 1px solid gray;
+      border: 1px solid #666666;
       border-radius: 5px; }
-    #high_serve .high-serve .vipserve ul {
-      width: 100%; }
-      #high_serve .high-serve .vipserve ul li {
-        width: 33.33vw; }
-        #high_serve .high-serve .vipserve ul li img {
-          display: block;
-          margin: auto;
-          width: 30vw;
-          height: 30vw; }
-        #high_serve .high-serve .vipserve ul li p {
-          text-align: center; }
-  #high_serve .high-serve .foot {
-    padding: 15px 0 0; }
-    #high_serve .high-serve .foot p {
-      text-align: center;
-      line-height: 20px; }
-    #high_serve .high-serve .foot h5 {
-      text-align: center;
-      font-weight: 600;
-      font-size: 16px; }
+  #high_serve .high-serve h5.title {
+    margin: 0;
+    padding: 0 0 0 12px;
+    height: 35px;
+    line-height: 35px; }
+  #high_serve .high-serve .pointtask .item-avatar .tasking {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 3px 5px;
+    border: 1px solid #f8962f;
+    color: #f8962f;
+    border-radius: 8px; }
+  #high_serve .high-serve .pointtask .item-avatar .gettask {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 3px 5px;
+    background-color: #f8962f;
+    color: white;
+    border-radius: 8px; }
 
 #chat_list .header {
-  background-color: #387ef5; }
+  background-color: #081535; }
   #chat_list .header .title .switch {
     width: 100%;
     height: 100%;
@@ -29543,7 +30896,16 @@ a.button {
       width: 50%;
       height: 30px;
       float: left;
+      background-color: #081535;
       border-color: #e6e6e6; }
+    #chat_list .header .title .switch .button.activated {
+      background-color: #e6e6e6;
+      color: #081535;
+      border-color: #081535; }
+    #chat_list .header .title .switch .button.clicked {
+      background-color: #e6e6e6;
+      color: #081535;
+      border-color: #081535; }
 
 #chat_list .dao-hang {
   position: fixed;
@@ -29565,213 +30927,319 @@ a.button {
 #chat_list .chat-list {
   margin-top: 44px; }
 
-#be_agent .fourchoose {
-  height: 44px;
-  width: 100vw;
-  position: absolute;
-  z-index: 9999;
-  top: 0;
-  box-sizing: border-box;
-  border-bottom: 1px solid #e6e6e6; }
-  #be_agent .fourchoose .fenlei {
-    display: block;
-    float: left;
-    line-height: 44px;
-    width: 25vw;
-    font-size: 16px;
-    text-align: center;
-    color: #333333; }
-  #be_agent .fourchoose .underline {
+#be_agent {
+  background-image: url("../imgs/bg.png"); }
+  #be_agent .fourchoose {
+    height: 44px;
+    width: 100vw;
     position: absolute;
-    bottom: 0px;
-    left: 7vw;
-    width: 11vw;
-    height: 0;
-    border-bottom: 2px solid #3699f5; }
-
-#be_agent .backtop {
-  display: none;
-  position: absolute;
-  z-index: 999;
-  bottom: 80px;
-  right: 15px;
-  width: 39px;
-  height: 39px;
-  line-height: 39px;
-  text-align: left;
-  border-radius: 50%;
-  color: #969696;
-  background-color: rgba(133, 64, 64, 0.9); }
-  #be_agent .backtop i {
-    position: relative;
-    top: 2px;
-    font-size: 38px; }
-
-#be_agent .dao-hang {
-  position: fixed;
-  z-index: 99;
-  bottom: 40px;
-  right: 15px;
-  width: 39px;
-  height: 39px;
-  line-height: 39px;
-  text-align: center;
-  border-radius: 50%;
-  color: #e5f0f7;
-  background-color: rgba(78, 127, 184, 0.9); }
-  #be_agent .dao-hang i {
-    position: relative;
-    top: 2px;
-    font-size: 20px; }
-
-#be_agent .scroll-content {
-  margin-top: 45px;
-  background-color: white; }
-
-#be_agent .video .bannerposition {
-  margin-bottom: 15px; }
-  #be_agent .video .bannerposition .box img {
-    display: block;
-    width: 100%; }
-
-#be_agent .video .videolist {
-  width: 100%; }
-  #be_agent .video .videolist ul {
-    width: 100%; }
-    #be_agent .video .videolist ul li {
-      width: 50%;
-      margin-bottom: 10px; }
-      #be_agent .video .videolist ul li img {
-        display: block;
-        width: 90%;
-        height: 80px;
-        margin: auto; }
-      #be_agent .video .videolist ul li h6 {
-        width: 90%;
-        margin: 0 auto;
-        height: 20px;
-        line-height: 20px;
-        padding: 0; }
-      #be_agent .video .videolist ul li .foot {
-        width: 90%;
-        margin: auto; }
-        #be_agent .video .videolist ul li .foot .level {
-          float: left;
-          width: 30px;
-          height: 20px;
-          border-radius: 5px; }
-        #be_agent .video .videolist ul li .foot .levelheight {
-          background-color: gold; }
-        #be_agent .video .videolist ul li .foot .levellow {
-          background-color: aquamarine; }
-        #be_agent .video .videolist ul li .foot .comment {
-          float: left;
-          width: calc(50% - 15px);
-          height: 20px;
-          text-align: center;
-          line-height: 20px; }
-        #be_agent .video .videolist ul li .foot .count {
-          float: left;
-          width: calc(50% - 15px);
-          height: 20px;
-          text-align: center;
-          line-height: 20px; }
-
-#be_agent .live .bannerposition {
-  margin-bottom: 15px; }
-  #be_agent .live .bannerposition .box img {
-    display: block;
-    width: 100%; }
-
-#be_agent .live .livelist {
-  width: 100%; }
-  #be_agent .live .livelist ul {
-    width: 100%; }
-    #be_agent .live .livelist ul li {
-      width: 50%;
-      margin-bottom: 10px; }
-      #be_agent .live .livelist ul li img {
-        display: block;
-        width: 90%;
-        height: 80px;
-        margin: auto; }
-      #be_agent .live .livelist ul li h6 {
-        width: 90%;
-        margin: 0 auto;
-        height: 20px;
-        line-height: 20px;
-        padding: 0; }
-      #be_agent .live .livelist ul li .foot {
-        width: 90%;
-        margin: auto; }
-        #be_agent .live .livelist ul li .foot .level {
-          float: left;
-          width: 30px;
-          height: 20px;
-          border-radius: 5px; }
-        #be_agent .live .livelist ul li .foot .levelheight {
-          background-color: gold; }
-        #be_agent .live .livelist ul li .foot .levellow {
-          background-color: aquamarine; }
-        #be_agent .live .livelist ul li .foot .comment {
-          float: left;
-          width: calc(50% - 15px);
-          height: 20px;
-          text-align: center;
-          line-height: 20px; }
-        #be_agent .live .livelist ul li .foot .count {
-          float: left;
-          width: calc(50% - 15px);
-          height: 20px;
-          text-align: center;
-          line-height: 20px; }
-
-#be_agent .train img {
-  display: block;
-  width: 100%; }
-
-#be_agent .train p.bothLine {
-  margin: 0;
-  padding: 15px 12px 15px;
-  background-color: #f6f6f6; }
-  #be_agent .train p.bothLine span {
-    text-align: center;
-    display: block;
-    /*设置为块级元素会独占一行形成上下居中的效果*/
-    font-size: 14px;
+    z-index: 9999;
+    top: 0;
+    box-sizing: border-box; }
+    #be_agent .fourchoose .fenlei {
+      display: block;
+      float: left;
+      line-height: 44px;
+      width: 25vw;
+      font-size: 16px;
+      text-align: center;
+      color: white; }
+    #be_agent .fourchoose .underline {
+      position: absolute;
+      bottom: 0px;
+      left: 7vw;
+      width: 11vw;
+      height: 0;
+      border-bottom: 2px solid #3699f5; }
+  #be_agent .backtop {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    bottom: 80px;
+    right: 15px;
+    width: 39px;
+    height: 39px;
+    line-height: 39px;
+    text-align: left;
+    border-radius: 50%;
     color: #969696;
-    position: relative;
-    /*定位横线（当横线的父元素）*/ }
-  #be_agent .train p.bothLine span:before {
-    content: '';
-    /*CSS伪类用法*/
-    position: absolute;
-    /*定位背景横线的位置*/
-    top: 52%;
-    background: #e6e6e6;
-    /*宽和高做出来的背景横线*/
-    width: 28%;
-    height: 1px; }
-  #be_agent .train p.bothLine span:after {
-    content: '';
-    /*CSS伪类用法*/
-    position: absolute;
-    /*定位背景横线的位置*/
-    top: 52%;
-    background: #e6e6e6;
-    /*宽和高做出来的背景横线*/
-    width: 28%;
-    height: 1px; }
-  #be_agent .train p.bothLine span:before {
-    left: 0;
-    /*调整背景横线的左右距离*/ }
-  #be_agent .train p.bothLine span:after {
-    right: 0; }
-
-#be_agent .train .button {
-  display: block;
-  width: 50%;
-  margin: 15px auto 0; }
+    background-color: rgba(133, 64, 64, 0.9); }
+    #be_agent .backtop i {
+      position: relative;
+      top: 2px;
+      font-size: 38px; }
+  #be_agent .dao-hang {
+    position: fixed;
+    z-index: 99;
+    bottom: 40px;
+    right: 15px;
+    width: 39px;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    border-radius: 50%;
+    color: #e5f0f7;
+    background-color: rgba(78, 127, 184, 0.9); }
+    #be_agent .dao-hang i {
+      position: relative;
+      top: 2px;
+      font-size: 20px; }
+  #be_agent .be-agent {
+    margin-top: 45px;
+    background-color: rgba(255, 255, 255, 0); }
+    #be_agent .be-agent .bigbox .box {
+      width: 100%;
+      height: calc(100vh - 80px); }
+      #be_agent .be-agent .bigbox .box .traininfo img {
+        display: block;
+        width: 100%;
+        height: 53vw; }
+      #be_agent .be-agent .bigbox .box .traininfo .info {
+        padding: 20px 0 0;
+        width: 100%;
+        height: 150px; }
+        #be_agent .be-agent .bigbox .box .traininfo .info .item {
+          background-color: rgba(255, 255, 255, 0); }
+          #be_agent .be-agent .bigbox .box .traininfo .info .item .input-label {
+            color: white; }
+        #be_agent .be-agent .bigbox .box .traininfo .info .button {
+          display: block;
+          margin: 20px auto;
+          width: 50%;
+          height: 35px;
+          text-align: center;
+          line-height: 50px;
+          background-color: #081535;
+          color: white; }
+      #be_agent .be-agent .bigbox .box .livelist {
+        width: 100%; }
+        #be_agent .be-agent .bigbox .box .livelist ul {
+          width: 100%; }
+          #be_agent .be-agent .bigbox .box .livelist ul li {
+            width: 50%;
+            margin-bottom: 10px; }
+            #be_agent .be-agent .bigbox .box .livelist ul li img {
+              display: block;
+              width: 90%;
+              height: 80px;
+              margin: auto; }
+            #be_agent .be-agent .bigbox .box .livelist ul li h6 {
+              color: white;
+              width: 90%;
+              margin: 0 auto;
+              height: 20px;
+              line-height: 20px;
+              padding: 0; }
+            #be_agent .be-agent .bigbox .box .livelist ul li .foot {
+              width: 90%;
+              margin: auto; }
+              #be_agent .be-agent .bigbox .box .livelist ul li .foot .level {
+                float: left;
+                width: 30px;
+                height: 20px;
+                border-radius: 5px; }
+              #be_agent .be-agent .bigbox .box .livelist ul li .foot .levelheight {
+                background-color: gold; }
+              #be_agent .be-agent .bigbox .box .livelist ul li .foot .levellow {
+                background-color: aquamarine; }
+              #be_agent .be-agent .bigbox .box .livelist ul li .foot .comment {
+                color: white;
+                float: left;
+                width: calc(50% - 15px);
+                height: 20px;
+                text-align: center;
+                line-height: 20px; }
+              #be_agent .be-agent .bigbox .box .livelist ul li .foot .count {
+                color: white;
+                float: left;
+                width: calc(50% - 15px);
+                height: 20px;
+                text-align: center;
+                line-height: 20px; }
+      #be_agent .be-agent .bigbox .box .videolist {
+        width: 100%; }
+        #be_agent .be-agent .bigbox .box .videolist ul {
+          width: 100%; }
+          #be_agent .be-agent .bigbox .box .videolist ul li {
+            width: 50%;
+            margin-bottom: 10px; }
+            #be_agent .be-agent .bigbox .box .videolist ul li img {
+              display: block;
+              width: 90%;
+              height: 80px;
+              margin: auto; }
+            #be_agent .be-agent .bigbox .box .videolist ul li h6 {
+              width: 90%;
+              margin: 0 auto;
+              height: 20px;
+              line-height: 20px;
+              padding: 0;
+              color: white; }
+            #be_agent .be-agent .bigbox .box .videolist ul li .foot {
+              width: 90%;
+              margin: auto; }
+              #be_agent .be-agent .bigbox .box .videolist ul li .foot .level {
+                float: left;
+                width: 30px;
+                height: 20px;
+                border-radius: 5px; }
+              #be_agent .be-agent .bigbox .box .videolist ul li .foot .levelheight {
+                background-color: gold; }
+              #be_agent .be-agent .bigbox .box .videolist ul li .foot .levellow {
+                background-color: aquamarine; }
+              #be_agent .be-agent .bigbox .box .videolist ul li .foot .comment {
+                color: white;
+                float: left;
+                width: calc(50% - 15px);
+                height: 20px;
+                text-align: center;
+                line-height: 20px; }
+              #be_agent .be-agent .bigbox .box .videolist ul li .foot .count {
+                color: white;
+                float: left;
+                width: calc(50% - 15px);
+                height: 20px;
+                text-align: center;
+                line-height: 20px; }
+  #be_agent .video .bannerposition {
+    margin-bottom: 15px; }
+    #be_agent .video .bannerposition .box img {
+      display: block;
+      width: 100%; }
+  #be_agent .video .videolist {
+    width: 100%; }
+    #be_agent .video .videolist ul {
+      width: 100%; }
+      #be_agent .video .videolist ul li {
+        width: 50%;
+        margin-bottom: 10px; }
+        #be_agent .video .videolist ul li img {
+          display: block;
+          width: 90%;
+          height: 80px;
+          margin: auto; }
+        #be_agent .video .videolist ul li h6 {
+          width: 90%;
+          margin: 0 auto;
+          height: 20px;
+          line-height: 20px;
+          padding: 0; }
+        #be_agent .video .videolist ul li .foot {
+          width: 90%;
+          margin: auto; }
+          #be_agent .video .videolist ul li .foot .level {
+            float: left;
+            width: 30px;
+            height: 20px;
+            border-radius: 5px; }
+          #be_agent .video .videolist ul li .foot .levelheight {
+            background-color: gold; }
+          #be_agent .video .videolist ul li .foot .levellow {
+            background-color: aquamarine; }
+          #be_agent .video .videolist ul li .foot .comment {
+            float: left;
+            width: calc(50% - 15px);
+            height: 20px;
+            text-align: center;
+            line-height: 20px; }
+          #be_agent .video .videolist ul li .foot .count {
+            float: left;
+            width: calc(50% - 15px);
+            height: 20px;
+            text-align: center;
+            line-height: 20px; }
+  #be_agent .live .bannerposition {
+    margin-bottom: 15px; }
+    #be_agent .live .bannerposition .box img {
+      display: block;
+      width: 100%; }
+  #be_agent .live .livelist {
+    width: 100%; }
+    #be_agent .live .livelist ul {
+      width: 100%; }
+      #be_agent .live .livelist ul li {
+        width: 50%;
+        margin-bottom: 10px; }
+        #be_agent .live .livelist ul li img {
+          display: block;
+          width: 90%;
+          height: 80px;
+          margin: auto; }
+        #be_agent .live .livelist ul li h6 {
+          width: 90%;
+          margin: 0 auto;
+          height: 20px;
+          line-height: 20px;
+          padding: 0; }
+        #be_agent .live .livelist ul li .foot {
+          width: 90%;
+          margin: auto; }
+          #be_agent .live .livelist ul li .foot .level {
+            float: left;
+            width: 30px;
+            height: 20px;
+            border-radius: 5px; }
+          #be_agent .live .livelist ul li .foot .levelheight {
+            background-color: gold; }
+          #be_agent .live .livelist ul li .foot .levellow {
+            background-color: aquamarine; }
+          #be_agent .live .livelist ul li .foot .comment {
+            float: left;
+            width: calc(50% - 15px);
+            height: 20px;
+            text-align: center;
+            line-height: 20px; }
+          #be_agent .live .livelist ul li .foot .count {
+            float: left;
+            width: calc(50% - 15px);
+            height: 20px;
+            text-align: center;
+            line-height: 20px; }
+  #be_agent .train img {
+    display: block;
+    width: 100%; }
+  #be_agent .train p.bothLine {
+    margin: 0;
+    padding: 15px 12px 15px;
+    background-color: #f6f6f6; }
+    #be_agent .train p.bothLine span {
+      text-align: center;
+      display: block;
+      /*设置为块级元素会独占一行形成上下居中的效果*/
+      font-size: 14px;
+      color: #969696;
+      position: relative;
+      /*定位横线（当横线的父元素）*/ }
+    #be_agent .train p.bothLine span:before {
+      content: '';
+      /*CSS伪类用法*/
+      position: absolute;
+      /*定位背景横线的位置*/
+      top: 52%;
+      background: #e6e6e6;
+      /*宽和高做出来的背景横线*/
+      width: 28%;
+      height: 1px; }
+    #be_agent .train p.bothLine span:after {
+      content: '';
+      /*CSS伪类用法*/
+      position: absolute;
+      /*定位背景横线的位置*/
+      top: 52%;
+      background: #e6e6e6;
+      /*宽和高做出来的背景横线*/
+      width: 28%;
+      height: 1px; }
+    #be_agent .train p.bothLine span:before {
+      left: 0;
+      /*调整背景横线的左右距离*/ }
+    #be_agent .train p.bothLine span:after {
+      right: 0; }
+  #be_agent .train .button {
+    display: block;
+    width: 50%;
+    margin: 15px auto 0;
+    background-color: #081535; }
 
 /*卡片*/
 #agent_search .searchhouse-header {

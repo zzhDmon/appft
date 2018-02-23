@@ -181,7 +181,7 @@
 
 			<div ng-if="other.length>0" class="offline"></div>
 			<div class="card hisonline" ng-if="other.length>0">
-				<h5>TA的其他在售房源</h5>
+				<h5>房源对比</h5>
 				<ul>
 					<!-- ui-sref="tabs.fydetail({id:otherhouse.Id,housetype:housetype})"-->
 					<li ng-repeat="otherhouse in other track by $index" ui-sref="tabs.fydetail({id:otherhouse.Id,housetype:housetype})">

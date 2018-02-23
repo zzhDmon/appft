@@ -1,7 +1,7 @@
 <!--发现界面模板-->
 <ion-view id="registerorback" view-title="{{name}}" hide-nav-bar=true>
 	<div class="header">
-		<div class="back" ui-sref="login">
+		<div class="back" ng-click="back()">
 			<i class=" iconfont icon-xiangzuo1"></i>
 		</div>
 		<div class="title">
@@ -12,7 +12,7 @@
 		</div>
 	</div>
 	
-	<ion-content class="registerorback" has-bouncing=false>
+	<ion-content class="registerorback">
 		<form novalidate name="formregister">
 			<div class="card list">
 				<button ng-click="yzcode($event)" ng-disabled="disabled" class="button button-small">获取</button>
@@ -32,8 +32,19 @@
 		          <span class="input-label">推荐号码</span>
 		          <input ng-model="submitData.ParPhone" type="tel" name="parphone" placeholder="输入推荐人手机号(选填)" pattern="^1[0-9]{10}$">
 		        </label>
+				<label ng-if="name=='注册'" class="item item-input">
+		          <span class="input-label">真实姓名</span>
+		          <input ng-model="submitData.ParPhone" type="text" name="name" placeholder="输入真实姓名" required>
+		        </label>
+				<label ng-if="name=='注册'" class="item item-input">
+		          <span class="input-label">身份证号</span>
+		          <input ng-model="submitData.ParPhone" type="number" name="idnumber" placeholder="输入身份证号码" required>
+		        </label>
 			</div>
-			
+			<div class="idimg">
+				<p>上传身份证真面照</p>
+				<img src="imgs/add.png"></img>
+			</div>
 			<div class="card loginbtn">
 				<div class="subbtn">
 					<button ng-disabled="formregister.$invalid" ng-click="Done()" class="button button-calm">完成</button>

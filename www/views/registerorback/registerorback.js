@@ -1,6 +1,6 @@
-angular.module('App').controller('RegisterorbackController',function($interval,$timeout,$ionicHistory,$http,$Factory,$stateParams,$scope,$state,$ionicLoading){
+angular.module('App').controller('RegisterorbackController',function(goBack,$interval,$timeout,$ionicHistory,$http,$Factory,$stateParams,$scope,$state,$ionicLoading){
 	$scope.back=function(){
-		$ionicHistory.goBack();
+		goBack.goback();
 	}
 	$scope.name = $stateParams.name;
 	

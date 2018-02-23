@@ -40,8 +40,9 @@
 				<ul>
 					<li on-finish-render-filters ng-repeat="sell in sellhouse" ng-click='show($event,sell.Id,housetype)'>
 						<div class="img">
-							<img ng-src="{{sell.Thumb}}"/>
-							<img ng-show={{sell.Recommend}} class="zhutui" src="imgs/主推.png"/>
+							<img ng-src="imgs/中.png"/>
+							<!-- <img ng-src="{{sell.Thumb}}"/> -->
+							<div class="discussagent housetag">可探讨代理</div>
 						</div>
 						<div class="description">
 							<h5>{{sell.Title}}</h5>
@@ -86,8 +87,9 @@
 				<ul>
 					<li on-finish-render-filters ng-repeat="rent in renthouse" ng-click='show($event,rent.Id,housetype)'>
 						<div class="img">
-							<img ng-src="{{rent.Thumb}}"/>
-							<img ng-show={{rent.Recommend}} class="zhutui" src="imgs/主推.png"/>
+							<img ng-src="imgs/左.png"/>
+							<!-- <img ng-src="{{rent.Thumb}}"/> -->
+							<div class="canagent housetag">可被代理</div>
 						</div>
 						<div class="description">
 							<h5>{{rent.Title}}</h5>

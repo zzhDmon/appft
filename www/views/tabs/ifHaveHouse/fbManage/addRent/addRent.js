@@ -1,5 +1,5 @@
 
-angular.module('App').controller('addRentCtl',function($ionicLoading,$ionicHistory,$http,$Factory,$rootScope,$scope,$stateParams,$ionicPopover,$timeout){
+angular.module('App').controller('addRentCtl',function(goTo,$ionicModal,$ionicLoading,$ionicHistory,$http,$Factory,$rootScope,$scope,$stateParams,$ionicPopover,$timeout){
 	
 	$scope.back=function(){
 		$ionicHistory.goBack();
@@ -665,117 +665,131 @@ angular.module('App').controller('addRentCtl',function($ionicLoading,$ionicHisto
 			var file = $(this)[0].files[0];
 			$scope.changeLayoutBase64(URL.createObjectURL(file))
 		});
-			
 		
+		$ionicModal.fromTemplateUrl('rentGoLogin-modal', {
+			scope: $scope,
+			animation: 'slide-in-up'
+		  }).then(function(modal) {
+			$scope.modal = modal;
+		  });
+		
+		$scope.goLogin=function(){
+			$scope.modal.hide();
+			goTo.goto('login')
+		}
 		$scope.publish=function(){
-	    	$scope.publishdata.xiaoqu=$scope.zufangxiaoqu
-	    	$scope.publishdata.title=$scope.zufangtitle
-	    	$scope.publishdata.des=$rootScope.zufangdes
-	    	$scope.publishdata.zufang=$(".zf-zufang").val()
-	    	$scope.publishdata.pay=$(".zf-fukuang").val()
-	    	$scope.publishdata.chaoxiang=$(".zf-chaoxiang").val()
-	    	$scope.publishdata.fangxing=$(".zf-fangxing").val()
-	    	$scope.publishdata.louceng=$(".zf-louceng").val()
-	    	$scope.publishdata.type=$(".zf-leixing").val()
-	    	$scope.publishdata.zhuangxiu=$(".zf-zhuangxiu").val()
+			
+			  $scope.modal.show();
+
+
+	    	// $scope.publishdata.xiaoqu=$scope.zufangxiaoqu
+	    	// $scope.publishdata.title=$scope.zufangtitle
+	    	// $scope.publishdata.des=$rootScope.zufangdes
+	    	// $scope.publishdata.zufang=$(".zf-zufang").val()
+	    	// $scope.publishdata.pay=$(".zf-fukuang").val()
+	    	// $scope.publishdata.chaoxiang=$(".zf-chaoxiang").val()
+	    	// $scope.publishdata.fangxing=$(".zf-fangxing").val()
+	    	// $scope.publishdata.louceng=$(".zf-louceng").val()
+	    	// $scope.publishdata.type=$(".zf-leixing").val()
+	    	// $scope.publishdata.zhuangxiu=$(".zf-zhuangxiu").val()
 	    	
-	    	var obj=$('input[type="checkbox"]'); 
-	    	$scope.publishdata.peizhi=[];
-			for(var i=0; i<obj.length; i++){ 
-				if(obj[i].checked){
-					$scope.publishdata.peizhi.push(i+1); //如果选中，将value添加到变量s中
-				} 
-			} 
+	    	// var obj=$('input[type="checkbox"]'); 
+	    	// $scope.publishdata.peizhi=[];
+			// for(var i=0; i<obj.length; i++){ 
+			// 	if(obj[i].checked){
+			// 		$scope.publishdata.peizhi.push(i+1); //如果选中，将value添加到变量s中
+			// 	} 
+			// } 
 			
-			//发布的信息$scope.publishdata
-			//提交的信息
-			$scope.Data={
-				AccountId:$scope.publishdata.AccountId,
-				Id:$scope.publishdata.Id,
-				BathType:$scope.BathType,
-				BuildType:$(".zf-leixing").val(),
-				CommunityId:$rootScope.zufangxiaoquid,
-				CommunityName:$rootScope.zufangxiaoqu,
-				Configure:$scope.publishdata.peizhi,
-				CreateTime:$scope.createtime,
-				Discription:$rootScope.zufangdes,
-				Fitment:$(".zf-zhuangxiu").val(),
-				Floor:$scope.Floor,
-				HallType:$scope.HallType,
-				IndoorImages:$scope.publishdata.IndoorImages,
-				IndoorShowImages:$scope.publishdata.IndoorShowImages,
-				LayoutImages:$scope.publishdata.LayoutImages,
-				LayoutShowImages:$scope.publishdata.LayoutShowImages,
-				Number:$scope.publishdata.number,
-				Orientation:$(".zf-chaoxiang").val(),
-				PayType:$(".zf-fukuang").val(),
-				Phone:localStorage.getItem('agentphone'),
-				Price:$scope.publishdata.zujin,
-				Recommend:'',
-				RentType:$(".zf-zufang").val(),
-				RoomType:$scope.RoomType,
-				Space:$scope.publishdata.area,
-				Special:'',
-				Tags:'',
-				Title:$rootScope.zufangtitle,
-				TotalFloor:$scope.TotalFloor,
-				Type:2,
-				Year:''
-			}
-			if($scope.Data.BathType==''||$scope.Data.BuildType==''||$scope.Data.RentType==''||$scope.Data.CommunityName==''||$scope.Data.Discription==''||$scope.Data.IndoorImages.length<1||$scope.Data.Configure.length<1||
-			$scope.Data.Fitment==''||$scope.Data.Floor==''||$scope.Data.PayType==''||$scope.Data.Orientation==''||$scope.Data.Price==''||$scope.Data.Space==''||$scope.Data.Title==''){
-				$ionicLoading.show({
-								template:'除房型图其他为必填',
-								duration:1000
-					});
-			}else{
-				var req = {
-				 method: 'POST',
-				 url: $Factory.HouseSource.save.url,
-				 headers: {
-				   'Content-Type': 'application/json'
-				 },
-				 data: $scope.Data
-				}
+			// //发布的信息$scope.publishdata
+			// //提交的信息
+			// $scope.Data={
+			// 	AccountId:$scope.publishdata.AccountId,
+			// 	Id:$scope.publishdata.Id,
+			// 	BathType:$scope.BathType,
+			// 	BuildType:$(".zf-leixing").val(),
+			// 	CommunityId:$rootScope.zufangxiaoquid,
+			// 	CommunityName:$rootScope.zufangxiaoqu,
+			// 	Configure:$scope.publishdata.peizhi,
+			// 	CreateTime:$scope.createtime,
+			// 	Discription:$rootScope.zufangdes,
+			// 	Fitment:$(".zf-zhuangxiu").val(),
+			// 	Floor:$scope.Floor,
+			// 	HallType:$scope.HallType,
+			// 	IndoorImages:$scope.publishdata.IndoorImages,
+			// 	IndoorShowImages:$scope.publishdata.IndoorShowImages,
+			// 	LayoutImages:$scope.publishdata.LayoutImages,
+			// 	LayoutShowImages:$scope.publishdata.LayoutShowImages,
+			// 	Number:$scope.publishdata.number,
+			// 	Orientation:$(".zf-chaoxiang").val(),
+			// 	PayType:$(".zf-fukuang").val(),
+			// 	Phone:localStorage.getItem('agentphone'),
+			// 	Price:$scope.publishdata.zujin,
+			// 	Recommend:'',
+			// 	RentType:$(".zf-zufang").val(),
+			// 	RoomType:$scope.RoomType,
+			// 	Space:$scope.publishdata.area,
+			// 	Special:'',
+			// 	Tags:'',
+			// 	Title:$rootScope.zufangtitle,
+			// 	TotalFloor:$scope.TotalFloor,
+			// 	Type:2,
+			// 	Year:''
+			// }
+			// if($scope.Data.BathType==''||$scope.Data.BuildType==''||$scope.Data.RentType==''||$scope.Data.CommunityName==''||$scope.Data.Discription==''||$scope.Data.IndoorImages.length<1||$scope.Data.Configure.length<1||
+			// $scope.Data.Fitment==''||$scope.Data.Floor==''||$scope.Data.PayType==''||$scope.Data.Orientation==''||$scope.Data.Price==''||$scope.Data.Space==''||$scope.Data.Title==''){
+			// 	$ionicLoading.show({
+			// 					template:'除房型图其他为必填',
+			// 					duration:1000
+			// 		});
+			// }else{
+			// 	var req = {
+			// 	 method: 'POST',
+			// 	 url: $Factory.HouseSource.save.url,
+			// 	 headers: {
+			// 	   'Content-Type': 'application/json'
+			// 	 },
+			// 	 data: $scope.Data
+			// 	}
 			
-				$http(req).then(function(resData){
-					if(resData.data.status==0){
-						$rootScope.ershouxiaoquid='';
-						$rootScope.ershouxiaoqu='';
-						$rootScope.ershoudes='';
-						$rootScope.ershoutitle='';
+			// 	$http(req).then(function(resData){
+			// 		if(resData.data.status==0){
+			// 			$rootScope.ershouxiaoquid='';
+			// 			$rootScope.ershouxiaoqu='';
+			// 			$rootScope.ershoudes='';
+			// 			$rootScope.ershoutitle='';
 						
-						//添加积分
-						var req = {
-							 method: 'POST',
-							 url: $Factory.Score.add.url,
-							 headers: {
-					//			'Content-Type': 'application/json'
-								'Content-Type': 'application/x-www-form-urlencoded'
-							 },
-					//		 data: {actId:$scope.uid}
-							 data: "actId="+11
-							}
-						$http(req).then(function(resData){
+			// 			//添加积分
+			// 			var req = {
+			// 				 method: 'POST',
+			// 				 url: $Factory.Score.add.url,
+			// 				 headers: {
+			// 		//			'Content-Type': 'application/json'
+			// 					'Content-Type': 'application/x-www-form-urlencoded'
+			// 				 },
+			// 		//		 data: {actId:$scope.uid}
+			// 				 data: "actId="+11
+			// 				}
+			// 			$http(req).then(function(resData){
 							
-						})
-						$timeout(function(){
-							$ionicHistory.goBack()
-						},1000)
-						$ionicLoading.show({
-								template:resData.data.msg,
-								duration:1000
-						});
+			// 			})
+			// 			$timeout(function(){
+			// 				$ionicHistory.goBack()
+			// 			},1000)
+			// 			$ionicLoading.show({
+			// 					template:resData.data.msg,
+			// 					duration:1000
+			// 			});
 					
-					}
-				},function(resData){
-					$ionicLoading.show({
-								template:'新增房源失败',
-								duration:1000
-					});
-				})	
+			// 		}
+			// 	},function(resData){
+			// 		$ionicLoading.show({
+			// 					template:'新增房源失败',
+			// 					duration:1000
+			// 		});
+			// 	})	
 				
-			}
+			// }
 			
 			
 			

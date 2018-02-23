@@ -59,10 +59,27 @@
                             float: left;
                             position: relative;
                             img{
+                                display: block;
                                 border-radius: 3px;
-                                width: 100%;
+                                margin: auto;
+                                width: 69px;
                                 height: 85px;
                             } 
+                            .housetag{
+                                position: absolute;
+                                top: 5px;
+                                width: 80px;
+                                height: 25px;
+                                text-align: center;
+                                line-height: 25px;
+                                border-radius: 0 3px 3px 0;
+                            }
+                            .canagent{
+                                background-color: rgba(123,211,98,0.3);
+                            }
+                            .discussagent{
+                                background-color: rgba(222,221,0,0.3);
+                            }
                             .zhutui{
                                 width: 8vw;
                                 height: auto;
@@ -172,8 +189,10 @@
                             float: left;
                             position: relative;
                             img{
+                                display: block;
                                 border-radius: 3px;
-                                width: 100%;
+                                margin: auto;
+                                width: 69px;
                                 height: 85px;
                             } 
                             .zhutui{

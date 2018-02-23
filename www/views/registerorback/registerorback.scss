@@ -19,8 +19,8 @@
                font-size: 14px;
                top: 7px;
                right: 10px;
-               color: rgb(65,160,255);
-               border: 1px solid rgb(65,160,255);
+               color: rgb(8,21,53);
+               border: 1px solid rgb(8,21,53);
                border-radius: 3px;
            }
            .item-input{
@@ -48,9 +48,25 @@
                    span{
                        position: absolute;
                        z-index: 9999;
-                       color: rgb(65,160,255);
+                       color: rgb(8,21,53);
                    }
                }
+           }
+       }
+       .idimg{
+           margin: 10px 0 0;
+           p{
+               margin: 0;
+               padding: 0;
+               height: 30px;
+               width: 100%;
+               line-height: 30px
+           }
+           img{
+               display: block;
+               width: 80vw;
+               height: 50vw;
+               margin: auto;
            }
        }
        .loginbtn{
@@ -62,7 +78,7 @@
                .button{
                    width: 90vw;
                    font-size: 16px;
-                   background-color: rgb(65,160,255);
+                   background-color: rgb(8,21,53);
                }
            }
        }

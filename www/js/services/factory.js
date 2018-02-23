@@ -1,6 +1,6 @@
 angular.module('App')
 .factory('$Factory',function(){
-//	var baseSever = 'http://app.fang-tian.com';
+	// var baseSever = 'http://app.fang-tian.com';
 	var baseSever = 'http://192.168.0.105:8081';
 //	var baseSever = 'http://ap.jiayuanservice.com';
 	return {
@@ -89,7 +89,7 @@ angular.module('App')
 	}
 })
 .factory('Apphost', [ function () {
-//	var apphost = 'http://app.fang-tian.com/app';
+	// var apphost = 'http://app.fang-tian.com/app';
 	var apphost = 'http://192.168.0.105:8081/app';
 //	var apphost = 'http://ap.jiayuanservice.com/app';
 	 return {

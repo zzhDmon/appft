@@ -9,8 +9,8 @@
 		<div class="title">
 			{{headtitle}}
 		</div>
-		<div class="right" ng-click="publish()">
-			发布
+		<div class="right">
+			
 		</div>
 	</div>
 	
@@ -102,7 +102,20 @@
 			<ion-checkbox ng-repeat="item in devList"
                         ng-model="item.isChecked" 
                         ng-checked="item.isChecked">
-           	 {{ item.value }}
+				<i ng-if="item.value=='床'" class="iconfont icon-chuang"></i>
+				<i ng-if="item.value=='衣柜'" class="iconfont icon-yigui"></i>
+				<i ng-if="item.value=='书桌'" class="iconfont icon-shuzhuo"></i>
+				<i ng-if="item.value=='沙发'" class="iconfont icon-shafa"></i>
+				<i ng-if="item.value=='电视'" class="iconfont icon-dianshi"></i>
+				<i ng-if="item.value=='冰箱'" class="iconfont icon-bingxiang"></i>
+				<i ng-if="item.value=='洗衣机'" class="iconfont icon-xiyiji"></i>
+				<i ng-if="item.value=='空调'" class="iconfont icon-kongtiao"></i>
+				<i ng-if="item.value=='热水器'" class="iconfont icon-reshuiqi"></i>
+				<i ng-if="item.value=='宽带'" class="iconfont icon-iconfontkuandai"></i>
+				<i ng-if="item.value=='可做饭'" class="iconfont icon-webiconyunxuzuofan"></i>
+				<i ng-if="item.value=='独卫'" class="iconfont icon-duwei"></i>
+				<i ng-if="item.value=='阳台'" class="iconfont icon-31"></i>
+				{{ item.value }}
           	</ion-checkbox>
 			<!--<ion-checkbox ng-show="title=='修改'" ng-repeat="item in changedevList"
                         ng-model="item.checked" 
@@ -142,8 +155,48 @@
 					</li>
 				</ul>
 			</div>
+			
+			<div class="progress">
+				<ul>
+					<li class="big">
+						<div class="top"><i class="iconfont icon-dianshi"></i></div>
+						<p>线上发布</p>
+					</li>
+					<li class="small">
+						<div class="top"></div>
+						<p><i class="iconfont icon-gengduo"></i></p>
+					</li>
+					<li class="big">
+						<div class="top"><i class="iconfont icon-shenhe01"></i></div>
+						<p>审核</p>
+					</li>
+					<li class="small">
+						<div class="top"></div>
+						<p><i class="iconfont icon-gengduo"></i></p>
+					</li>
+					<li class="big">
+						<div class="top"><i class="iconfont icon-icon-chushou"></i></div>
+						<p>房源上架</p>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="twobutton">
+				<div ng-click="publish()" class="public">发布</div>
+				<div class="keyMake">一键制作</div>
+			</div>
 			<canvas style="display: none;" id="mycans" width="" height=""></canvas>
 	</ion-content>
 	
+	<script id="rentGoLogin-modal" type="text/ng-template">
+		<ion-modal-view id="rent_go_login_modal">
+			<div class="img">
+				<img ng-src="imgs/提交成功.png"/>
+				<p class="suc">发布前需要实名认证</p>		
+				<div ng-click="goLogin()" class="button">前往认证</div>
+			</div>
+		</ion-modal-view>
+	</script>
+
 </ion-view>
 

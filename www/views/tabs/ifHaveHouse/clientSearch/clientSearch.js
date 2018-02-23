@@ -6,32 +6,27 @@ angular.module('App')
 		$ionicHistory.goBack();
 	}
 	
-	$http.get($Factory.VTwoPFive.hotsearch.url).then(function(resData){
-				$scope.hotSearcharr=resData.data;
-			}).catch(function(err){
-				
-			});
 	
-	$scope.typechoose=$stateParams.housetype||'二手房'
-	$scope.changetype=function(type){
-		$scope.typechoose=type;
-		$scope.popover.hide();
-		if($scope.typechoose=='二手房'){
-			$scope.type=1;
-		}else if($scope.typechoose=='租房'){
-			$scope.type=2;
-		}else{
-			$scope.type=0;
-		}
+	// $scope.typechoose=$stateParams.housetype||'二手房'
+	// $scope.changetype=function(type){
+	// 	$scope.typechoose=type;
+	// 	$scope.popover.hide();
+	// 	if($scope.typechoose=='二手房'){
+	// 		$scope.type=1;
+	// 	}else if($scope.typechoose=='租房'){
+	// 		$scope.type=2;
+	// 	}else{
+	// 		$scope.type=0;
+	// 	}
 		
-	}
-	if($scope.typechoose=='二手房'){
-		$scope.type=1;
-	}else if($scope.typechoose=='租房'){
-		$scope.type=2;
-	}else{
-		$scope.type=0;
-	}
+	// }
+	// if($scope.typechoose=='二手房'){
+	// 	$scope.type=1;
+	// }else if($scope.typechoose=='租房'){
+	// 	$scope.type=2;
+	// }else{
+	// 	$scope.type=0;
+	// }
 	
 	//输入框样式操作
 	$scope.searchName={

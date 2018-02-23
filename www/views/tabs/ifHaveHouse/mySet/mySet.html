@@ -55,13 +55,21 @@
 		<div class="borderline"></div>
 		
 		<div class="offline"></div>
-		<div class="borderline"></div>
-		<div class="card logout"  ng-click="logout()">
+		
+		<div class="logout"  ng-click="logout()">
 			退出登录
 		</div>
-		<div class="borderline"></div>
 
 	</ion-content>
 	
+	<ion-footer-bar>
+		<label class="item-input-wrapper">
+			<textarea ng-model="input.message" value="" placeholder="输入..." required minlength="1" maxlength="1500" rows="1" msd-elastic></textarea>
+		</label>
+		<div class="footer-btn-wrap">
+			<button class="button button-icon icon ion-android-send footer-btn" type="submit" ng-disabled="!input.message || input.message === ''">
+			</button>
+		</div>
+	</ion-footer-bar>
 </ion-view>
 

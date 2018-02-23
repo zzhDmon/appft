@@ -1,0 +1,100 @@
+
+<!--对话模板-->
+<ion-view id="my_safe" view-title="我的保险" hide-nav-bar=true>
+	<div class="header">
+		<div class="back" ng-click="back()">
+			<i class=" iconfont icon-xiangzuo1"></i>
+		</div>
+		<div class="title">
+			我的保险
+		</div>
+		<div class="right">
+		</div>
+	</div>
+	<ion-content on-swipe-right="onSwipeRight()" class="my-safe">
+			<div class="bannerposition">
+				<ion-slide-box does-continue="true"  class="detailcursor" on-slide-changed='changeindex()'  delegate-handle='fydetail-handle'>
+					<ion-slide>
+						<div class="box"><img ng-src="imgs/关于我们_01.png"/></div>
+					</ion-slide>
+					<ion-slide>
+						<div class="box"><img ng-src="imgs/关于我们_02.png"/></div>
+					</ion-slide>
+					<ion-slide>
+						<div class="box"><img ng-src="imgs/关于我们_03.png"/></div>
+					</ion-slide>
+				</ion-slide-box>
+				<!-- <div class="indexnum">{{currentindex}}/{{totalbanner}}</div> -->
+			</div>
+			<div class="safelist">
+				<ul>
+					<li>
+						<div class="left">
+							<img src="imgs/ios二维码.png" alt="">
+						</div>
+						<div class="right">
+							<h5>出租无忧险</h5>
+							<p>专为出租屋房东设计</p>
+							<div class="foot">
+								<span class="price">100</span>元/份起 <span ng-click="buysafe()" class="buy">投保</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="imgs/108x108.png" alt="">
+						</div>
+						<div class="right">
+							<h5>出租无忧险</h5>
+							<p>专为出租屋房东设计</p>
+							<div class="foot">
+								<span class="price">150</span>元/份起 <span ng-click="buysafe()" class="buy">投保</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="imgs/兑换成功_03.png" alt="">
+						</div>
+						<div class="right">
+							<h5>出租无忧险</h5>
+							<p>专为出租屋房东设计</p>
+							<div class="foot">
+								<span class="price">120</span>元/份起 <span ng-click="buysafe()" class="buy">投保</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+	</ion-content>
+
+	<script id="templates/buySafemodal.html" type="text/ng-template">
+		<ion-modal-view>
+		  <ion-header-bar class="bar bar-header">
+			<button class="button button-clear button-positive" ng-click="modal.hide()">
+				<i class="iconfont icon-guanbi1"></i>
+			</button>
+			<h1 class="title">购买保险</h1>
+		  </ion-header-bar>
+		  <ion-content class="padding">
+				<div class="list">
+					<label class="item item-input">
+						<span class="input-label">开通服务</span>
+						<input ng-model="newUser.firstName" type="text">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">付款模式</span>
+						<input ng-model="newUser.lastName" type="text">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">应付金额</span>
+						<input ng-model="newUser.email" type="text">
+					</label>
+					<button class="button button-full button-positive" ng-click="createContact(newUser)">立即支付</button>
+					</div>
+		  </ion-content>
+		</ion-modal-view>
+	  </script>
+	
+</ion-view>
+

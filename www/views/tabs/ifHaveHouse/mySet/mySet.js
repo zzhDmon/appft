@@ -8,7 +8,6 @@ angular.module('App').controller('mySetCtl',function($timeout,$ionicHistory,$cor
 	}
 	$scope.name = $stateParams.name
 	
-
 	
    //confirm 对话框
    	$scope.logout = function() {

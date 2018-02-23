@@ -3,9 +3,9 @@
     
         <div ng-click="toggleOpen()" class="circle">
             <div class="ring">
-                <span class="menuItem iconfont icon-home" ui-sref="tabs.ifHaveHouse({'query':homeTypeParams})"></span>
-                <span class="menuItem iconfont icon-kehu"></span>
-                <span class="menuItem iconfont icon-dianhua" ui-sref="tabs.chatList"></span>
+                <span class="menuItem iconfont icon-home" ui-sref="tabs.ifHaveHouse"></span>
+                <span class="menuItem iconfont icon-jingjiren" ui-sref="tabs.beAgent"></span>
+                <span class="menuItem iconfont icon-xiaoxi" ui-sref="tabs.chatList"></span>
                 <span class="menuItem iconfont icon-wode" ui-sref="tabs.perCenter"></span>
             </div>
             <span class="center iconfont icon-jiahao1"></span>
@@ -19,10 +19,10 @@
             </div>
             <div class="title">
                 <div class="switch">
-                    <div class="button button-small button-positive" head-red-point='true'>
-                            消息
+                    <div ng-click="headChoose(0)" ng-class="{true:'clicked',false:''}[headType==0]" class="button button-small button-positive" head-red-point='true'>
+                            消息{{headType}}
                     </div>
-                    <div class="button button-small button-positive">
+                    <div ng-click="headChoose(1)" ng-class="{true:'clicked',false:''}[headType==1]" class="button button-small button-positive">
                             未读
                     </div>
                 </div>
@@ -34,7 +34,7 @@
         
          <!--页面内容-->
          <ion-content class="chat-list" has-bouncing="true">
-                <button class="button button-icon" ng-click="popovershow()" head-red-point='true'><i class="icon ion-ios-more"></i></button>
+        
                 <ion-list>
                     <!--把下面数据封装成一个数组(从后台服务器来的)，格式[{name:'林丹',headerSrc:'path',content:''}]-->
                     <!--<ion-item ng-repeat="obj in array" class="item-avatar" ui-sref="tabs.dialog">{{obj.name}}</ion-item>-->
@@ -50,7 +50,7 @@
                         <p>容易劈腿</p>
                         <span class="badge badge-assertive">9</span>
                     </ion-item>
-                    <ion-item class="item-avatar" ui-sref="tabs.dialogBox({id:'林丹'})">
+                    <ion-item class="item-avatar" ng-click="goto('林丹')">
                         <img src="http://ionicframework.com/img/docs/spengler.jpg"/>
                         <h2>林丹</h2>
                         <p>嘿，林丹好啊！马蓉语言真准啊</p>

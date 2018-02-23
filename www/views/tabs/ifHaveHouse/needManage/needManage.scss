@@ -59,10 +59,12 @@
                             float: left;
                             position: relative;
                             img{
+                                display: block;
                                 border-radius: 3px;
-                                width: 100%;
+                                margin: auto;
+                                width: 69px;
                                 height: 85px;
-                            } 
+                            }
                             .zhutui{
                                 width: 8vw;
                                 height: auto;
@@ -172,8 +174,10 @@
                             float: left;
                             position: relative;
                             img{
+                                display: block;
                                 border-radius: 3px;
-                                width: 100%;
+                                margin: auto;
+                                width: 69px;
                                 height: 85px;
                             } 
                             .zhutui{

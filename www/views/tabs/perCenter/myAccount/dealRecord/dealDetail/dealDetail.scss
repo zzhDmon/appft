@@ -1,0 +1,45 @@
+#deal_detail{
+    .deal-detail{
+        margin-top: 44px;
+        .head{
+            padding: 0 12px;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            .left{
+                width: 20%;
+                height:100%;
+                float: left;
+                color: rgb(102,102,102);
+            }
+            .right{
+                width: 80%;
+                height: 100%;
+                float: left;
+                text-align: right;
+                color: rgb(245,150,47);
+            }
+        }
+        .borderline{
+            margin-bottom: 15px;
+        }
+        .detail{
+            padding: 0 12px;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            .left{
+                width: 20%;
+                height:100%;
+                float: left;
+                color: rgb(102,102,102);
+            }
+            .right{
+                width: 80%;
+                height: 100%;
+                float: left;
+                text-align: right;
+            }
+        }
+    }
+}

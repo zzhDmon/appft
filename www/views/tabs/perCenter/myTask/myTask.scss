@@ -1,0 +1,157 @@
+#my_task{
+    .header{
+        .back{
+           width: 25%; 
+        }
+        .title{
+            width: 50%;
+        }
+        .right{
+            width: 25%;
+            color: #969696;
+            padding: 0 12px 0 0;
+        }
+    }
+    .my-task{
+        padding: 0;
+        margin-top: 44px;
+        .headimg{
+            width: 100%;
+            height: 45.3vw;
+            img{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .taskrecord{
+            position: relative;
+            padding: 0 12px;
+            .sideline{
+                width: 0;
+                height: 100%;
+                border-right: 1px solid rgb(102,205,204);
+                position: absolute;
+                z-index: -1;
+                left: 22px;
+            }
+            ul{
+                margin: 15px 0 0;
+                width: 100%;
+                li{
+                    width: 100%;
+                    height: 20px;
+                    margin: 8px 0;
+                    .left{
+                        float: left;
+                        width: 20px;
+                        height: 20px;
+                        text-align: center;
+                        line-height: 20px;
+                        border-right: 50%;
+                        background-color: white;
+                        border: 1px solid rgb(102,205,204);
+                        color: rgb(102,205,204);
+                        border-radius: 50%;
+                    }
+                    .mid{
+                        float: left;
+                        padding: 0 10px;
+                        width: calc(90% - 20px);
+                        height: 20px;
+                        line-height: 20px;
+                    }
+                    .right{
+                        float: left;
+                        width: 10%;
+                        height: 20px;
+                        line-height: 20px;
+                        text-align: right;
+                        color: rgb(245,150,47);
+                    }
+                }
+                li:first-child{
+                    margin: 0; 
+                    .left{
+                        background-color: rgb(102,205,204);
+                    }
+                }
+            }
+        }
+        .tasklist{
+            position: relative;
+            padding: 0 12px;
+            .sideline{
+                width: 0;
+                height: 100%;
+                border-right: 1px solid rgb(102,205,204);
+                position: absolute;
+                z-index: -1;
+                left: 22px;
+            }
+            ul{
+                margin: 15px 0 0;
+                width: 100%;
+                li{
+                    width: 100%;
+                    height: 40px;
+                    margin: 8px 0;
+                    .left{
+                        float: left;
+                        width: 20px;
+                        height: 20px;
+                        text-align: center;
+                        line-height: 20px;
+                        border-right: 50%;
+                        background-color: white;
+                        border: 1px solid rgb(102,205,204);
+                        color: rgb(102,205,204);
+                        border-radius: 50%;
+                    }
+                    .mid{
+                        float: left;
+                        padding: 0 10px;
+                        width: calc(100% - 70px);
+                        height: 40px;
+                        h5{
+                            margin: 0;
+                            padding: 0;
+                            width: 100%;
+                            height: 20px;
+                            line-height: 20px;
+                        }
+                        p{
+                            margin: 0;
+                            padding: 0;
+                            width: 100%;
+                            height: 20px;
+                            line-height: 20px;
+                            color: rgb(102,102,102)
+                        }
+                    }
+                    .right{
+                        float: left;
+                        width: 50px;
+                        height: 40px;
+                        div{
+                            width: 100%;
+                            height: 25px;
+                            line-height: 25px;
+                            text-align: center;
+                            margin: 8px 0 7px 0;
+                            border-radius: 12px;
+                            border: 1px solid rgb(245,150,47);
+                            color: rgb(245,150,47);
+                        }
+                    }
+                }
+                li:first-child{
+                    margin: 0; 
+                    .left{
+                        background-color: rgb(102,205,204);
+                    }
+                }
+            }
+        }
+    }
+}

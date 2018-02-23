@@ -11,62 +11,47 @@
 		<div class="right">
 		</div>
 	</div>
+
+	<div ng-click="renew()" class="renew">
+			续费会员
+	</div>
+
 	<ion-content on-swipe-right="onSwipeRight()" class="high-serve">
 		<div class="head">
-			<ul>
-				<li>
-					<div>一星会员</div>
-				</li>
-				<li>
-					<div>二星会员</div>
-				</li>
-				<li>
-					<img src="imgs/108x108.png" alt="">
-				</li>
-				<li>
-					<div>三星会员</div>
-				</li>
-				<li>
-					<div>四星会员</div>
-				</li>
-			</ul>
-			<div class="borderline"></div>
+			<h5>提升成长值，绝招在此！</h5>
 		</div>
+		<h5 class="title">积分任务</h5>
 		<div class="borderline"></div>
+
+		<div class="pointtask">
+				<ion-list>
+						<!--把下面数据封装成一个数组(从后台服务器来的)，格式[{name:'林丹',headerSrc:'path',content:''}]-->
+						<!--<ion-item ng-repeat="obj in array" class="item-avatar" ui-sref="tabs.dialog">{{obj.name}}</ion-item>-->
+						<ion-item class="item-avatar" ng-click="goto('林丹')">
+							<img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+							<h2>每日登陆</h2>
+							<p>2018年3月1日到期</p>
+							<span class="tasking">进行中…</span>
+						</ion-item>
+						<ion-item class="item-avatar" ng-click="goto('林丹')">
+							<img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+							<h2>发布房源</h2>
+							<p>查看任务详情</p>
+							<span class="gettask">领取任务</span>
+						</ion-item>
+						<ion-item class="item-avatar" ng-click="goto('林丹')">
+							<img src="http://ionicframework.com/img/docs/spengler.jpg"/>
+							<h2>推荐房源</h2>
+							<p>查看任务详情</p>
+							<span class="gettask">领取任务</span>
+						</ion-item>
+				</ion-list>
+		</div>
 		
-		<div class="vipserve">
-			<h5>我的三星特权</h5>
-			<ul>
-				<li>
-					<img src="imgs/broker_logo.png" alt="">
-					<p>详情制作页8.8折</p>
-				</li>
-				<li>
-					<img src="imgs/broker_logo.png" alt="">
-					<p>详情制作页8.8折</p>
-				</li>
-				<li>
-					<img src="imgs/broker_logo.png" alt="">
-					<p>详情制作页8.8折</p>
-				</li>
-				<li>
-					<img src="imgs/broker_logo.png" alt="">
-					<p>详情制作页8.8折</p>
-				</li>
-				<li>
-					<img src="imgs/broker_logo.png" alt="">
-					<p>详情制作页8.8折</p>
-				</li>
-			</ul>
-		</div>
-		<div class="foot">
-			<p>再加500点成长值拥有四星特权</p>
-			<h5 ng-click="renew()">查看四星特权</h5>
-		</div>
 	</ion-content>
 	
 
-	<!-- 回复模态框 -->
+	<!-- 购买模态框 -->
 	<script id="templates/highServemodal.html" type="text/ng-template">
 		<ion-modal-view>
 		  <ion-header-bar class="bar bar-header">

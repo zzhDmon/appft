@@ -8363,7 +8363,7 @@ ionic.views.Slider = ionic.views.View.inherit({
 
       // set continuous to false if only one slide
       if (slides.length < 2) options.continuous = false;
-
+ 
       //special case if two slides
       if (browser.transitions && options.continuous && slides.length < 3) {
         element.appendChild(slides[0].cloneNode(true));

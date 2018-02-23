@@ -1,13 +1,15 @@
 
 angular.module('App').controller('dialogBoxCtl', 
-    function(goBack,$scope, $rootScope, $state, $stateParams, MockService,
-        $ionicActionSheet,
+    function(goBack,goTo,$scope, $rootScope, $state, $stateParams, MockService,$ionicActionSheet,
         $ionicPopup, $ionicScrollDelegate, $timeout, $interval) {
         
         $scope.headTitle=$stateParams.id;
         $scope.back=function(){
             goBack.goback();
         };
+        $scope.goAgentHomePage=function(){
+            goTo.goto('agentHomePage',{id:$stateParams.id})
+        }
 
         // mock acquiring data via $stateParams
         $scope.toUser = {
@@ -80,7 +82,7 @@ angular.module('App').controller('dialogBoxCtl',
         }
 
         $scope.$watch('input.message', function(newValue, oldValue) {
-            console.log('input.message $watch, newValue ' + newValue);
+            console.log('input newValue is-- ' + newValue);
             if (!newValue) newValue = '';
             localStorage['userMessage-' + $scope.toUser._id] = newValue;
         });
@@ -130,9 +132,8 @@ angular.module('App').controller('dialogBoxCtl',
             });
         }
 
+        // 长按
         $scope.onMessageHold = function(e, itemIndex, message) {
-            console.log('onMessageHold');
-            console.log('message: ' + JSON.stringify(message, null, 2));
             $ionicActionSheet.show({
                 buttons: [{
                     text: 'Copy Text'
@@ -160,7 +161,7 @@ angular.module('App').controller('dialogBoxCtl',
             });
         };
 
-        // this prob seems weird here but I have reasons for this in my app, secret!
+        //查看个人资料
         $scope.viewProfile = function(msg) {
             if (msg.userId === $scope.user._id) {
                 // go to your profile
@@ -228,7 +229,7 @@ angular.module('App').controller('dialogBoxCtl',
     }
 ])
 
-// fitlers
+// fitlers过滤换行
 .filter('nl2br', ['$filter',
     function($filter) {
         return function(data) {

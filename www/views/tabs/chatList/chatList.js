@@ -1,9 +1,15 @@
 angular.module('App')
-.controller('chatListCtl',function(goTo,$scope,$rootScope,$ionicPopover,$ionicSideMenuDelegate,$timeout){
-	
+.controller('chatListCtl',function( $ionicHistory,goTo,$scope,$rootScope,$ionicPopover,$ionicSideMenuDelegate,$timeout){
+    $ionicHistory.clearHistory();
+    
 	$scope.goto=function(id){
         goTo.goto('dialogBox',{id:id})
     }
+    $scope.headType=0;
+    $scope.headChoose=function(type){
+        $scope.headType=type;
+    }
+
 // 旋轉導航
     var items = $('#chat_list .menuItem');
     for(var i = 0, l = items.length; i < l; i++) {

@@ -1,5 +1,5 @@
 
-angular.module('App').controller('MyinfoController',function($timeout,$ionicHistory,$rootScope,$scope,$http,$Factory,$stateParams){
+angular.module('App').controller('myInfoCtl',function($timeout,$ionicHistory,$rootScope,$scope,$http,$Factory,$stateParams){
 	$timeout(function(){
 		$('span.back-text').css('display','none');
 	})	

@@ -1,7 +1,7 @@
 angular.module('App').controller('beAgentCtl',function($timeout,$ionicScrollDelegate,$rootScope,$ionicHistory,$Factory,$scope,$http,$ionicLoading,$ionicSideMenuDelegate,$ionicSlideBoxDelegate){
 	//清除浏览历史，即使手机上有回退按钮或者导航栏上显示回退按钮，都无法回退
 	$ionicHistory.clearHistory();
-	// 旋轉導航
+// 旋轉導航
 	var items = $('#be_agent .menuItem');
 	for(var i = 0, l = items.length; i < l; i++) {
 		
@@ -21,6 +21,20 @@ angular.module('App').controller('beAgentCtl',function($timeout,$ionicScrollDele
 		$timeout(function(){
 			$('#be_agent .circle').addClass('open');
 		},100)
+	}
+
+	$scope.headTitle='视频';
+	$scope.changeindex=function(){
+		$scope.currentindex=$ionicSlideBoxDelegate.$getByHandle('beAgent-handle').currentIndex();
+		if($scope.currentindex==0){
+			$scope.headTitle='视频';
+		}else if($scope.currentindex==1){
+			$scope.headTitle='直播';
+		}else if($scope.currentindex==2){
+			$scope.headTitle='经纪人培训';
+		}else{
+
+		}
 	}
 	
 

@@ -1,58 +1,120 @@
 ﻿
 <!--对话模板-->
-<ion-view id="if_have_house" hide-nav-bar=true view-title="房源发布"  class='dark'>
+<ion-view id="if_have_house" hide-nav-bar=true view-title="房源发布">
 	
 	<div ng-click="toggleOpen()" class="circle">
 		<div class="ring">
 			<span class="menuItem iconfont icon-home" ></span>
-			<span class="menuItem iconfont icon-kehu" ui-sref="tabs.beAgent"></span>
-			<span class="menuItem iconfont icon-dianhua" ui-sref="tabs.chatList"></span>
+			<span class="menuItem iconfont icon-jingjiren" ui-sref="tabs.beAgent"></span>
+			<span class="menuItem iconfont icon-xiaoxi" ui-sref="tabs.chatList"></span>
 			<span class="menuItem iconfont icon-wode" ui-sref="tabs.perCenter"></span>
 		</div>
-		<span class="center iconfont icon-jiahao1"></span>
+		<span class="center iconfont icon-guanbi1"></span>
 	</div>
-	<div ng-click="openNav()" class="dao-hang"><i class="iconfont icon-daohang"></i></div>
+	<!-- <div ng-click="openNav()" class="dao-hang"><i class="iconfont icon-daohang"></i></div> -->
 
 	
 	<div ng-click="closechoose()" class="bar searchhouse-header item-input-inset">
 	    <span class="location" ng-click="getarea()">厦门<i class="iconfont icon-xialacaidanxiaosanjiao1"></i></span>
 		
-		<span ng-if="haveHouse" class="item-input-wrapper" ui-sref="tabs.clientSearch">
+		<span class="item-min" >
+	     	
+		</span>
+		<!-- <span class="item-input-wrapper" >
+	     	
+		</span> -->
+		<!-- <span ng-if="haveHouse" class="item-input-wrapper" ui-sref="tabs.clientSearch">
 	     	<i class="iconfont icon-sousuo2"></i>
             <input type="search" placeholder="请输入客户名或需求" ng-model="searchName.key" ng-change="search(searchName.key)">
-            <!--<i class="icon ion-close-circled placeholder-icon" style="vertical-align: middle;"
-                   ng-click="clear()" ng-if="searchName.key.length"></i>-->
+            
 		</span>
 	    <span ng-if="!haveHouse" class="item-input-wrapper" ui-sref="tabs.houseSearch">
 	     	<i class="iconfont icon-sousuo2"></i>
             <input type="search" placeholder="请输入小区名称或地址" ng-model="searchName.key" ng-change="search(searchName.key)">           
-		</span>
+		</span> -->
 		
 		<span class="set" ui-sref="tabs.mySet"><i class="iconfont icon-shezhi"></i></span>
 	</div>
 
-	<div class="tabNav" style="position:absolute;bottom:0;width:100%;height:45px;z-index:1;">
-		<ul ng-if="haveHouse" class="havehouse">
-			<li class="lef" ui-sref="tabs.fbManage({type:0})">出售</li>
-			<li class="mid">mid</li>
-			<li class="rig" ui-sref="tabs.fbManage({type:1})">出租</li>
+	<div class="slide-page-num">
+		<ul>
+			<li ng-class="{true:'active',false:''}[slidePageNum==0]"></li>
+			<li ng-class="{true:'active',false:''}[slidePageNum==1]"></li>
 		</ul>
-		<ul ng-if="!haveHouse" class="nohouse">
-			<li class="lef" ui-sref="tabs.needManage({type:0})">买房</li>
-			<li class="mid">mid</li>
-			<li class="rig" ui-sref="tabs.needManage({type:1})">租房</li>
+	</div>
+	<div class="navTop">
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+	<div class="tabNav" style="position:absolute;bottom:0;width:100%;z-index:1;">
+		<ul ng-if="slidePageNum==0" class="havehouse">
+			<li class="lef" ui-sref="tabs.fbManage({type:0})">
+				<!-- <div class="top"><i class="iconfont icon-icon-chushou"></i></div> -->
+				<img src="imgs/左02.png" alt="">
+				<p>出售</p>
+			</li>
+			<li class="mid" ng-click="openNav()">
+				<!-- <div class="top"><i class="iconfont icon-tianjia"></i></div> -->
+				<img src="imgs/中02.png" alt="">
+			</li>
+			<li class="rig" ui-sref="tabs.fbManage({type:1})">
+				<!-- <div class="top"><i class="iconfont icon-icon-chuzu"></i></div> -->
+				<img src="imgs/右02.png" alt="">
+				<p>出租</p>	
+			</li>
+		</ul>
+		<ul ng-if="slidePageNum==1" class="nohouse">
+			<li class="lef" ui-sref="tabs.needManage({type:0})">
+				<img src="imgs/左02.png" alt="">
+				<p>买房</p>
+			</li>
+			<li class="mid" ng-click="openNav()">
+				<img src="imgs/中02.png" alt="">
+			</li>
+			<li class="rig" ui-sref="tabs.needManage({type:1})">
+				<img src="imgs/右02.png" alt="">
+				<p>租房</p>
+			</li>
+		</ul>
+	</div>
+
+	<div class="tiantian">
+		<div ng-if="slidePageNum==0" ng-click="closeTiantian()" ui-sref="tabs.clientSearch" class="search">
+			<i class="iconfont icon-fangdajing"></i>
+			<!-- <span class="bot"></span>  
+  			<span class="top"></span>  -->
+		</div>
+		<div ng-if="slidePageNum==1" ng-click="closeTiantian()" ui-sref="tabs.houseSearch" class="search">
+			<i class="iconfont icon-fangdajing"></i>
+			<!--<span class="bot"></span>  
+  			<span class="top"></span>-->
+		</div>
+		<div ng-click="closeTiantian()" class="upimg"></div>
+		<img ng-click="showTiantian()" src="imgs/助手02.png" alt="">
+		<ul ng-click="closeTiantian()">
+			<li ng-click="goKefu()"><p>客服</p></li>
+			<li ui-sref="tabs.houseClass"><p>房产课堂</p></li>
+			<li ui-sref="tabs.agentList"><p>代理列表</p></li>
+			<li><p>代办</p></li>
+
+			<div>
+				<p>
+					<i class="iconfont icon-xiangshang2"></i><br>
+					收起
+				</p>
+			</div>
+			<!-- <li><p>商城</p></li> -->
 		</ul>
 	</div>
 	
-	<ul class="topfour" >
-	<!-- <ul class="topfour" ui-sref="tabs.chatList"> -->
+	<!-- <ul class="topfour" >
 		<li ng-click="openchoose(0)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.district=='区域']"><div>{{querydata.district}} <span ng-if="querydata.area!==''">|{{querydata.area}}</span></div><i class="iconfont icon--pulldown"></i></li>
 		<li ng-click="openchoose(1)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.price=='售价']"><div>{{querydata.price}}</div><i class="iconfont icon--pulldown"></i></li>
 		<li ng-click="openchoose(2)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.type=='房型']"><div>{{querydata.type}}</div><i class="iconfont icon--pulldown"></i></li>
 		<li ng-click="openchoose(3)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.sort=='排序']"><div>{{querydata.sort}}</div><i class="iconfont icon--pulldown"></i></li>
 	</ul>
 	
-	<!--模态层-->
+	
 	<div ng-click="closechoose()" class="mask"></div>
 	<div class="pullchooselist first">
 		<div class="bottom"></div>
@@ -97,68 +159,180 @@
 				</ion-list>
 			</ion-content>
 		</div>
-	</div>
-	
+	</div> -->
 
-	<div ng-if="haveHouse" class="haveHouse">
-		<ion-content delegate-handle="mainscroll" on-swipe-right="onSwipeRight()" on-swipe-down="onSwipeDown()" on-swipe-up="onSwipeUp()" class="if-have-house">
-				<div ng-if="sellhousearr.length<1" class="card noresult">
-					<div class="top">
-						<span class="iconfont icon-fangdajingtubiao"></span>
+	<ion-content delegate-handle="mainscroll" on-swipe-down="onSwipeDown()" on-swipe-up="onSwipeUp()" class="if-have-house" >
+		<div class="ershou">
+				<div class="headimg">
+						<img src="imgs/海报图.png" alt="">
 					</div>
-					<div class="bottom">
-						<p>没有符合条件的结果，<span ng-click="reload()">清空条件</span></p>
+					<div class="underhead">
+						<div class="left"></div>
+						<div class="right"></div>
 					</div>
-				</div>
-				<!--未渲染完成-->
-				<p ng-if="renderdone&&sellhousearr.length>0" class="loading">
-					<ion-spinner icon="lines" class=""></ion-spinner>
-				</p>
-				
-				<div ng-if="sellhousearr.length>0" class="card ershou">
-					
-					<ion-list>
-							<ion-item on-finish-render-filters item="item" ng-click="closeoption($event)" ng-repeat="sellhouse in sellhousearr track by $index" ui-sref="tabs.alikehousedetail({id:sellhouse.Id,type:1})">
-								<div class="img clientImg">
-									<img ng-src="http://ionicframework.com/img/docs/spengler.jpg"/>
+		</div>
+		<ion-slide-box show-pager="false" does-continue="true" repeat-done="repeatDone()" on-slide-changed='slideChange($index)'  delegate-handle='ifHaveHouse-handle'>
+			<ion-slide>
+				<div class="ershou">
+					<ion-list ng-if="sellhousearr.length>0">
+						<ion-item on-finish-render-filters item="item" ng-click="closeoption($event)" ng-repeat="sellhouse in sellhousearr track by $index" ui-sref="tabs.clientDetail">
+							<div class="img clientImg">
+								<img ng-src="imgs/中02.png"/>
+								<div class="tag">
+									<div class="left">全新</div>
+									<div class="right"></div>
 								</div>
-								
-								<div class="description">
-									<h6>{{sellhouse.HouseType}}/{{sellhouse.Space}}平米</h6>
-									<p>{{sellhouse.CommunityName}}</p>
-									<div>
-										<div class="space">
-											<!-- {{sellhouse.HouseType}}&nbsp;{{sellhouse.Space}}平米  -->
-										</div>
-										<div class="price">
-											<span>200~300</span>万
-										</div>
+								<!-- <img ng-src="http://ionicframework.com/img/docs/spengler.jpg"/> -->
+							</div>
+							
+							<div class="description">
+								<h6>{{sellhouse.HouseType}}/{{sellhouse.Space}}平米</h6>
+								<p>{{sellhouse.CommunityName}}</p>
+								<div>
+									<div class="space" style="color: rgb(230,75,0);font-size:16px;font-weight:600;">
+										<span>200~300</span>万
 									</div>
-									<p>
-										<span ng-repeat="Tag in sellhouse.Tags">{{Tag}}</span>
-									</p>
+									<div class="price">
+									</div>
 								</div>
-								
-								<!-- <ion-option-button ng-click="closeoption($event)" ui-sref="tabs.alikehouse({minprize:sellhouse.Price,maxprize:sellhouse.Id,roomType:sellhouse.HouseType})">
-									<div>
-										相似<br />
-										房源
-									</div>
-								</ion-option-button> -->
-							</ion-item>
+								<p>
+									<!-- <span ng-repeat="Tag in sellhouse.Tags"><i class="iconfont icon-icon-xinfang"></i>{{Tag}}</span> -->
+									<span><i class="iconfont icon-icon-xinfang"></i>要学区房</span>
+									<span><i class="iconfont icon-yangguang"></i>阳光好</span>
+									<span><i class="iconfont icon-zhuangxiu"></i>精装修</span>
+								</p>
+							</div>
+						</ion-item>
 					</ion-list>
 					
 					<div style="clear: both;"></div>
 					<p ng-show="baseLine" class="baseLine"><span>人家是有底线的啦</span></p>
 				</div>
-				<!--上拉加载-->
-				<ion-infinite-scroll on-infinite="zufanglistloadMore(true)" distance="20%" ng-if="noMore" > </ion-infinite-scroll>
-			
-				
-			</ion-content>
-	</div>
-
-	<div ng-if="!haveHouse" class="needHouse">
+			</ion-slide>
+			<ion-slide>
+				<div class="ershou">
+					<ion-list ng-if="sellhousearr.length>0">
+						<ion-item on-finish-render-filters item="item" ng-repeat="sellhouse in sellhousearr track by $index" ng-click="goSellDetail(sellhouse.Id)">
+							<div class="img">
+								<!-- <img ng-src="{{sellhouse.Thumb}}"/> -->
+								<img ng-src="imgs/助手02.png"/>
+							</div>
+							
+							<div class="description">
+								<h6>{{sellhouse.Title}}22</h6>
+								<p>{{sellhouse.CommunityName}}</p>
+								<div>
+									<div class="space">
+										{{sellhouse.HouseType}}&nbsp;{{sellhouse.Space}}平米 
+									</div>
+									<div class="price">
+										<span>{{sellhouse.Price}}</span>万
+									</div>
+								</div>
+								<p>
+									<!-- <span ng-repeat="Tag in sellhouse.Tags">{{Tag}}</span> -->
+									<span><i class="iconfont icon-xuexiao"></i>学区房</span>
+									<span><i class="iconfont icon-zhongxinhuanjing"></i>环境优美</span>
+									<span><i class="iconfont icon-jinpaishigongdui"></i>金牌物业</span>
+								</p>
+							</div>
+							
+							<!-- <ion-option-button ng-click="closeoption($event)" ui-sref="tabs.alikehouse({minprize:sellhouse.Price,maxprize:sellhouse.Id,roomType:sellhouse.HouseType})">
+								<div>
+									相似<br />
+									房源
+								</div>
+							</ion-option-button> -->
+						</ion-item>
+					</ion-list>
+					
+					<div style="clear: both;"></div>
+					<p ng-show="baseLine" class="baseLine"><span>人家是有底线的啦</span></p>
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="ershou">
+					<ion-list ng-if="sellhousearr.length>0">
+						<ion-item on-finish-render-filters item="item" ng-click="closeoption($event)" ng-repeat="sellhouse in sellhousearr track by $index" ui-sref="tabs.clientDetail">
+							<div class="img clientImg">
+								<img ng-src="imgs/中02.png"/>
+								<div class="tag">
+									<div class="left">全新</div>
+									<div class="right"></div>
+								</div>
+								<!-- <img ng-src="http://ionicframework.com/img/docs/spengler.jpg"/> -->
+							</div>
+							
+							<div class="description">
+								<h6>{{sellhouse.HouseType}}/{{sellhouse.Space}}平米</h6>
+								<p>{{sellhouse.CommunityName}}</p>
+								<div>
+									<div class="space" style="color: rgb(230,75,0);font-size:16px;font-weight:600;">
+										<span>200~300</span>万
+									</div>
+									<div class="price">
+									</div>
+								</div>
+								<p>
+									<!-- <span ng-repeat="Tag in sellhouse.Tags"><i class="iconfont icon-icon-xinfang"></i>{{Tag}}</span> -->
+									<span><i class="iconfont icon-icon-xinfang"></i>要学区房</span>
+									<span><i class="iconfont icon-yangguang"></i>阳光好</span>
+									<span><i class="iconfont icon-zhuangxiu"></i>精装修</span>
+								</p>
+							</div>
+						</ion-item>
+					</ion-list>
+					
+					<div style="clear: both;"></div>
+					<p ng-show="baseLine" class="baseLine"><span>人家是有底线的啦</span></p>
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="ershou">
+					<ion-list ng-if="sellhousearr.length>0">
+						<ion-item on-finish-render-filters item="item" ng-repeat="sellhouse in sellhousearr track by $index" ng-click="goSellDetail(sellhouse.Id)">
+							<div class="img">
+								<!-- <img ng-src="{{sellhouse.Thumb}}"/> -->
+								<img ng-src="imgs/助手02.png"/>
+							</div>
+							
+							<div class="description">
+								<h6>{{sellhouse.Title}}22</h6>
+								<p>{{sellhouse.CommunityName}}</p>
+								<div>
+									<div class="space">
+										{{sellhouse.HouseType}}&nbsp;{{sellhouse.Space}}平米 
+									</div>
+									<div class="price">
+										<span>{{sellhouse.Price}}</span>万
+									</div>
+								</div>
+								<p>
+									<!-- <span ng-repeat="Tag in sellhouse.Tags">{{Tag}}</span> -->
+									<span><i class="iconfont icon-xuexiao"></i>学区房</span>
+									<span><i class="iconfont icon-zhongxinhuanjing"></i>环境优美</span>
+									<span><i class="iconfont icon-jinpaishigongdui"></i>金牌物业</span>
+								</p>
+							</div>
+							
+							<!-- <ion-option-button ng-click="closeoption($event)" ui-sref="tabs.alikehouse({minprize:sellhouse.Price,maxprize:sellhouse.Id,roomType:sellhouse.HouseType})">
+								<div>
+									相似<br />
+									房源
+								</div>
+							</ion-option-button> -->
+						</ion-item>
+					</ion-list>
+					
+					<div style="clear: both;"></div>
+					<p ng-show="baseLine" class="baseLine"><span>人家是有底线的啦</span></p>
+				</div>
+			</ion-slide>
+		</ion-slide-box>
+	</ion-content>
+	
+<!--  ng-if="haveHouse" -->
+	<div ng-if="false" class="haveHouse">
 		<ion-content delegate-handle="mainscroll" on-swipe-right="onSwipeRight()" on-swipe-down="onSwipeDown()" on-swipe-up="onSwipeUp()" class="if-have-house">
 			<div ng-if="sellhousearr.length<1" class="card noresult">
 				<div class="top">
@@ -173,19 +347,93 @@
 				<ion-spinner icon="lines" class=""></ion-spinner>
 			</p>
 			
-			<div class="buyOrRent">
+			<div class="card ershou">
+				<div class="headimg">
+					<img src="imgs/海报图.png" alt="">
+				</div>
+				<div class="underhead">
+					<div class="left"></div>
+					<div class="right"></div>
+				</div>
+
+				<ion-list ng-if="sellhousearr.length>0">
+					<ion-item on-finish-render-filters item="item" ng-click="closeoption($event)" ng-repeat="sellhouse in sellhousearr track by $index" ui-sref="tabs.clientDetail">
+						<div class="img clientImg">
+							<img ng-src="imgs/中02.png"/>
+							<div class="tag">
+								<div class="left">全新</div>
+								<div class="right"></div>
+							</div>
+							<!-- <img ng-src="http://ionicframework.com/img/docs/spengler.jpg"/> -->
+						</div>
+						
+						<div class="description">
+							<h6>{{sellhouse.HouseType}}/{{sellhouse.Space}}平米</h6>
+							<p>{{sellhouse.CommunityName}}</p>
+							<div>
+								<div class="space" style="color: rgb(230,75,0);font-size:16px;font-weight:600;">
+									<span>200~300</span>万
+								</div>
+								<div class="price">
+								</div>
+							</div>
+							<p>
+								<!-- <span ng-repeat="Tag in sellhouse.Tags"><i class="iconfont icon-icon-xinfang"></i>{{Tag}}</span> -->
+								<span><i class="iconfont icon-icon-xinfang"></i>学区房</span>
+								<span><i class="iconfont icon-yangguang"></i>阳光好</span>
+								<span><i class="iconfont icon-zhuangxiu"></i>精装修</span>
+							</p>
+						</div>
+					</ion-item>
+				</ion-list>
+				
+				<div style="clear: both;"></div>
+				<p ng-show="baseLine" class="baseLine"><span>人家是有底线的啦</span></p>
+			</div>
+			<!--上拉加载-->
+			<ion-infinite-scroll on-infinite="zufanglistloadMore(true)" distance="20%" ng-if="noMore" > </ion-infinite-scroll>
+		
+			
+		</ion-content>
+	</div>
+<!--  ng-if="!haveHouse" -->
+	<div ng-if="false" class="needHouse">
+		<ion-content delegate-handle="mainscroll" on-swipe-right="onSwipeRight()" on-swipe-down="onSwipeDown()" on-swipe-up="onSwipeUp()" class="if-have-house">
+			<div ng-if="sellhousearr.length<1" class="card noresult">
+				<div class="top">
+					<span class="iconfont icon-fangdajingtubiao"></span>
+				</div>
+				<div class="bottom">
+					<p>没有符合条件的结果，<span ng-click="reload()">清空条件</span></p>
+				</div>
+			</div>
+			<!--未渲染完成-->
+			<p ng-if="renderdone&&sellhousearr.length>0" class="loading">
+				<ion-spinner icon="lines" class=""></ion-spinner>
+			</p>
+			
+			<!-- <div class="buyOrRent">
 				<div ng-click="changeNeedType(0)" ng-class="{true:'active',false:''}[needType==0]" class="buy son">
 					买房
 				</div>
 				<div ng-click="changeNeedType(1)" ng-class="{true:'active',false:''}[needType==1]" class="rent son">
 					租房
 				</div>
-			</div>
-			<div ng-if="sellhousearr.length>0" class="card ershou">
-				<ion-list>
+			</div> -->
+			<div class="card ershou">
+				<div class="headimg">
+					<img src="imgs/海报图.png" alt="">
+				</div>
+				<div class="underhead">
+					<div class="left"></div>
+					<div class="right"></div>
+				</div>
+
+				<ion-list ng-if="sellhousearr.length>0">
 						<ion-item on-finish-render-filters item="item" ng-repeat="sellhouse in sellhousearr track by $index" ng-click="goSellDetail(sellhouse.Id)">
 							<div class="img">
-								<img ng-src="{{sellhouse.Thumb}}"/>
+								<!-- <img ng-src="{{sellhouse.Thumb}}"/> -->
+								<img ng-src="imgs/助手02.png"/>
 							</div>
 							
 							<div class="description">

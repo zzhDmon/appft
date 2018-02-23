@@ -60,8 +60,72 @@
 		</div>
 		
 		<div class="houseList">
-				<ul>
-					<li on-drag-left="dragLeft()" on-finish-render-filters ng-repeat="new in homehousearr">
+
+				<ion-slide-box does-continue="true"  class="bigbox" on-slide-changed='changeindex()'  delegate-handle='agentHome-handle'>
+					<ion-slide>
+						<div class="box">
+							<ul>
+								<li ng-click="goDetail()" on-drag-left="dragLeft()" on-finish-render-filters ng-repeat="new in homehousearr track by $index">
+									<div class="img">
+										<img ng-src="{{new.Images}}"/>
+										<span class="newonline">
+											{{new.SellType}}
+										</span>
+									</div>
+									<div class="description">
+										<div class="tit"><div class="name">{{new.Title}}</div><div class="price"><span>{{new.Prize}}</span>元/㎡</div></div>
+										
+										<p class="devarea">{{new.Address}}</p>
+										<p>
+											<span ng-repeat="Special in new.Specialty">{{Special}}</span>
+										</p>
+										<div class="earn">
+											<div class="yongjin" ng-if="showmoney">
+												<span class="unit">佣金</span><span class="count">{{new.Bound}}/每套</span>
+											</div>
+											<div class="yongjin" ng-if="!showmoney">
+												<span class="nosignunit">佣金</span><span class="nosigncount">登录认证后可见</span>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</ion-slide>
+					<ion-slide>
+						<div class="box">
+							<ul>
+								<li ng-click="goDetail()" on-drag-left="dragLeft()" on-finish-render-filters ng-repeat="new in homehousearr track by $index">
+									<div class="img">
+										<img ng-src="{{new.Images}}"/>
+										<span class="newonline">
+											{{new.SellType}}
+										</span>
+									</div>
+									<div class="description">
+										<div class="tit"><div class="name">{{new.Title}}</div><div class="price"><span>{{new.Prize}}</span>元/㎡</div></div>
+										
+										<p class="devarea">{{new.Address}}</p>
+										<p>
+											<span ng-repeat="Special in new.Specialty">{{Special}}</span>
+										</p>
+										<div class="earn">
+											<div class="yongjin" ng-if="showmoney">
+												<span class="unit">佣金</span><span class="count">{{new.Bound}}/每套</span>
+											</div>
+											<div class="yongjin" ng-if="!showmoney">
+												<span class="nosignunit">佣金</span><span class="nosigncount">登录认证后可见</span>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</ion-slide>
+				</ion-slide-box>
+				
+				<!-- <ul>
+					<li ng-click="goDetail()" on-drag-left="dragLeft()" on-finish-render-filters ng-repeat="new in homehousearr track by $index">
 						<div class="img">
 							<img ng-src="{{new.Images}}"/>
 							<span class="newonline">
@@ -85,7 +149,7 @@
 							</div>
 						</div>
 					</li>
-				</ul>
+				</ul> -->
 		</div>
 		
 	

@@ -9,8 +9,8 @@
 		<div class="title">
 			{{headtitle}}
 		</div>
-		<div class="right" ng-click="publish()">
-			发布
+		<div class="right">
+		
 		</div>
 	</div>
 	
@@ -142,9 +142,49 @@
 					</li>
 				</ul>
 			</div>
+
+			<div class="progress">
+				<ul>
+					<li class="big">
+						<div class="top"><i class="iconfont icon-dianshi"></i></div>
+						<p>线上发布</p>
+					</li>
+					<li class="small">
+						<div class="top"></div>
+						<p><i class="iconfont icon-gengduo"></i></p>
+					</li>
+					<li class="big">
+						<div class="top"><i class="iconfont icon-shenhe01"></i></div>
+						<p>审核</p>
+					</li>
+					<li class="small">
+						<div class="top"></div>
+						<p><i class="iconfont icon-gengduo"></i></p>
+					</li>
+					<li class="big">
+						<div class="top"><i class="iconfont icon-icon-chushou"></i></div>
+						<p>房源上架</p>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="twobutton">
+				<div ng-click="publish()" class="public">发布</div>
+				<div class="keyMake">一键制作</div>
+			</div>
 			<canvas style="display: none;" id="mycans" width="" height=""></canvas>
 		</form>
 	</ion-content>
 	
+	
+	<script id="sellGoLogin-modal" type="text/ng-template">
+		<ion-modal-view id="sell_go_login_modal">
+			<div class="img">
+				<img ng-src="imgs/提交成功.png"/>
+				<p class="suc">发布前需要实名认证</p>		
+				<div ng-click="goLogin()" class="button">前往认证</div>
+			</div>
+		</ion-modal-view>
+	</script>
 </ion-view>
 

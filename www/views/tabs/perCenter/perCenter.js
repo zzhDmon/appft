@@ -52,6 +52,9 @@ angular.module('App').controller('perCenterCtl',function(goTo,$timeout,$interval
 	$scope.goRealname=function(){
 		goTo.goto('realName')
 	}
+	$scope.goRealhouse=function(){
+		goTo.goto('realHouse')
+	}
        	
 //	$scope.newslist=["推荐经纪人同行加入房田，马上换福利","经纪人同行加入房田，马上换福利","同行加入房田，马上换福利"]
 //  $scope.autoScroll = function(obj){  

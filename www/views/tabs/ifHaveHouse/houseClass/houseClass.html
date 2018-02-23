@@ -1,0 +1,188 @@
+<!--联系人界面模板-->
+<ion-view id="house_class" view-title="经纪人" hide-nav-bar="true">
+	
+	<!-- <div class="fourchoose" >
+		<span ng-click="move(0,$event)" class="fenlei">视频</span>
+		<span ng-click="move(1,$event)" class="fenlei">直播</span>
+		<span ng-click="move(2,$event)" class="fenlei">经纪人培训</span>		
+		<span class="fenlei" ui-sref="tabs.agentSearch"><i class="iconfont icon-fangdajing"></i></span>
+		<div class="underline"></div>
+	</div> -->
+	<div class="header">
+			<div ng-click="back()" class="back">
+				<i class="iconfont icon-fanhuishangyiji"></i>
+			</div>
+			<div class="title">
+				{{headTitle}}
+			</div>
+			<div class="right">
+				
+			</div>
+		</div>
+	
+	<ion-content class="house-class" >
+		<ion-slide-box does-continue="true"  class="bigbox" on-slide-changed='changeindex()'  delegate-handle='beAgent-handle'>
+			<ion-slide>
+			<div class="box">
+				<div class="videolist">
+					<ul>
+						<li ng-repeat="data in testData.room track by $index">
+								<img ng-src="imgs/海报图.png" alt="">
+							<!-- <img ng-src="{{data.pic}}" alt=""> -->
+							<h6>教你怎么挑好房</h6>
+							<div class="foot">
+								<div ng-if="data.cateid%2==0" class="level levelheight">会员</div>
+								<div ng-if="data.cateid%2==1" class="level levellow">免费</div>
+								<div class="comment"><i class="iconfont icon-xiaoxi"></i>250评论</div>
+								<div class="count">500看过</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			</ion-slide>
+			<ion-slide>
+			<div class="box">
+				<div class="livelist">
+					<ul>
+						<li ng-repeat="data in testData.room track by $index">
+							<img ng-src="imgs/发现_大字报.png" alt="">
+							<!-- <img ng-src="{{data.pic}}" alt=""> -->
+							<h6>教你怎么挑好房</h6>
+							<div class="foot">
+								<div ng-if="data.cateid%2==0" class="level levelheight">会员</div>
+								<div ng-if="data.cateid%2==1" class="level levellow">免费</div>
+								<div class="comment"></div>
+								<div class="count"><i class="iconfont icon-xiaoxi"></i>250人</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			</ion-slide>
+			<ion-slide>
+			<div class="box">
+				<div class="traininfo">
+					<img src="imgs/海报图.png" alt="">
+					
+					<div class="info">
+						<label class="item item-input">
+							<span class="input-label">真实姓名</span>
+							<input ng-model="sudData.name" type="text" name="name" placeholder="输入真实姓名" required>
+						</label>
+						<label class="item item-input">
+							<span class="input-label">手机号码</span>
+							<input ng-model="sudData.phone" type="tel" name="phone" placeholder="输入身份证号码" required>
+						</label>
+
+						<div class="button">报名</div>
+					</div>
+				</div>
+			</div>
+			</ion-slide>
+		</ion-slide-box>
+	</ion-content>
+
+<!--视频-->
+	<!--回到顶部-->
+	<div ng-if="headChoose=='0'" class="backtop" ng-click="videoScrollTop()"><i class="iconfont icon-xiangshang"></i></div>
+	
+	<div ng-if="headChoose=='0'">
+<!-- 		
+		<ion-content class="video" delegate-handle="videoScroll" on-scroll="videoScrollListen()">
+			
+			<div class="bannerposition">
+				<ion-slide-box does-continue="true"  class="detailcursor" on-slide-changed='changeindex()'  delegate-handle='fydetail-handle'>
+					<ion-slide ng-repeat="banner in testData.room track by $index">
+					<div class="box"><img ng-src="{{banner.pic}}"/></div>
+					</ion-slide>
+				</ion-slide-box>
+				
+			</div>
+			<div class="videolist">
+				<ul>
+					<li ng-repeat="data in testData.room track by $index">
+						<img ng-src="{{data.pic}}" alt="">
+						<h6>教你怎么挑好房</h6>
+						<div class="foot">
+							<div ng-if="data.cateid%2==0" class="level levelheight">会员</div>
+							<div ng-if="data.cateid%2==1" class="level levellow">免费</div>
+							<div class="comment">250评论</div>
+							<div class="count">500看过</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</ion-content> -->
+		
+	</div>
+	
+<!--直播-->
+	<!--回到顶部-->
+	<div ng-if="headChoose=='1'" class="backtop" ng-click="liveScrollTop()"><i class="iconfont icon-xiangshang"></i></div>
+	
+	<div ng-if="headChoose=='1'">
+		<ion-content class="live" delegate-handle="liveScroll" on-scroll="liveScrollListen()">
+			<!-- <ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="lsdoRefresh(false)"></ion-refresher>
+		
+			
+			<ion-infinite-scroll on-infinite="lsloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll> -->
+			<div class="bannerposition">
+				<ion-slide-box does-continue="true"  class="detailcursor" on-slide-changed='changeindex()'  delegate-handle='fydetail-handle'>
+					<ion-slide ng-repeat="banner in testData.room track by $index">
+					<div class="box"><img ng-src="{{banner.pic}}"/></div>
+					</ion-slide>
+				</ion-slide-box>
+				<!-- <div class="indexnum">{{currentindex}}/{{totalbanner}}</div> -->
+			</div>
+			<div class="livelist">
+				<ul>
+					<li ng-repeat="data in testData.room track by $index">
+						<img ng-src="{{data.pic}}" alt="">
+						<h6>教你怎么挑好房</h6>
+						<div class="foot">
+							<div ng-if="data.cateid%2==0" class="level levelheight">会员</div>
+							<div ng-if="data.cateid%2==1" class="level levellow">免费</div>
+							<div class="comment"></div>
+							<div class="count">250人</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</ion-content>
+		
+	</div>
+
+<!--经纪人培训-->
+	<!--回到顶部-->
+	<div ng-if="headChoose=='2'"  class="train">
+		<ion-content class="train" delegate-handle="loushiscroll" on-scroll="loushiscrollListen()">
+			<!-- <ion-refresher pulling-icon="" pulling-text="刷新" on-refresh="lsdoRefresh(false)"></ion-refresher>
+		
+			
+			<ion-infinite-scroll on-infinite="lsloadMore(true)" distance="15%" ng-if="noMore" > </ion-infinite-scroll> -->
+			<div>
+				<img src=https://rpic.douyucdn.cn/amrpic-180208/744244_1642.jpg alt="">
+			</div>
+			<p class="bothLine"><span>我要报名</span></p>
+			<div class="info">
+				<label class="item item-input">
+				<span class="input-label">真实姓名</span>
+				<input type="text" name="name" ng-model="signinInfo.Name" required=""  placeholder="真实姓名" pattern="">
+				</label>
+				<label class="item item-input">
+				<span class="input-label">手机号码</span>
+				<input type="tel" name="phone" ng-model="signinInfo.Phone" required="" placeholder="请输入手机号码" pattern="^1[0-9]{10}$" >
+				</label>
+
+				<!-- <input type="text" placeholder="真实姓名">
+				<input type="text" placeholder="手机号"> -->
+			</div>
+			<button class="button button-positive">我要报名</button>
+		
+		</ion-content>
+		
+	</div>
+
+	
+</ion-view>
