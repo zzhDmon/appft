@@ -56,8 +56,13 @@ li{
 /*自定义导航栏*/
 .header{
         width: 100%;
+<<<<<<< HEAD
 		height: 44px;
 		background-color: rgb(255,255,255);
+=======
+        height: 44px;
+        background-color: rgb(255,255,255);
+>>>>>>> 081916c385fd68810a38d2d340f8fd490b7802a6
 		background-image: url('../imgs/头.png');
         position: absolute;
         z-index: 9999;

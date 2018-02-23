@@ -1,7 +1,11 @@
 #if_have_house{
     background-image: url('../imgs/bg.png');
     .searchhouse-header{
+<<<<<<< HEAD
         background-color: rgba(255,255,255,0.5);
+=======
+        background-image: url('../imgs/头.png');
+>>>>>>> 081916c385fd68810a38d2d340f8fd490b7802a6
         position: absolute;
         z-index: 1002;
         width: 100%!important;
@@ -60,6 +64,7 @@
             }
         }
     }
+<<<<<<< HEAD
     .slide-page-num{
         width: 100%;
         height: 10px;
@@ -102,23 +107,44 @@
             height: 10px;
             float: left;
             border-radius: 0 10px 50vw 0;
+=======
+    .tiantian{
+        position: fixed;
+        z-index: 1;
+        right: 5px;
+        top: 200px;
+        img{
+            display: block;
+            width: 80px;
+            height: 100px;
+>>>>>>> 081916c385fd68810a38d2d340f8fd490b7802a6
         }
     }
     .tabNav{
         position: fixed;
         bottom: 0;
         width: 100%;
+<<<<<<< HEAD
         height: 49px;
         padding: 0;
         background-color: rgb(255,255,255);
         // border-radius: 10px 10px 0 0;
+=======
+        height: 50px;
+        padding: 5px 0 0;
+        background-color: #e6e6e6;
+>>>>>>> 081916c385fd68810a38d2d340f8fd490b7802a6
         ul{
             width: 100%;
             height: 100%;
             li{
                 height: 100%;
                 text-align: center;
+<<<<<<< HEAD
                 line-height: 50px;
+=======
+                // line-height: 45px;
+>>>>>>> 081916c385fd68810a38d2d340f8fd490b7802a6
                 img{
                     display: block;
                     width: 30px;
@@ -128,6 +154,7 @@
                 p{
                     margin: 0;
                     padding: 0;
+<<<<<<< HEAD
                     height: 19px;
                     line-height: 19px;
                 }
@@ -146,6 +173,12 @@
                     .iconfont:before{
                         line-height: 1;
                     }
+=======
+                    height: 15px;
+                    line-height: 15px;
+                    text-align: center;
+                    line-height: 15px;
+>>>>>>> 081916c385fd68810a38d2d340f8fd490b7802a6
                 }
             }
             .rig{
@@ -428,8 +461,23 @@
     }
     
     .if-have-house{
+<<<<<<< HEAD
         padding: 0;
         margin: 44px 0 49px;
+=======
+        margin-top: 44px;
+        .headimg{
+            width: 100%;
+            img{
+                display: block;
+                width: 100%;
+                height: 54vw;
+            }
+        }
+        .card{
+            box-shadow: none;
+        }
+>>>>>>> 081916c385fd68810a38d2d340f8fd490b7802a6
         p.loading{
             margin: 100px 0 100px;
             font-size: 50px;
@@ -706,8 +754,23 @@
     }
     //大屏
     .plus{
+<<<<<<< HEAD
         padding: 0;
         margin-top: 44px 0 49px;
+=======
+        margin-top: 44px;
+        .headimg{
+            width: 100%;
+            img{
+                display: block;
+                width: 100%;
+                height: 54vw;
+            }
+        }
+        .card{
+            box-shadow: none;
+        }
+>>>>>>> 081916c385fd68810a38d2d340f8fd490b7802a6
         p.loading{
             margin: 100px 0 100px;
             font-size: 50px;

@@ -16,6 +16,7 @@
 	
 	<div ng-click="closechoose()" class="bar searchhouse-header item-input-inset">
 	    <span class="location" ng-click="getarea()">厦门<i class="iconfont icon-xialacaidanxiaosanjiao1"></i></span>
+<<<<<<< HEAD
 		
 		<span class="item-min" >
 	     	
@@ -28,6 +29,14 @@
             <input type="search" placeholder="请输入客户名或需求" ng-model="searchName.key" ng-change="search(searchName.key)">
             
 		</span>
+=======
+		<span class="item-input-wrapper"></span>
+		<!--<span ng-if="haveHouse" class="item-input-wrapper" ui-sref="tabs.clientSearch">
+	     	<i class="iconfont icon-sousuo2"></i>
+            <input type="search" placeholder="请输入客户名或需求" ng-model="searchName.key" ng-change="search(searchName.key)">
+            
+		</span>-->
+>>>>>>> 081916c385fd68810a38d2d340f8fd490b7802a6
 	    <span ng-if="!haveHouse" class="item-input-wrapper" ui-sref="tabs.houseSearch">
 	     	<i class="iconfont icon-sousuo2"></i>
             <input type="search" placeholder="请输入小区名称或地址" ng-model="searchName.key" ng-change="search(searchName.key)">           
@@ -36,6 +45,7 @@
 		<span class="set" ui-sref="tabs.mySet"><i class="iconfont icon-shezhi"></i></span>
 	</div>
 
+<<<<<<< HEAD
 	<div class="slide-page-num">
 		<ul>
 			<li ng-class="{true:'active',false:''}[slidePageNum==0]"></li>
@@ -108,13 +118,52 @@
 	</div>
 	
 	<!-- <ul class="topfour" >
+=======
+	<div class="tabNav">
+		<ul ng-if="haveHouse" class="havehouse">
+			<li class="lef" ui-sref="tabs.fbManage({type:0})">
+				<img src="imgs/左.png" alt="">
+				<p>出售</p>
+				</li>
+			<li class="mid">
+				<img src="imgs/中.png" alt="">
+			</li>
+			<li class="rig" ui-sref="tabs.fbManage({type:1})">
+				<img src="imgs/右.png" alt="">
+				<p>出租</p>
+				</li>
+		</ul>
+		<ul ng-if="!haveHouse" class="nohouse">
+			<li class="lef" ui-sref="tabs.needManage({type:0})">
+				<img src="imgs/左.png" alt="">
+				<p>买房</p>
+				</li>
+			<li class="mid">
+				<img src="imgs/中.png" alt="">
+				</li>
+			<li class="rig" ui-sref="tabs.needManage({type:1})">
+				<img src="imgs/右.png" alt="">
+				<p>租房</p>
+				</li>
+		</ul>
+	</div>
+	
+	<div class="tiantian">
+		<img src="imgs/助手.png" alt="">
+	</div>
+	<!--<ul class="topfour" >
+>>>>>>> 081916c385fd68810a38d2d340f8fd490b7802a6
 		<li ng-click="openchoose(0)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.district=='区域']"><div>{{querydata.district}} <span ng-if="querydata.area!==''">|{{querydata.area}}</span></div><i class="iconfont icon--pulldown"></i></li>
 		<li ng-click="openchoose(1)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.price=='售价']"><div>{{querydata.price}}</div><i class="iconfont icon--pulldown"></i></li>
 		<li ng-click="openchoose(2)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.type=='房型']"><div>{{querydata.type}}</div><i class="iconfont icon--pulldown"></i></li>
 		<li ng-click="openchoose(3)" ng-class="{true: 'nochoose', false: 'havechoose'}[querydata.sort=='排序']"><div>{{querydata.sort}}</div><i class="iconfont icon--pulldown"></i></li>
 	</ul>
 	
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 081916c385fd68810a38d2d340f8fd490b7802a6
 	<div ng-click="closechoose()" class="mask"></div>
 	<div class="pullchooselist first">
 		<div class="bottom"></div>
@@ -159,12 +208,27 @@
 				</ion-list>
 			</ion-content>
 		</div>
+<<<<<<< HEAD
 	</div> -->
 
 	<ion-content delegate-handle="mainscroll" on-swipe-down="onSwipeDown()" on-swipe-up="onSwipeUp()" class="if-have-house" >
 		<div class="ershou">
 				<div class="headimg">
 						<img src="imgs/海报图.png" alt="">
+=======
+	</div>-->
+	
+
+	<div ng-if="haveHouse" class="haveHouse">
+		<ion-content delegate-handle="mainscroll" on-swipe-right="onSwipeRight()" on-swipe-down="onSwipeDown()" on-swipe-up="onSwipeUp()" class="if-have-house">
+				<div class="headimg">
+					<img src="imgs/海报图.png" alt="">
+				</div>
+				
+				<div ng-if="sellhousearr.length<1" class="card noresult">
+					<div class="top">
+						<span class="iconfont icon-fangdajingtubiao"></span>
+>>>>>>> 081916c385fd68810a38d2d340f8fd490b7802a6
 					</div>
 					<div class="underhead">
 						<div class="left"></div>
